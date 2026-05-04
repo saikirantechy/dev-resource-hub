@@ -91,6 +91,17 @@ Dev Resource Hub is an open-source initiative aimed at helping developers, stude
 * Trello – Task management
 
 ---
+## 🟢 Start Contributing (Beginner Friendly)
+
+New to open source? Start here 👇
+
+- Add 1 tool in any category  
+- Fix formatting  
+- Improve descriptions  
+
+👉 Check issues labeled **good first issue**
+
+🚀 Your first PR is just 5 minutes away!
 
 ## 🚀 Why Contribute?
 
