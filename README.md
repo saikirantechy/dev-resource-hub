@@ -21,37 +21,66 @@ Dev Resource Hub is an open-source initiative aimed at helping developers, stude
 
 ## 🌟 Categories
 
-### 🤖 AI Tools
+## 🤖 AI Tools
+- ChatGPT – AI assistant for coding, writing, and problem solving  
+  🔗 https://chat.openai.com  
 
-* ChatGPT – AI assistant for coding & writing
-* Gemini – Google AI for multimodal tasks
-* Claude – AI for long-form reasoning
+- Gemini – Google AI for multimodal tasks  
+  🔗 https://gemini.google.com  
 
-### 💻 Web Development
+- Claude – AI assistant for long-form reasoning  
+  🔗 https://claude.ai  
 
-* React – Frontend library
-* Next.js – Full-stack framework
-* Tailwind CSS – Utility-first CSS
+- Perplexity AI – AI-powered search engine  
+  🔗 https://www.perplexity.ai  
 
-### 📱 Mobile Development
+- Poe – Access multiple AI models in one place  
+  🔗 https://poe.com  
 
-* Flutter – Cross-platform framework
-* React Native – Mobile app development
+---
 
-### ⚙️ DevOps
+## 💻 Web Development
+- React – Frontend library  
+  🔗 https://react.dev  
 
-* Docker – Containerization
-* Kubernetes – Container orchestration
+- Next.js – Full-stack React framework  
+  🔗 https://nextjs.org  
 
-### 🎨 Design Tools
+- Tailwind CSS – Utility-first CSS framework  
+  🔗 https://tailwindcss.com  
 
-* Figma – UI/UX design
-* Canva – Design platform
+- Vite – Fast frontend build tool  
+  🔗 https://vitejs.dev  
 
-### 📚 Learning Resources
+---
 
-* freeCodeCamp – Learn coding for free
-* MDN Docs – Web development docs
+## ⚙️ DevOps
+- Docker – Containerization platform  
+  🔗 https://www.docker.com  
+
+- Kubernetes – Container orchestration system  
+  🔗 https://kubernetes.io  
+
+- GitHub Actions – CI/CD automation  
+  🔗 https://github.com/features/actions  
+
+---
+
+## 🎨 Design Tools
+- Figma – UI/UX design tool  
+  🔗 https://figma.com  
+
+- Canva – Easy design platform  
+  🔗 https://canva.com  
+
+---
+
+## 📚 Learning Resources
+- freeCodeCamp – Free coding courses  
+  🔗 https://www.freecodecamp.org  
+
+- MDN Web Docs – Web development documentation  
+  🔗 https://developer.mozilla.org  
 
 ### 🚀 Productivity Tools
 
