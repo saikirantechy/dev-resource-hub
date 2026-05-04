@@ -1,91 +1,79 @@
 # 🚀 Dev Resource Hub
 
-> 🌍 A premium, community-driven collection of the best developer tools, AI resources, learning platforms, and opportunities.
+> 🌍 A curated, community-driven collection of the best developer tools, AI resources, and learning platforms.
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge" />
+  <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge&color=yellow" />
   <img src="https://img.shields.io/github/forks/saikirantechy/dev-resource-hub?style=for-the-badge" />
   <img src="https://img.shields.io/github/issues/saikirantechy/dev-resource-hub?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" />
 </p>
 
+<p align="center">
+  ⭐ Star this repo • 🤝 Contribute • 🌐 Share
+</p>
+
 ---
 
-## ✨ About This Project
+## ✨ About
 
-Dev Resource Hub is an open-source initiative aimed at helping developers, students, and tech enthusiasts discover the **best tools, platforms, and resources** in one place.
+Dev Resource Hub helps developers discover **high-quality tools, platforms, and resources** — all in one place.
 
-💡 Whether you're a beginner or an expert, this repo is built **for YOU**.
+💡 Built for:
+
+* Beginners 🚀
+* Developers 💻
+* Tech enthusiasts 🌍
 
 ---
 
 ## 🌟 Categories
 
-## 🤖 AI Tools
-- ChatGPT – AI assistant for coding, writing, and problem solving  
-  🔗 https://chat.openai.com  
+### 🤖 AI Tools
 
-- Gemini – Google AI for multimodal tasks  
-  🔗 https://gemini.google.com  
-
-- Claude – AI assistant for long-form reasoning  
-  🔗 https://claude.ai  
-
-- Perplexity AI – AI-powered search engine  
-  🔗 https://www.perplexity.ai  
-
-- Poe – Access multiple AI models in one place  
-  🔗 https://poe.com  
+* ChatGPT – AI assistant for coding & writing
+* Gemini – Google AI for multimodal tasks
+* Claude – AI for long-form reasoning
+* Perplexity AI – AI-powered search
+* Poe – Multi-model AI access
 
 ---
 
-## 💻 Web Development
-- React – Frontend library  
-  🔗 https://react.dev  
+### 💻 Web Development
 
-- Next.js – Full-stack React framework  
-  🔗 https://nextjs.org  
-
-- Tailwind CSS – Utility-first CSS framework  
-  🔗 https://tailwindcss.com  
-
-- Vite – Fast frontend build tool  
-  🔗 https://vitejs.dev  
+* React – Frontend library
+* Next.js – Full-stack framework
+* Tailwind CSS – Utility-first CSS
+* Vite – Fast build tool
 
 ---
 
-## ⚙️ DevOps
-- Docker – Containerization platform  
-  🔗 https://www.docker.com  
+### ⚙️ DevOps
 
-- Kubernetes – Container orchestration system  
-  🔗 https://kubernetes.io  
-
-- GitHub Actions – CI/CD automation  
-  🔗 https://github.com/features/actions  
+* Docker – Containerization
+* Kubernetes – Orchestration
+* GitHub Actions – CI/CD
 
 ---
 
-## 🎨 Design Tools
-- Figma – UI/UX design tool  
-  🔗 https://figma.com  
+### 🎨 Design Tools
 
-- Canva – Easy design platform  
-  🔗 https://canva.com  
+* Figma – UI/UX design
+* Canva – Easy design
 
 ---
 
-## 📚 Learning Resources
-- freeCodeCamp – Free coding courses  
-  🔗 https://www.freecodecamp.org  
+### 📚 Learning Resources
 
-- MDN Web Docs – Web development documentation  
-  🔗 https://developer.mozilla.org  
+* freeCodeCamp – Free courses
+* MDN Docs – Web documentation
+
+---
 
 ### 🚀 Productivity Tools
 
-* Notion – Productivity workspace
-* Trello – Task management
+* Notion – Workspace
+* Trello – Task manager
 
 ---
 
@@ -94,88 +82,65 @@ Dev Resource Hub is an open-source initiative aimed at helping developers, stude
 * 🌍 Help developers worldwide
 * 💡 Share useful tools
 * 📈 Build your GitHub profile
-* 🤝 Be part of open-source
+* 🤝 Join open-source
 
 ---
 
 ## 🤝 How to Contribute
 
-We welcome contributions from everyone!
-
-### 🔥 Steps:
-
-1. Fork this repository
-2. Create a new branch
-3. Add your resource
-4. Commit your changes
-5. Open a Pull Request
+1. Fork the repo
+2. Create a branch
+3. Add a resource
+4. Submit a PR
 
 ---
 
-## 📌 Contribution Guidelines
+## 📌 Contribution Rules
 
-* Add resources in the correct category
-* Keep descriptions short and useful
-* Avoid spam or promotional links
-* Follow this format:
+* Keep it useful
+* No spam
+* Short descriptions
+* Follow format:
 
 **Tool Name** – Short description
 🔗 Link
 
 ---
 
-## 🏷 Topics
+## ⭐ Support
 
-```
-developer-resources
-awesome-list
-open-source
-ai-tools
-beginner-friendly
-```
+If this project helps you:
 
----
-
-## ⭐ Support This Project
-
-If you find this helpful:
-
-👉 Give it a **star ⭐**
-👉 Share with your friends
+👉 Star ⭐ the repo
+👉 Share it 🌐
 👉 Contribute 🚀
 
 ---
+
 ## 🌐 Share This Project
 
 <p align="center">
-  <a href="https://www.reddit.com/submit?url=https://github.com/saikirantechy/dev-resource-hub&title=Check%20out%20this%20Dev%20Resource%20Hub%20🚀">
-    <img src="https://img.shields.io/badge/share%20on-reddit-orange?style=for-the-badge&logo=reddit" />
+  <a href="https://www.reddit.com/submit?url=https://github.com/saikirantechy/dev-resource-hub">
+    <img src="https://img.shields.io/badge/Reddit-orange?style=for-the-badge&logo=reddit" />
   </a>
 
-  <a href="https://news.ycombinator.com/submitlink?u=https://github.com/saikirantechy/dev-resource-hub&t=Dev%20Resource%20Hub">
-    <img src="https://img.shields.io/badge/share%20on-hacker%20news-black?style=for-the-badge&logo=ycombinator" />
-  </a>
-
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/saikirantechy/dev-resource-hub&text=Check%20out%20this%20awesome%20Dev%20Resource%20Hub%20🚀">
-    <img src="https://img.shields.io/badge/share%20on-twitter-blue?style=for-the-badge&logo=twitter" />
-  </a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/saikirantechy/dev-resource-hub">
-    <img src="https://img.shields.io/badge/share%20on-facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/saikirantechy/dev-resource-hub">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter" />
   </a>
 
   <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/saikirantechy/dev-resource-hub">
-    <img src="https://img.shields.io/badge/share%20on-linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" />
   </a>
 </p>
-🚀 Help this project reach more developers by sharing it!
+
+---
 
 ## ❤️ Contributors
 
-Thanks to all the amazing open source  people who contributed or working on  this project! or open source
+Thanks to all amazing contributors ❤️
 
-<a href="https://github.com/saikirantechy/clipmind-ai/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=saikirantechy/clipmind-ai" />
+<a href="https://github.com/saikirantechy/dev-resource-hub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=saikirantechy/dev-resource-hub" />
 </a>
 
 ---
@@ -184,17 +149,7 @@ Thanks to all the amazing open source  people who contributed or working on  thi
 
 **Sai Kiran BK (SKT)**
 🚀 Founder @ SKT Nexus
-💡 Building tech communities & open-source projects
 
 ---
 
-## 🌐 Connect & Community
-
-Want to grow, collaborate, or contribute more?
-
-👉 Join SKT Nexus Community
-👉 Learn, Build & Grow Together 🚀
-
----
-
-# 🚀 Let's Build This Together!
+# 🚀 Let’s Build This Together!
