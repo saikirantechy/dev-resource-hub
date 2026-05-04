@@ -145,6 +145,30 @@ If you find this helpful:
 👉 Contribute 🚀
 
 ---
+## 🌐 Share This Project
+
+<p align="center">
+  <a href="https://www.reddit.com/submit?url=https://github.com/saikirantechy/dev-resource-hub&title=Check%20out%20this%20Dev%20Resource%20Hub%20🚀">
+    <img src="https://img.shields.io/badge/share%20on-reddit-orange?style=for-the-badge&logo=reddit" />
+  </a>
+
+  <a href="https://news.ycombinator.com/submitlink?u=https://github.com/saikirantechy/dev-resource-hub&t=Dev%20Resource%20Hub">
+    <img src="https://img.shields.io/badge/share%20on-hacker%20news-black?style=for-the-badge&logo=ycombinator" />
+  </a>
+
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/saikirantechy/dev-resource-hub&text=Check%20out%20this%20awesome%20Dev%20Resource%20Hub%20🚀">
+    <img src="https://img.shields.io/badge/share%20on-twitter-blue?style=for-the-badge&logo=twitter" />
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/saikirantechy/dev-resource-hub">
+    <img src="https://img.shields.io/badge/share%20on-facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+  </a>
+
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/saikirantechy/dev-resource-hub">
+    <img src="https://img.shields.io/badge/share%20on-linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+🚀 Help this project reach more developers by sharing it!
 
 ## ❤️ Contributors
 
