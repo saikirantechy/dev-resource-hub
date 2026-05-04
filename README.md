@@ -1,6 +1,6 @@
 # 🚀 Dev Resource Hub
 
-> 🌍 A curated, community-driven collection of the best developer tools, AI resources, and learning platforms.
+> 🌍 A premium, community-driven collection of the best developer tools, AI resources, learning platforms, and opportunities.
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge&color=yellow" />
@@ -12,68 +12,83 @@
 <p align="center">
   ⭐ Star this repo • 🤝 Contribute • 🌐 Share
 </p>
-
 ---
 
-## ✨ About
+## ✨ About This Project
 
-Dev Resource Hub helps developers discover **high-quality tools, platforms, and resources** — all in one place.
+Dev Resource Hub is an open-source initiative aimed at helping developers, students, and tech enthusiasts discover the **best tools, platforms, and resources** in one place.
 
-💡 Built for:
-
-* Beginners 🚀
-* Developers 💻
-* Tech enthusiasts 🌍
+💡 Whether you're a beginner or an expert, this repo is built **for YOU**.
 
 ---
 
 ## 🌟 Categories
 
-### 🤖 AI Tools
+## 🤖 AI Tools
+- ChatGPT – AI assistant for coding, writing, and problem solving  
+  🔗 https://chat.openai.com  
 
-* ChatGPT – AI assistant for coding & writing
-* Gemini – Google AI for multimodal tasks
-* Claude – AI for long-form reasoning
-* Perplexity AI – AI-powered search
-* Poe – Multi-model AI access
+- Gemini – Google AI for multimodal tasks  
+  🔗 https://gemini.google.com  
 
----
+- Claude – AI assistant for long-form reasoning  
+  🔗 https://claude.ai  
 
-### 💻 Web Development
+- Perplexity AI – AI-powered search engine  
+  🔗 https://www.perplexity.ai  
 
-* React – Frontend library
-* Next.js – Full-stack framework
-* Tailwind CSS – Utility-first CSS
-* Vite – Fast build tool
-
----
-
-### ⚙️ DevOps
-
-* Docker – Containerization
-* Kubernetes – Orchestration
-* GitHub Actions – CI/CD
+- Poe – Access multiple AI models in one place  
+  🔗 https://poe.com  
 
 ---
 
-### 🎨 Design Tools
+## 💻 Web Development
+- React – Frontend library  
+  🔗 https://react.dev  
 
-* Figma – UI/UX design
-* Canva – Easy design
+- Next.js – Full-stack React framework  
+  🔗 https://nextjs.org  
+
+- Tailwind CSS – Utility-first CSS framework  
+  🔗 https://tailwindcss.com  
+
+- Vite – Fast frontend build tool  
+  🔗 https://vitejs.dev  
 
 ---
 
-### 📚 Learning Resources
+## ⚙️ DevOps
+- Docker – Containerization platform  
+  🔗 https://www.docker.com  
 
-* freeCodeCamp – Free courses
-* MDN Docs – Web documentation
+- Kubernetes – Container orchestration system  
+  🔗 https://kubernetes.io  
+
+- GitHub Actions – CI/CD automation  
+  🔗 https://github.com/features/actions  
 
 ---
+
+## 🎨 Design Tools
+- Figma – UI/UX design tool  
+  🔗 https://figma.com  
+
+- Canva – Easy design platform  
+  🔗 https://canva.com  
+
+---
+
+## 📚 Learning Resources
+- freeCodeCamp – Free coding courses  
+  🔗 https://www.freecodecamp.org  
+
+- MDN Web Docs – Web development documentation  
+  🔗 https://developer.mozilla.org  
 
 ### 🚀 Productivity Tools
 
-* Notion – Workspace
-* Trello – Task manager
+* Notion – Productivity workspace
+* Trello – Task management
 
 ---
 
@@ -82,65 +97,88 @@ Dev Resource Hub helps developers discover **high-quality tools, platforms, and 
 * 🌍 Help developers worldwide
 * 💡 Share useful tools
 * 📈 Build your GitHub profile
-* 🤝 Join open-source
+* 🤝 Be part of open-source
 
 ---
 
 ## 🤝 How to Contribute
 
-1. Fork the repo
-2. Create a branch
-3. Add a resource
-4. Submit a PR
+We welcome contributions from everyone!
+
+### 🔥 Steps:
+
+1. Fork this repository
+2. Create a new branch
+3. Add your resource
+4. Commit your changes
+5. Open a Pull Request
 
 ---
 
-## 📌 Contribution Rules
+## 📌 Contribution Guidelines
 
-* Keep it useful
-* No spam
-* Short descriptions
-* Follow format:
+* Add resources in the correct category
+* Keep descriptions short and useful
+* Avoid spam or promotional links
+* Follow this format:
 
 **Tool Name** – Short description
 🔗 Link
 
 ---
 
-## ⭐ Support
+## 🏷 Topics
 
-If this project helps you:
+```
+developer-resources
+awesome-list
+open-source
+ai-tools
+beginner-friendly
+```
 
-👉 Star ⭐ the repo
-👉 Share it 🌐
+---
+
+## ⭐ Support This Project
+
+If you find this helpful:
+
+👉 Give it a **star ⭐**
+👉 Share with your friends
 👉 Contribute 🚀
 
 ---
-
 ## 🌐 Share This Project
 
 <p align="center">
-  <a href="https://www.reddit.com/submit?url=https://github.com/saikirantechy/dev-resource-hub">
-    <img src="https://img.shields.io/badge/Reddit-orange?style=for-the-badge&logo=reddit" />
+  <a href="https://www.reddit.com/submit?url=https://github.com/saikirantechy/dev-resource-hub&title=Check%20out%20this%20Dev%20Resource%20Hub%20🚀">
+    <img src="https://img.shields.io/badge/share%20on-reddit-orange?style=for-the-badge&logo=reddit" />
   </a>
 
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/saikirantechy/dev-resource-hub">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter" />
+  <a href="https://news.ycombinator.com/submitlink?u=https://github.com/saikirantechy/dev-resource-hub&t=Dev%20Resource%20Hub">
+    <img src="https://img.shields.io/badge/share%20on-hacker%20news-black?style=for-the-badge&logo=ycombinator" />
+  </a>
+
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/saikirantechy/dev-resource-hub&text=Check%20out%20this%20awesome%20Dev%20Resource%20Hub%20🚀">
+    <img src="https://img.shields.io/badge/share%20on-twitter-blue?style=for-the-badge&logo=twitter" />
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/saikirantechy/dev-resource-hub">
+    <img src="https://img.shields.io/badge/share%20on-facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
   </a>
 
   <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/saikirantechy/dev-resource-hub">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/share%20on-linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
-
----
+🚀 Help this project reach more developers by sharing it!
 
 ## ❤️ Contributors
 
-Thanks to all amazing contributors ❤️
+Thanks to all the amazing open source  people who contributed or working on  this project! or open source
 
-<a href="https://github.com/saikirantechy/dev-resource-hub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=saikirantechy/dev-resource-hub" />
+<a href="https://github.com/saikirantechy/clipmind-ai/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=saikirantechy/clipmind-ai" />
 </a>
 
 ---
@@ -149,7 +187,18 @@ Thanks to all amazing contributors ❤️
 
 **Sai Kiran BK (SKT)**
 🚀 Founder @ SKT Nexus
+💡 Building tech communities & open-source projects
 
 ---
 
-# 🚀 Let’s Build This Together!
+## 🌐 Connect & Community
+
+Want to grow, collaborate, or contribute more?
+
+👉 Join SKT Nexus Community
+👉 Learn, Build & Grow Together 🚀
+
+---
+
+# 🚀 Let's Build This Together!
+
