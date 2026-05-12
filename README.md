@@ -58,14 +58,40 @@ Dev Resource Hub is an open-source initiative aimed at helping developers, stude
 ---
 
 ## ⚙️ DevOps
-- Docker – Containerization platform  
-  🔗 https://www.docker.com  
 
-- Kubernetes – Container orchestration system  
-  🔗 https://kubernetes.io  
+  * Docker – Containerization platform
+  https://www.docker.com
 
-- GitHub Actions – CI/CD automation  
-  🔗 https://github.com/features/actions  
+  * Kubernetes – Container orchestration system
+  https://kubernetes.io
+
+  * GitHub Actions – CI/CD automation
+  https://github.com/features/actions
+
+  * Jenkins – Open-source automation server for building CI/CD pipelines
+  https://www.jenkins.io
+
+  * Terraform – Infrastructure as Code tool for provisioning cloud resources
+  https://www.terraform.io
+
+  * Ansible – Automation tool for configuration management and application deployment
+  https://www.ansible.com
+
+  * Amazon Web Services – Cloud platform for compute, storage, networking, and DevOps services
+  https://aws.amazon.com
+
+  * AWS CloudWatch – Monitoring and observability service for AWS resources and applications
+  https://aws.amazon.com/cloudwatch
+
+  * Prometheus – Open-source monitoring and alerting toolkit
+  https://prometheus.io
+
+  * Grafana – Visualization and dashboard platform for metrics and logs
+  https://grafana.com
+
+  * Argo CD – GitOps continuous delivery tool for Kubernetes
+  https://argo-cd.readthedocs.io
+
 
 ---
 
