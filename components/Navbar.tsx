@@ -10,6 +10,7 @@ export default function Navbar() {
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <Link href="/ai-finder" className="hover:text-white transition-colors">AI Finder</Link>
           <Link href="/contributors" className="hover:text-white transition-colors">Contributors</Link>
           <Link href="/submit" className="hover:text-white transition-colors">Submit</Link>
           <Link 

@@ -12,7 +12,8 @@ import {
   Laptop,
   Cpu,
   Settings,
-  Globe
+  Globe,
+  BrainCircuit
 } from "lucide-react";
 
 export default function CommandPalette() {
@@ -37,6 +38,7 @@ export default function CommandPalette() {
   }, [togglePalette]);
 
   const actions = [
+    { name: "AI Resource Finder", icon: <BrainCircuit size={18} />, href: "/ai-finder", shortcut: "AI", category: "Featured" },
     { name: "Search Tools", icon: <Search size={18} />, href: "/", shortcut: "S" },
     { name: "Trending Now", icon: <TrendingUp size={18} />, href: "/trending", shortcut: "T" },
     { name: "Contributors", icon: <Users size={18} />, href: "/contributors", shortcut: "C" },

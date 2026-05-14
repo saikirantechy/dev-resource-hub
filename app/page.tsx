@@ -2,7 +2,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import ResourceGrid from "@/components/ResourceGrid";
-import { Users, LayoutGrid, Zap, Globe, Trophy } from "lucide-react";
+import { Users, LayoutGrid, Zap, Globe, Trophy, Sparkles } from "lucide-react";
 
 const categories = [
   {
@@ -71,6 +71,12 @@ export default async function Home() {
         
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div className="flex justify-center gap-4 animate-fade-in">
+            <Link 
+              href="/ai-finder"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider"
+            >
+              <Sparkles size={12} /> AI Finder
+            </Link>
             <Link 
               href="/contributors"
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-bold uppercase tracking-wider"
