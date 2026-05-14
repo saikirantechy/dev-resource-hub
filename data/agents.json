@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Devin AI",
+    "description": "The world's first fully autonomous AI software engineer.",
+    "url": "https://cognition-labs.com",
+    "tags": ["Autonomous", "Engineering", "Agent"],
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Manus",
+    "description": "A powerful, general-purpose autonomous agent for complex workflows.",
+    "url": "https://manus.gg",
+    "tags": ["Agent", "Workflow", "Automation"],
+    "isFeatured": true,
+    "isFree": true,
+    "isOpenSource": false
+  },
+  {
+    "name": "Traycer AI",
+    "description": "Agentic framework for building and deploying AI researchers.",
+    "url": "https://traycer.ai",
+    "tags": ["Research", "Agent", "Framework"],
+    "isTrending": true,
+    "isOpenSource": true
+  },
+  {
+    "name": "CrewAI",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents.",
+    "url": "https://crewai.com",
+    "tags": ["Multi-Agent", "Framework", "Python"],
+    "isFree": true,
+    "isOpenSource": true
+  }
+]

@@ -14,6 +14,8 @@ export default function Navbar() {
           <Link href="/webagentcore" className="text-emerald-400 hover:text-emerald-300 transition-colors font-bold flex items-center gap-1.5">
             <Sparkles size={14} /> WebAgentCore
           </Link>
+          <Link href="/ai-agents" className="hover:text-white transition-colors">Agents</Link>
+          <Link href="/prompts" className="hover:text-white transition-colors">Prompts</Link>
           <Link href="/blogs" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/ai-finder" className="hover:text-white transition-colors">AI Finder</Link>
           <Link href="/contributors" className="hover:text-white transition-colors">Contributors</Link>

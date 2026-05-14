@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cursor-react-component",
+    "title": "React Component Architect",
+    "description": "Generate a fully typed, responsive React component with Tailwind CSS.",
+    "content": "Create a React component named {{ComponentName}} using TypeScript and Tailwind CSS. It should be fully responsive, accessible, and include Framer Motion for entrance animations. Include prop types and a clear, clean structure.",
+    "category": "Cursor Prompts",
+    "tags": ["React", "Tailwind", "Component"],
+    "author": "Dev Resource Hub",
+    "views": 1205
+  },
+  {
+    "id": "windsurf-api-route",
+    "title": "Next.js API Route Generator",
+    "description": "Scaffold a secure Next.js App Router API endpoint.",
+    "content": "Write a Next.js App Router API route (route.ts) for {{EndpointPurpose}}. Use standard try-catch error handling, validate incoming JSON using Zod, and return structured JSON responses with appropriate HTTP status codes.",
+    "category": "Windsurf",
+    "tags": ["Next.js", "API", "Backend"],
+    "author": "Community",
+    "views": 842
+  },
+  {
+    "id": "devin-fullstack-setup",
+    "title": "Fullstack App Initializer",
+    "description": "Prompt an autonomous agent to build a full project foundation.",
+    "content": "Initialize a new project using Next.js 15, Tailwind CSS, and Supabase. Set up the directory structure, install all dependencies, configure the Tailwind config for a dark theme, and create a basic auth page. Verify that the dev server runs without errors.",
+    "category": "Devin AI",
+    "tags": ["Fullstack", "Setup", "Agent"],
+    "author": "Dev Resource Hub",
+    "views": 3200
+  }
+]
