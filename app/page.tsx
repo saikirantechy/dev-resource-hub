@@ -2,7 +2,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import ResourceGrid from "@/components/ResourceGrid";
-import { Users, LayoutGrid, Zap, Globe, Trophy, Sparkles } from "lucide-react";
+import { Users, LayoutGrid, Zap, Globe, Trophy, Sparkles, GraduationCap } from "lucide-react";
 
 const categories = [
   {
@@ -71,6 +71,12 @@ export default async function Home() {
         
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div className="flex justify-center gap-4 animate-fade-in">
+            <Link 
+              href="/beginner-guide"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider"
+            >
+              <GraduationCap size={12} /> Student Path
+            </Link>
             <Link 
               href="/ai-finder"
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider"
@@ -181,6 +187,36 @@ export default async function Home() {
               View all trending resources →
             </Link>
           </div>
+        </div>
+      </section>
+      {/* Newsletter Section (NEW) */}
+      <section className="py-24 px-6 border-t border-white/5 bg-gradient-to-b from-transparent to-blue-500/5">
+        <div className="max-w-4xl mx-auto p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/10 text-center space-y-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-8 text-blue-500/20 rotate-12">
+            <Zap size={120} strokeWidth={1} />
+          </div>
+          
+          <div className="space-y-4 relative z-10">
+            <h2 className="text-4xl font-bold">Join the Ecosystem</h2>
+            <p className="text-gray-400 max-w-md mx-auto">
+              Get weekly updates on the best developer tools, trending resources, and open-source opportunities.
+            </p>
+          </div>
+
+          <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto relative z-10" onSubmit={(e) => e.preventDefault()}>
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all"
+            />
+            <button className="px-8 py-4 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all">
+              Join Now
+            </button>
+          </form>
+          
+          <p className="text-[10px] text-gray-600 uppercase font-bold tracking-widest">
+            Join 2,000+ developers already in the loop.
+          </p>
         </div>
       </section>
     </main>
