@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Sparkles } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -10,6 +11,9 @@ export default function Navbar() {
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <Link href="/webagentcore" className="text-emerald-400 hover:text-emerald-300 transition-colors font-bold flex items-center gap-1.5">
+            <Sparkles size={14} /> WebAgentCore
+          </Link>
           <Link href="/blogs" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/ai-finder" className="hover:text-white transition-colors">AI Finder</Link>
           <Link href="/contributors" className="hover:text-white transition-colors">Contributors</Link>
