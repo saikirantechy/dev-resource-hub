@@ -14,7 +14,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dev Resource Hub | Premium Developer Ecosystem",
-  description: "A community-driven collection of the best developer tools, AI resources, and learning platforms.",
+  description: "Discover the best developer tools, AI resources, and learning platforms in one community-curated hub.",
+  keywords: ["developer tools", "AI resources", "web development", "open source", "devops", "learning resources"],
+  authors: [{ name: "Sai Kiran BK" }],
+  openGraph: {
+    title: "Dev Resource Hub",
+    description: "The ultimate community-curated hub for developers.",
+    url: "https://saikirantechy.github.io/dev-resource-hub/",
+    siteName: "Dev Resource Hub",
+    images: [
+      {
+        url: "https://saikirantechy.github.io/dev-resource-hub/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dev Resource Hub",
+    description: "The ultimate community-curated hub for developers.",
+    images: ["https://saikirantechy.github.io/dev-resource-hub/og-image.png"],
+  },
 };
 
 import Navbar from "@/components/Navbar";
