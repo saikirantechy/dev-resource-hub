@@ -1,0 +1,26 @@
+[
+  {
+    "name": "First Contributions",
+    "description": "The easiest way to make your first open source contribution.",
+    "url": "https://github.com/firstcontributions/first-contributions",
+    "tags": ["Beginner", "Git", "GitHub"],
+    "isFree": true,
+    "isOpenSource": true
+  },
+  {
+    "name": "Up-For-Grabs",
+    "description": "Find projects with tasks specifically curated for new contributors.",
+    "url": "https://up-for-grabs.net/",
+    "tags": ["Issues", "Open Source", "Beginner"],
+    "isFree": true,
+    "isOpenSource": true
+  },
+  {
+    "name": "Good First Issue",
+    "description": "Curated list of 'good first issues' across popular OSS projects.",
+    "url": "https://goodfirstissue.dev/",
+    "tags": ["GitHub", "Issues", "Learning"],
+    "isFree": true,
+    "isOpenSource": true
+  }
+]

@@ -36,6 +36,12 @@ const categories = [
     description: "Free and high-quality platforms to learn."
   },
   {
+    name: "Open Source",
+    slug: "open-source",
+    icon: "🛠",
+    description: "Beginner-friendly repos to start your OSS journey."
+  },
+  {
     name: "Productivity",
     slug: "productivity-tools",
     icon: "🚀",

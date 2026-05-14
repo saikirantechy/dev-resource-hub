@@ -15,6 +15,8 @@ interface ResourceCardProps {
   category?: string;
   isTrending?: boolean;
   isFeatured?: boolean;
+  isFree?: boolean;
+  isOpenSource?: boolean;
 }
 
 export default function ResourceCard({
@@ -24,7 +26,9 @@ export default function ResourceCard({
   tags,
   category,
   isTrending,
-  isFeatured
+  isFeatured,
+  isFree,
+  isOpenSource
 }: ResourceCardProps) {
   return (
     <div className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300 flex flex-col h-full overflow-hidden shadow-2xl">
@@ -44,6 +48,16 @@ export default function ResourceCard({
             {isFeatured && (
               <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">
                 ⭐ Featured
+              </span>
+            )}
+            {isFree && (
+              <span className="px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 text-[10px] font-bold uppercase tracking-wider border border-green-500/20">
+                💸 Free
+              </span>
+            )}
+            {isOpenSource && (
+              <span className="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">
+                🌐 OSS
               </span>
             )}
           </div>
