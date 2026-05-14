@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PlusCircle, Github, ArrowRight, Lightbulb, ShieldCheck, Zap } from "lucide-react";
+import { PlusCircle, GitHub, ArrowRight, Lightbulb, ShieldCheck, Zap } from "lucide-react";
 
 export default function SubmitPage() {
   const steps = [
@@ -9,7 +9,7 @@ export default function SubmitPage() {
       description: "Discover a resource that's missing from our ecosystem."
     },
     {
-      icon: <Github className="text-white" />,
+      icon: <GitHub className="text-white" />,
       title: "Open an Issue",
       description: "Use our 'Resource Addition' template to submit the tool."
     },
