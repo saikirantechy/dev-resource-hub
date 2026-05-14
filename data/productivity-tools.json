@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Notion",
+    "description": "All-in-one workspace for notes, tasks, and wikis",
+    "url": "https://www.notion.so",
+    "tags": ["Notes", "Tasks", "Productivity"]
+  },
+  {
+    "name": "Trello",
+    "description": "Visual tool for managing projects and workflows",
+    "url": "https://trello.com",
+    "tags": ["Kanban", "Project Management", "Tasks"]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ChatGPT",
+    "description": "AI assistant for coding, writing, and problem solving",
+    "url": "https://chat.openai.com",
+    "tags": ["AI Assistant", "LLM", "Coding"]
+  },
+  {
+    "name": "Gemini",
+    "description": "Google AI for multimodal tasks",
+    "url": "https://gemini.google.com",
+    "tags": ["Multimodal", "Google AI", "LLM"]
+  },
+  {
+    "name": "Claude",
+    "description": "AI assistant for long-form reasoning",
+    "url": "https://claude.ai",
+    "tags": ["Reasoning", "Anthropic", "LLM"]
+  },
+  {
+    "name": "Perplexity AI",
+    "description": "AI-powered search engine",
+    "url": "https://www.perplexity.ai",
+    "tags": ["Search", "AI Search", "Research"]
+  },
+  {
+    "name": "Poe",
+    "description": "Access multiple AI models in one place",
+    "url": "https://poe.com",
+    "tags": ["Aggregator", "AI Assistant", "LLM"]
+  }
+]

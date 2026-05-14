@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Docker",
+    "description": "Containerization platform to build, share, and run applications",
+    "url": "https://www.docker.com",
+    "tags": ["Containers", "DevOps", "Infrastructure"]
+  },
+  {
+    "name": "Kubernetes",
+    "description": "Container orchestration system for automating deployment and scaling",
+    "url": "https://kubernetes.io",
+    "tags": ["Orchestration", "Containers", "Cloud"]
+  },
+  {
+    "name": "GitHub Actions",
+    "description": "CI/CD automation directly in your GitHub repository",
+    "url": "https://github.com/features/actions",
+    "tags": ["CI/CD", "Automation", "GitHub"]
+  },
+  {
+    "name": "Jenkins",
+    "description": "Open-source automation server for building CI/CD pipelines",
+    "url": "https://www.jenkins.io",
+    "tags": ["CI/CD", "Automation", "Open Source"]
+  },
+  {
+    "name": "Terraform",
+    "description": "Infrastructure as Code tool for provisioning cloud resources",
+    "url": "https://www.terraform.io",
+    "tags": ["IaC", "Cloud", "Provisioning"]
+  },
+  {
+    "name": "Ansible",
+    "description": "Automation tool for configuration management and deployment",
+    "url": "https://www.ansible.com",
+    "tags": ["Automation", "Config Management", "DevOps"]
+  },
+  {
+    "name": "Amazon Web Services",
+    "description": "Comprehensive cloud platform for all your DevOps needs",
+    "url": "https://aws.amazon.com",
+    "tags": ["Cloud", "AWS", "Infrastructure"]
+  },
+  {
+    "name": "AWS CloudWatch",
+    "description": "Monitoring and observability service for AWS resources",
+    "url": "https://aws.amazon.com/cloudwatch",
+    "tags": ["Monitoring", "Logging", "AWS"]
+  },
+  {
+    "name": "Prometheus",
+    "description": "Open-source monitoring and alerting toolkit",
+    "url": "https://prometheus.io",
+    "tags": ["Monitoring", "Metrics", "Alerting"]
+  },
+  {
+    "name": "Grafana",
+    "description": "Visualization and dashboard platform for metrics and logs",
+    "url": "https://grafana.com",
+    "tags": ["Visualization", "Dashboards", "Metrics"]
+  },
+  {
+    "name": "Argo CD",
+    "description": "GitOps continuous delivery tool for Kubernetes",
+    "url": "https://argo-cd.readthedocs.io",
+    "tags": ["GitOps", "CD", "Kubernetes"]
+  }
+]

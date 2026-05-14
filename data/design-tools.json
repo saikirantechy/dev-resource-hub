@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Figma",
+    "description": "Collaborative interface design tool",
+    "url": "https://figma.com",
+    "tags": ["UI/UX", "Design", "Collaboration"]
+  },
+  {
+    "name": "Canva",
+    "description": "Simple and powerful graphic design platform",
+    "url": "https://canva.com",
+    "tags": ["Design", "Graphics", "Marketing"]
+  }
+]

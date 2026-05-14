@@ -1,0 +1,26 @@
+[
+  {
+    "name": "React",
+    "description": "Frontend library for building user interfaces",
+    "url": "https://react.dev",
+    "tags": ["Frontend", "UI", "Library"]
+  },
+  {
+    "name": "Next.js",
+    "description": "Full-stack React framework for production",
+    "url": "https://nextjs.org",
+    "tags": ["Full-stack", "Framework", "React"]
+  },
+  {
+    "name": "Tailwind CSS",
+    "description": "Utility-first CSS framework for rapid UI development",
+    "url": "https://tailwindcss.com",
+    "tags": ["CSS", "Styling", "UI"]
+  },
+  {
+    "name": "Vite",
+    "description": "Next generation frontend build tool",
+    "url": "https://vitejs.dev",
+    "tags": ["Build Tool", "Frontend", "Performance"]
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "freeCodeCamp",
+    "description": "Comprehensive free coding courses and certifications",
+    "url": "https://www.freecodecamp.org",
+    "tags": ["Education", "Courses", "Certifications"]
+  },
+  {
+    "name": "MDN Web Docs",
+    "description": "The ultimate resource for web developer documentation",
+    "url": "https://developer.mozilla.org",
+    "tags": ["Documentation", "Web Dev", "Reference"]
+  }
+]
