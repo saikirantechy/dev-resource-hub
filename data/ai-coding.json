@@ -1,0 +1,29 @@
+[
+  {
+    "name": "GitHub Copilot",
+    "description": "Your AI pair programmer that provides autocomplete-style suggestions.",
+    "url": "https://github.com/features/copilot",
+    "tags": ["IDE", "Autocomplete", "Productivity"],
+    "isFree": false,
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "name": "Cursor",
+    "description": "The AI-first code editor built for pair programming with LLMs.",
+    "url": "https://cursor.com/",
+    "tags": ["IDE", "Editor", "AI"],
+    "isFree": true,
+    "isOpenSource": false,
+    "isTrending": true
+  },
+  {
+    "name": "Replit Agent",
+    "description": "Build full-stack applications from natural language prompts.",
+    "url": "https://replit.com/ai",
+    "tags": ["Cloud IDE", "Full Stack", "AI"],
+    "isFree": false,
+    "isOpenSource": false,
+    "isTrending": true
+  }
+]

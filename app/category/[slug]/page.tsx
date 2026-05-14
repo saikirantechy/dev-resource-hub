@@ -18,7 +18,8 @@ export async function generateStaticParams() {
     { slug: "learning-resources" },
     { slug: "productivity-tools" },
     { slug: "mobile-development" },
-    { slug: "open-source" }
+    { slug: "open-source" },
+    { slug: "ai-coding" }
   ];
 }
 
@@ -43,7 +44,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     "learning-resources": "📚 Learning Resources",
     "productivity-tools": "🚀 Productivity Tools",
     "mobile-development": "📱 Mobile Development",
-    "open-source": "🛠 Open Source Starter Pack"
+    "open-source": "🛠 Open Source Starter Pack",
+    "ai-coding": "⌨️ AI Coding Assistants"
   };
 
   const name = categoryNames[slug] || slug;
