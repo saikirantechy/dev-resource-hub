@@ -2,7 +2,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import ResourceGrid from "@/components/ResourceGrid";
-import { Users, LayoutGrid, Zap, GitHub, Trophy } from "lucide-react";
+import { Users, LayoutGrid, Zap, Globe, Trophy } from "lucide-react";
 
 const categories = [
   {
@@ -119,7 +119,7 @@ export default async function Home() {
             </div>
             <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 flex flex-col items-center text-center space-y-2">
               <div className="p-3 rounded-2xl bg-purple-500/10 text-purple-400 mb-2">
-                <GitHub size={24} />
+                <Globe size={24} />
               </div>
               <div className="text-4xl font-black">100%</div>
               <div className="text-sm text-gray-500 font-bold uppercase tracking-widest">Open Source</div>

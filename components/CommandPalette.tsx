@@ -12,7 +12,7 @@ import {
   Laptop,
   Cpu,
   Settings,
-  GitHub
+  Globe
 } from "lucide-react";
 
 export default function CommandPalette() {
@@ -44,7 +44,7 @@ export default function CommandPalette() {
     { name: "AI Tools", icon: <Cpu size={18} />, href: "/category/ai-tools", category: "Category" },
     { name: "Web Development", icon: <Laptop size={18} />, href: "/category/web-dev", category: "Category" },
     { name: "DevOps", icon: <Settings size={18} />, href: "/category/devops", category: "Category" },
-    { name: "View on GitHub", icon: <GitHub size={18} />, href: "https://github.com/saikirantechy/dev-resource-hub", external: true },
+    { name: "View on GitHub", icon: <Globe size={18} />, href: "https://github.com/saikirantechy/dev-resource-hub", external: true },
   ];
 
   const filteredActions = actions.filter(action => 

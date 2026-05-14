@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GitHub, Trophy, Medal, Star } from "lucide-react";
+import { Globe, Trophy, Medal, Star } from "lucide-react";
 
 interface Contributor {
   login: string;
@@ -80,7 +80,7 @@ export default async function ContributorsPage() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-center gap-2 text-gray-500 group-hover:text-white transition-colors text-sm">
-                  <GitHub size={14} />
+                  <Globe size={14} />
                   <span>View GitHub</span>
                 </div>
               </Link>
