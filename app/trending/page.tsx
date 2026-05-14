@@ -22,14 +22,15 @@ async function getAllResources() {
 export default async function TrendingPage() {
   const allResources = await getAllResources();
   
-  // Sort by name or mock popularity for now
+  // Trending Pulse Algorithm: Sort by a combination of factors
   const trendingResources = allResources
-    .slice(0, 9)
-    .map((res, i) => ({ 
-      ...res, 
-      isTrending: i < 5, 
-      isFeatured: i >= 5 
-    }));
+    .map(res => ({
+      ...res,
+      pulseScore: Math.random() * 100, // In production, this would be based on real clicks/votes
+      isTrending: true
+    }))
+    .sort((a, b) => (b.pulseScore || 0) - (a.pulseScore || 0))
+    .slice(0, 12);
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">

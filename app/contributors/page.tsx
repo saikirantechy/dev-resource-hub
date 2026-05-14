@@ -52,8 +52,7 @@ export default async function ContributorsPage() {
             return (
               <Link 
                 key={contributor.login}
-                href={contributor.html_url}
-                target="_blank"
+                href={`/contributors/${contributor.login}`}
                 className="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/50 hover:bg-white/[0.07] transition-all duration-300 text-center relative overflow-hidden"
               >
                 {/* Background Glow */}

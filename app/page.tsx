@@ -169,6 +169,9 @@ export default async function Home() {
               🔥
             </div>
             <h2 className="text-3xl font-bold">Trending Now</h2>
+            <div className="ml-2 px-2 py-0.5 rounded bg-orange-500/20 text-orange-400 text-[10px] font-black uppercase animate-pulse">
+              Pulse Live
+            </div>
           </div>
           
           <ResourceGrid initialResources={trendingResources} showSearch={false} />
