@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: "/dev-resource-hub",
-  trailingSlash: true,
 };
 
 export default nextConfig;
