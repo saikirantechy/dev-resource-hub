@@ -1,86 +1,152 @@
 # 🚀 Dev Resource Hub
 
-> 🌍 A premium, community-driven developer ecosystem and discovery platform.
-
-### 🌐 [Visit the Live Platform →](https://saikirantechy.github.io/dev-resource-hub/)
+> 🌍 A premium, community-driven collection of the best developer tools, AI resources, learning platforms, DevOps tools, and opportunities.
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge&color=yellow" />
-  <img src="https://img.shields.io/github/forks/saikirantechy/dev-resource-hub?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues/saikirantechy/dev-resource-hub?style=for-the-badge" />
+  <a href="https://saikirantechy.github.io/dev-resource-hub/">
+    <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Now-0A66C2?style=for-the-badge" />
+  </a>
+
+  <a href="https://github.com/saikirantechy/dev-resource-hub/stargazers">
+    <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge&color=yellow" />
+  </a>
+
+  <a href="https://github.com/saikirantechy/dev-resource-hub/network/members">
+    <img src="https://img.shields.io/github/forks/saikirantechy/dev-resource-hub?style=for-the-badge" />
+  </a>
+
+  <a href="https://github.com/saikirantechy/dev-resource-hub/issues">
+    <img src="https://img.shields.io/github/issues/saikirantechy/dev-resource-hub?style=for-the-badge" />
+  </a>
+
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" />
 </p>
 
 <p align="center">
-  ⭐ Star this repo • 🤝 Contribute • 🌐 Share
+ ⭐ Star this repo • 🤝 Contribute • 🌐 Share • 🚀 Explore Resources
 </p>
 
 ---
 
-## 🚀 Platform Highlights
+# 🌐 Live Website
 
-- **🔍 Instant Search Engine**: Fuzzy search across all tools and categories.
-- **🏆 Contributor Leaderboard**: Live gamified rankings for our community.
-- **🔥 Trending Resources**: Discover the most popular tools in real-time.
-- **⌨️ Command Palette**: Ultra-fast navigation using `CMD + K`.
-- **📱 Responsive UI**: A premium, dark-mode experience for all devices.
+🔥 Explore the live platform here:
+
+👉 https://saikirantechy.github.io/dev-resource-hub/
 
 ---
 
 ## ✨ About This Project
 
-Dev Resource Hub is an open-source initiative aimed at helping developers, students, and tech enthusiasts discover the **best tools, platforms, and resources** in one place.
+Dev Resource Hub is an open-source initiative aimed at helping:
 
-💡 Whether you're a beginner or an expert, this platform is built **for YOU**.
+- 👨💻 Developers
+- 🎓 Students
+- 🚀 Startups
+- 🤖 AI Enthusiasts
+- ☁️ DevOps Engineers
+- 🌐 Web Developers
 
----
+discover the **best tools, platforms, resources, and opportunities** in one place.
 
-## 🌟 Explore Categories
-
-Discover resources by category on our website:
-
-| Category | Description |
-| :--- | :--- |
-| [🤖 AI Tools](https://saikirantechy.github.io/dev-resource-hub/category/ai-tools) | AI assistants, LLMs, and search engines |
-| [💻 Web Development](https://saikirantechy.github.io/dev-resource-hub/category/web-dev) | Frontend frameworks, libraries, and tools |
-| [⚙️ DevOps](https://saikirantechy.github.io/dev-resource-hub/category/devops) | Containers, CI/CD, and infrastructure |
-| [🎨 Design Tools](https://saikirantechy.github.io/dev-resource-hub/category/design-tools) | UI/UX design and creative tools |
-| [📚 Learning Resources](https://saikirantechy.github.io/dev-resource-hub/category/learning-resources) | Courses, docs, and tutorials |
-| [🚀 Productivity](https://saikirantechy.github.io/dev-resource-hub/category/productivity-tools) | Task management and workspace tools |
+💡 Whether you're a beginner or an expert, this platform is built for YOU.
 
 ---
 
-## 🤝 Getting Started & Contributing
+## 🚀 Platform Features
 
-New here? Start with these guides:
-
-- 🚀 [Getting Started](docs/getting-started.md)
-- 🛠️ [Contribution Guide](CONTRIBUTING.md)
-- ❤️ [Code of Conduct](CODE_OF_CONDUCT.md)
-- 🗺️ [Project Roadmap](docs/roadmap.md)
-
-### 🔥 Quick Steps to Contribute:
-1. **Fork** the repo.
-2. Add a new resource to the correct `.json` file in the `data/` folder.
-3. Open a **PR** and watch it go live!
+✅ Premium modern UI  
+✅ Lightning-fast search experience  
+✅ Category-based discovery  
+✅ Open-source contributions  
+✅ GitHub Actions deployment  
+✅ GitHub Pages hosting  
+✅ Mobile responsive design  
+✅ Community-driven resource hub  
+✅ Beginner-friendly contribution system  
+✅ Dynamic resource architecture using JSON  
 
 ---
 
-## 🛠️ Local Development
+## 🌟 Available Categories
 
-To run the platform locally:
+- 🤖 AI Tools
+- 💻 Web Development
+- ⚙️ DevOps & Cloud
+- 🎨 Design Tools
+- 📚 Learning Platforms
+- 🚀 Productivity Tools
+- 🛠 Open Source Resources
+- 🔥 Developer Utilities
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js 15+
+- TypeScript
+- Tailwind CSS
+- GitHub Actions
+- GitHub Pages
+- Fuse.js Search
+- Lucide Icons
+
+---
+
+## 🤝 Open Source Contributions
+
+We welcome contributions from developers around the world 🌍
+
+You can contribute by:
+
+- Adding tools
+- Improving UI
+- Enhancing search
+- Fixing bugs
+- Adding categories
+- Improving documentation
+
+---
+
+## 🚀 Quick Start
 
 ```bash
+git clone https://github.com/saikirantechy/dev-resource-hub.git
+
+cd dev-resource-hub
+
 npm install
+
 npm run dev
 ```
 
-Visit `http://localhost:3000` to see your changes.
+---
+
+## 🌐 Deployment
+
+This project is automatically deployed using:
+
+✅ GitHub Actions
+✅ GitHub Pages
+
+Every push to `main` triggers automatic deployment 🚀
+
+---
+
+## ⭐ Support This Project
+
+If you find this useful:
+
+⭐ Star the repository
+🍴 Fork the project
+🤝 Contribute
+🌍 Share with developers
 
 ---
 
 ## ❤️ Contributors
-Thanks to all the amazing people who make this project possible!
+
+Thanks to all the amazing open-source contributors who are helping grow this platform 🚀
 
 <a href="https://github.com/saikirantechy/dev-resource-hub/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=saikirantechy/dev-resource-hub" />
@@ -89,9 +155,12 @@ Thanks to all the amazing people who make this project possible!
 ---
 
 ## 🔥 Maintained By
-**Sai Kiran BK (SKT)**
-🚀 Founder @ SKT Nexus | 💡 Building tech communities
+
+### Sai Kiran BK (SKT)
+
+🚀 Founder @ SKT Nexus
+💡 Building developer communities & open-source platforms
 
 ---
 
-# 🚀 Let's Build This Together!
+# 🚀 Let's Build The Ultimate Developer Resource Platform Together!
