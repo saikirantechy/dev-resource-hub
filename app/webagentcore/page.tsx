@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+export const dynamic = "force-static";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/webagentcore/Hero";
 import DemoTerminal from "@/components/webagentcore/DemoTerminal";
