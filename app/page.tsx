@@ -6,6 +6,12 @@ import { Users, LayoutGrid, Zap, Globe, Trophy, Sparkles, GraduationCap } from "
 
 const categories = [
   {
+    name: "AI Coding",
+    slug: "ai-coding",
+    icon: "⌨️",
+    description: "AI-first editors and coding assistants."
+  },
+  {
     name: "AI Tools",
     slug: "ai-tools",
     icon: "🤖",

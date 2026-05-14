@@ -133,6 +133,22 @@ Every push to `main` triggers automatic deployment 🚀
 
 ---
 
+## 🌟 Contributing
+
+We welcome contributors from around the world to help build the ultimate developer ecosystem! 🌍
+
+### 🚀 Good First Issues
+Looking for a place to start? Check our curated list of beginner-friendly tasks:
+👉 [View Open Issues](https://github.com/saikirantechy/dev-resource-hub/issues)
+
+### 🛠️ How to Contribute
+1. **Fork** the repository.
+2. **Create a branch** for your feature or fix.
+3. **Commit** your changes with a clear message.
+4. **Open a Pull Request** (link it to an issue with `Fixes #IssueNumber`).
+
+---
+
 ## ⭐ Support This Project
 
 If you find this useful:
