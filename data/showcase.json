@@ -1,0 +1,38 @@
+[
+  {
+    "id": "project-alpha",
+    "title": "AI Documentation Generator",
+    "description": "An autonomous agent built with Cursor and LangChain that generates beautiful documentation for any GitHub repo.",
+    "url": "#",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
+    "builder": {
+      "name": "Jane Doe",
+      "avatar": "https://avatars.githubusercontent.com/u/1?v=4"
+    },
+    "stack": ["Cursor", "Next.js", "LangChain"]
+  },
+  {
+    "id": "project-beta",
+    "title": "Vercel v0 Portfolio",
+    "description": "A stunning, highly animated developer portfolio generated entirely using v0 by Vercel.",
+    "url": "#",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600",
+    "builder": {
+      "name": "Alex Smith",
+      "avatar": "https://avatars.githubusercontent.com/u/2?v=4"
+    },
+    "stack": ["v0", "Tailwind", "React"]
+  },
+  {
+    "id": "project-gamma",
+    "title": "Autonomous PR Reviewer",
+    "description": "A GitHub Action powered by Devin AI that autonomously reviews and suggests improvements for pull requests.",
+    "url": "#",
+    "image": "https://images.unsplash.com/photo-1618401471353-b98a5233c591?auto=format&fit=crop&q=80&w=600",
+    "builder": {
+      "name": "Sam Lee",
+      "avatar": "https://avatars.githubusercontent.com/u/3?v=4"
+    },
+    "stack": ["Devin", "GitHub Actions", "Python"]
+  }
+]

@@ -17,6 +17,8 @@ export default function Navbar() {
           <Link href="/ai-agents" className="hover:text-white transition-colors">Agents</Link>
           <Link href="/prompts" className="hover:text-white transition-colors">Prompts</Link>
           <Link href="/compare" className="hover:text-white transition-colors">Compare</Link>
+          <Link href="/showcase" className="hover:text-white transition-colors">Showcase</Link>
+          <Link href="/community" className="hover:text-white transition-colors">Community</Link>
           <Link href="/blogs" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/ai-finder" className="hover:text-white transition-colors">AI Finder</Link>
           <Link href="/contributors" className="hover:text-white transition-colors">Contributors</Link>
