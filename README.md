@@ -33,18 +33,6 @@
 
 ---
 
-# 🖼 Platform Preview
-
-| Homepage | Marketplace |
-|---|---|
-| ![Homepage](./public/screenshots/home.png) | ![Marketplace](./public/screenshots/marketplace.png) |
-
-| Trending | Compare |
-|---|---|
-| ![Trending](./public/screenshots/trending.png) | ![Compare](./public/screenshots/compare.png) |
-
----
-
 ## ✨ About the Platform
 
 The **AI Developer Ecosystem Platform** is a production-grade resource hub designed for the modern AI era. It's more than just a list of links—it's a curated marketplace and discovery engine for:
