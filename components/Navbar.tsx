@@ -7,9 +7,9 @@ const navLinks = [
   { href: "/ai-agents", label: "Agents", icon: Bot, color: "text-blue-400" },
   { href: "/tools", label: "Tools", icon: Package, color: "text-emerald-400" },
   { href: "/prompts", label: "Prompts", icon: Terminal, color: "text-purple-400" },
+  { href: "/ai-finder", label: "Finder", icon: Sparkles, color: "text-blue-300" },
+  { href: "/learning", label: "Learn", icon: GraduationCap, color: "text-purple-300" },
   { href: "/trending", label: "Trending", icon: Flame, color: "text-orange-400" },
-  { href: "/compare", label: "Compare", icon: Scale, color: "text-cyan-400" },
-  { href: "/showcase", label: "Showcase", icon: Star, color: "text-pink-400" },
   { href: "/blogs", label: "Blog", icon: BookOpen, color: "text-yellow-400" },
   { href: "/community", label: "Community", icon: Users, color: "text-indigo-400" },
 ];

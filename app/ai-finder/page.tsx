@@ -1,135 +1,183 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import { Sparkles, ArrowRight, Bot, Code2, Palette, Globe, Zap, CheckCircle2, ChevronRight, Filter } from "lucide-react";
 import Link from "next/link";
-import { Sparkles, ArrowRight, BrainCircuit, Search, Bot } from "lucide-react";
-import ResourceCard from "@/components/ResourceCard";
-import Fuse from "fuse.js";
+import agentsData from "@/data/agents.json";
+import toolsData from "@/data/tools.json";
 
-// We'll pass this in or fetch it. For now, we'll use a placeholder structure
-// In a real app, you'd fetch all JSON data.
-interface Resource {
-  name: string;
-  description: string;
-  url: string;
-  tags: string[];
-  category: string;
-}
+const PERSONAS = [
+  {
+    id: "frontend",
+    title: "Frontend Developer",
+    icon: Palette,
+    desc: "Focus on UI/UX, components, and styling with AI.",
+    color: "blue",
+  },
+  {
+    id: "backend",
+    title: "Backend Engineer",
+    icon: Globe,
+    desc: "Infrastructure, APIs, and scaling with AI assistance.",
+    color: "purple",
+  },
+  {
+    id: "ai-engineer",
+    title: "AI Engineer",
+    icon: Bot,
+    desc: "Building agents, fine-tuning, and LLM orchestration.",
+    color: "emerald",
+  },
+  {
+    id: "fullstack",
+    title: "Fullstack Developer",
+    icon: Code2,
+    desc: "End-to-end development with productivity boosts.",
+    color: "orange",
+  },
+];
 
 export default function AIFinderPage() {
-  const [userInput, setUserInput] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
-  const [results, setResults] = useState<Resource[]>([]);
+  const [step, setStep] = useState(1);
+  const [selectedPersona, setSelectedPersona] = useState<string | null>(null);
+  const [recommendations, setRecommendations] = useState<any[]>([]);
 
-  // Mocking the aggregate data for the client-side finder
-  // In Phase 3, this will be an API call to a vector database
-  const allResources: Resource[] = [
-    { name: "ChatGPT", description: "AI assistant for coding", url: "https://chat.openai.com", tags: ["AI", "Coding"], category: "AI TOOLS" },
-    { name: "Next.js", description: "React framework for production", url: "https://nextjs.org", tags: ["Web", "React"], category: "WEB DEV" },
-    { name: "Docker", description: "Containerization platform", url: "https://docker.com", tags: ["DevOps", "Infrastructure"], category: "DEVOPS" },
-    { name: "Tailwind CSS", description: "Styling framework", url: "https://tailwindcss.com", tags: ["Web", "CSS"], category: "WEB DEV" },
-    { name: "Figma", description: "Design tool", url: "https://figma.com", tags: ["Design", "UI"], category: "DESIGN" },
-    { name: "Gemini", description: "Google's multimodal AI", url: "https://gemini.google.com", tags: ["AI", "Google"], category: "AI TOOLS" },
-  ];
-
-  const fuse = useMemo(() => new Fuse(allResources, {
-    keys: ["name", "description", "tags"],
-    threshold: 0.4,
-  }), []);
-
-  const handleFind = () => {
-    if (!userInput.trim()) return;
-    setIsSearching(true);
+  const handleSelectPersona = (id: string) => {
+    setSelectedPersona(id);
     
-    // Simulate AI "thinking"
-    setTimeout(() => {
-      const searchResults = fuse.search(userInput).map(r => r.item);
-      setResults(searchResults);
-      setIsSearching(false);
-    }, 800);
+    // Simple logic for recommendations
+    let filtered: any[] = [];
+    if (id === "frontend") {
+      filtered = [
+        ...toolsData.filter(t => t.category === "UI Builders" || t.tags.includes("UI")),
+        ...agentsData.filter(a => a.tags.includes("Coding")),
+      ].slice(0, 4);
+    } else if (id === "ai-engineer") {
+      filtered = [
+        ...agentsData.filter(a => a.category === "Agent Frameworks" || a.category === "Autonomous Agents"),
+        ...toolsData.filter(t => t.tags.includes("Local LLM")),
+      ].slice(0, 4);
+    } else {
+      filtered = [
+        ...toolsData.filter(t => t.isFeatured),
+        ...agentsData.filter(a => a.isFeatured),
+      ].slice(0, 4);
+    }
+
+    setRecommendations(filtered);
+    setStep(2);
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium">
-            <Sparkles size={14} /> AI Recommendation Engine
+    <div className="min-h-screen bg-[#050508] text-white">
+      <div className="gradient-mesh" />
+      <Navbar />
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-20 space-y-16">
+        <header className="text-center space-y-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 badge badge-blue">
+            <Sparkles size={12} /> AI Recommendation Engine
           </div>
-          <h1 className="text-5xl font-bold tracking-tight">AI Resource Finder</h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Describe your goal, and our AI will suggest the best stack from our curated hub.
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+            Find Your <span className="gradient-text-hero">Perfect Stack</span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-xl mx-auto leading-relaxed">
+            Answer a few questions and our engine will recommend the best AI tools and agents for your specific workflow.
           </p>
         </header>
 
-        {/* Search Interface */}
-        <div className="relative mb-12">
-          <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
-            <Bot className="h-6 w-6 text-purple-500" />
-          </div>
-          <input 
-            type="text"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleFind()}
-            placeholder="e.g., 'I want to build a portfolio with a modern design and AI features'"
-            className="w-full bg-white/[0.03] border border-white/10 text-white pl-16 pr-32 py-6 rounded-3xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-lg shadow-2xl"
-          />
-          <button 
-            onClick={handleFind}
-            disabled={isSearching}
-            className="absolute right-3 top-3 bottom-3 px-6 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 disabled:opacity-50"
-          >
-            {isSearching ? "Thinking..." : "Find Tools"} <ArrowRight size={18} />
-          </button>
-        </div>
-
-        {/* Results Section */}
-        <div className="space-y-8">
-          {results.length > 0 && (
-            <div className="animate-fade-in space-y-8">
-              <div className="flex items-center gap-3 text-purple-400 font-bold">
-                <BrainCircuit size={20} />
-                <span>AI Recommendations for your goal:</span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {results.map((res, index) => (
-                  <ResourceCard key={index} {...res} isFeatured={index === 0} />
-                ))}
-              </div>
+        {step === 1 ? (
+          <section className="space-y-8 animate-fade-in-scale">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Step 1: Choose your persona</h2>
+              <p className="text-gray-500">What best describes your current focus?</p>
             </div>
-          )}
 
-          {results.length === 0 && !isSearching && (
-            <div className="text-center py-20 border border-dashed border-white/5 rounded-3xl bg-white/[0.01]">
-              <div className="text-6xl mb-6 opacity-20">🧠</div>
-              <h3 className="text-xl font-bold text-gray-500">Waiting for your prompt...</h3>
-              <p className="text-gray-600 text-sm mt-2">Try asking for a specific tech stack or project goal.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {PERSONAS.map((persona) => (
+                <button
+                  key={persona.id}
+                  onClick={() => handleSelectPersona(persona.id)}
+                  className="group relative p-8 rounded-3xl glass border border-white/8 text-left hover:border-blue-500/40 transition-all card-hover"
+                >
+                  <div className={`w-12 h-12 rounded-2xl bg-${persona.color}-500/10 border border-${persona.color}-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <persona.icon className={`text-${persona.color}-400`} size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{persona.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{persona.desc}</p>
+                  <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronRight size={20} className="text-blue-400" />
+                  </div>
+                </button>
+              ))}
             </div>
-          )}
-        </div>
+          </section>
+        ) : (
+          <section className="space-y-12 animate-fade-in">
+            <div className="text-center space-y-2">
+              <div className="badge badge-emerald inline-flex mb-4">
+                <CheckCircle2 size={10} /> Stack Generated
+              </div>
+              <h2 className="text-3xl font-black">Your Recommended AI Stack</h2>
+              <p className="text-gray-500">Based on your persona as a <span className="text-white font-bold">{PERSONAS.find(p => p.id === selectedPersona)?.title}</span></p>
+            </div>
 
-        {/* Example Prompts */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-500 text-sm mb-4">Popular queries:</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "Modern frontend framework",
-              "Best AI for coding",
-              "Containerization for beginners",
-              "UI/UX Design tools"
-            ].map(prompt => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {recommendations.map((item, i) => (
+                <div 
+                  key={item.id} 
+                  className="p-6 rounded-3xl glass border border-white/8 hover:border-blue-500/30 transition-all flex flex-col gap-4 animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                        {item.category.includes("Agent") ? <Bot size={18} className="text-blue-400" /> : <Zap size={18} className="text-emerald-400" />}
+                      </div>
+                      <div>
+                        <div className="font-bold text-white">{item.name}</div>
+                        <div className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{item.category}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-400 line-clamp-2">{item.description}</p>
+                  <Link 
+                    href={item.url} 
+                    target="_blank"
+                    className="mt-auto flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 group"
+                  >
+                    View Resource <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-center gap-4">
               <button 
-                key={prompt}
-                onClick={() => { setUserInput(prompt); }}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-gray-400 hover:text-white hover:bg-white/10 transition-all"
+                onClick={() => setStep(1)} 
+                className="btn-secondary px-8 py-3 rounded-2xl flex items-center gap-2"
               >
-                "{prompt}"
+                <Filter size={14} /> Start Over
               </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    </main>
+              <Link 
+                href="/tools" 
+                className="btn-primary px-8 py-3 rounded-2xl flex items-center gap-2"
+              >
+                Explore More <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="p-8 rounded-[2rem] glass border border-blue-500/20 text-center space-y-4">
+              <h3 className="text-xl font-bold">Want a custom roadmap?</h3>
+              <p className="text-sm text-gray-400">Join our Discord to get 1-on-1 advice from experienced AI builders.</p>
+              <Link href="/community" className="badge badge-purple px-4 py-2 hover:scale-105 transition-transform">
+                Join Community
+              </Link>
+            </div>
+          </section>
+        )}
+      </main>
+    </div>
   );
 }
