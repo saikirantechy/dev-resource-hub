@@ -1,34 +1,66 @@
-# 🤝 Contributing Guide
+# Contributing to AI Developer Ecosystem Platform
 
-First off, thank you for considering contributing to the Dev Resource Hub! It's people like you that make this a great resource for everyone.
+First off, thank you for taking the time to contribute! 🎉
+
+The following is a set of guidelines for contributing to **Dev Resource Hub**. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 ## 🚀 How Can I Contribute?
 
-### Adding a New Resource
-1. **Fork** the repository.
-2. Navigate to the appropriate category file in the `categories/` directory.
-3. Add the resource following the established format:
-   ```md
-   - Tool Name – Short description
-     🔗 Link
-   ```
-4. Ensure the link is valid and the description is concise.
-5. **Create a Pull Request** with a clear description of what you added.
+### 1. Adding New Resources
+Our platform is data-driven. All tools, agents, and prompts are stored in the `data/` directory as JSON files.
+- **Agents**: Add to `data/agents.json`
+- **Tools**: Add to `data/tools.json`
+- **Prompts**: Add to `data/prompts.json`
+- **Blogs**: Add to `data/blogs.json`
 
-### Improving Existing Content
-- Fix broken links.
-- Improve descriptions for clarity.
-- Update categories if a resource fits better elsewhere.
+**Standard format for a resource:**
+```json
+{
+  "id": "unique-id",
+  "name": "Tool Name",
+  "description": "Short, punchy description.",
+  "url": "https://link-to-tool.com",
+  "category": "Specific Category",
+  "tags": ["Tag1", "Tag2"],
+  "pricing": "Free / Paid / Freemium",
+  "isFeatured": false,
+  "isTrending": false,
+  "isOpenSource": true,
+  "stars": 0,
+  "views": 0
+}
+```
 
-## 🛠️ Contribution Rules
-- **No Spam**: Only high-quality, useful resources.
-- **Clean Format**: Follow the existing Markdown structure.
-- **Be Descriptive**: A one-sentence description is usually enough.
-- **Check for Duplicates**: Make sure the resource isn't already listed.
+### 2. Improving the UI/UX
+We use **Next.js 16**, **Tailwind CSS v4**, and **Framer Motion**.
+- Global styles: `app/globals.css`
+- Components: `components/`
+- Layouts: `app/layout.tsx`
 
-## 🌈 Beginner Friendly
-New to open source? This is a great place to start! Feel free to pick up any issue labeled `good first issue` or simply add a tool you use every day.
+If you're proposing a design change, please include a screenshot in your PR.
+
+### 3. Reporting Bugs
+- Use the [GitHub Issues](https://github.com/saikirantechy/dev-resource-hub/issues) tracker.
+- Describe the bug, steps to reproduce, and expected vs. actual behavior.
+
+## 🛠️ Development Setup
+
+1. Fork and clone the repo.
+2. Install dependencies: `npm install`
+3. Run the dev server: `npm run dev`
+4. Open [http://localhost:3000/dev-resource-hub](http://localhost:3000/dev-resource-hub)
+
+## 🤝 Pull Request Process
+
+1. Create a new branch: `git checkout -b feature/amazing-feature`
+2. Ensure your code follows the existing style (TypeScript + Tailwind).
+3. Test your changes locally.
+4. Push to your fork and submit a PR.
+5. Provide a clear description of the changes and link to any related issues.
+
+## 🏆 Contributor Rewards
+High-impact contributors are featured in the **Showcase** and our **Leaderboard**.
 
 ---
 
-*Happy contributing!* 🚀
+*Let's build the ultimate AI developer ecosystem together!* 🚀
