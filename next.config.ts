@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/dev-resource-hub",
-  assetPrefix: "/dev-resource-hub/",
+  // output: "export", // Commented out to support Supabase SSR & Middleware
+  // basePath: "/dev-resource-hub", // Remove if moving to custom domain/Vercel
+  // assetPrefix: "/dev-resource-hub/",
   images: {
     unoptimized: true,
   },
