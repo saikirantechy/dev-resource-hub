@@ -201,8 +201,8 @@ Together we're building the future of AI development.
 * [x] Phase 2 — Universal Search Engine (Fuse.js)
 * [x] Phase 2 — Dynamic Blog Detail Pages (MDX Style)
 * [x] Phase 2 — AI Stack Finder (Recommendation Engine)
-* [ ] Phase 2 — Favorites / Bookmark system
-* [ ] Phase 3 — User Authentication (Clerk)
+* [x] Phase 2 — Favorites / Bookmark system
+* [ ] Phase 3 — User Authentication (Supabase / Clerk)
 * [ ] Phase 3 — Supabase Backend Migration
 * [ ] Phase 4 — AI Workflow Builder (visual nodes)
 * [ ] Phase 4 — Semantic AI Search
