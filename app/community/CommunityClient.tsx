@@ -3,8 +3,8 @@
 import Navbar from "@/components/Navbar";
 import { 
   Users, Trophy, MessageSquare, Heart, Star, GitFork, 
-  Globe, Github, Twitter, Award, Zap, TrendingUp,
-  Share2, ShieldCheck, Sparkles
+  Globe, Award, Zap, TrendingUp,
+  Share2, ShieldCheck, Sparkles, ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -113,7 +113,7 @@ export default function CommunityClient() {
                     </div>
                   </div>
                   <div className="ml-4 p-2 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
-                    <Github size={18} className="text-gray-500 hover:text-white" />
+                    <GitFork size={18} className="text-gray-500 hover:text-white" />
                   </div>
                 </motion.div>
               ))}
@@ -179,8 +179,7 @@ export default function CommunityClient() {
                  <button className="btn-primary px-10 py-4 rounded-2xl whitespace-nowrap">Subscribe Now</button>
               </div>
               <div className="flex items-center justify-center gap-6 pt-4 text-gray-500">
-                 <Link href="#" className="hover:text-white transition-colors"><Github size={20} /></Link>
-                 <Link href="#" className="hover:text-white transition-colors"><Twitter size={20} /></Link>
+                 <Link href="#" className="hover:text-white transition-colors"><GitFork size={20} /></Link>
                  <Link href="#" className="hover:text-white transition-colors"><Globe size={20} /></Link>
                  <Link href="#" className="hover:text-white transition-colors"><Share2 size={20} /></Link>
               </div>

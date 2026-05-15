@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
-import { Github, Mail, Lock, ArrowRight, Sparkles, ShieldCheck, Zap, Globe } from "lucide-react";
+import { Mail, Lock, ArrowRight, Sparkles, ShieldCheck, Zap, Globe, GitFork } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -95,7 +95,7 @@ export default function LoginPage() {
                 onClick={handleGithubLogin}
                 className="w-full py-4 rounded-2xl bg-white text-black font-black flex items-center justify-center gap-3 hover:bg-gray-200 transition-all active:scale-95"
               >
-                <Github size={20} /> Continue with GitHub
+                <GitFork size={20} /> Continue with GitHub
               </button>
               
               <div className="relative flex items-center gap-4 py-2">

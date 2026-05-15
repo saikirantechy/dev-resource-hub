@@ -66,7 +66,7 @@ export default function Hero() {
               target="_blank"
               className="px-8 py-4 bg-white/5 text-white font-bold rounded-2xl border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-all backdrop-blur-md"
             >
-              <Github size={20} /> View GitHub
+              <GitFork size={20} /> View GitHub
             </Link>
           </motion.div>
 

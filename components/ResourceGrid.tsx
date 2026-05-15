@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import ResourceCard from "./ResourceCard";
 import SearchBar from "./SearchBar";
 import Fuse from "fuse.js";

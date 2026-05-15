@@ -4,7 +4,7 @@ import { useState } from "react";
 import { 
   Sparkles, Menu, X, Flame, Bot, Terminal, BarChart3, 
   Scale, Users, BookOpen, Trophy, Zap, Star, Package,
-  LogIn, LogOut, User as UserIcon, Bookmark, GraduationCap
+  LogIn, LogOut, User as UserIcon, Bookmark, GraduationCap, Layers
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 

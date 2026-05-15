@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 
 interface Resource {
+  id: string;
   name: string;
   description: string;
   url: string;
@@ -27,7 +28,12 @@ async function getCategoryData(slug: string): Promise<Resource[]> {
   const filePath = path.join(process.cwd(), "data", `${slug}.json`);
   if (!fs.existsSync(filePath)) return [];
   const fileContent = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(fileContent);
+  const data = JSON.parse(fileContent);
+  // Ensure every resource has an id for the interactive grid
+  return data.map((res: any) => ({
+    ...res,
+    id: res.id || res.name.toLowerCase().replace(/ /g, "-")
+  }));
 }
 
 import ResourceGrid from "@/components/ResourceGrid";

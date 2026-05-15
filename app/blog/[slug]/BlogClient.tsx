@@ -140,7 +140,7 @@ export default function BlogClient({ blog }: { blog: any }) {
               {/* Related CTA */}
               <div className="p-10 rounded-[2.5rem] glass border border-white/8 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
                 <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
-                  <Bot size={32} className="text-blue-400" />
+                  <Sparkles size={32} className="text-blue-400" />
                 </div>
                 <div className="flex-1 space-y-2">
                   <h3 className="text-xl font-black">Enjoyed this article?</h3>

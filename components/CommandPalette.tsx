@@ -104,8 +104,8 @@ export default function CommandPalette() {
       icon: <BookOpen size={18} className="text-orange-400" />
     }));
 
-    return [...actions, ...agents, ...tools, ...prompts, ...blogs];
-  }, []);
+    return [...actions, ...agents, ...tools, ...prompts, ...blogs] as SearchItem[];
+  }, [actions]);
 
   const fuse = useMemo(() => new Fuse(searchIndex, {
     keys: ['name', 'description', 'category'],
