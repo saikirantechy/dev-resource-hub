@@ -1,6 +1,6 @@
+"use client";
+
 import Link from "next/link";
-import fs from "fs";
-import path from "path";
 import { 
   Bot, Terminal, Package, Flame, Scale, MonitorPlay, BookOpen, 
   Users, Zap, ArrowRight, Star, Globe, Code2, TrendingUp, Sparkles,
@@ -8,20 +8,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import NewsletterForm from "@/components/NewsletterForm";
-
-async function getStats() {
-  const dataDir = path.join(process.cwd(), "data");
-  const files = fs.readdirSync(dataDir);
-  let totalResources = 0;
-
-  files.forEach(file => {
-    if (file.endsWith(".json")) {
-      const content = JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8"));
-      totalResources += Array.isArray(content) ? content.length : 0;
-    }
-  });
-  return { totalResources };
-}
+import { motion } from "framer-motion";
 
 const platformSections = [
   {
@@ -123,224 +110,299 @@ const featuredTools = [
   { name: "Claude AI", emoji: "🧠", desc: "200K context LLM", href: "https://claude.ai", tag: "LLM" },
 ];
 
-export default async function Home() {
-  const { totalResources } = await getStats();
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050508] text-white">
-      <div className="gradient-mesh" />
+    <div className="min-h-screen bg-[#050508] text-white overflow-hidden">
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative px-4 sm:px-6 pt-24 pb-20 overflow-hidden">
-        {/* Particle orbs */}
-        <div className="absolute top-20 left-1/4 w-64 h-64 bg-blue-500/8 rounded-full blur-3xl animate-float" />
-        <div className="absolute top-40 right-1/4 w-80 h-80 bg-purple-500/6 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-blue-500/5 blur-3xl" />
+      <section className="relative px-4 sm:px-6 pt-32 pb-20 overflow-hidden">
+        {/* Animated Background Orbs */}
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+            x: [0, 50, 0],
+            y: [0, -50, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -z-10" 
+        />
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.4, 0.2],
+            x: [0, -70, 0],
+            y: [0, 30, 0]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute top-40 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] -z-10" 
+        />
 
-        <div className="max-w-6xl mx-auto text-center space-y-8 relative">
+        <div className="max-w-6xl mx-auto text-center space-y-12 relative">
           {/* Top badges */}
-          <div className="flex flex-wrap justify-center gap-3 animate-fade-in stagger-1">
-            <Link href="/beginner-guide" className="badge badge-blue hover:bg-blue-500/20 transition-all cursor-pointer">
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            <Link href="/beginner-guide" className="badge badge-blue hover:scale-105 transition-transform cursor-pointer">
               <GraduationCap size={10} /> Student Path
             </Link>
-            <Link href="/ai-finder" className="badge badge-purple hover:bg-purple-500/20 transition-all cursor-pointer">
+            <Link href="/ai-finder" className="badge badge-purple hover:scale-105 transition-transform cursor-pointer">
               <Sparkles size={10} /> AI Finder
             </Link>
-            <Link href="/contributors" className="badge badge-orange hover:bg-orange-500/20 transition-all cursor-pointer">
+            <Link href="/contributors" className="badge badge-orange hover:scale-105 transition-transform cursor-pointer">
               <Trophy size={10} /> Leaderboard
             </Link>
-            <Link href="/webagentcore" className="badge badge-emerald hover:bg-emerald-500/20 transition-all cursor-pointer">
-              <Code2 size={10} /> WebAgentCore
-            </Link>
-          </div>
+          </motion.div>
 
           {/* Hero Headline */}
-          <div className="space-y-4 animate-fade-in stagger-2">
-            <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.9]">
+          <div className="space-y-6">
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85]"
+            >
               <span className="gradient-text-hero">The Open AI</span>
               <br />
-              <span className="text-white">Developer</span>
+              <span className="text-white opacity-90">Developer</span>
               <br />
               <span className="gradient-text-blue">Universe</span>
-            </h1>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto leading-relaxed font-medium"
+            >
+              Build, discover, and scale in the global AI ecosystem.  
+              Explore <span className="text-white">agents</span>, <span className="text-white">prompts</span>, and <span className="text-white">tools</span> in one unified platform.
+            </motion.p>
           </div>
-
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in stagger-3">
-            Discover AI tools, explore autonomous agents, copy battle-tested prompts, and connect with{" "}
-            <span className="text-white font-semibold">10,000+ developers</span> building the future.
-          </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in stagger-4">
-            <Link href="/tools" className="btn-primary text-base px-8 py-4 rounded-2xl">
-              <Package size={18} /> Explore Tools <ArrowRight size={16} />
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <Link href="/tools" className="btn-primary text-base px-10 py-5 rounded-2xl group">
+              <Package size={20} /> Get Started <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/ai-agents" className="btn-secondary text-base px-8 py-4 rounded-2xl">
-              <Bot size={18} /> Browse Agents
+            <Link href="/ai-agents" className="btn-secondary text-base px-10 py-5 rounded-2xl">
+              <Bot size={20} /> Browse Agents
             </Link>
-            <Link
-              href="https://github.com/saikirantechy/dev-resource-hub"
-              target="_blank"
-              className="btn-secondary text-base px-8 py-4 rounded-2xl"
-            >
-              <Star size={18} /> Star on GitHub
-            </Link>
-          </div>
+          </motion.div>
 
-          {/* Terminal Snippet */}
-          <div className="max-w-lg mx-auto animate-fade-in stagger-5">
-            <div className="terminal text-left text-sm">
-              <div className="pt-5 space-y-1">
-                <span className="text-gray-500"># Discover. Copy. Build.</span><br />
-                <span className="text-purple-400">const</span>
-                <span className="text-white"> tools </span>
-                <span className="text-gray-500">= </span>
-                <span className="text-emerald-400">await</span>
-                <span className="text-white"> devresourcehub</span>
-                <span className="text-gray-400">.</span>
-                <span className="text-blue-400">getAll</span>
-                <span className="text-gray-400">();</span><br />
-                <span className="text-gray-500">// </span>
-                <span className="text-yellow-400">{totalResources}</span>
-                <span className="text-gray-500"> curated resources ready 🚀</span>
+          {/* Terminal Code Snippet */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="max-w-xl mx-auto"
+          >
+            <div className="terminal text-left text-sm group hover:border-blue-500/30 transition-colors shadow-2xl">
+              <div className="pt-6 space-y-1.5">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="w-3 h-3 rounded-full bg-red-500/50" />
+                  <span className="w-3 h-3 rounded-full bg-yellow-500/50" />
+                  <span className="w-3 h-3 rounded-full bg-green-500/50" />
+                  <span className="ml-2 text-[10px] text-gray-600 font-bold uppercase tracking-widest">ai-ecosystem.ts</span>
+                </div>
+                <div className="font-mono">
+                  <span className="text-gray-500"># Initializing the universe...</span><br />
+                  <span className="text-purple-400">const</span>
+                  <span className="text-white"> platform </span>
+                  <span className="text-gray-500">= </span>
+                  <span className="text-emerald-400">await</span>
+                  <span className="text-white"> Ecosystem</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-blue-400">connect</span>
+                  <span className="text-gray-400">();</span><br />
+                  <span className="text-white">platform</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-yellow-400">enableAnimations</span>
+                  <span className="text-gray-400">();</span><br />
+                  <span className="text-gray-500">// Ecosystem ready 🚀</span>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* ─── STATS ─── */}
-      <section className="py-16 border-y border-white/5">
+      <section className="py-20 border-y border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: "Resources", value: `${totalResources}+`, icon: Package, color: "text-blue-400", bg: "bg-blue-500/10" },
-              { label: "Contributors", value: "200+", icon: Users, color: "text-emerald-400", bg: "bg-emerald-500/10" },
-              { label: "GitHub Stars", value: "5k+", icon: Star, color: "text-yellow-400", bg: "bg-yellow-500/10" },
-              { label: "Open Source", value: "100%", icon: Globe, color: "text-purple-400", bg: "bg-purple-500/10" },
+              { label: "Resources", value: "100+", icon: Package, color: "text-blue-400" },
+              { label: "Contributors", value: "200+", icon: Users, color: "text-emerald-400" },
+              { label: "GitHub Stars", value: "5k+", icon: Star, color: "text-yellow-400" },
+              { label: "Open Source", value: "100%", icon: Globe, color: "text-purple-400" },
             ].map((stat, i) => (
-              <div
+              <motion.div
                 key={stat.label}
-                className="p-6 rounded-3xl glass border border-white/5 flex flex-col items-center text-center space-y-3 card-hover animate-fade-in"
-                style={{ animationDelay: `${i * 0.1}s` }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center space-y-2 group"
               >
-                <div className={`p-3 rounded-2xl ${stat.bg}`}>
-                  <stat.icon size={22} className={stat.color} />
-                </div>
-                <div className="text-4xl font-black">{stat.value}</div>
-                <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">{stat.label}</div>
-              </div>
+                <div className="text-5xl font-black group-hover:scale-110 transition-transform duration-500">{stat.value}</div>
+                <div className="text-[10px] text-gray-600 font-black uppercase tracking-[0.2em]">{stat.label}</div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ─── PLATFORM SECTIONS ─── */}
-      <section className="py-24 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <div className="badge badge-purple inline-flex"><BarChart3 size={11} /> Platform Pages</div>
-            <h2 className="text-4xl md:text-5xl font-black">Everything in One Ecosystem</h2>
-            <p className="text-gray-500 text-xl max-w-2xl mx-auto">8 specialized platform sections — each a standalone experience.</p>
+      <section className="py-32 px-4 sm:px-6 relative">
+        <div className="max-w-7xl mx-auto space-y-20">
+          <div className="text-center space-y-6">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="badge badge-purple inline-flex"
+            >
+              <BarChart3 size={11} /> Platform Pages
+            </motion.div>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter">Everything in One Ecosystem</h2>
+            <p className="text-gray-500 text-xl max-w-2xl mx-auto">8 specialized platform sections built for developers.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {platformSections.map((section, i) => (
-              <Link
+              <motion.div
                 key={section.href}
-                href={section.href}
-                className={`group relative p-6 rounded-3xl bg-gradient-to-br ${section.gradient} border ${section.border} card-hover transition-all duration-300 flex flex-col animate-fade-in`}
-                style={{ animationDelay: `${i * 0.06}s` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-3xl group-hover:scale-110 transition-transform">{section.emoji}</span>
-                  <span className="badge badge-blue text-[9px]">{section.badge}</span>
-                </div>
-                <h3 className="text-xl font-black text-white mb-2 group-hover:text-blue-300 transition-colors">
-                  {section.title}
-                </h3>
-                <p className="text-sm text-gray-400 leading-relaxed flex-1">{section.description}</p>
-                <div className="mt-4 flex items-center text-blue-400 text-xs font-bold group-hover:translate-x-2 transition-transform">
-                  Explore <ArrowRight size={12} className="ml-1" />
-                </div>
-              </Link>
+                <Link
+                  href={section.href}
+                  className={`group relative h-full p-8 rounded-[2rem] bg-gradient-to-br ${section.gradient} border ${section.border} card-hover transition-all duration-500 flex flex-col overflow-hidden`}
+                >
+                  <div className="flex items-start justify-between mb-8">
+                    <span className="text-4xl group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-500">{section.emoji}</span>
+                    <span className="badge badge-blue text-[9px]">{section.badge}</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-white mb-3 group-hover:text-blue-300 transition-colors">
+                    {section.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed font-medium group-hover:text-gray-300 transition-colors flex-1">{section.description}</p>
+                  <div className="mt-8 flex items-center text-blue-400 text-xs font-bold group-hover:translate-x-3 transition-transform duration-500">
+                    Explore Experience <ArrowRight size={14} className="ml-2" />
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ─── FEATURED TOOLS ─── */}
-      <section className="py-24 px-4 sm:px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="badge badge-orange inline-flex mb-3"><Flame size={11} /> Hot Right Now</div>
-              <h2 className="text-3xl md:text-4xl font-black">Featured Tools</h2>
+      <section className="py-32 px-4 sm:px-6 bg-white/[0.01] border-t border-white/5">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="space-y-4">
+              <div className="badge badge-orange inline-flex"><Flame size={11} /> Hot Right Now</div>
+              <h2 className="text-5xl font-black tracking-tight">Featured Tools</h2>
             </div>
-            <Link href="/trending" className="btn-secondary flex items-center gap-2 text-sm">
-              <TrendingUp size={14} /> View Trending
+            <Link href="/trending" className="btn-secondary px-8 py-4 rounded-2xl group">
+              <TrendingUp size={16} /> View Trending <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {featuredTools.map((tool, i) => (
-              <Link
+              <motion.div
                 key={tool.name}
-                href={tool.href}
-                target="_blank"
-                className="group p-5 rounded-2xl glass border border-white/8 hover:border-blue-500/30 card-hover text-center flex flex-col items-center gap-3 animate-fade-in"
-                style={{ animationDelay: `${i * 0.06}s` }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
               >
-                <span className="text-4xl group-hover:scale-110 transition-transform">{tool.emoji}</span>
-                <div>
-                  <div className="font-bold text-sm text-white group-hover:text-blue-300 transition-colors">{tool.name}</div>
-                  <div className="text-[10px] text-gray-500 mt-0.5">{tool.desc}</div>
-                </div>
-                <span className="badge badge-blue text-[9px]">{tool.tag}</span>
-              </Link>
+                <Link
+                  href={tool.href}
+                  target="_blank"
+                  className="group p-8 rounded-3xl glass border border-white/8 hover:border-blue-500/40 card-hover text-center flex flex-col items-center gap-4 h-full"
+                >
+                  <span className="text-5xl group-hover:scale-110 transition-transform duration-500">{tool.emoji}</span>
+                  <div className="space-y-1">
+                    <div className="font-black text-base text-white group-hover:text-blue-300 transition-colors">{tool.name}</div>
+                    <div className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">{tool.tag}</div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── ROADMAP TEASER ─── */}
-      <section className="py-24 px-4 sm:px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative p-10 md:p-16 rounded-[2.5rem] glass border border-white/8 overflow-hidden text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-emerald-500/5" />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl" />
-            <div className="relative z-10 space-y-6">
-              <GitBranch size={40} className="mx-auto text-blue-400 animate-float" />
-              <h2 className="text-4xl md:text-5xl font-black">
-                Phase 2 Coming Soon
-              </h2>
-              <p className="text-gray-400 text-lg max-w-lg mx-auto">
-                AI recommendation engine, stack generator, workflow builder, accounts & bookmarks.
-              </p>
+      {/* ─── ROADMAP ─── */}
+      <section className="py-32 px-4 sm:px-6 border-t border-white/5 relative">
+        <div className="max-w-5xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative p-12 md:p-24 rounded-[3rem] glass border border-white/10 overflow-hidden text-center"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/5 to-emerald-600/10 animate-gradient" />
+            <div className="relative z-10 space-y-10">
+              <div className="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center mx-auto border border-white/10 animate-float">
+                <GitBranch size={40} className="text-blue-400" />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-5xl md:text-7xl font-black tracking-tighter">
+                  Phase 2 Coming Soon
+                </h2>
+                <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+                  We're building the future of AI development infrastructure. 
+                  Expect deep integrations, smarter tools, and persistent user environments.
+                </p>
+              </div>
               <div className="flex flex-wrap justify-center gap-3">
-                {["Accounts", "Bookmarks", "AI Recommendations", "Stack Generator", "Workflow Builder", "Supabase DB"].map(f => (
-                  <span key={f} className="badge badge-purple">{f}</span>
+                {["Auth", "Bookmarks", "AI Recommendations", "Supabase DB", "Stack Engine"].map(f => (
+                  <span key={f} className="badge badge-purple px-4 py-1.5">{f}</span>
                 ))}
               </div>
-              <Link href="/docs" className="btn-primary inline-flex mt-4">
-                <BookOpen size={16} /> View Roadmap
-              </Link>
+              <div className="pt-6">
+                <Link href="/docs" className="btn-primary px-10 py-5 rounded-2xl">
+                  <BookOpen size={18} /> View Platform Roadmap
+                </Link>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* ─── NEWSLETTER ─── */}
-      <section className="py-20 px-4 sm:px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="badge badge-blue inline-flex"><Sparkles size={11} /> Stay Updated</div>
-          <h2 className="text-4xl font-black">Join the Ecosystem</h2>
-          <p className="text-gray-400 max-w-md mx-auto">
-            Weekly drops: best AI tools, trending resources, new prompts, and open-source opportunities.
-          </p>
+      <section className="py-32 px-4 sm:px-6 bg-[#030305]">
+        <div className="max-w-4xl mx-auto text-center space-y-10">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="badge badge-blue inline-flex"
+          >
+            <Sparkles size={11} /> Stay Updated
+          </motion.div>
+          <div className="space-y-4">
+            <h2 className="text-5xl font-black tracking-tight">Join the Ecosystem</h2>
+            <p className="text-gray-500 text-xl max-w-md mx-auto">
+              Weekly drops: best AI tools, trending resources, and open-source opportunities.
+            </p>
+          </div>
           <NewsletterForm />
-          <p className="text-[10px] text-gray-600 uppercase font-bold tracking-widest">
+          <p className="text-[10px] text-gray-700 uppercase font-black tracking-[0.3em]">
             Join 2,000+ developers already subscribed
           </p>
         </div>

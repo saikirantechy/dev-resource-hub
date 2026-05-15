@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import Fuse from "fuse.js";
 import { 
   Search, 
   Terminal, 
@@ -17,15 +18,111 @@ import {
   BookOpen,
   Bot,
   Scale,
-  MonitorPlay
+  MonitorPlay,
+  Zap,
+  ArrowRight,
+  MessageSquare,
+  Sparkles,
+  Command as CommandIcon,
+  Search as SearchIcon
 } from "lucide-react";
+
+// Import data
+import agentsData from "@/data/agents.json";
+import toolsData from "@/data/tools.json";
+import promptsData from "@/data/prompts.json";
+import blogsData from "@/data/blogs.json";
+
+type SearchItem = {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  href: string;
+  type: 'action' | 'agent' | 'tool' | 'prompt' | 'blog';
+  icon?: React.ReactNode;
+  shortcut?: string;
+};
 
 export default function CommandPalette() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
 
-  const togglePalette = useCallback(() => setIsOpen(prev => !prev), []);
+  const actions: SearchItem[] = [
+    { id: 'a1', name: "Latest Blog Posts", description: "Read the latest AI insights", icon: <BookOpen size={18} />, href: "/blogs", shortcut: "B", category: "Content", type: 'action' },
+    { id: 'a2', name: "AI Resource Finder", description: "Discover tools based on your stack", icon: <BrainCircuit size={18} />, href: "/ai-finder", shortcut: "AI", category: "Featured", type: 'action' },
+    { id: 'a3', name: "Prompt Library", description: "Master prompt engineering", icon: <Terminal size={18} />, href: "/prompts", shortcut: "PR", category: "Content", type: 'action' },
+    { id: 'a4', name: "AI Agent Explorer", description: "Explore autonomous builders", icon: <Bot size={18} />, href: "/ai-agents", shortcut: "AG", category: "Featured", type: 'action' },
+    { id: 'a5', name: "Compare AI Tools", description: "Side-by-side technical breakdowns", icon: <Scale size={18} />, href: "/compare", shortcut: "VS", category: "Featured", type: 'action' },
+    { id: 'a6', name: "Project Showcase", description: "Community built projects", icon: <MonitorPlay size={18} />, href: "/showcase", shortcut: "SH", category: "Community", type: 'action' },
+    { id: 'a7', name: "Community Hub", description: "Connect with builders", icon: <Users size={18} />, href: "/community", shortcut: "CM", category: "Community", type: 'action' },
+    { id: 'a8', name: "Trending Now", description: "Hottest resources this week", icon: <TrendingUp size={18} />, href: "/trending", shortcut: "T", type: 'action', category: "Discovery" },
+    { id: 'a9', name: "Submit Resource", description: "Add to the ecosystem", icon: <PlusCircle size={18} />, href: "/submit", shortcut: "P", type: 'action', category: "Community" },
+    { id: 'a10', name: "View on GitHub", description: "Open source platform", icon: <Globe size={18} />, href: "https://github.com/saikirantechy/dev-resource-hub", type: 'action', category: "Platform" },
+  ];
+
+  const searchIndex = useMemo(() => {
+    const agents = (agentsData as any[]).map(item => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      category: item.category,
+      href: `/ai-agents?id=${item.id}`,
+      type: 'agent' as const,
+      icon: <Bot size={18} className="text-emerald-400" />
+    }));
+
+    const tools = (toolsData as any[]).map(item => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      category: item.category,
+      href: `/tools?id=${item.id}`,
+      type: 'tool' as const,
+      icon: <Cpu size={18} className="text-blue-400" />
+    }));
+
+    const prompts = (promptsData as any[]).map(item => ({
+      id: item.id,
+      name: item.title,
+      description: item.description,
+      category: item.category,
+      href: `/prompts?id=${item.id}`,
+      type: 'prompt' as const,
+      icon: <Terminal size={18} className="text-purple-400" />
+    }));
+
+    const blogs = (blogsData as any[]).map(item => ({
+      id: item.id,
+      name: item.title,
+      description: item.excerpt,
+      category: item.category,
+      href: `/blogs/${item.slug}`,
+      type: 'blog' as const,
+      icon: <BookOpen size={18} className="text-orange-400" />
+    }));
+
+    return [...actions, ...agents, ...tools, ...prompts, ...blogs];
+  }, []);
+
+  const fuse = useMemo(() => new Fuse(searchIndex, {
+    keys: ['name', 'description', 'category'],
+    threshold: 0.3,
+    distance: 100,
+  }), [searchIndex]);
+
+  const results = useMemo(() => {
+    if (!query) return actions;
+    return fuse.search(query).map(r => r.item);
+  }, [fuse, query]);
+
+  const togglePalette = useCallback(() => {
+    setIsOpen(prev => !prev);
+    setQuery("");
+    setSelectedIndex(0);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -36,32 +133,26 @@ export default function CommandPalette() {
       if (e.key === "Escape") {
         setIsOpen(false);
       }
+      if (isOpen) {
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          setSelectedIndex(prev => (prev + 1) % results.length);
+        }
+        if (e.key === "ArrowUp") {
+          e.preventDefault();
+          setSelectedIndex(prev => (prev - 1 + results.length) % results.length);
+        }
+        if (e.key === "Enter") {
+          e.preventDefault();
+          if (results[selectedIndex]) {
+            navigate(results[selectedIndex].href, results[selectedIndex].href.startsWith('http'));
+          }
+        }
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [togglePalette]);
-
-  const actions = [
-    { name: "Latest Blog Posts", icon: <BookOpen size={18} />, href: "/blogs", shortcut: "B", category: "Content" },
-    { name: "AI Resource Finder", icon: <BrainCircuit size={18} />, href: "/ai-finder", shortcut: "AI", category: "Featured" },
-    { name: "Prompt Library", icon: <Terminal size={18} />, href: "/prompts", shortcut: "PR", category: "Content" },
-    { name: "AI Agent Explorer", icon: <Bot size={18} />, href: "/ai-agents", shortcut: "AG", category: "Featured" },
-    { name: "Compare AI Tools", icon: <Scale size={18} />, href: "/compare", shortcut: "VS", category: "Featured" },
-    { name: "Project Showcase", icon: <MonitorPlay size={18} />, href: "/showcase", shortcut: "SH", category: "Community" },
-    { name: "Community Hub", icon: <Users size={18} />, href: "/community", shortcut: "CM", category: "Community" },
-    { name: "Search Tools", icon: <Search size={18} />, href: "/", shortcut: "S" },
-    { name: "Trending Now", icon: <TrendingUp size={18} />, href: "/trending", shortcut: "T" },
-    { name: "Contributors", icon: <Users size={18} />, href: "/contributors", shortcut: "C" },
-    { name: "Submit Resource", icon: <PlusCircle size={18} />, href: "/submit", shortcut: "P" },
-    { name: "AI Tools", icon: <Cpu size={18} />, href: "/category/ai-tools", category: "Category" },
-    { name: "Web Development", icon: <Laptop size={18} />, href: "/category/web-dev", category: "Category" },
-    { name: "DevOps", icon: <Settings size={18} />, href: "/category/devops", category: "Category" },
-    { name: "View on GitHub", icon: <Globe size={18} />, href: "https://github.com/saikirantechy/dev-resource-hub", external: true },
-  ];
-
-  const filteredActions = actions.filter(action => 
-    action.name.toLowerCase().includes(query.toLowerCase())
-  );
+  }, [togglePalette, isOpen, results, selectedIndex]);
 
   const navigate = (href: string, external?: boolean) => {
     setIsOpen(false);
@@ -76,80 +167,116 @@ export default function CommandPalette() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-20">
+    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] px-4">
       <div 
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm animate-fade-in" 
+        className="fixed inset-0 bg-black/80 backdrop-blur-md animate-fade-in" 
         onClick={() => setIsOpen(false)} 
       />
       
-      <div className="relative w-full max-w-2xl bg-[#0f0f0f] border border-white/10 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
-        <div className="flex items-center px-4 border-b border-white/5">
-          <Terminal size={18} className="text-gray-500 mr-3" />
+      <div className="relative w-full max-w-2xl bg-[#0a0a0c] border border-white/10 rounded-2xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] overflow-hidden animate-in zoom-in-95 duration-200">
+        <div className="flex items-center px-4 border-b border-white/5 bg-white/[0.02]">
+          <SearchIcon size={20} className="text-gray-500 mr-3" />
           <input
             autoFocus
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a command or search..."
-            className="flex-1 bg-transparent py-4 text-white outline-none placeholder:text-gray-600 text-sm"
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setSelectedIndex(0);
+            }}
+            placeholder="Search agents, prompts, tools, or commands... (⌘ + K)"
+            className="flex-1 bg-transparent py-5 text-white outline-none placeholder:text-gray-600 text-base font-medium"
           />
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-gray-600 font-bold px-1.5 py-0.5 rounded border border-white/5 bg-white/5">ESC</span>
+            <span className="text-[10px] text-gray-500 font-bold px-2 py-1 rounded border border-white/10 bg-black/50">ESC</span>
             <button onClick={() => setIsOpen(false)}>
-              <X size={18} className="text-gray-600 hover:text-white transition-colors" />
+              <X size={20} className="text-gray-500 hover:text-white transition-colors" />
             </button>
           </div>
         </div>
 
-        <div className="max-h-[400px] overflow-y-auto p-2 scrollbar-hide">
-          {filteredActions.length > 0 ? (
+        <div className="max-h-[450px] overflow-y-auto p-2 scrollbar-hide">
+          {results.length > 0 ? (
             <div className="space-y-1">
-              {filteredActions.map((action, index) => (
+              {results.map((item, index) => (
                 <button
-                  key={index}
-                  onClick={() => navigate(action.href, action.external)}
-                  className="w-full flex items-center justify-between p-3 rounded-xl hover:bg-white/5 group transition-all"
+                  key={item.id + index}
+                  onMouseEnter={() => setSelectedIndex(index)}
+                  onClick={() => navigate(item.href, item.href.startsWith('http'))}
+                  className={`w-full flex items-center justify-between p-3.5 rounded-xl transition-all group ${
+                    selectedIndex === index ? "bg-white/10" : "hover:bg-white/5"
+                  }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="text-gray-500 group-hover:text-blue-400 transition-colors">
-                      {action.icon}
+                  <div className="flex items-center gap-4">
+                    <div className={`p-2 rounded-lg transition-colors ${
+                      selectedIndex === index ? "bg-blue-500/20 text-blue-400" : "bg-white/5 text-gray-500"
+                    }`}>
+                      {item.icon}
                     </div>
                     <div className="text-left">
-                      <div className="text-sm font-medium text-gray-300 group-hover:text-white">
-                        {action.name}
+                      <div className="flex items-center gap-2">
+                        <span className={`text-sm font-semibold transition-colors ${
+                          selectedIndex === index ? "text-white" : "text-gray-300"
+                        }`}>
+                          {item.name}
+                        </span>
+                        {item.type !== 'action' && (
+                          <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-500 font-bold uppercase tracking-widest">
+                            {item.type}
+                          </span>
+                        )}
                       </div>
-                      {action.category && (
-                        <div className="text-[10px] text-gray-600 uppercase font-bold tracking-wider">
-                          {action.category}
-                        </div>
-                      )}
+                      <div className="text-xs text-gray-500 line-clamp-1 mt-0.5">
+                        {item.description}
+                      </div>
                     </div>
                   </div>
-                  {action.shortcut && (
-                    <div className="text-[10px] text-gray-600 font-bold px-1.5 py-0.5 rounded border border-white/10 group-hover:border-white/20">
-                      {action.shortcut}
-                    </div>
-                  )}
+                  <div className="flex items-center gap-3">
+                    {item.category && (
+                      <span className="hidden sm:inline-block text-[9px] text-gray-600 uppercase font-bold tracking-widest">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.shortcut ? (
+                      <div className="text-[10px] text-gray-500 font-bold px-2 py-1 rounded border border-white/10 bg-black/50 group-hover:border-white/20">
+                        {item.shortcut}
+                      </div>
+                    ) : (
+                      selectedIndex === index && <ArrowRight size={14} className="text-blue-500 animate-in slide-in-from-left-2" />
+                    )}
+                  </div>
                 </button>
               ))}
             </div>
           ) : (
-            <div className="py-12 text-center text-gray-500 text-sm italic">
-              No commands found for "{query}"
+            <div className="py-20 text-center space-y-4">
+              <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10">
+                <SearchIcon size={24} className="text-gray-600" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-gray-300 font-medium">No results found for "{query}"</p>
+                <p className="text-xs text-gray-600">Try searching for "Cursor", "Agents", or "Prompts"</p>
+              </div>
             </div>
           )}
         </div>
 
-        <div className="p-3 border-t border-white/5 bg-white/[0.02] flex items-center justify-between">
-          <div className="text-[10px] text-gray-600 font-medium">
-            Dev Resource Hub Command Palette
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1 text-[10px] text-gray-600">
-              <span className="p-0.5 px-1 rounded border border-white/10">↑↓</span> to navigate
+        <div className="p-4 border-t border-white/5 bg-black/40 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-bold uppercase tracking-wider">
+              <Zap size={10} className="text-yellow-500" />
+              Universal Search
             </div>
-            <div className="flex items-center gap-1 text-[10px] text-gray-600">
-              <span className="p-0.5 px-1 rounded border border-white/10">↵</span> to select
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">↑↓</span> Navigate
+            </div>
+            <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">↵</span> Select
+            </div>
+            <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">ESC</span> Close
             </div>
           </div>
         </div>

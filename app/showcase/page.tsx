@@ -1,5 +1,12 @@
 import Navbar from "@/components/Navbar";
 import showcaseData from "@/data/showcase.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Project Showcase | Dev Resource Hub",
+  description: "Explore the best AI projects and workflows built by our community using autonomous agents and modern AI frameworks.",
+  keywords: ["AI showcase", "community projects", "AI builders", "AI workflows", "built with AI"],
+};
 import { MonitorPlay, ExternalLink, GitFork, Star, Zap, Trophy, Users } from "lucide-react";
 import Link from "next/link";
 

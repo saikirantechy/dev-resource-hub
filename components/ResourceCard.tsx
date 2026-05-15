@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink, Star, Zap, Globe, Sparkles } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -17,6 +20,7 @@ interface ResourceCardProps {
   isFeatured?: boolean;
   isFree?: boolean;
   isOpenSource?: boolean;
+  index?: number;
 }
 
 export default function ResourceCard({
@@ -28,60 +32,61 @@ export default function ResourceCard({
   isTrending,
   isFeatured,
   isFree,
-  isOpenSource
+  isOpenSource,
+  index = 0
 }: ResourceCardProps) {
   return (
-    <div className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 hover:bg-white/[0.05] transition-all duration-300 flex flex-col h-full overflow-hidden shadow-2xl">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/30 hover:bg-white/[0.05] transition-all duration-300 flex flex-col h-full overflow-hidden shadow-2xl"
+    >
       {/* Decorative Gradient Background */}
       <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/10 blur-[80px] group-hover:bg-blue-500/20 transition-colors duration-500 -z-10" />
+      <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-purple-500/10 blur-[80px] group-hover:bg-purple-500/20 transition-colors duration-500 -z-10" />
       
       {/* Header */}
       <div className="flex justify-between items-start mb-4">
         <div className="space-y-1">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{name}</h3>
             {isTrending && (
-              <span className="px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase tracking-wider border border-orange-500/20">
-                🔥 Trending
-              </span>
+              <span className="badge badge-orange animate-pulse">🔥 Trending</span>
             )}
             {isFeatured && (
-              <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">
-                ⭐ Featured
-              </span>
+              <span className="badge badge-purple"><Sparkles size={10} /> Featured</span>
             )}
             {isFree && (
-              <span className="px-2 py-0.5 rounded-full bg-green-500/10 text-green-400 text-[10px] font-bold uppercase tracking-wider border border-green-500/20">
-                💸 Free
-              </span>
+              <span className="badge badge-emerald">💸 Free</span>
             )}
             {isOpenSource && (
-              <span className="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">
-                🌐 OSS
-              </span>
+              <span className="badge badge-blue"><Globe size={10} /> OSS</span>
             )}
           </div>
           {category && (
-            <span className="text-[10px] text-gray-500 font-medium uppercase tracking-widest">{category}</span>
+            <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest block mt-1">{category}</span>
           )}
         </div>
       </div>
 
       {/* Description */}
-      <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1 line-clamp-3 group-hover:text-gray-300 transition-colors">
+      <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1 line-clamp-3 group-hover:text-gray-200 transition-colors">
         {description}
       </p>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-8">
-        {tags.map((tag) => (
+        {tags.slice(0, 3).map((tag) => (
           <span 
             key={tag} 
-            className="px-2 py-1 rounded-md bg-white/5 text-gray-400 text-[10px] font-medium border border-white/5 group-hover:border-white/10 transition-colors"
+            className="px-2 py-1 rounded-md bg-white/5 text-gray-500 text-[10px] font-bold uppercase tracking-wider border border-white/5 group-hover:border-white/20 transition-colors"
           >
             {tag}
           </span>
         ))}
+        {tags.length > 3 && <span className="text-[10px] text-gray-600 font-bold">+{tags.length - 3}</span>}
       </div>
 
       {/* Footer / Action */}
@@ -93,6 +98,6 @@ export default function ResourceCard({
         <span>Visit Resource</span>
         <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
       </Link>
-    </div>
+    </motion.div>
   );
 }

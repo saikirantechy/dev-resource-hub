@@ -80,7 +80,7 @@ export default function ResourceGrid({ initialResources, showSearch = true, titl
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredResources.map((res, index) => (
-          <ResourceCard key={index} {...res} />
+          <ResourceCard key={index} {...res} index={index} />
         ))}
       </div>
 

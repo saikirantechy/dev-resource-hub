@@ -4,6 +4,13 @@ import { Package, Bot, Terminal, Star, TrendingUp, Zap, ArrowRight, Flame, Filte
 import toolsData from "@/data/tools.json";
 import agentsData from "@/data/agents.json";
 import promptsData from "@/data/prompts.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Developer Marketplace | Dev Resource Hub",
+  description: "Browse and discover the best AI tools, autonomous agents, and battle-tested prompts curated by the developer community.",
+  keywords: ["AI marketplace", "AI tools", "AI agents", "prompts", "developer tools", "discover AI"],
+};
 
 const marketplaceSections = [
   {

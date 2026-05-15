@@ -42,6 +42,8 @@ export const metadata: Metadata = {
 
 import Footer from "@/components/Footer";
 import CommandPalette from "@/components/CommandPalette";
+import PageTransition from "@/components/PageTransition";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function RootLayout({
   children,
@@ -58,9 +60,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#050508]">
+      <body className="min-h-full flex flex-col bg-[#050508] relative">
+        <div className="gradient-mesh" />
+        <CursorGlow />
         <CommandPalette />
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
         <Footer />
       </body>
     </html>

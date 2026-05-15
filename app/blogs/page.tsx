@@ -2,6 +2,13 @@ import blogsData from "@/data/blogs.json";
 import { Calendar, User, ArrowRight, BookOpen, Clock, Eye, Flame, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dev Intelligence Blog | Dev Resource Hub",
+  description: "Deep dives, tool comparisons, agent tutorials, and the latest AI developer news. Written by developers, for developers.",
+  keywords: ["AI blog", "developer blog", "AI tutorials", "tool comparisons", "AI news", "Cursor vs Windsurf"],
+};
 
 const CAT_COLORS: Record<string, string> = {
   "Tools": "badge-blue",
