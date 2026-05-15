@@ -1,3 +1,1 @@
-import { createClient } from "@/utils/supabase/client";
-
-export const supabase = createClient();
+export { supabase } from "@/utils/supabase/client";
