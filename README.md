@@ -198,12 +198,13 @@ Together we're building the future of AI development.
 ## 🌟 Roadmap
 
 * [x] Phase 1 — Core Architecture & Route Expansion
-* [ ] Phase 2 — Universal Search Engine (Fuse.js)
-* [ ] Phase 2 — MDX Blog Detail Pages
+* [x] Phase 2 — Universal Search Engine (Fuse.js)
+* [x] Phase 2 — Dynamic Blog Detail Pages (MDX Style)
+* [x] Phase 2 — AI Stack Finder (Recommendation Engine)
+* [ ] Phase 2 — Favorites / Bookmark system
 * [ ] Phase 3 — User Authentication (Clerk)
 * [ ] Phase 3 — Supabase Backend Migration
-* [ ] Phase 4 — AI Recommendation Engine
-* [ ] Phase 4 — User Personalization & Bookmarks
+* [ ] Phase 4 — AI Workflow Builder (visual nodes)
 * [ ] Phase 4 — Semantic AI Search
 
 ---

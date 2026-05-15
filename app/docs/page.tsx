@@ -26,12 +26,12 @@ const roadmap = [
     status: "in-progress",
     emoji: "🔧",
     items: [
-      { label: "Universal Command Palette (Fuse.js)", done: false },
-      { label: "Cross-resource instant search", done: false },
+      { label: "Universal Command Palette (Fuse.js)", done: true },
+      { label: "Cross-resource instant search", done: true },
+      { label: "AI Stack Finder (Recommendation Engine)", done: true },
+      { label: "Blog detail page rendering", done: true },
       { label: "Prompt full-text viewer", done: false },
       { label: "Favorites / Bookmark system", done: false },
-      { label: "AI Stack Generator", done: false },
-      { label: "Blog MDX rendering", done: false },
     ]
   },
   {
