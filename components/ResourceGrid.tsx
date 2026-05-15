@@ -30,6 +30,16 @@ type FilterType = "all" | "free" | "oss";
 export default function ResourceGrid({ initialResources, showSearch = true, title }: ResourceGridProps) {
   const [query, setQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+  const [isSemantic, setIsSemantic] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+
+  useEffect(() => {
+    if (isSemantic && query) {
+      setIsSearching(true);
+      const timer = setTimeout(() => setIsSearching(false), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [query, isSemantic]);
 
   const fuse = useMemo(() => new Fuse(initialResources, {
     keys: ["name", "description", "tags", "category"],
@@ -53,7 +63,7 @@ export default function ResourceGrid({ initialResources, showSearch = true, titl
       <div className="space-y-8">
         {title && <h2 className="text-3xl font-bold text-white text-center">{title}</h2>}
         <div className="space-y-6">
-          {showSearch && <SearchBar onSearch={setQuery} />}
+          {showSearch && <SearchBar onSearch={setQuery} onModeChange={setIsSemantic} />}
           
           {/* Advanced Filters */}
           <div className="flex flex-wrap items-center justify-center gap-4">

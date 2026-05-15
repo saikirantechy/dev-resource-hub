@@ -1,20 +1,32 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Search, X, Command } from "lucide-react";
+import { Search, X, Command, Sparkles } from "lucide-react";
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
+  onModeChange?: (isSemantic: boolean) => void;
   placeholder?: string;
 }
 
-export default function SearchBar({ onSearch, placeholder = "Search for tools, tags, or categories..." }: SearchBarProps) {
+export default function SearchBar({ 
+  onSearch, 
+  onModeChange,
+  placeholder = "Search for tools, tags, or categories..." 
+}: SearchBarProps) {
   const [query, setQuery] = useState("");
+  const [isSemantic, setIsSemantic] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     onSearch(query);
   }, [query, onSearch]);
+
+  const toggleSemantic = () => {
+    const next = !isSemantic;
+    setIsSemantic(next);
+    onModeChange?.(next);
+  };
 
   // Keyboard shortcut (CMD/CTRL + K)
   useEffect(() => {
@@ -31,7 +43,11 @@ export default function SearchBar({ onSearch, placeholder = "Search for tools, t
   return (
     <div className="relative group max-w-2xl mx-auto w-full">
       <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-        <Search className="h-5 w-5 text-gray-500 group-focus-within:text-blue-400 transition-colors" />
+        {isSemantic ? (
+          <Sparkles className="h-5 w-5 text-purple-400 animate-pulse" />
+        ) : (
+          <Search className="h-5 w-5 text-gray-500 group-focus-within:text-blue-400 transition-colors" />
+        )}
       </div>
       
       <input
@@ -39,11 +55,31 @@ export default function SearchBar({ onSearch, placeholder = "Search for tools, t
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder={placeholder}
-        className="w-full bg-white/[0.03] border border-white/10 text-white pl-12 pr-12 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder:text-gray-600 shadow-2xl"
+        placeholder={isSemantic ? "Describe what you want to build..." : placeholder}
+        className={cn(
+          "w-full bg-white/[0.03] border text-white pl-12 pr-32 py-4 rounded-2xl focus:outline-none transition-all placeholder:text-gray-600 shadow-2xl",
+          isSemantic 
+            ? "border-purple-500/30 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50" 
+            : "border-white/10 focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50"
+        )}
       />
 
-      <div className="absolute inset-y-0 right-4 flex items-center gap-2">
+      <div className="absolute inset-y-0 right-4 flex items-center gap-3">
+        <button
+          onClick={toggleSemantic}
+          className={cn(
+            "flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-[10px] font-bold uppercase tracking-wider transition-all",
+            isSemantic 
+              ? "bg-purple-500/10 border-purple-500/30 text-purple-400" 
+              : "bg-white/5 border-white/10 text-gray-500 hover:text-white"
+          )}
+        >
+          {isSemantic ? <Sparkles size={12} /> : <Command size={12} />}
+          {isSemantic ? "Semantic" : "Classic"}
+        </button>
+
+        <div className="w-px h-4 bg-white/10" />
+
         {query ? (
           <button 
             onClick={() => setQuery("")}
@@ -52,11 +88,15 @@ export default function SearchBar({ onSearch, placeholder = "Search for tools, t
             <X className="h-4 w-4" />
           </button>
         ) : (
-          <div className="hidden sm:flex items-center gap-1 px-1.5 py-1 rounded border border-white/10 bg-white/5 text-[10px] font-bold text-gray-500 select-none">
+          <div className="hidden sm:flex items-center gap-1 text-[10px] font-bold text-gray-600 select-none">
             <Command size={10} /> K
           </div>
         )}
       </div>
     </div>
   );
+}
+
+function cn(...inputs: any[]) {
+  return inputs.filter(Boolean).join(" ");
 }
