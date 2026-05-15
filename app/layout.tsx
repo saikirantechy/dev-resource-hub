@@ -44,6 +44,7 @@ import Footer from "@/components/Footer";
 import CommandPalette from "@/components/CommandPalette";
 import PageTransition from "@/components/PageTransition";
 import CursorGlow from "@/components/CursorGlow";
+import { BookmarkProvider } from "@/context/BookmarkContext";
 
 export default function RootLayout({
   children,
@@ -61,13 +62,15 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-full flex flex-col bg-[#050508] relative">
-        <div className="gradient-mesh" />
-        <CursorGlow />
-        <CommandPalette />
-        <PageTransition>
-          {children}
-        </PageTransition>
-        <Footer />
+        <BookmarkProvider>
+          <div className="gradient-mesh" />
+          <CursorGlow />
+          <CommandPalette />
+          <PageTransition>
+            {children}
+          </PageTransition>
+          <Footer />
+        </BookmarkProvider>
       </body>
     </html>
   );

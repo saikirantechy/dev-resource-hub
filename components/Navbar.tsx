@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/learning", label: "Learn", icon: GraduationCap, color: "text-purple-300" },
   { href: "/trending", label: "Trending", icon: Flame, color: "text-orange-400" },
   { href: "/blogs", label: "Blog", icon: BookOpen, color: "text-yellow-400" },
+  { href: "/saved", label: "Saved", icon: Bookmark, color: "text-orange-300" },
   { href: "/community", label: "Community", icon: Users, color: "text-indigo-400" },
 ];
 

@@ -199,12 +199,14 @@ export default function PromptsPage() {
                       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0d0d14] to-transparent" />
                     )}
                   </div>
-                  <button
-                    onClick={() => setExpandedId(isExpanded ? null : prompt.id)}
-                    className="mt-2 flex items-center gap-1 text-xs text-gray-500 hover:text-purple-400 transition-colors self-center font-medium"
-                  >
-                    {isExpanded ? <><ChevronUp size={12} /> Show less</> : <><ChevronDown size={12} /> Show full prompt</>}
-                  </button>
+                  <div className="mt-6 flex gap-2">
+                    <Link
+                      href={`/prompts/${prompt.id}`}
+                      className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold hover:bg-purple-500/20 transition-all group/btn"
+                    >
+                      <Zap size={14} className="group-hover:scale-110 transition-transform" /> View Details & Playground
+                    </Link>
+                  </div>
 
                   {/* Tags */}
                   <div className="mt-4 flex flex-wrap gap-1.5">
