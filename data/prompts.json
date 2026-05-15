@@ -2,31 +2,97 @@
   {
     "id": "cursor-react-component",
     "title": "React Component Architect",
-    "description": "Generate a fully typed, responsive React component with Tailwind CSS.",
-    "content": "Create a React component named {{ComponentName}} using TypeScript and Tailwind CSS. It should be fully responsive, accessible, and include Framer Motion for entrance animations. Include prop types and a clear, clean structure.",
+    "description": "Generate a fully typed, responsive React component with Tailwind CSS and animations.",
+    "content": "Create a React component named {{ComponentName}} using TypeScript and Tailwind CSS. It should be fully responsive, accessible, and include Framer Motion for entrance animations. Include prop types, JSDoc comments, and a clear, clean structure. Add hover states and dark mode support by default.",
     "category": "Cursor Prompts",
-    "tags": ["React", "Tailwind", "Component"],
+    "tags": ["React", "Tailwind", "TypeScript", "Component"],
     "author": "Dev Resource Hub",
-    "views": 1205
+    "views": 12050,
+    "likes": 892,
+    "difficulty": "Intermediate"
   },
   {
     "id": "windsurf-api-route",
     "title": "Next.js API Route Generator",
-    "description": "Scaffold a secure Next.js App Router API endpoint.",
-    "content": "Write a Next.js App Router API route (route.ts) for {{EndpointPurpose}}. Use standard try-catch error handling, validate incoming JSON using Zod, and return structured JSON responses with appropriate HTTP status codes.",
-    "category": "Windsurf",
-    "tags": ["Next.js", "API", "Backend"],
+    "description": "Scaffold a secure Next.js App Router API endpoint with Zod validation.",
+    "content": "Write a Next.js App Router API route (route.ts) for {{EndpointPurpose}}. Use standard try-catch error handling, validate incoming JSON using Zod, and return structured JSON responses with appropriate HTTP status codes. Include rate limiting middleware and proper CORS headers.",
+    "category": "Next.js",
+    "tags": ["Next.js", "API", "Backend", "Zod"],
     "author": "Community",
-    "views": 842
+    "views": 8420,
+    "likes": 634,
+    "difficulty": "Advanced"
   },
   {
     "id": "devin-fullstack-setup",
     "title": "Fullstack App Initializer",
-    "description": "Prompt an autonomous agent to build a full project foundation.",
-    "content": "Initialize a new project using Next.js 15, Tailwind CSS, and Supabase. Set up the directory structure, install all dependencies, configure the Tailwind config for a dark theme, and create a basic auth page. Verify that the dev server runs without errors.",
-    "category": "Devin AI",
-    "tags": ["Fullstack", "Setup", "Agent"],
+    "description": "Prompt an autonomous agent to build a complete project foundation from scratch.",
+    "content": "Initialize a new project using Next.js 15, Tailwind CSS, and Supabase. Set up the directory structure, install all dependencies, configure the Tailwind config for a dark theme, create a basic auth page with Clerk, and set up environment variables. Verify that the dev server runs without errors and all routes are working.",
+    "category": "Agent Prompts",
+    "tags": ["Fullstack", "Setup", "Agent", "Supabase"],
     "author": "Dev Resource Hub",
-    "views": 3200
+    "views": 32000,
+    "likes": 2400,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": "system-prompt-assistant",
+    "title": "Elite AI Assistant System Prompt",
+    "description": "A battle-tested system prompt that makes any LLM act like a world-class senior developer.",
+    "content": "You are an elite senior software engineer with 15+ years of experience across full-stack development, system design, and AI integration. You write clean, production-ready code with thorough comments. You always consider edge cases, security vulnerabilities, and performance implications. When solving problems, you explain your reasoning step-by-step, offer multiple approaches when relevant, and always recommend industry best practices.",
+    "category": "System Prompts",
+    "tags": ["System Prompt", "GPT", "Claude", "Engineering"],
+    "author": "Community",
+    "views": 45000,
+    "likes": 3800,
+    "difficulty": "Beginner"
+  },
+  {
+    "id": "code-reviewer",
+    "title": "Senior Code Reviewer",
+    "description": "Get a thorough code review with security, performance, and best practices feedback.",
+    "content": "Review the following code as a senior software engineer. Analyze it for: (1) Security vulnerabilities and potential attack vectors, (2) Performance bottlenecks and optimization opportunities, (3) Code quality, readability, and maintainability issues, (4) Adherence to SOLID principles and design patterns, (5) Missing error handling or edge cases. Provide specific, actionable feedback with code examples for improvements.\n\n```\n{{YOUR_CODE_HERE}}\n```",
+    "category": "Code Review",
+    "tags": ["Review", "Security", "Performance", "Best Practices"],
+    "author": "Dev Resource Hub",
+    "views": 28000,
+    "likes": 2100,
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "ai-stack-builder",
+    "title": "AI Stack Generator",
+    "description": "Generate a complete, production-ready AI application stack recommendation.",
+    "content": "I'm building {{APP_DESCRIPTION}}. Generate a complete, production-ready tech stack recommendation including: frontend framework, backend/API layer, database and ORM, authentication provider, AI/LLM integration, vector database (if needed), deployment platform, monitoring tools, and CI/CD pipeline. Include justification for each choice and potential alternatives. Estimate monthly costs for 1,000 users.",
+    "category": "Architecture",
+    "tags": ["Stack", "Architecture", "AI", "Planning"],
+    "author": "Community",
+    "views": 19000,
+    "likes": 1560,
+    "difficulty": "Advanced"
+  },
+  {
+    "id": "prompt-optimizer",
+    "title": "Prompt Engineering Optimizer",
+    "description": "Transform a basic prompt into a highly effective, structured prompt.",
+    "content": "Transform this basic prompt into a highly optimized version using prompt engineering best practices:\n\nOriginal: {{BASIC_PROMPT}}\n\nApply these techniques: Chain-of-thought reasoning, few-shot examples, clear role definition, output format specification, constraints and guardrails. Return the optimized prompt with an explanation of each improvement made.",
+    "category": "Prompt Engineering",
+    "tags": ["Prompt Engineering", "Optimization", "LLM", "ChatGPT"],
+    "author": "Dev Resource Hub",
+    "views": 22000,
+    "likes": 1890,
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "debug-agent",
+    "title": "Autonomous Bug Hunter",
+    "description": "Send an AI agent on a mission to find and fix all bugs in your codebase.",
+    "content": "Analyze the following codebase/error and act as an autonomous debugging agent. Your mission: (1) Identify the root cause of the error, (2) Trace the execution path that leads to the bug, (3) Propose 3 different fixes with trade-offs, (4) Implement the best fix, (5) Write a test case to prevent regression, (6) Check for similar bugs elsewhere in the codebase.\n\nError: {{ERROR_MESSAGE}}\nContext: {{CODE_CONTEXT}}",
+    "category": "Debugging",
+    "tags": ["Debugging", "Agent", "Testing", "Error Handling"],
+    "author": "Community",
+    "views": 16000,
+    "likes": 1240,
+    "difficulty": "Advanced"
   }
 ]

@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dev Resource Hub | Premium Developer Ecosystem",
-  description: "Discover the best developer tools, AI resources, and learning platforms in one community-curated hub.",
-  keywords: ["developer tools", "AI resources", "web development", "open source", "devops", "learning resources"],
+  title: "Dev Resource Hub | The Open AI Developer Universe",
+  description: "Discover AI tools, agents, prompts, compare frameworks, explore trending resources, and connect with 10,000+ developers building the future.",
+  keywords: ["AI tools", "AI agents", "developer tools", "AI prompts", "Cursor", "Windsurf", "CrewAI", "LangGraph", "open source AI", "web development"],
   authors: [{ name: "Sai Kiran BK" }],
   openGraph: {
-    title: "Dev Resource Hub",
-    description: "The ultimate community-curated hub for developers.",
+    title: "Dev Resource Hub — The Open AI Developer Universe",
+    description: "Discover AI tools, agents, prompts, and connect with the global developer ecosystem.",
     url: "https://saikirantechy.github.io/dev-resource-hub/",
     siteName: "Dev Resource Hub",
     images: [
@@ -34,13 +34,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dev Resource Hub",
-    description: "The ultimate community-curated hub for developers.",
+    title: "Dev Resource Hub — The Open AI Developer Universe",
+    description: "Discover AI tools, agents, prompts, and connect with the global developer ecosystem.",
     images: ["https://saikirantechy.github.io/dev-resource-hub/og-image.png"],
   },
 };
 
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CommandPalette from "@/components/CommandPalette";
 
@@ -54,9 +53,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0a0a0a]">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+      </head>
+      <body className="min-h-full flex flex-col bg-[#050508]">
         <CommandPalette />
-        <Navbar />
         {children}
         <Footer />
       </body>

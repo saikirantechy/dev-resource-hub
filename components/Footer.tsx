@@ -1,37 +1,110 @@
 import Link from "next/link";
+import { Sparkles, GitFork, Heart } from "lucide-react";
+
+const footerLinks = [
+  {
+    title: "Platform",
+    links: [
+      { label: "AI Agents", href: "/ai-agents" },
+      { label: "Tools Hub", href: "/tools" },
+      { label: "Prompt Library", href: "/prompts" },
+      { label: "Marketplace", href: "/marketplace" },
+      { label: "Trending", href: "/trending" },
+    ]
+  },
+  {
+    title: "Explore",
+    links: [
+      { label: "Compare Tools", href: "/compare" },
+      { label: "Showcase", href: "/showcase" },
+      { label: "Blog", href: "/blogs" },
+      { label: "AI Finder", href: "/ai-finder" },
+      { label: "WebAgentCore", href: "/webagentcore" },
+    ]
+  },
+  {
+    title: "Community",
+    links: [
+      { label: "Community Hub", href: "/community" },
+      { label: "Contributors", href: "/contributors" },
+      { label: "Submit a Tool", href: "/submit" },
+      { label: "Docs & Roadmap", href: "/docs" },
+      { label: "GitHub", href: "https://github.com/saikirantechy/dev-resource-hub" },
+    ]
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#0a0a0a] py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="text-center md:text-left">
-          <div className="text-xl font-bold mb-2">Dev Resource Hub</div>
-          <p className="text-gray-500 text-sm max-w-xs">
-            Building the most comprehensive ecosystem for modern developers.
-          </p>
-        </div>
-        
-        <div className="flex gap-12 text-sm">
+    <footer className="border-t border-white/5 bg-[#050508] pt-16 pb-8 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-white/5">
+          {/* Brand */}
           <div className="space-y-4">
-            <h4 className="font-bold text-white">Project</h4>
-            <ul className="space-y-2 text-gray-500">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/explore" className="hover:text-white transition-colors">Explore</Link></li>
-              <li><Link href="/docs" className="hover:text-white transition-colors">Docs</Link></li>
-            </ul>
+            <Link href="/" className="flex items-center gap-2 group w-fit">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <Sparkles size={14} className="text-white" />
+              </div>
+              <span className="text-lg font-bold tracking-tight">
+                Dev Resource <span className="gradient-text-blue">Hub</span>
+              </span>
+            </Link>
+            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
+              The Open AI Developer Universe. Discover tools, explore agents, copy prompts, and build the future.
+            </p>
+            <div className="flex items-center gap-3 text-xs text-gray-600">
+              <span className="flex items-center gap-1">
+                <Heart size={11} className="text-pink-500 fill-pink-500" /> Open Source
+              </span>
+              <span>•</span>
+              <span>100% Free</span>
+              <span>•</span>
+              <span>Community-Driven</span>
+            </div>
           </div>
-          <div className="space-y-4">
-            <h4 className="font-bold text-white">Community</h4>
-            <ul className="space-y-2 text-gray-500">
-              <li><Link href="https://github.com/saikirantechy/dev-resource-hub" className="hover:text-white transition-colors">GitHub</Link></li>
-              <li><Link href="/contribute" className="hover:text-white transition-colors">Contribute</Link></li>
-              <li><Link href="/showcase" className="hover:text-white transition-colors">Showcase</Link></li>
-            </ul>
+
+          {/* Links */}
+          {footerLinks.map(section => (
+            <div key={section.title} className="space-y-4">
+              <h4 className="font-black text-sm text-white uppercase tracking-widest">{section.title}</h4>
+              <ul className="space-y-2.5">
+                {section.links.map(link => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      className="text-sm text-gray-500 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-xs text-gray-600">
+            © 2026 Dev Resource Hub. Built by the community, for the community. 🚀
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://github.com/saikirantechy/dev-resource-hub"
+              target="_blank"
+              className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-white transition-colors"
+            >
+              <GitFork size={13} /> GitHub
+            </Link>
+            <Link href="/docs" className="text-xs text-gray-500 hover:text-white transition-colors">
+              Roadmap
+            </Link>
+            <Link href="/community" className="text-xs text-gray-500 hover:text-white transition-colors">
+              Community
+            </Link>
           </div>
         </div>
-      </div>
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-gray-600 text-xs">
-        © 2026 Dev Resource Hub. Built by the community for the community.
       </div>
     </footer>
   );

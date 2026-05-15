@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, Github, Zap } from "lucide-react";
+import { Sparkles, ArrowRight, GitFork, Zap } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
