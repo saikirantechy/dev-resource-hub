@@ -205,7 +205,7 @@ Together we're building the future of AI development.
 * [x] Phase 3 — User Authentication (Supabase / Clerk)
 * [x] Phase 3 — Supabase Backend Migration
 * [x] Phase 4 — AI Workflow Builder (visual nodes)
-* [ ] Phase 4 — Semantic AI Search
+* [x] Phase 4 — Semantic AI Search
 
 ---
 

@@ -50,14 +50,14 @@ const roadmap = [
   {
     phase: "Phase 4",
     title: "Platform Scale",
-    status: "in-progress",
+    status: "complete",
     emoji: "🚀",
     items: [
       { label: "Visual AI Workflow Builder", done: true },
-      { label: "Semantic AI Search (Embeddings)", done: false },
-      { label: "API marketplace", done: false },
-      { label: "GitHub trending integration", done: false },
-      { label: "Vercel Analytics", done: false },
+      { label: "Semantic AI Search (Embeddings)", done: true },
+      { label: "API marketplace integration", done: true },
+      { label: "GitHub trending automation", done: true },
+      { label: "Vercel Analytics & Performance", done: true },
     ]
   }
 ];
