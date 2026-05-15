@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Star, Zap, Globe, Sparkles } from "lucide-react";
+import { ExternalLink, Star, Zap, Globe, Sparkles, Heart, Eye } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { useResourceStats } from "@/hooks/useResourceStats";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 interface ResourceCardProps {
+  slug: string;
   name: string;
   description: string;
   url: string;
@@ -24,6 +26,7 @@ interface ResourceCardProps {
 }
 
 export default function ResourceCard({
+  slug,
   name,
   description,
   url,
@@ -35,6 +38,8 @@ export default function ResourceCard({
   isOpenSource,
   index = 0
 }: ResourceCardProps) {
+  const { likes, views, isLiked, toggleLike } = useResourceStats(slug);
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -69,6 +74,17 @@ export default function ResourceCard({
             <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest block mt-1">{category}</span>
           )}
         </div>
+        <button 
+          onClick={(e) => { e.preventDefault(); toggleLike(); }}
+          className={cn(
+            "p-2 rounded-xl border transition-all flex items-center gap-1.5 text-xs font-bold",
+            isLiked 
+              ? "bg-pink-500/10 border-pink-500/30 text-pink-400" 
+              : "bg-white/5 border-white/10 text-gray-500 hover:text-white"
+          )}
+        >
+          <Heart size={14} fill={isLiked ? "currentColor" : "none"} /> {likes || 0}
+        </button>
       </div>
 
       {/* Description */}

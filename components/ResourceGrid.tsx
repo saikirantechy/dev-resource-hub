@@ -7,6 +7,7 @@ import Fuse from "fuse.js";
 import { Filter, Globe, DollarSign, CheckCircle2 } from "lucide-react";
 
 interface Resource {
+  id: string;
   name: string;
   description: string;
   url: string;
@@ -80,7 +81,7 @@ export default function ResourceGrid({ initialResources, showSearch = true, titl
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredResources.map((res, index) => (
-          <ResourceCard key={index} {...res} index={index} />
+          <ResourceCard key={index} {...res} slug={res.id} index={index} />
         ))}
       </div>
 
