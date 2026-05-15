@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Globe, Twitter, Mail, ArrowLeft, Star, Award, Zap } from "lucide-react";
+import { GitFork, Globe, MessageCircle, Mail, ArrowLeft, Star, Award, Zap } from "lucide-react";
 
 interface GitHubUser {
   login: string;
@@ -76,7 +76,7 @@ export default async function ContributorProfilePage({ params }: { params: Promi
             
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Link href={user.html_url} target="_blank" className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-gray-400 hover:text-white">
-                <Github size={20} />
+                <GitFork size={20} />
               </Link>
               {user.blog && (
                 <Link href={user.blog.startsWith('http') ? user.blog : `https://${user.blog}`} target="_blank" className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-gray-400 hover:text-white">
@@ -85,7 +85,7 @@ export default async function ContributorProfilePage({ params }: { params: Promi
               )}
               {user.twitter_username && (
                 <Link href={`https://twitter.com/${user.twitter_username}`} target="_blank" className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-gray-400 hover:text-white">
-                  <Twitter size={20} />
+                  <MessageCircle size={20} />
                 </Link>
               )}
             </div>
