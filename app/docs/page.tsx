@@ -37,14 +37,14 @@ const roadmap = [
   {
     phase: "Phase 3",
     title: "Community & Intelligence",
-    status: "planned",
+    status: "complete",
     emoji: "🧠",
     items: [
-      { label: "AI Recommendation Engine", done: false },
-      { label: "Contributor leaderboard API", done: false },
-      { label: "User accounts (Clerk)", done: false },
-      { label: "Community votes / likes", done: false },
-      { label: "Analytics dashboard", done: false },
+      { label: "AI Recommendation Engine", done: true },
+      { label: "Contributor leaderboard UI", done: true },
+      { label: "User accounts (Supabase)", done: true },
+      { label: "Community votes / likes (Supabase)", done: true },
+      { label: "Real-time analytics integration", done: true },
     ]
   },
   {
