@@ -50,11 +50,11 @@ const roadmap = [
   {
     phase: "Phase 4",
     title: "Platform Scale",
-    status: "planned",
+    status: "in-progress",
     emoji: "🚀",
     items: [
-      { label: "Supabase / PostgreSQL backend", done: false },
-      { label: "AI Workflow Builder (visual nodes)", done: false },
+      { label: "Visual AI Workflow Builder", done: true },
+      { label: "Semantic AI Search (Embeddings)", done: false },
       { label: "API marketplace", done: false },
       { label: "GitHub trending integration", done: false },
       { label: "Vercel Analytics", done: false },
