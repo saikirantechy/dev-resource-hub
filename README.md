@@ -1,10 +1,10 @@
-# 🚀 Dev Resource Hub
+# 🚀 AI Developer Ecosystem Platform
 
-> 🌍 A premium, community-driven collection of the best developer tools, AI resources, learning platforms, DevOps tools, and opportunities.
+> 🌍 **Dev Resource Hub** has evolved into a high-performance, community-driven AI Developer Ecosystem. Explore agents, prompts, tools, and comparisons in a unified glassmorphism interface.
 
 <p align="center">
   <a href="https://saikirantechy.github.io/dev-resource-hub/">
-    <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Now-0A66C2?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/🌐_Live_Platform-Visit_Now-0A66C2?style=for-the-badge" />
   </a>
 
   <a href="https://github.com/saikirantechy/dev-resource-hub/stargazers">
@@ -22,147 +22,84 @@
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" />
 </p>
 
-<p align="center">
- ⭐ Star this repo • 🤝 Contribute • 🌐 Share • 🚀 Explore Resources
-</p>
+---
+
+# 🧠 The Open AI Developer Universe
+
+🔥 **Explore the live platform here:**  
+👉 **[https://saikirantechy.github.io/dev-resource-hub/](https://saikirantechy.github.io/dev-resource-hub/)**
 
 ---
 
-# 🌐 Live Website
+## ✨ About the Platform
 
-🔥 Explore the live platform here:
+The **AI Developer Ecosystem Platform** is a production-grade resource hub designed for the modern AI era. It's more than just a list of links—it's a curated marketplace and discovery engine for:
 
-👉 https://saikirantechy.github.io/dev-resource-hub/
-
----
-
-## ✨ About This Project
-
-Dev Resource Hub is an open-source initiative aimed at helping:
-
-- 👨💻 Developers
-- 🎓 Students
-- 🚀 Startups
-- 🤖 AI Enthusiasts
-- ☁️ DevOps Engineers
-- 🌐 Web Developers
-
-discover the **best tools, platforms, resources, and opportunities** in one place.
-
-💡 Whether you're a beginner or an expert, this platform is built for YOU.
+- 🤖 **AI Agents** (Devin, Manus, CrewAI, etc.)
+- ⌨️ **AI Tooling** (Cursor, Windsurf, v0)
+- 📝 **Prompt Marketplace** (Battle-tested developer prompts)
+- 📊 **Comparisons** (Side-by-side technical breakdowns)
+- 🔥 **Trending Hub** (The hottest resources ranked by the community)
 
 ---
 
-## 🚀 Platform Features
+## 🚀 Key Routes & Features
 
-✅ Premium modern UI  
-✅ Lightning-fast search experience  
-✅ Category-based discovery  
-✅ Open-source contributions  
-✅ GitHub Actions deployment  
-✅ GitHub Pages hosting  
-✅ Mobile responsive design  
-✅ Community-driven resource hub  
-✅ Beginner-friendly contribution system  
-✅ Dynamic resource architecture using JSON  
-
----
-
-## 🌟 Available Categories
-
-- 🤖 AI Tools
-- 💻 Web Development
-- ⚙️ DevOps & Cloud
-- 🎨 Design Tools
-- 📚 Learning Platforms
-- 🚀 Productivity Tools
-- 🛠 Open Source Resources
-- 🔥 Developer Utilities
+| Feature | Description |
+| :--- | :--- |
+| **[AI Agents](/ai-agents)** | Explore autonomous and coding agents with technical stack labels. |
+| **[Prompts Library](/prompts)** | A curated marketplace for high-performance system and developer prompts. |
+| **[Tools Hub](/tools)** | The definitive directory of AI IDEs, UI builders, and frameworks. |
+| **[Marketplace](/marketplace)** | Unified portal for resource discovery and category rankings. |
+| **[Trending](/trending)** | Live podium-style rankings of the most starred and viewed tools. |
+| **[Compare](/compare)** | Side-by-side feature comparisons (IDEs, Agents, Frameworks). |
+| **[Showcase](/showcase)** | Hall of Fame featuring projects built by the community. |
+| **[Community](/community)** | Social hubs, contributor leaderboards, and open issue tracking. |
+| **[Docs & Roadmap](/docs)** | Technical overview and our 4-phase ecosystem expansion plan. |
 
 ---
 
 ## 🛠 Tech Stack
 
-- Next.js 15+
-- TypeScript
-- Tailwind CSS
-- GitHub Actions
-- GitHub Pages
-- Fuse.js Search
-- Lucide Icons
+- **Framework**: Next.js 16 (Turbopack)
+- **Styling**: Tailwind CSS v4 + Glassmorphism Design System
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Search**: Fuse.js (Cross-resource discovery)
+- **Deployment**: GitHub Actions (Static Export)
+- **Hosting**: GitHub Pages
 
 ---
 
 ## 🤝 Open Source Contributions
 
-We welcome contributions from developers around the world 🌍
+We are building the ultimate AI developer ecosystem, and we need your help!
 
-You can contribute by:
-
-- Adding tools
-- Improving UI
-- Enhancing search
-- Fixing bugs
-- Adding categories
-- Improving documentation
-
----
-
-## 🚀 Quick Start
-
-```bash
-git clone https://github.com/saikirantechy/dev-resource-hub.git
-
-cd dev-resource-hub
-
-npm install
-
-npm run dev
-```
-
----
-
-## 🌐 Deployment
-
-This project is automatically deployed using:
-
-✅ GitHub Actions
-✅ GitHub Pages
-
-Every push to `main` triggers automatic deployment 🚀
-
----
-
-## 🌟 Contributing
-
-We welcome contributors from around the world to help build the ultimate developer ecosystem! 🌍
-
-### 🚀 Good First Issues
-Looking for a place to start? Check our curated list of beginner-friendly tasks:
-👉 [View Open Issues](https://github.com/saikirantechy/dev-resource-hub/issues)
+- **Add Tools**: Submit new agents, IDEs, or productivity tools.
+- **Submit Prompts**: Share your most effective developer prompts.
+- **Contribute Code**: Improve our search engine, UI, or backend integration.
+- **Bug Reports**: Help us keep the platform stable.
 
 ### 🛠️ How to Contribute
 1. **Fork** the repository.
-2. **Create a branch** for your feature or fix.
-3. **Commit** your changes with a clear message.
-4. **Open a Pull Request** (link it to an issue with `Fixes #IssueNumber`).
+2. **Create a branch** (`feature/amazing-new-feature`).
+3. **Commit** your changes.
+4. **Push** and **Open a Pull Request**.
 
 ---
 
-## ⭐ Support This Project
+## 🌟 Roadmap
 
-If you find this useful:
-
-⭐ Star the repository
-🍴 Fork the project
-🤝 Contribute
-🌍 Share with developers
+- [x] **Phase 1**: Core Architecture & Route Expansion
+- [ ] **Phase 2**: Universal Search Engine (Fuse.js) & MDX Blog Detail Pages
+- [ ] **Phase 3**: User Auth (Clerk) & Supabase Backend Migration
+- [ ] **Phase 4**: AI Personalization Engine & User Bookmarks
 
 ---
 
 ## ❤️ Contributors
 
-Thanks to all the amazing open-source contributors who are helping grow this platform 🚀
+Thanks to the amazing developers building the future of the AI ecosystem!
 
 <a href="https://github.com/saikirantechy/dev-resource-hub/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=saikirantechy/dev-resource-hub" />
@@ -173,10 +110,9 @@ Thanks to all the amazing open-source contributors who are helping grow this pla
 ## 🔥 Maintained By
 
 ### Sai Kiran BK (SKT)
-
-🚀 Founder @ SKT Nexus
-💡 Building developer communities & open-source platforms
+🚀 Founder @ **SKT Nexus**  
+💡 Building developer communities & open-source AI platforms.
 
 ---
 
-# 🚀 Let's Build The Ultimate Developer Resource Platform Together!
+# 🚀 Let's Build The Ultimate AI Developer Ecosystem Together!
