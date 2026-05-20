@@ -1,27 +1,69 @@
 [
   {
+    "id": "github-copilot",
     "name": "GitHub Copilot",
-    "description": "Your AI pair programmer that provides autocomplete-style suggestions.",
+    "description": "The world's most widely used AI developer tool. Autocompletes code, suggests whole functions, and provides chat in the IDE.",
     "url": "https://github.com/features/copilot",
-    "tags": ["IDE", "Autocomplete", "Productivity"],
+    "tags": ["IDE", "Autocomplete", "Productivity", "GitHub"],
     "isFree": false,
     "isOpenSource": false,
     "isFeatured": true
   },
   {
+    "id": "cursor",
     "name": "Cursor",
-    "description": "The AI-first code editor built for pair programming with LLMs.",
+    "description": "The AI-first code editor built for pair programming with LLMs. Features Composer for multi-file editing and deep codebase context.",
     "url": "https://cursor.com/",
-    "tags": ["IDE", "Editor", "AI"],
+    "tags": ["IDE", "Editor", "AI", "Composer"],
     "isFree": true,
     "isOpenSource": false,
+    "isTrending": true,
+    "isFeatured": true
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "description": "Next-gen AI IDE from Codeium. Features Cascade, a deeply context-aware AI that can take multi-step actions in your project.",
+    "url": "https://codeium.com/windsurf",
+    "tags": ["IDE", "Cascade", "Context", "AI"],
+    "isFree": true,
     "isTrending": true
   },
   {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "description": "Generative UI tool from Vercel. Describe a component and get production-ready shadcn/ui + Tailwind code instantly.",
+    "url": "https://v0.dev",
+    "tags": ["UI Generation", "React", "shadcn", "Tailwind"],
+    "isFree": true,
+    "isTrending": true,
+    "isFeatured": true
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "description": "StackBlitz's AI web development agent. Build, run, edit, and deploy full-stack apps in the browser with Claude.",
+    "url": "https://bolt.new",
+    "tags": ["Browser", "Fullstack", "Claude", "Deploy"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isTrending": true
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "description": "Build full-stack web apps with natural language. Lovable generates React frontends with Supabase backends automatically.",
+    "url": "https://lovable.dev",
+    "tags": ["Fullstack", "React", "Supabase", "No-Code"],
+    "isFree": true,
+    "isTrending": true
+  },
+  {
+    "id": "replit-agent",
     "name": "Replit Agent",
-    "description": "Build full-stack applications from natural language prompts.",
+    "description": "Build and deploy full-stack applications from natural language prompts directly within the Replit Cloud IDE.",
     "url": "https://replit.com/ai",
-    "tags": ["Cloud IDE", "Full Stack", "AI"],
+    "tags": ["Cloud IDE", "Full Stack", "AI", "Deployment"],
     "isFree": false,
     "isOpenSource": false,
     "isTrending": true

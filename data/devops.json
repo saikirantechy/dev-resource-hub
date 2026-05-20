@@ -1,68 +1,115 @@
 [
   {
+    "id": "docker",
     "name": "Docker",
-    "description": "Containerization platform to build, share, and run applications",
+    "description": "Containerization platform to build, share, and run applications in any environment. The industry standard for microservices.",
     "url": "https://www.docker.com",
-    "tags": ["Containers", "DevOps", "Infrastructure"]
+    "tags": ["Containers", "DevOps", "Infrastructure"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isFeatured": true
   },
   {
+    "id": "kubernetes",
     "name": "Kubernetes",
-    "description": "Container orchestration system for automating deployment and scaling",
+    "description": "Open-source container orchestration system for automating deployment, scaling, and management of containerized applications.",
     "url": "https://kubernetes.io",
-    "tags": ["Orchestration", "Containers", "Cloud"]
+    "tags": ["Orchestration", "Containers", "Cloud"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isFeatured": true
   },
   {
+    "id": "github-actions",
     "name": "GitHub Actions",
-    "description": "CI/CD automation directly in your GitHub repository",
+    "description": "Powerful CI/CD and workflow automation directly integrated with your GitHub repositories.",
     "url": "https://github.com/features/actions",
-    "tags": ["CI/CD", "Automation", "GitHub"]
+    "tags": ["CI/CD", "Automation", "GitHub"],
+    "isFree": true
   },
   {
+    "id": "jenkins",
     "name": "Jenkins",
-    "description": "Open-source automation server for building CI/CD pipelines",
+    "description": "The leading open-source automation server, providing hundreds of plugins to support building, deploying, and automating any project.",
     "url": "https://www.jenkins.io",
-    "tags": ["CI/CD", "Automation", "Open Source"]
+    "tags": ["CI/CD", "Automation", "Open Source"],
+    "isFree": true,
+    "isOpenSource": true
   },
   {
+    "id": "terraform",
     "name": "Terraform",
-    "description": "Infrastructure as Code tool for provisioning cloud resources",
+    "description": "Infrastructure as Code (IaC) tool by HashiCorp. Provision and manage any cloud, infrastructure, or service with declarative configuration.",
     "url": "https://www.terraform.io",
-    "tags": ["IaC", "Cloud", "Provisioning"]
+    "tags": ["IaC", "Cloud", "Provisioning"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isFeatured": true
   },
   {
+    "id": "ansible",
     "name": "Ansible",
-    "description": "Automation tool for configuration management and deployment",
+    "description": "Simple, agentless IT automation for configuration management, application deployment, and intra-service orchestration.",
     "url": "https://www.ansible.com",
-    "tags": ["Automation", "Config Management", "DevOps"]
+    "tags": ["Automation", "Config Management", "DevOps"],
+    "isFree": true,
+    "isOpenSource": true
   },
   {
+    "id": "aws",
     "name": "Amazon Web Services",
-    "description": "Comprehensive cloud platform for all your DevOps needs",
+    "description": "The world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally.",
     "url": "https://aws.amazon.com",
-    "tags": ["Cloud", "AWS", "Infrastructure"]
+    "tags": ["Cloud", "AWS", "Infrastructure"],
+    "isFree": true
   },
   {
-    "name": "AWS CloudWatch",
-    "description": "Monitoring and observability service for AWS resources",
-    "url": "https://aws.amazon.com/cloudwatch",
-    "tags": ["Monitoring", "Logging", "AWS"]
-  },
-  {
+    "id": "prometheus",
     "name": "Prometheus",
-    "description": "Open-source monitoring and alerting toolkit",
+    "description": "An open-source monitoring system and time series database. Built-in support for multi-dimensional data collection and querying.",
     "url": "https://prometheus.io",
-    "tags": ["Monitoring", "Metrics", "Alerting"]
+    "tags": ["Monitoring", "Metrics", "Alerting"],
+    "isFree": true,
+    "isOpenSource": true
   },
   {
+    "id": "grafana",
     "name": "Grafana",
-    "description": "Visualization and dashboard platform for metrics and logs",
+    "description": "Query, visualize, alert on, and understand your metrics no matter where they are stored. Create beautiful, real-time dashboards.",
     "url": "https://grafana.com",
-    "tags": ["Visualization", "Dashboards", "Metrics"]
+    "tags": ["Visualization", "Dashboards", "Metrics"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isFeatured": true
   },
   {
+    "id": "argo-cd",
     "name": "Argo CD",
-    "description": "GitOps continuous delivery tool for Kubernetes",
+    "description": "A declarative, GitOps continuous delivery tool for Kubernetes. Synchronize your clusters with your Git repositories automatically.",
     "url": "https://argo-cd.readthedocs.io",
-    "tags": ["GitOps", "CD", "Kubernetes"]
+    "tags": ["GitOps", "CD", "Kubernetes"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isTrending": true
+  },
+  {
+    "id": "coolify",
+    "name": "Coolify",
+    "description": "An open-source & self-hostable alternative to Heroku / Netlify / Vercel. Manage your servers and applications with ease.",
+    "url": "https://coolify.io",
+    "tags": ["Self-hosting", "PaaS", "Alternative", "OSS"],
+    "isFree": true,
+    "isOpenSource": true,
+    "isTrending": true,
+    "isFeatured": true
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "description": "The platform for frontend developers, providing the speed and reliability to deploy and scale web applications effortlessly.",
+    "url": "https://vercel.com",
+    "tags": ["Hosting", "Frontend", "Next.js", "Serverless"],
+    "isFree": true,
+    "isFeatured": true
   }
 ]

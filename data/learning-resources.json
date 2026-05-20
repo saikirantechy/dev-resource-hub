@@ -1,9 +1,33 @@
 [
   {
     "name": "freeCodeCamp",
-    "description": "Comprehensive free coding courses and certifications",
+    "description": "Interactive coding lessons, projects, and certifications.",
     "url": "https://www.freecodecamp.org",
     "tags": ["Education", "Courses", "Certifications"]
+  },
+  {
+    "name": "The Odin Project",
+    "description": "Full-stack curriculum with hands-on projects.",
+    "url": "https://www.theodinproject.com",
+    "tags": ["Full Stack", "Web Dev", "Curriculum"]
+  },
+  {
+    "name": "CS50 (Harvard)",
+    "description": "World-renowned introduction to computer science.",
+    "url": "https://cs50.harvard.edu",
+    "tags": ["Computer Science", "Intro", "Harvard"]
+  },
+  {
+    "name": "Khan Academy",
+    "description": "Beginner-friendly programming tutorials and computer science basics.",
+    "url": "https://www.khanacademy.org",
+    "tags": ["General Learning", "Math", "Science"]
+  },
+  {
+    "name": "MIT OpenCourseWare",
+    "description": "Free access to MIT’s computer science and engineering courses.",
+    "url": "https://ocw.mit.edu",
+    "tags": ["University", "Advanced", "MIT"]
   },
   {
     "name": "MDN Web Docs",

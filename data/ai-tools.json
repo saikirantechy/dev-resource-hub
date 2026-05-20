@@ -1,32 +1,65 @@
 [
   {
+    "id": "chatgpt",
     "name": "ChatGPT",
-    "description": "AI assistant for coding, writing, and problem solving",
+    "description": "AI assistant for coding, writing, and problem solving. Features advanced reasoning with o1 and canvas for collaboration.",
     "url": "https://chat.openai.com",
-    "tags": ["AI Assistant", "LLM", "Coding"]
+    "tags": ["AI Assistant", "LLM", "Coding", "OpenAI"],
+    "isFree": true,
+    "isFeatured": true
   },
   {
+    "id": "gemini",
     "name": "Gemini",
-    "description": "Google AI for multimodal tasks",
+    "description": "Google's most capable AI model, built to be multimodal from the ground up. Excellent at handling long context.",
     "url": "https://gemini.google.com",
-    "tags": ["Multimodal", "Google AI", "LLM"]
+    "tags": ["Multimodal", "Google AI", "LLM", "Long Context"],
+    "isFree": true,
+    "isTrending": true
   },
   {
+    "id": "claude",
     "name": "Claude",
-    "description": "AI assistant for long-form reasoning",
+    "description": "Anthropic's AI assistant focused on safety and honesty. Superior performance in coding and complex reasoning.",
     "url": "https://claude.ai",
-    "tags": ["Reasoning", "Anthropic", "LLM"]
+    "tags": ["Reasoning", "Anthropic", "LLM", "Coding"],
+    "isFree": true,
+    "isFeatured": true
   },
   {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "description": "Strong open-weights model specialized in coding and mathematics. Known for exceptional efficiency and performance.",
+    "url": "https://chat.deepseek.com",
+    "tags": ["Open Weights", "Coding", "Math", "LLM"],
+    "isFree": true,
+    "isTrending": true,
+    "isOpenSource": true
+  },
+  {
+    "id": "perplexity",
     "name": "Perplexity AI",
-    "description": "AI-powered search engine",
+    "description": "AI-powered search engine that provides cited, real-time answers. Ideal for research and discovery.",
     "url": "https://www.perplexity.ai",
-    "tags": ["Search", "AI Search", "Research"]
+    "tags": ["Search", "AI Search", "Research"],
+    "isFree": true,
+    "isFeatured": true
   },
   {
+    "id": "poe",
     "name": "Poe",
-    "description": "Access multiple AI models in one place",
+    "description": "Quora's platform to access multiple AI models including Claude, GPT-4, and Llama in one interface.",
     "url": "https://poe.com",
-    "tags": ["Aggregator", "AI Assistant", "LLM"]
+    "tags": ["Aggregator", "AI Assistant", "LLM"],
+    "isFree": true
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "description": "European AI champion providing high-performance open models like Mistral 7B and Mixtral 8x7B.",
+    "url": "https://mistral.ai",
+    "tags": ["Open Source", "Efficiency", "LLM"],
+    "isFree": true,
+    "isOpenSource": true
   }
 ]

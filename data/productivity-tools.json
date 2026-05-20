@@ -1,14 +1,66 @@
 [
   {
+    "id": "notion",
     "name": "Notion",
-    "description": "All-in-one workspace for notes, tasks, and wikis",
+    "description": "The all-in-one workspace for your notes, tasks, wikis, and databases. Highly customizable for developer documentation and project tracking.",
     "url": "https://www.notion.so",
-    "tags": ["Notes", "Tasks", "Productivity"]
+    "tags": ["Notes", "Tasks", "Productivity", "Wiki"],
+    "isFree": true,
+    "isFeatured": true
   },
   {
+    "id": "trello",
     "name": "Trello",
-    "description": "Visual tool for managing projects and workflows",
+    "description": "Visual board-based tool for managing projects and workflows. Excellent for Kanban-style task tracking.",
     "url": "https://trello.com",
-    "tags": ["Kanban", "Project Management", "Tasks"]
+    "tags": ["Kanban", "Project Management", "Tasks"],
+    "isFree": true
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "description": "The issue tracker for high-performance teams. Streamline software projects, sprints, and bug tracking with a focus on speed.",
+    "url": "https://linear.app",
+    "tags": ["Issue Tracking", "Agile", "Sprints", "Software"],
+    "isFree": true,
+    "isTrending": true,
+    "isFeatured": true
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "description": "A powerful knowledge base that works on top of a local folder of plain text Markdown files. Ideal for personal knowledge management.",
+    "url": "https://obsidian.md",
+    "tags": ["Notes", "Markdown", "Local-first", "Knowledge Base"],
+    "isFree": true,
+    "isTrending": true,
+    "isOpenSource": false
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "description": "A modern, Rust-based terminal with AI built-in. Collaborative, fast, and works with your existing shell.",
+    "url": "https://www.warp.dev",
+    "tags": ["Terminal", "Rust", "AI", "CLI"],
+    "isFree": true,
+    "isTrending": true
+  },
+  {
+    "id": "arc-browser",
+    "name": "Arc Browser",
+    "description": "The browser that helps you focus. A modern internet experience with spaces, boosts, and a powerful command bar.",
+    "url": "https://arc.net",
+    "tags": ["Browser", "Focus", "UI/UX"],
+    "isFree": true,
+    "isTrending": true
+  },
+  {
+    "id": "raycast",
+    "name": "Raycast",
+    "description": "A blazingly fast, extendable launcher for Mac. Replace Spotlight with a powerful command palette for everything.",
+    "url": "https://www.raycast.com",
+    "tags": ["Launcher", "Productivity", "Mac", "Automation"],
+    "isFree": true,
+    "isFeatured": true
   }
 ]
