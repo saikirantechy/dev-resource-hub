@@ -9,15 +9,16 @@ import {
 import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
+  { href: "/dashboard", label: "Dashboard", icon: Layout, color: "text-cyan-400" },
   { href: "/ai-agents", label: "Agents", icon: Bot, color: "text-blue-400" },
   { href: "/tools", label: "Tools", icon: Package, color: "text-emerald-400" },
   { href: "/prompts", label: "Prompts", icon: Terminal, color: "text-purple-400" },
-  { href: "/ai-finder", label: "Finder", icon: Sparkles, color: "text-blue-300" },
+  { href: "/workflow", label: "Orchestrate", icon: Layers, color: "text-blue-400" },
+  { href: "/prompt-optimizer", label: "Optimize", icon: Sparkles, color: "text-purple-300" },
+  { href: "/token-calculator", label: "Tokens", icon: BarChart3, color: "text-emerald-300" },
   { href: "/learning", label: "Learn", icon: GraduationCap, color: "text-purple-300" },
   { href: "/trending", label: "Trending", icon: Flame, color: "text-orange-400" },
   { href: "/blogs", label: "Blog", icon: BookOpen, color: "text-yellow-400" },
-  { href: "/workflow", label: "Orchestrate", icon: Layers, color: "text-blue-400" },
-  { href: "/saved", label: "Saved", icon: Bookmark, color: "text-orange-300" },
   { href: "/community", label: "Community", icon: Users, color: "text-indigo-400" },
 ];
 
