@@ -3,10 +3,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { 
   Sparkles, Menu, X, Flame, Bot, Terminal, BarChart3, 
-  Scale, Users, BookOpen, Trophy, Zap, Star, Package,
-  LogIn, LogOut, User as UserIcon, Bookmark, GraduationCap, Layers, Layout
+  Users, BookOpen, Zap, Package,
+  LogIn, LogOut, GraduationCap, Layers, Layout
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "/dashboard", label: "Dashboard", icon: Layout, color: "text-cyan-400" },
@@ -56,6 +57,8 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
+
             <Link
               href="/webagentcore"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold hover:bg-emerald-500/20 transition-all"
@@ -119,6 +122,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-white/5 space-y-2">
+                <div className="px-4 py-2">
+                  <ThemeToggle />
+                </div>
+
                 <Link href="/webagentcore" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-4 py-3 rounded-xl bg-emerald-500/10 text-emerald-400 font-bold hover:bg-emerald-500/20 transition-all">
                   <Sparkles size={14} /> WebAgentCore
                 </Link>
