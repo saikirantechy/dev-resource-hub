@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import toolsData from "@/data/tools.json";
-import { Search, Star, Eye, ExternalLink, GitFork, BookOpen, Copy, CheckCircle2, Filter, Zap, Package, Monitor, Globe, Code2 } from "lucide-react";
+import { Search, Star, Eye, GitFork, BookOpen, Copy, CheckCircle2, Filter, Package, Monitor, Globe, Code2, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
@@ -244,7 +244,7 @@ export default function ToolsPage() {
         <div className="relative p-12 rounded-[2.5rem] glass border border-white/8 text-center overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-blue-500/5" />
           <div className="relative z-10 space-y-4">
-            <h2 className="text-3xl font-black">Know a tool we're missing?</h2>
+            <h2 className="text-3xl font-black">Know a tool we&apos;re missing?</h2>
             <p className="text-gray-400 max-w-md mx-auto">The ecosystem grows with community contributions. Add any tool you love.</p>
             <Link href="/submit" className="btn-primary inline-flex">
               <Zap size={16} /> Submit a Tool

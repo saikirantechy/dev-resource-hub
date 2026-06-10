@@ -1,153 +1,159 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import ShowcaseCard, { ShowcaseItem } from "@/components/ShowcaseCard";
 import showcaseData from "@/data/showcase.json";
-import { Metadata } from "next";
+import { Search, Star, Sparkles, LayoutGrid, Code2, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: "AI Project Showcase | Dev Resource Hub",
-  description: "Explore the best AI projects and workflows built by our community using autonomous agents and modern AI frameworks.",
-  keywords: ["AI showcase", "community projects", "AI builders", "AI workflows", "built with AI"],
-};
-import { MonitorPlay, ExternalLink, GitFork, Star, Zap, Trophy, Users } from "lucide-react";
-import Link from "next/link";
-
-const STACK_COLORS: Record<string, string> = {
-  "Next.js": "badge-blue",
-  "React": "badge-blue",
-  "Tailwind": "badge-emerald",
-  "Supabase": "badge-emerald",
-  "OpenAI": "badge-purple",
-  "Python": "badge-orange",
-};
+const CATEGORIES = [
+  "All",
+  "AI Agents",
+  "SaaS",
+  "Automation",
+  "Browser AI",
+  "Workflows",
+  "Prompt Engineering"
+];
 
 export default function ShowcasePage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showBuiltWithHubOnly, setShowBuiltWithHubOnly] = useState(false);
+
+  const items = showcaseData as ShowcaseItem[];
+
+  const filteredItems = items.filter(item => {
+    const matchesCategory = activeCategory === "All" || item.category === activeCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesBuiltWithHub = showBuiltWithHubOnly ? item.builtWithHub : true;
+    
+    return matchesCategory && matchesSearch && matchesBuiltWithHub;
+  });
+
   return (
     <div className="min-h-screen bg-[#050508] text-white">
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
+        
         {/* Header */}
-        <header className="text-center space-y-6 animate-fade-in">
-          <div className="inline-flex items-center gap-2 badge badge-pink">
-            <MonitorPlay size={12} /> Community Builds
+        <header className="text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-bold uppercase tracking-widest">
+            <Star size={14} /> Community
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-            <span className="gradient-text-purple">Project</span>
+            Developer
             <br />
-            <span className="text-white/90">Showcase</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500">
+              Showcase
+            </span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Discover what the community is building with AI tools, agents, and prompts from the Dev Resource Hub ecosystem.
+            Discover incredible projects, agents, and SaaS applications built by the Dev Resource Hub community.
           </p>
-
-          {/* Stats */}
-          <div className="flex items-center justify-center gap-8 pt-4">
-            {[
-              { label: "Projects", value: showcaseData.length + "+", icon: MonitorPlay },
-              { label: "Builders", value: "200+", icon: Users },
-              { label: "Stars", value: "10k+", icon: Star },
-            ].map(stat => (
-              <div key={stat.label} className="flex items-center gap-2 text-sm">
-                <stat.icon size={14} className="text-pink-400" />
-                <span className="font-black text-white text-lg">{stat.value}</span>
-                <span className="text-gray-500">{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </header>
 
-        {/* Hall of Fame top row */}
-        <section className="space-y-4">
-          <div className="flex items-center gap-3">
-            <Trophy size={20} className="text-yellow-400" />
-            <h2 className="text-xl font-black">Hall of Fame</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {showcaseData.map((project, i) => (
-              <div
-                key={project.id}
-                className="group glass rounded-3xl border border-white/5 hover:border-pink-500/30 card-hover overflow-hidden flex flex-col animate-fade-in"
-                style={{ animationDelay: `${i * 0.07}s` }}
+        {/* Filters and Search */}
+        <div className="space-y-6">
+          <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white/5 p-4 rounded-3xl border border-white/10 backdrop-blur-md">
+            
+            <div className="relative w-full md:w-96">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
+              <input 
+                type="text" 
+                placeholder="Search projects, creators, stacks..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-black/50 border border-white/10 rounded-2xl py-3 pl-12 pr-4 text-white focus:outline-none focus:border-yellow-500/50 transition-colors"
+              />
+            </div>
+
+            <div className="flex items-center gap-4 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+              <button 
+                onClick={() => setShowBuiltWithHubOnly(!showBuiltWithHubOnly)}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold transition-all whitespace-nowrap border ${
+                  showBuiltWithHubOnly 
+                  ? 'bg-blue-500/20 text-blue-400 border-blue-500/30 shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)]' 
+                  : 'bg-white/5 text-gray-400 border-white/10 hover:bg-white/10 hover:text-white'
+                }`}
               >
-                {/* Image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-transparent to-transparent" />
-                  {i === 0 && (
-                    <div className="absolute top-3 left-3">
-                      <span className="badge badge-orange"><Trophy size={9} /> Top Pick</span>
-                    </div>
-                  )}
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    className="absolute top-3 right-3 p-2 rounded-xl glass border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all opacity-0 group-hover:opacity-100"
-                  >
-                    <ExternalLink size={14} />
-                  </Link>
-                </div>
+                <Code2 size={16} className={showBuiltWithHubOnly ? "animate-pulse-slow" : ""} /> Built with Hub
+              </button>
+              
+              <div className="h-8 w-px bg-white/10 mx-2 hidden md:block"></div>
+              
+              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white font-bold transition-all whitespace-nowrap">
+                <Users size={16} /> Following
+              </button>
+              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:text-white font-bold transition-all whitespace-nowrap">
+                <LayoutGrid size={16} /> Newest
+              </button>
+            </div>
+          </div>
 
-                {/* Content */}
-                <div className="p-5 flex flex-col flex-1 space-y-4">
-                  {/* Builder */}
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={project.builder.avatar}
-                      alt={project.builder.name}
-                      className="w-7 h-7 rounded-full border border-white/10"
-                    />
-                    <span className="text-xs text-gray-400">Built by <span className="text-white font-semibold">{project.builder.name}</span></span>
-                  </div>
-
-                  <h3 className="text-xl font-black text-white group-hover:text-pink-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 line-clamp-2 flex-1">{project.description}</p>
-
-                  {/* Stack */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.stack.map(tech => (
-                      <span key={tech} className={`badge ${STACK_COLORS[tech] || "badge-blue"} text-[9px]`}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex gap-2 pt-1">
-                    <Link
-                      href={project.url}
-                      target="_blank"
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold hover:bg-pink-500/20 transition-all"
-                    >
-                      <ExternalLink size={12} /> View Project
-                    </Link>
-                    <button className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-400 text-xs font-bold hover:bg-white/10 transition-all">
-                      <Star size={12} />
-                    </button>
-                  </div>
-                </div>
-              </div>
+          {/* Categories */}
+          <div className="flex flex-wrap gap-2 justify-center">
+            {CATEGORIES.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
+                  activeCategory === cat 
+                  ? 'bg-white text-black' 
+                  : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {cat}
+              </button>
             ))}
           </div>
-        </section>
+        </div>
+
+        {/* Results Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.length > 0 ? (
+            filteredItems.map((item, i) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+              >
+                <ShowcaseCard item={item} />
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-full py-20 text-center space-y-4">
+              <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10">
+                <Search size={24} className="text-gray-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white">No projects found</h3>
+              <p className="text-gray-500">Try adjusting your filters or search query.</p>
+            </div>
+          )}
+        </div>
 
         {/* Submit CTA */}
-        <div className="relative p-12 rounded-[2.5rem] glass border border-pink-500/15 text-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-transparent to-purple-500/5" />
-          <div className="relative z-10 space-y-4">
-            <div className="text-4xl animate-float inline-block">🚀</div>
-            <h2 className="text-3xl font-black">Built something awesome?</h2>
-            <p className="text-gray-400 max-w-md mx-auto">Submit your project to be featured in the showcase and get discovered by 10,000+ developers.</p>
-            <Link href="/submit" className="btn-primary inline-flex">
-              <Zap size={16} /> Submit Your Project
-            </Link>
+        <div className="mt-20 relative p-12 rounded-[3rem] glass border border-white/10 text-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-orange-500/10" />
+          <div className="relative z-10 space-y-6">
+            <div className="w-20 h-20 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto border border-yellow-500/30">
+              <Sparkles size={32} className="text-yellow-400" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black">Built something amazing?</h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Join the showcase and get your project in front of thousands of AI developers. Open source, SaaS, or just a cool experiment—we want to see it.
+            </p>
+            <a href="/submit" className="inline-flex px-8 py-4 rounded-xl bg-white text-black font-black text-lg hover:bg-gray-200 hover:scale-105 transition-all">
+              Submit Your Project
+            </a>
           </div>
         </div>
+
       </main>
     </div>
   );

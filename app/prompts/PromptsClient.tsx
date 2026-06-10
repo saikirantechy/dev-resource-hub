@@ -2,11 +2,30 @@
 
 import { useState, useMemo } from "react";
 import promptsData from "@/data/prompts.json";
-import { Copy, CheckCircle2, Search, Terminal, Eye, ThumbsUp, Filter, Sparkles, Zap, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Copy,
+  CheckCircle2,
+  Search,
+  Terminal,
+  Eye,
+  ThumbsUp,
+  Filter,
+  Sparkles, Zap
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
-const CATEGORIES = ["All", "Cursor Prompts", "Next.js", "Agent Prompts", "System Prompts", "Code Review", "Architecture", "Prompt Engineering", "Debugging"];
+const CATEGORIES = [
+  "All",
+  "Cursor Prompts",
+  "Next.js",
+  "Agent Prompts",
+  "System Prompts",
+  "Code Review",
+  "Architecture",
+  "Prompt Engineering",
+  "Debugging",
+];
 const DIFFICULTIES = ["All", "Beginner", "Intermediate", "Advanced"];
 
 const DIFF_COLORS: Record<string, string> = {
@@ -28,17 +47,22 @@ export default function PromptsPage() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const filtered = useMemo(() =>
-    promptsData.filter(p => {
-      const q = search.toLowerCase();
-      const matchesSearch =
-        p.title.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q) ||
-        p.tags.some(t => t.toLowerCase().includes(q));
-      const matchesCat = activeCategory === "All" || p.category === activeCategory;
-      const matchesDiff = activeDifficulty === "All" || p.difficulty === activeDifficulty;
-      return matchesSearch && matchesCat && matchesDiff;
-    }), [search, activeCategory, activeDifficulty]);
+  const filtered = useMemo(
+    () =>
+      promptsData.filter((p) => {
+        const q = search.toLowerCase();
+        const matchesSearch =
+          p.title.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q) ||
+          p.tags.some((t) => t.toLowerCase().includes(q));
+        const matchesCat =
+          activeCategory === "All" || p.category === activeCategory;
+        const matchesDiff =
+          activeDifficulty === "All" || p.difficulty === activeDifficulty;
+        return matchesSearch && matchesCat && matchesDiff;
+      }),
+    [search, activeCategory, activeDifficulty],
+  );
 
   const formatNumber = (n: number) =>
     n >= 1000 ? `${(n / 1000).toFixed(0)}k` : String(n);
@@ -60,26 +84,35 @@ export default function PromptsPage() {
             <span className="text-white/90">Library</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Battle-tested prompts for Cursor, Windsurf, Claude, GPT-4, and autonomous agents. Copy, use, and ship faster.
+            Battle-tested prompts for Cursor, Windsurf, Claude, GPT-4, and
+            autonomous agents. Copy, use, and ship faster.
           </p>
 
           {/* Stats */}
           <div className="flex items-center justify-center gap-8 pt-2">
             <div className="text-center">
-              <div className="text-2xl font-black text-white">{promptsData.length}</div>
-              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Prompts</div>
+              <div className="text-2xl font-black text-white">
+                {promptsData.length}
+              </div>
+              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">
+                Prompts
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-black text-white">
                 {formatNumber(promptsData.reduce((acc, p) => acc + p.views, 0))}
               </div>
-              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Total Views</div>
+              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">
+                Total Views
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-black text-white">
                 {formatNumber(promptsData.reduce((acc, p) => acc + p.likes, 0))}
               </div>
-              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">Likes</div>
+              <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">
+                Likes
+              </div>
             </div>
           </div>
         </header>
@@ -87,7 +120,10 @@ export default function PromptsPage() {
         {/* Search & Filters */}
         <div className="space-y-4 max-w-3xl mx-auto">
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+            <Search
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
+              size={18}
+            />
             <input
               type="text"
               placeholder="Search prompts, tags, categories..."
@@ -102,7 +138,7 @@ export default function PromptsPage() {
               <Filter size={13} className="text-gray-500" />
               <span className="text-xs text-gray-500 font-bold">Category:</span>
             </div>
-            {CATEGORIES.map(cat => (
+            {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
@@ -120,9 +156,11 @@ export default function PromptsPage() {
           <div className="flex flex-wrap gap-2">
             <div className="flex items-center gap-1 mr-2">
               <Sparkles size={13} className="text-gray-500" />
-              <span className="text-xs text-gray-500 font-bold">Difficulty:</span>
+              <span className="text-xs text-gray-500 font-bold">
+                Difficulty:
+              </span>
             </div>
-            {DIFFICULTIES.map(d => (
+            {DIFFICULTIES.map((d) => (
               <button
                 key={d}
                 onClick={() => setActiveDifficulty(d)}
@@ -140,7 +178,9 @@ export default function PromptsPage() {
 
         {/* Results */}
         <div className="text-sm text-gray-500">
-          Showing <span className="text-white font-bold">{filtered.length}</span> of {promptsData.length} prompts
+          Showing{" "}
+          <span className="text-white font-bold">{filtered.length}</span> of{" "}
+          {promptsData.length} prompts
         </div>
 
         {/* Prompts Grid */}
@@ -158,10 +198,14 @@ export default function PromptsPage() {
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1 flex-wrap">
-                        <span className={`badge ${DIFF_COLORS[prompt.difficulty] || "badge-blue"}`}>
+                        <span
+                          className={`badge ${DIFF_COLORS[prompt.difficulty] || "badge-blue"}`}
+                        >
                           {prompt.difficulty}
                         </span>
-                        <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">{prompt.category}</span>
+                        <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">
+                          {prompt.category}
+                        </span>
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
                         {prompt.title}
@@ -176,14 +220,20 @@ export default function PromptsPage() {
                       }`}
                     >
                       {copiedId === prompt.id ? (
-                        <><CheckCircle2 size={13} /> Copied!</>
+                        <>
+                          <CheckCircle2 size={13} /> Copied!
+                        </>
                       ) : (
-                        <><Copy size={13} /> Copy</>
+                        <>
+                          <Copy size={13} /> Copy
+                        </>
                       )}
                     </button>
                   </div>
 
-                  <p className="text-sm text-gray-400 mb-4 leading-relaxed">{prompt.description}</p>
+                  <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                    {prompt.description}
+                  </p>
 
                   {/* Code Preview */}
                   <div
@@ -192,9 +242,7 @@ export default function PromptsPage() {
                     }`}
                     onClick={() => setExpandedId(isExpanded ? null : prompt.id)}
                   >
-                    <div className="pt-4">
-                      {prompt.content}
-                    </div>
+                    <div className="pt-4">{prompt.content}</div>
                     {!isExpanded && (
                       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0d0d14] to-transparent" />
                     )}
@@ -204,14 +252,21 @@ export default function PromptsPage() {
                       href={`/prompts/${prompt.id}`}
                       className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold hover:bg-purple-500/20 transition-all group/btn"
                     >
-                      <Zap size={14} className="group-hover:scale-110 transition-transform" /> View Details & Playground
+                      <Zap
+                        size={14}
+                        className="group-hover:scale-110 transition-transform"
+                      />{" "}
+                      View Details & Playground
                     </Link>
                   </div>
 
                   {/* Tags */}
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {prompt.tags.map(tag => (
-                      <span key={tag} className="px-2 py-0.5 bg-white/[0.04] border border-white/8 rounded text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                    {prompt.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 bg-white/[0.04] border border-white/8 rounded text-[10px] text-gray-400 font-bold uppercase tracking-wider"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -221,8 +276,13 @@ export default function PromptsPage() {
                   <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
                     <span className="font-medium">by {prompt.author}</span>
                     <div className="flex items-center gap-3">
-                      <span className="flex items-center gap-1"><Eye size={11} /> {formatNumber(prompt.views)}</span>
-                      <span className="flex items-center gap-1"><ThumbsUp size={11} className="text-pink-400" /> {formatNumber(prompt.likes)}</span>
+                      <span className="flex items-center gap-1">
+                        <Eye size={11} /> {formatNumber(prompt.views)}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <ThumbsUp size={11} className="text-pink-400" />{" "}
+                        {formatNumber(prompt.likes)}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -234,8 +294,17 @@ export default function PromptsPage() {
         {filtered.length === 0 && (
           <div className="text-center py-24 space-y-4">
             <div className="text-5xl">✨</div>
-            <p className="text-gray-400 text-xl">No prompts found for <span className="text-white font-bold">"{search}"</span></p>
-            <button onClick={() => { setSearch(""); setActiveCategory("All"); }} className="btn-secondary mt-4">
+            <p className="text-gray-400 text-xl">
+              No prompts found for{" "}
+              <span className="text-white font-bold">&quot;{search}&quot;</span>
+            </p>
+            <button
+              onClick={() => {
+                setSearch("");
+                setActiveCategory("All");
+              }}
+              className="btn-secondary mt-4"
+            >
               Clear filters
             </button>
           </div>
@@ -247,7 +316,9 @@ export default function PromptsPage() {
           <div className="relative z-10 space-y-4">
             <div className="text-4xl">📝</div>
             <h2 className="text-3xl font-black">Have a killer prompt?</h2>
-            <p className="text-gray-400 max-w-md mx-auto">Share your best prompts with 10,000+ developers in the ecosystem.</p>
+            <p className="text-gray-400 max-w-md mx-auto">
+              Share your best prompts with 10,000+ developers in the ecosystem.
+            </p>
             <Link href="/submit" className="btn-primary inline-flex">
               <Zap size={16} /> Submit Your Prompt
             </Link>
@@ -257,3 +328,4 @@ export default function PromptsPage() {
     </div>
   );
 }
+

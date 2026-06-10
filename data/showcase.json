@@ -1,38 +1,54 @@
 [
   {
-    "id": "project-alpha",
-    "title": "AI Documentation Generator",
-    "description": "An autonomous agent built with Cursor and LangChain that generates beautiful documentation for any GitHub repo.",
-    "url": "#",
-    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
-    "builder": {
-      "name": "Jane Doe",
-      "avatar": "https://avatars.githubusercontent.com/u/1?v=4"
-    },
-    "stack": ["Cursor", "Next.js", "LangChain"]
+    "id": "showcase-dev-resource-hub",
+    "title": "Dev Resource Hub",
+    "description": "The Open AI Developer Ecosystem. A central hub for agents, tools, prompts, workflows, and learning.",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+    "category": "SaaS",
+    "techStack": ["Next.js", "Tailwind CSS", "Zustand", "React Flow"],
+    "creator": "saikirantechy",
+    "github": "https://github.com/saikirantechy/dev-resource-hub",
+    "likes": 1250,
+    "views": 45000,
+    "builtWithHub": true
   },
   {
-    "id": "project-beta",
-    "title": "Vercel v0 Portfolio",
-    "description": "A stunning, highly animated developer portfolio generated entirely using v0 by Vercel.",
-    "url": "#",
-    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600",
-    "builder": {
-      "name": "Alex Smith",
-      "avatar": "https://avatars.githubusercontent.com/u/2?v=4"
-    },
-    "stack": ["v0", "Tailwind", "React"]
+    "id": "showcase-auto-coder",
+    "title": "AutoCoder CLI",
+    "description": "A terminal-based autonomous agent that writes code from natural language prompts using local models.",
+    "image": "https://images.unsplash.com/photo-1618401471353-b98a5233c591?w=800&q=80",
+    "category": "AI Agents",
+    "techStack": ["Python", "Ollama", "Typer"],
+    "creator": "local-ai-dev",
+    "github": "https://github.com",
+    "likes": 840,
+    "views": 12000,
+    "builtWithHub": false
   },
   {
-    "id": "project-gamma",
-    "title": "Autonomous PR Reviewer",
-    "description": "A GitHub Action powered by Devin AI that autonomously reviews and suggests improvements for pull requests.",
-    "url": "#",
-    "image": "https://images.unsplash.com/photo-1618401471353-b98a5233c591?auto=format&fit=crop&q=80&w=600",
-    "builder": {
-      "name": "Sam Lee",
-      "avatar": "https://avatars.githubusercontent.com/u/3?v=4"
-    },
-    "stack": ["Devin", "GitHub Actions", "Python"]
+    "id": "showcase-rag-pipeline",
+    "title": "Enterprise RAG Pipeline Builder",
+    "description": "Visual drag-and-drop tool to orchestrate advanced Retrieval-Augmented Generation workflows securely.",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+    "category": "Workflows",
+    "techStack": ["React", "Pinecone", "LangChain"],
+    "creator": "enterprise-ai",
+    "github": "https://github.com",
+    "likes": 530,
+    "views": 8500,
+    "builtWithHub": true
+  },
+  {
+    "id": "showcase-browser-assistant",
+    "title": "DOM Navigator Extension",
+    "description": "Chrome extension that uses multi-modal models to understand, summarize, and automate actions on any website.",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    "category": "Browser AI",
+    "techStack": ["TypeScript", "Chrome API", "Claude Vision"],
+    "creator": "web-hacker",
+    "github": "https://github.com",
+    "likes": 320,
+    "views": 5000,
+    "builtWithHub": false
   }
 ]

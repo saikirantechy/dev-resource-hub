@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Globe, Trophy, Medal, Star } from "lucide-react";
+import { Globe, Trophy, Medal } from "lucide-react";
 
 interface Contributor {
   login: string;
@@ -42,7 +42,7 @@ export default async function ContributorsPage() {
           </div>
           <h1 className="text-5xl font-bold tracking-tight">Meet Our Contributors</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            The amazing people who are building the world's best developer ecosystem together.
+            The amazing people who are building the world&apos;s best developer ecosystem together.
           </p>
         </header>
 

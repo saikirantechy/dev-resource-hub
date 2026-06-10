@@ -1,0 +1,72 @@
+[
+  {
+    "username": "saikirantechy",
+    "displayName": "Sai Kiran",
+    "avatar": "https://ui-avatars.com/api/?name=SK&background=3b82f6&color=fff",
+    "xp": 14500,
+    "rank": "Grandmaster",
+    "streak": 42,
+    "contributions": {
+      "workflows": 15,
+      "prompts": 42,
+      "articles": 8
+    },
+    "badges": ["Founder", "Top Writer", "Architect"]
+  },
+  {
+    "username": "alex-ai",
+    "displayName": "Alex Chen",
+    "avatar": "https://ui-avatars.com/api/?name=AC&background=10b981&color=fff",
+    "xp": 9200,
+    "rank": "Master",
+    "streak": 14,
+    "contributions": {
+      "workflows": 8,
+      "prompts": 12,
+      "articles": 3
+    },
+    "badges": ["Workflow Wizard", "Early Adopter"]
+  },
+  {
+    "username": "sarah-dev",
+    "displayName": "Sarah Jenkins",
+    "avatar": "https://ui-avatars.com/api/?name=SJ&background=f59e0b&color=fff",
+    "xp": 8450,
+    "rank": "Master",
+    "streak": 5,
+    "contributions": {
+      "workflows": 2,
+      "prompts": 35,
+      "articles": 5
+    },
+    "badges": ["Prompt Engineer", "Top Writer"]
+  },
+  {
+    "username": "local-ai-dev",
+    "displayName": "Marcus T.",
+    "avatar": "https://ui-avatars.com/api/?name=MT&background=8b5cf6&color=fff",
+    "xp": 6100,
+    "rank": "Diamond",
+    "streak": 8,
+    "contributions": {
+      "workflows": 5,
+      "prompts": 8,
+      "articles": 1
+    },
+    "badges": ["Open Source Hero"]
+  },
+  {
+    "username": "prompt-god",
+    "displayName": "Elena R.",
+    "avatar": "https://ui-avatars.com/api/?name=ER&background=ec4899&color=fff",
+    "xp": 4300,
+    "rank": "Platinum",
+    "streak": 1,
+    "contributions": {
+      "workflows": 0,
+      "prompts": 55,
+      "articles": 0
+    },
+    "badges": ["Prompt Engineer"]
+  }
+]

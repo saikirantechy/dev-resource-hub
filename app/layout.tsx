@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Dev Resource Hub",
     images: [
       {
-        url: "https://saikirantechy.github.io/dev-resource-hub/og-image.png",
+        url: "https://saikirantechy.github.io/dev-resource-hub/og-image.svg",
         width: 1200,
         height: 630,
       },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dev Resource Hub — The Open AI Developer Universe",
     description: "Discover AI tools, agents, prompts, and connect with the global developer ecosystem.",
-    images: ["https://saikirantechy.github.io/dev-resource-hub/og-image.png"],
+    images: ["https://saikirantechy.github.io/dev-resource-hub/og-image.svg"],
   },
 };
 
@@ -46,12 +46,15 @@ import PageTransition from "@/components/PageTransition";
 import CursorGlow from "@/components/CursorGlow";
 import { BookmarkProvider } from "@/context/BookmarkContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { getAllBlogs } from "@/lib/blogs";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const blogs = getAllBlogs();
+  
   return (
     <html
       lang="en"
@@ -66,13 +69,57 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Dev Resource Hub",
+              url: "https://saikirantechy.github.io/dev-resource-hub/",
+              description: "The Open AI Developer Universe — discover AI tools, agents, prompts, compare frameworks, explore trending resources, and connect with the developer ecosystem.",
+              author: {
+                "@type": "Person",
+                name: "Sai Kiran BK",
+              },
+              about: {
+                "@type": "Thing",
+                name: "AI Developer Tools",
+                description: "Curated marketplace of AI coding tools, agent frameworks, prompts, and developer resources.",
+              },
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              name: "AI Resource Collection",
+              description: "A curated collection of AI developer tools, agents, and prompts.",
+              url: "https://saikirantechy.github.io/dev-resource-hub/",
+              isPartOf: {
+                "@type": "WebSite",
+                name: "Dev Resource Hub",
+                url: "https://saikirantechy.github.io/dev-resource-hub/",
+              },
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#050508] relative transition-colors duration-300">
         <AuthProvider>
           <BookmarkProvider>
             <div className="gradient-mesh" />
             <CursorGlow />
-            <CommandPalette />
+            <CommandPalette initialBlogs={blogs} />
             <PageTransition>
               {children}
             </PageTransition>

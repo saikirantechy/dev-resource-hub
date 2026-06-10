@@ -19,17 +19,16 @@ interface BookmarkContextType {
   isBookmarked: (id: string) => boolean;
 }
 
-const BookmarkContext = createContext<BookmarkContextType | undefined>(undefined);
+const BookmarkContext = createContext<BookmarkContextType | undefined>(
+  undefined,
+);
 
 export function BookmarkProvider({ children }: { children: React.ReactNode }) {
-  const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
-
-  useEffect(() => {
+  const [bookmarks, setBookmarks] = useState<Bookmark[]>(() => {
+    if (typeof window === "undefined") return [];
     const saved = localStorage.getItem("dev_hub_bookmarks");
-    if (saved) {
-      setBookmarks(JSON.parse(saved));
-    }
-  }, []);
+    return saved ? JSON.parse(saved) : [];
+  });
 
   const addBookmark = (bookmark: Bookmark) => {
     const updated = [...bookmarks, bookmark];
@@ -46,7 +45,9 @@ export function BookmarkProvider({ children }: { children: React.ReactNode }) {
   const isBookmarked = (id: string) => bookmarks.some((b) => b.id === id);
 
   return (
-    <BookmarkContext.Provider value={{ bookmarks, addBookmark, removeBookmark, isBookmarked }}>
+    <BookmarkContext.Provider
+      value={{ bookmarks, addBookmark, removeBookmark, isBookmarked }}
+    >
       {children}
     </BookmarkContext.Provider>
   );

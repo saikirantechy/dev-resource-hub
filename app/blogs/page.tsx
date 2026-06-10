@@ -1,4 +1,4 @@
-import blogsData from "@/data/blogs.json";
+import { getAllBlogs } from "@/lib/blogs";
 import { Calendar, User, ArrowRight, BookOpen, Clock, Eye, Flame, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -19,8 +19,9 @@ const CAT_COLORS: Record<string, string> = {
 };
 
 export default function BlogsPage() {
-  const featured = blogsData.filter(b => b.isFeatured);
-  const rest = blogsData.filter(b => !b.isFeatured);
+  const blogsData = getAllBlogs();
+  const featured = blogsData.slice(0, 4); // First 4 as featured
+  const rest = blogsData.slice(4);
   const formatNum = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(0)}k` : String(n);
 
   return (
@@ -60,7 +61,7 @@ export default function BlogsPage() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={featured[0].coverImage}
+                    src={featured[0].cover}
                     alt={featured[0].title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -101,7 +102,7 @@ export default function BlogsPage() {
                   className="group flex gap-4 p-4 rounded-2xl glass border border-white/8 hover:border-blue-500/30 card-hover items-start"
                 >
                   <img
-                    src={blog.coverImage}
+                    src={blog.cover}
                     alt={blog.title}
                     className="w-20 h-16 object-cover rounded-xl flex-shrink-0 group-hover:scale-105 transition-transform"
                   />
@@ -139,7 +140,7 @@ export default function BlogsPage() {
               >
                 <div className="relative h-44 overflow-hidden">
                   <img
-                    src={blog.coverImage}
+                    src={blog.cover}
                     alt={blog.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

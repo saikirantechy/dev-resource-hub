@@ -2,11 +2,30 @@
 
 import { useState, useMemo } from "react";
 import agentsData from "@/data/agents.json";
-import { Bot, GitFork, ExternalLink, BookOpen, Copy, CheckCircle2, Star, Eye, Search, Filter, Zap, Users, Code2, Globe } from "lucide-react";
+import {
+  Bot,
+  GitFork,
+  BookOpen,
+  Copy,
+  CheckCircle2,
+  Star,
+  Eye,
+  Search,
+  Filter,
+  Code2,
+  Globe,
+  Zap,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
-const CATEGORIES = ["All", "Autonomous Agents", "Coding Agents", "Agent Frameworks", "Research Agents"];
+const CATEGORIES = [
+  "All",
+  "Autonomous Agents",
+  "Coding Agents",
+  "Agent Frameworks",
+  "Research Agents",
+];
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Autonomous Agents": "badge-orange",
@@ -20,15 +39,19 @@ export default function AgentsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const filtered = useMemo(() =>
-    agentsData.filter(a => {
-      const matchesSearch =
-        a.name.toLowerCase().includes(search.toLowerCase()) ||
-        a.description.toLowerCase().includes(search.toLowerCase()) ||
-        a.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
-      const matchesCat = activeCategory === "All" || a.category === activeCategory;
-      return matchesSearch && matchesCat;
-    }), [search, activeCategory]);
+  const filtered = useMemo(
+    () =>
+      agentsData.filter((a) => {
+        const matchesSearch =
+          a.name.toLowerCase().includes(search.toLowerCase()) ||
+          a.description.toLowerCase().includes(search.toLowerCase()) ||
+          a.tags.some((t) => t.toLowerCase().includes(search.toLowerCase()));
+        const matchesCat =
+          activeCategory === "All" || a.category === activeCategory;
+        return matchesSearch && matchesCat;
+      }),
+    [search, activeCategory],
+  );
 
   const handleCopy = (id: string, url: string) => {
     navigator.clipboard.writeText(url);
@@ -56,7 +79,8 @@ export default function AgentsPage() {
             <span className="text-white/90">Explorer</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Explore the frontier of autonomous AI. From solo coding agents to orchestrated multi-agent frameworks — find your perfect agent stack.
+            Explore the frontier of autonomous AI. From solo coding agents to
+            orchestrated multi-agent frameworks — find your perfect agent stack.
           </p>
 
           {/* Stats Row */}
@@ -78,7 +102,10 @@ export default function AgentsPage() {
         {/* Search & Filter */}
         <div className="space-y-4">
           <div className="relative max-w-2xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+            <Search
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
+              size={18}
+            />
             <input
               type="text"
               placeholder="Search agents, frameworks, tags..."
@@ -116,13 +143,17 @@ export default function AgentsPage() {
               {/* Featured / Trending badges */}
               <div className="absolute top-4 right-4 flex gap-1.5">
                 {agent.isFeatured && (
-                  <span className="badge badge-orange"><Zap size={9} /> Featured</span>
+                  <span className="badge badge-orange">
+                    <Zap size={9} /> Featured
+                  </span>
                 )}
                 {agent.isTrending && (
                   <span className="badge badge-blue animate-pulse">🔥 Hot</span>
                 )}
                 {agent.isOpenSource && (
-                  <span className="badge badge-emerald"><Code2 size={9} /> OSS</span>
+                  <span className="badge badge-emerald">
+                    <Code2 size={9} /> OSS
+                  </span>
                 )}
               </div>
 
@@ -135,7 +166,9 @@ export default function AgentsPage() {
                   <h3 className="font-bold text-lg text-white group-hover:text-blue-300 transition-colors truncate">
                     {agent.name}
                   </h3>
-                  <span className={`badge ${CATEGORY_COLORS[agent.category] || "badge-blue"} text-[9px] mt-1`}>
+                  <span
+                    className={`badge ${CATEGORY_COLORS[agent.category] || "badge-blue"} text-[9px] mt-1`}
+                  >
                     {agent.category}
                   </span>
                 </div>
@@ -147,14 +180,19 @@ export default function AgentsPage() {
 
               {/* Strength */}
               <div className="mb-4 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <div className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">💡 Strength</div>
+                <div className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">
+                  💡 Strength
+                </div>
                 <div className="text-xs text-gray-300">{agent.strength}</div>
               </div>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mb-5">
-                {agent.tags.slice(0, 4).map(tag => (
-                  <span key={tag} className="px-2 py-0.5 bg-white/5 border border-white/8 rounded text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                {agent.tags.slice(0, 4).map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 bg-white/5 border border-white/8 rounded text-[10px] text-gray-400 font-bold uppercase tracking-wider"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -174,7 +212,9 @@ export default function AgentsPage() {
                     {formatNumber(agent.views)}
                   </span>
                 )}
-                <span className="ml-auto font-semibold text-gray-400">{agent.pricing}</span>
+                <span className="ml-auto font-semibold text-gray-400">
+                  {agent.pricing}
+                </span>
               </div>
 
               {/* Action Buttons */}
@@ -223,8 +263,17 @@ export default function AgentsPage() {
         {filtered.length === 0 && (
           <div className="text-center py-24 space-y-4">
             <div className="text-5xl">🤖</div>
-            <p className="text-gray-400 text-xl">No agents found for <span className="text-white font-bold">"{search}"</span></p>
-            <button onClick={() => { setSearch(""); setActiveCategory("All"); }} className="btn-secondary mt-4">
+            <p className="text-gray-400 text-xl">
+              No agents found for{" "}
+              <span className="text-white font-bold">&quot;{search}&quot;</span>
+            </p>
+            <button
+              onClick={() => {
+                setSearch("");
+                setActiveCategory("All");
+              }}
+              className="btn-secondary mt-4"
+            >
               Clear filters
             </button>
           </div>
@@ -235,7 +284,10 @@ export default function AgentsPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
           <div className="relative z-10 space-y-4">
             <h2 className="text-3xl font-black">Know an AI Agent we missed?</h2>
-            <p className="text-gray-400 max-w-md mx-auto">Help grow the ecosystem. Submit any tool, framework, or agent to be featured.</p>
+            <p className="text-gray-400 max-w-md mx-auto">
+              Help grow the ecosystem. Submit any tool, framework, or agent to
+              be featured.
+            </p>
             <Link href="/submit" className="btn-primary inline-flex">
               <Zap size={16} /> Submit an Agent
             </Link>

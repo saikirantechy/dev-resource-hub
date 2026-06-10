@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 import {
   Connection,
   Edge,
@@ -11,7 +11,7 @@ import {
   OnConnect,
   applyNodeChanges,
   applyEdgeChanges,
-} from '@xyflow/react';
+} from "@xyflow/react";
 
 // Custom types for our workflows
 export type WorkflowData = {
@@ -27,7 +27,7 @@ export type AppNode = Node & {
   data: {
     label?: string;
     description?: string;
-    config?: any; // Additional configuration for the node
+    config?: Record<string, unknown>; // Additional configuration for the node
   };
 };
 
@@ -42,25 +42,25 @@ type RFState = {
   setEdges: (edges: Edge[]) => void;
   addNode: (node: AppNode) => void;
   setWorkflowName: (name: string) => void;
-  
+
   // Storage & Export
   saveWorkflow: () => void;
   loadWorkflow: (id: string) => void;
   exportWorkflow: () => void;
   importWorkflow: (jsonString: string) => void;
-  
+
   // Simulation
   executionLogs: string[];
   addExecutionLog: (log: string) => void;
   clearExecutionLogs: () => void;
 };
 
-const LOCAL_STORAGE_KEY = 'dev-resource-hub-workflows';
+const LOCAL_STORAGE_KEY = "dev-resource-hub-workflows";
 
 export const useWorkflowStore = create<RFState>((set, get) => ({
   nodes: [],
   edges: [],
-  workflowName: 'Untitled Workflow',
+  workflowName: "Untitled Workflow",
 
   onNodesChange: (changes: NodeChange<AppNode>[]) => {
     set({
@@ -93,17 +93,17 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
   // Save to LocalStorage
   saveWorkflow: () => {
     const { nodes, edges, workflowName } = get();
-    const existingStr = localStorage.getItem(LOCAL_STORAGE_KEY) || '[]';
+    const existingStr = localStorage.getItem(LOCAL_STORAGE_KEY) || "[]";
     let existingWorkflows: WorkflowData[] = [];
     try {
       existingWorkflows = JSON.parse(existingStr);
-    } catch (e) {
+    } catch {
       existingWorkflows = [];
     }
 
     // Determine ID based on name (slugify)
-    const id = workflowName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const existingIndex = existingWorkflows.findIndex(w => w.id === id);
+    const id = workflowName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const existingIndex = existingWorkflows.findIndex((w) => w.id === id);
 
     const now = new Date().toISOString();
     const newWorkflow: WorkflowData = {
@@ -111,7 +111,8 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
       name: workflowName,
       nodes,
       edges,
-      createdAt: existingIndex >= 0 ? existingWorkflows[existingIndex].createdAt : now,
+      createdAt:
+        existingIndex >= 0 ? existingWorkflows[existingIndex].createdAt : now,
       updatedAt: now,
     };
 
@@ -127,10 +128,10 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
 
   // Load from LocalStorage
   loadWorkflow: (id: string) => {
-    const existingStr = localStorage.getItem(LOCAL_STORAGE_KEY) || '[]';
+    const existingStr = localStorage.getItem(LOCAL_STORAGE_KEY) || "[]";
     try {
       const existingWorkflows: WorkflowData[] = JSON.parse(existingStr);
-      const target = existingWorkflows.find(w => w.id === id);
+      const target = existingWorkflows.find((w) => w.id === id);
       if (target) {
         set({
           nodes: target.nodes,
@@ -139,24 +140,26 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
         });
       }
     } catch (e) {
-      console.error('Failed to load workflow', e);
+      console.error("Failed to load workflow", e);
     }
   },
 
   // Export JSON file
   exportWorkflow: () => {
     const { nodes, edges, workflowName } = get();
-    const data: Omit<WorkflowData, 'id' | 'createdAt' | 'updatedAt'> = {
+    const data: Omit<WorkflowData, "id" | "createdAt" | "updatedAt"> = {
       name: workflowName,
       nodes,
       edges,
     };
-    
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
+      type: "application/json",
+    });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = `${workflowName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.json`;
+    a.download = `${workflowName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.json`;
     a.click();
     URL.revokeObjectURL(url);
   },
@@ -169,11 +172,11 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
         set({
           nodes: parsed.nodes,
           edges: parsed.edges,
-          workflowName: parsed.name || 'Imported Workflow',
+          workflowName: parsed.name || "Imported Workflow",
         });
       }
     } catch (e) {
-      console.error('Failed to import workflow', e);
+      console.error("Failed to import workflow", e);
     }
   },
 
@@ -183,5 +186,5 @@ export const useWorkflowStore = create<RFState>((set, get) => ({
   },
   clearExecutionLogs: () => {
     set({ executionLogs: [] });
-  }
+  },
 }));

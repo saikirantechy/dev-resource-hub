@@ -290,7 +290,7 @@ Tailwind's default scale plus a few utilities:
 - [x] Sitemap + robots auto-generation
 - [ ] Wire new pages into Navbar
 - [ ] Build `/playground` (prompt testing across models)
-- [ ] OpenGraph image (`/public/og-image.png`)
+- [x] OpenGraph image (`/public/og-image.svg`)
 
 ### Phase 3 — Q4 2026
 
@@ -329,7 +329,7 @@ Tailwind's default scale plus a few utilities:
 - ✅ Auto-generated `sitemap.xml` covering all 23 static routes
 - ✅ Auto-generated `robots.txt` disallowing `/login` and `/saved`
 - ✅ Canonical URL via `openGraph.url`
-- ⚠️ `og-image.png` is referenced but not yet present in `/public`
+- ✅ `og-image.svg` is available in `/public` for social sharing
 
 ### 6.2 Content SEO Targets
 

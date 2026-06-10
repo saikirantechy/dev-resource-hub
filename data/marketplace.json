@@ -1,0 +1,115 @@
+[
+  {
+    "id": "workflow-pr-reviewer",
+    "title": "Automated PR Reviewer",
+    "description": "Multi-agent workflow that analyzes PRs, runs security checks, and posts a comprehensive review comment.",
+    "category": "Workflow Templates",
+    "pricing": "Free",
+    "isOpenSource": true,
+    "tags": ["GitHub", "Security", "Review"],
+    "stars": 450,
+    "creator": "saikirantechy",
+    "logo": "https://ui-avatars.com/api/?name=PR&background=10b981&color=fff",
+    "isFeatured": true,
+    "isTrending": true,
+    "workflowData": {
+      "nodes": [
+        { "id": "1", "type": "promptNode", "position": { "x": 100, "y": 100 }, "data": { "label": "GitHub PR Diff", "content": "Extract changes from PR webhook payload." } },
+        { "id": "2", "type": "agentNode", "position": { "x": 400, "y": -50 }, "data": { "label": "Security Agent", "role": "Analyzer", "model": "gpt-4o" } },
+        { "id": "3", "type": "agentNode", "position": { "x": 400, "y": 250 }, "data": { "label": "Performance Agent", "role": "Analyzer", "model": "claude-3.5-sonnet" } },
+        { "id": "4", "type": "agentNode", "position": { "x": 700, "y": 100 }, "data": { "label": "Lead Reviewer", "role": "Synthesizer", "model": "o1-mini" } },
+        { "id": "5", "type": "outputNode", "position": { "x": 1000, "y": 100 }, "data": { "label": "GitHub Comment API", "format": "markdown" } }
+      ],
+      "edges": [
+        { "id": "e1-2", "source": "1", "target": "2" },
+        { "id": "e1-3", "source": "1", "target": "3" },
+        { "id": "e2-4", "source": "2", "target": "4" },
+        { "id": "e3-4", "source": "3", "target": "4" },
+        { "id": "e4-5", "source": "4", "target": "5" }
+      ]
+    }
+  },
+  {
+    "id": "prompt-pack-nextjs",
+    "title": "Next.js 15 Architect Prompts",
+    "description": "A collection of 25+ system prompts to force Claude 3.5 Sonnet to write perfect App Router code.",
+    "category": "Prompt Packs",
+    "pricing": "Free",
+    "isOpenSource": true,
+    "tags": ["Next.js", "React", "Prompts"],
+    "stars": 892,
+    "creator": "vercel-fan",
+    "logo": "https://ui-avatars.com/api/?name=NX&background=000&color=fff",
+    "isFeatured": false,
+    "isTrending": true
+  },
+  {
+    "id": "tool-helicone",
+    "title": "Helicone LLM Observability",
+    "description": "Open-source observability platform for LLM applications. Track costs, latency, and prompts with 1 line of code.",
+    "category": "Developer Tools",
+    "pricing": "Freemium",
+    "isOpenSource": true,
+    "tags": ["Observability", "Analytics", "Gateway"],
+    "stars": 4200,
+    "creator": "helicone",
+    "logo": "https://ui-avatars.com/api/?name=HC&background=8b5cf6&color=fff",
+    "isFeatured": true,
+    "isTrending": false
+  },
+  {
+    "id": "agent-swe",
+    "title": "SWE-Agent",
+    "description": "Open-source agent that turns LMs into software engineers. Fixes bugs and issues in real GitHub repos.",
+    "category": "AI Agents",
+    "pricing": "Free",
+    "isOpenSource": true,
+    "tags": ["Autonomous", "Coding", "Python"],
+    "stars": 12500,
+    "creator": "princeton-nlp",
+    "logo": "https://ui-avatars.com/api/?name=SW&background=3b82f6&color=fff",
+    "isFeatured": true,
+    "isTrending": true
+  },
+  {
+    "id": "workflow-seo-writer",
+    "title": "Auto SEO Blogger",
+    "description": "Generates 2,000-word SEO optimized articles from a single keyword. Uses Perplexity for research and Claude for writing.",
+    "category": "Workflow Templates",
+    "pricing": "Paid",
+    "isOpenSource": false,
+    "tags": ["Content", "SEO", "Marketing"],
+    "stars": 120,
+    "creator": "content-ai",
+    "logo": "https://ui-avatars.com/api/?name=SE&background=f59e0b&color=fff",
+    "isFeatured": false,
+    "isTrending": true,
+    "workflowData": {
+      "nodes": [
+        { "id": "1", "type": "promptNode", "position": { "x": 100, "y": 100 }, "data": { "label": "Keyword Input", "content": "Enter focus keyword." } },
+        { "id": "2", "type": "toolNode", "position": { "x": 400, "y": 100 }, "data": { "label": "Perplexity Search", "tool": "Web Search" } },
+        { "id": "3", "type": "agentNode", "position": { "x": 700, "y": 100 }, "data": { "label": "Writer Agent", "role": "Copywriter", "model": "claude-3.5-sonnet" } },
+        { "id": "4", "type": "outputNode", "position": { "x": 1000, "y": 100 }, "data": { "label": "Markdown File", "format": "markdown" } }
+      ],
+      "edges": [
+        { "id": "e1-2", "source": "1", "target": "2" },
+        { "id": "e2-3", "source": "2", "target": "3" },
+        { "id": "e3-4", "source": "3", "target": "4" }
+      ]
+    }
+  },
+  {
+    "id": "ide-cursor",
+    "title": "Cursor IDE",
+    "description": "The AI-first code editor. Built to make you extraordinarily productive.",
+    "category": "AI IDEs",
+    "pricing": "Freemium",
+    "isOpenSource": false,
+    "tags": ["Editor", "VS Code Fork"],
+    "stars": 0,
+    "creator": "anysphere",
+    "logo": "https://ui-avatars.com/api/?name=CR&background=000&color=fff",
+    "isFeatured": true,
+    "isTrending": true
+  }
+]
