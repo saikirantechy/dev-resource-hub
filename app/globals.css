@@ -250,6 +250,36 @@ body {
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* ─── FOCUS VISIBLE RINGS ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip to main content link for keyboard users */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+}
+.skip-to-content:focus {
+  left: 16px;
+  top: 0;
+}
+
 /* ─── BUTTON STYLES ─── */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;

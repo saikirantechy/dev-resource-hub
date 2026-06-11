@@ -36,7 +36,7 @@ export default function TokenCalculatorPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="relative">
+      <main id="main-content" className="relative">
         <Hero />
         <Calculator />
         <Tips />

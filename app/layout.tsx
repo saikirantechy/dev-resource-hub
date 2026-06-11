@@ -66,9 +66,7 @@ export default function RootLayout({
             __html: `(function(){try{var key='dev-resource-hub-theme';var stored=localStorage.getItem(key);var theme=stored==='light'||stored==='dark'?stored:(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;}catch(e){document.documentElement.dataset.theme='dark';document.documentElement.style.colorScheme='dark';}})();`,
           }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -115,6 +113,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[#050508] relative transition-colors duration-300">
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         <AuthProvider>
           <BookmarkProvider>
             <div className="gradient-mesh" />

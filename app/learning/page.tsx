@@ -5,6 +5,12 @@ import { GraduationCap, BookOpen, Trophy, CheckCircle2, ChevronRight, Zap, Targe
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const PATH_COLORS: Record<string, { bg: string; border: string; text: string; glow: string }> = {
+  blue: { bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400", glow: "bg-blue-500/10" },
+  purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400", glow: "bg-purple-500/10" },
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400", glow: "bg-emerald-500/10" },
+};
+
 const learningPaths = [
   {
     title: "AI Engineer Path",
@@ -44,7 +50,7 @@ export default function LearningPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-20">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-20">
         {/* Header */}
         <header className="text-center space-y-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-purple">
@@ -69,10 +75,10 @@ export default function LearningPage() {
               transition={{ delay: i * 0.1 }}
               className="group p-8 rounded-[2.5rem] glass border border-white/8 hover:border-blue-500/30 transition-all card-hover flex flex-col h-full overflow-hidden relative"
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-${path.color}-500/10 blur-[60px] -z-10`} />
+              <div className={`absolute top-0 right-0 w-32 h-32 ${PATH_COLORS[path.color]?.glow || "bg-white/5"} blur-[60px] -z-10`} />
               
               <div className="flex items-start justify-between mb-8">
-                <div className={`p-4 rounded-2xl bg-${path.color}-500/10 border border-${path.color}-500/20 text-${path.color}-400 group-hover:scale-110 transition-transform`}>
+                <div className={`p-4 rounded-2xl ${PATH_COLORS[path.color]?.bg || "bg-white/5"} ${PATH_COLORS[path.color]?.border || "border-white/10"} ${PATH_COLORS[path.color]?.text || "text-gray-400"} group-hover:scale-110 transition-transform`}>
                   <path.icon size={24} />
                 </div>
                 <div className="text-right">

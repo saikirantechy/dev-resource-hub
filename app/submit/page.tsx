@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { PlusCircle, Globe, ArrowRight, Lightbulb, ShieldCheck, Zap } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Submit a Resource | Dev Resource Hub",
+  description: "Contribute to the ecosystem by suggesting a new AI tool, agent, prompt, or resource to the Dev Resource Hub marketplace.",
+};
 
 export default function SubmitPage() {
   const steps = [
@@ -26,7 +32,7 @@ export default function SubmitPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">
+    <main id="main-content" className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium">

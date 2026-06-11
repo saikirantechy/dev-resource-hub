@@ -19,7 +19,7 @@ export default function BlogClient({ blog, relatedBlogs = [] }: { blog: BlogPost
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,6 @@ export default function BlogClient({ blog, relatedBlogs = [] }: { blog: BlogPost
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 border-y border-white/5 py-6">
               <div className="flex items-center gap-2">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`https://ui-avatars.com/api/?name=${blog.author}&background=0D8ABC&color=fff`} className="w-8 h-8 rounded-full" alt={blog.author} />
                 <span className="text-white font-bold">{blog.author}</span>
               </div>
@@ -66,8 +65,7 @@ export default function BlogClient({ blog, relatedBlogs = [] }: { blog: BlogPost
 
           {/* Cover Image */}
           <div className="relative h-[300px] md:h-[500px] rounded-[2.5rem] overflow-hidden border border-white/10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={blog.cover} className="w-full h-full object-cover" alt={blog.title} />
+              <img src={blog.cover} className="w-full h-full object-cover" alt={blog.title} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-transparent to-transparent opacity-60" />
           </div>
 
@@ -147,7 +145,6 @@ export default function BlogClient({ blog, relatedBlogs = [] }: { blog: BlogPost
                 {relatedBlogs.map(rb => (
                   <Link href={`/blog/${rb.slug}`} key={rb.slug} className="group glass rounded-3xl border border-white/8 hover:border-blue-500/30 card-hover overflow-hidden flex flex-col">
                     <div className="relative h-44 overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={rb.cover} alt={rb.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#050508] to-transparent opacity-70" />
                     </div>

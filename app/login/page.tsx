@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
-import { Mail, Lock, ArrowRight, Sparkles, ShieldCheck, Zap, Globe, GitFork } from "lucide-react";
+import { Mail, ArrowRight, Sparkles, ShieldCheck, Zap, Globe, GitFork } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -46,7 +46,7 @@ export default function LoginPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 flex flex-col lg:flex-row items-center gap-16">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 flex flex-col lg:flex-row items-center gap-16">
         {/* Left Side: Branding */}
         <div className="flex-1 space-y-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-blue">

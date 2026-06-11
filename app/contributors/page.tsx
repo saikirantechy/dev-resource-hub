@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { Globe, Trophy, Medal } from "lucide-react";
 
@@ -22,6 +23,11 @@ async function getContributors(): Promise<Contributor[]> {
   }
 }
 
+export const metadata: Metadata = {
+  title: "Contributor Leaderboard | Dev Resource Hub",
+  description: "Meet the amazing people building the Dev Resource Hub ecosystem. View top contributors, rankings, and contribution badges.",
+};
+
 export default async function ContributorsPage() {
   const contributors = await getContributors();
 
@@ -34,7 +40,7 @@ export default async function ContributorsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">
+    <main id="main-content" className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-20 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">

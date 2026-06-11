@@ -1,7 +1,6 @@
 "use client";
 
-import { Star, Eye, Code, Code2, Link as LinkIcon, Heart } from "lucide-react";
-import Link from "next/link";
+import { Eye, Code, Code2, Link as LinkIcon, Heart } from "lucide-react";
 import { useState } from "react";
 
 export interface ShowcaseItem {

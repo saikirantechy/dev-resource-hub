@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { 
-  Sparkles, Menu, X, Flame, Bot, Terminal, BarChart3, 
+import {
+  Sparkles, Menu, X, Bot, Terminal, Star, Trophy,
   Users, BookOpen, Zap, Package,
-  LogIn, LogOut, GraduationCap, Layers, Layout
+  LogIn, LogOut, Layers, Layout,
+  Gauge, ArrowLeftRight, ShoppingCart, Flame
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -13,9 +14,12 @@ const navLinks = [
   { href: "/dashboard", label: "Dashboard", icon: Layout, color: "text-cyan-400" },
   { href: "/ai-agents", label: "Agents", icon: Bot, color: "text-blue-400" },
   { href: "/tools", label: "Tools", icon: Package, color: "text-emerald-400" },
+  { href: "/compare", label: "Compare", icon: ArrowLeftRight, color: "text-green-400" },
   { href: "/prompts", label: "Prompts", icon: Terminal, color: "text-purple-400" },
-  { href: "/workflow", label: "Orchestrate", icon: Layers, color: "text-blue-400" },
-  { href: "/marketplace", label: "Marketplace", icon: Package, color: "text-pink-400" },
+  { href: "/prompt-optimizer", label: "Optimizer", icon: Gauge, color: "text-orange-400" },
+  { href: "/trending", label: "Trending", icon: Flame, color: "text-red-400" },
+  { href: "/workflow", label: "Orchestrate", icon: Layers, color: "text-sky-400" },
+  { href: "/marketplace", label: "Marketplace", icon: ShoppingCart, color: "text-pink-400" },
   { href: "/showcase", label: "Showcase", icon: Star, color: "text-yellow-400" },
   { href: "/blogs", label: "Blog", icon: BookOpen, color: "text-yellow-400" },
   { href: "/leaderboard", label: "Leaderboard", icon: Trophy, color: "text-amber-400" },
@@ -75,8 +79,7 @@ export default function Navbar() {
               <div className="w-8 h-8 rounded-full bg-white/5 animate-pulse" />
             ) : user ? (
               <div className="flex items-center gap-3">
-                 <div className="w-8 h-8 rounded-full border border-white/10 overflow-hidden">
-                    <img src={user.user_metadata.avatar_url || `https://ui-avatars.com/api/?name=${user.email}&background=random`} alt="User" />
+                 <div className="w-8 h-8 rounded-full border border-white/10 overflow-hidden">                     <img src={user.user_metadata.avatar_url || `https://ui-avatars.com/api/?name=${user.email?.charAt(0) || 'U'}&background=random`} alt="User avatar" />
                  </div>
                  <button onClick={signOut} className="p-2 rounded-lg hover:bg-white/5 text-gray-500 hover:text-red-400 transition-all" title="Sign Out">
                     <LogOut size={16} />

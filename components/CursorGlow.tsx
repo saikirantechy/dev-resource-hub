@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, useSpring } from "framer-motion";
 
 export default function CursorGlow() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const springConfig = { damping: 25, stiffness: 700 };
   const cursorX = useSpring(0, springConfig);

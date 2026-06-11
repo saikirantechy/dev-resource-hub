@@ -18,6 +18,13 @@ import Link from "next/link";
 import agentsData from "@/data/agents.json";
 import toolsData from "@/data/tools.json";
 
+const PERSONA_COLORS: Record<string, { bg: string; border: string; text: string }> = {
+  blue: { bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400" },
+  purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400" },
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400" },
+  orange: { bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400" },
+};
+
 const PERSONAS = [
   {
     id: "frontend",
@@ -112,7 +119,7 @@ export default function AIFinderPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-20 space-y-16">
+      <main id="main-content" className="max-w-4xl mx-auto px-4 sm:px-6 py-20 space-y-16">
         <header className="text-center space-y-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-blue">
             <Sparkles size={12} /> AI Recommendation Engine
@@ -145,10 +152,10 @@ export default function AIFinderPage() {
                   className="group relative p-8 rounded-3xl glass border border-white/8 text-left hover:border-blue-500/40 transition-all card-hover"
                 >
                   <div
-                    className={`w-12 h-12 rounded-2xl bg-${persona.color}-500/10 border border-${persona.color}-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                    className={`w-12 h-12 rounded-2xl ${PERSONA_COLORS[persona.color]?.bg || "bg-white/5"} ${PERSONA_COLORS[persona.color]?.border || "border-white/10"} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
                   >
                     <persona.icon
-                      className={`text-${persona.color}-400`}
+                      className={PERSONA_COLORS[persona.color]?.text || "text-gray-400"}
                       size={24}
                     />
                   </div>

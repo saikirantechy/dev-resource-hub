@@ -26,7 +26,7 @@ export default function SavedPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-20 space-y-16">
+      <main id="main-content" className="max-w-6xl mx-auto px-4 sm:px-6 py-20 space-y-16">
         <header className="text-center space-y-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-blue">
             <Bookmark size={12} /> My Collections

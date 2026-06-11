@@ -5,14 +5,10 @@ import {
   Zap, 
   Globe, 
   Brain, 
-  ShieldCheck, 
   Cpu, 
   Plug, 
   Workflow, 
-  Search, 
   Layers, 
-  MousePointer2, 
-  Code2, 
   Lock
 } from "lucide-react";
 

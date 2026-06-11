@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import MarketplaceCard, { MarketplaceItem } from "@/components/MarketplaceCard";
 import marketplaceData from "@/data/marketplace.json";
-import { Search, Filter, Sparkles, TrendingUp, Package, Code } from "lucide-react";
+import { Search, Sparkles, TrendingUp, Package, Code } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CATEGORIES = [
@@ -40,7 +40,7 @@ export default function MarketplacePage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
         
         {/* Header */}
         <header className="text-center space-y-6">

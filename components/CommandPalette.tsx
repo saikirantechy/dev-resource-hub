@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Fuse from "fuse.js";
 import {
@@ -48,7 +48,7 @@ export default function CommandPalette({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
 
-  const actions: SearchItem[] = [
+  const actions = useMemo((): SearchItem[] => [
     {
       id: "a1",
       name: "Latest Blog Posts",
@@ -148,7 +148,7 @@ export default function CommandPalette({
       type: "action",
       category: "Platform",
     },
-  ];
+  ], []);
 
   const searchIndex = useMemo(() => {
     const agents = agentsData.map((item: (typeof agentsData)[0]) => ({
@@ -215,7 +215,7 @@ export default function CommandPalette({
     return fuse.search(query).map((r) => r.item);
   }, [fuse, query, actions]);
 
-  const navigate = (href: string, external?: boolean) => {
+  const navigate = useCallback((href: string, external?: boolean) => {
     setIsOpen(false);
     setQuery("");
     if (external) {
@@ -223,7 +223,7 @@ export default function CommandPalette({
     } else {
       router.push(href);
     }
-  };
+  }, [router]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -261,7 +261,7 @@ export default function CommandPalette({
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, results, selectedIndex]);
+  }, [isOpen, results, selectedIndex, navigate]);
 
   if (!isOpen) return null;
 

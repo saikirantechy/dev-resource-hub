@@ -34,7 +34,7 @@ export default function ResourceGrid({
 }: ResourceGridProps) {
   const [query, setQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
-  const [isSemantic, setIsSemantic] = useState(false);
+  const [, setIsSemantic] = useState(false);
 
   const fuse = useMemo(
     () =>

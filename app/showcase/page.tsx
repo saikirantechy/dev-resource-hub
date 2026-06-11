@@ -38,7 +38,7 @@ export default function ShowcasePage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
         
         {/* Header */}
         <header className="text-center space-y-6">

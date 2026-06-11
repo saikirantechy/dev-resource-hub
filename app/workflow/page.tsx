@@ -28,7 +28,7 @@ export default function WorkflowPage() {
         </button>
       </div>
 
-      <main className="flex-1 flex overflow-hidden relative">
+      <main id="main-content" className="flex-1 flex overflow-hidden relative">
         <Sidebar />
         
         <div className="flex-1 flex flex-col h-full relative">

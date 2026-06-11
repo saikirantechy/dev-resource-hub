@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import { BookOpen, GitBranch, Zap, CheckCircle2, Circle, Clock, Rocket, ArrowRight } from "lucide-react";
+import { BookOpen, GitBranch, Zap, CheckCircle2, Circle, Rocket, ArrowRight } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Docs & Roadmap | Dev Resource Hub",
+  description: "Platform documentation, technology stack overview, roadmap phases, and contribution guide for the Open AI Developer Universe.",
+};
 
 const roadmap = [
   {
@@ -83,7 +89,7 @@ export default function DocsPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-20 space-y-20">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 py-20 space-y-20">
         {/* Header */}
         <header className="text-center space-y-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-blue">

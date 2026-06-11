@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GitFork, Globe, MessageCircle, Mail, ArrowLeft, Star, Award, Zap } from "lucide-react";
+import { GitFork, Globe, MessageCircle, ArrowLeft, Star, Award, Zap } from "lucide-react";
 
 interface GitHubUser {
   login: string;
@@ -50,7 +50,7 @@ export default async function ContributorProfilePage({ params }: { params: Promi
   }
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6 relative overflow-hidden">
+    <main id="main-content" className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6 relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-blue-600/10 to-transparent blur-3xl -z-10" />
       

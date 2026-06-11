@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import {
   BookOpen,
@@ -8,6 +9,11 @@ import {
   ChevronRight,
   GraduationCap,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Beginner's Guide | Dev Resource Hub",
+  description: "A step-by-step path to start your developer journey — from basics to your first open-source contribution.",
+};
 
 export default function BeginnerGuidePage() {
   const steps = [
@@ -54,7 +60,7 @@ export default function BeginnerGuidePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6 relative overflow-hidden">
+    <main id="main-content" className="min-h-screen bg-[#0a0a0a] text-white py-24 px-6 relative overflow-hidden">
       {/* Decorative Glow */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent -z-10" />
 

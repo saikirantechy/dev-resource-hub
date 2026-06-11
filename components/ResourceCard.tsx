@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Star, Zap, Globe, Sparkles, Heart, Eye } from "lucide-react";
+import { ExternalLink, Globe, Sparkles, Heart } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
@@ -38,7 +38,7 @@ export default function ResourceCard({
   isOpenSource,
   index = 0
 }: ResourceCardProps) {
-  const { likes, views, isLiked, toggleLike } = useResourceStats(slug);
+  const { likes, isLiked, toggleLike } = useResourceStats(slug);
 
   return (
     <motion.div 

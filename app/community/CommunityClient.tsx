@@ -16,6 +16,13 @@ const topContributors = [
   { name: "James Wilson", role: "Prompt Engineer", avatar: "JW", stats: { commits: 45, resources: 8, likes: "420" }, rank: 4, color: "orange" },
 ];
 
+const STAT_COLORS: Record<string, { bg: string; border: string; text: string }> = {
+  blue: { bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400" },
+  purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400" },
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400" },
+  orange: { bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400" },
+};
+
 const feedItems = [
   { user: "Sarah Chen", action: "submitted a new Agent", target: "Devin-v2", time: "2h ago", type: "submission" },
   { user: "Alex Rivera", action: "bookmarked", target: "AI UI Mastery Path", time: "4h ago", type: "bookmark" },
@@ -29,7 +36,7 @@ export default function CommunityClient() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-24">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 space-y-24">
         {/* Header */}
         <header className="text-center space-y-6 animate-fade-in">
           <div className="inline-flex items-center gap-2 badge badge-indigo">
@@ -58,10 +65,10 @@ export default function CommunityClient() {
             { label: "Total Contributions", value: "2.5k", icon: Award, color: "purple" },
             { label: "AI Resources", value: "850+", icon: Zap, color: "emerald" },
             { label: "Monthly Visits", value: "150k", icon: TrendingUp, color: "orange" },
-          ].map((stat, i) => (
+          ].map((stat, _i) => (
             <div key={stat.label} className="p-6 rounded-3xl glass border border-white/5 space-y-4 text-center group card-hover">
-               <div className={`w-12 h-12 rounded-2xl bg-${stat.color}-500/10 border border-${stat.color}-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}>
-                 <stat.icon className={`text-${stat.color}-400`} size={20} />
+               <div className={`w-12 h-12 rounded-2xl ${STAT_COLORS[stat.color]?.bg || "bg-white/5"} ${STAT_COLORS[stat.color]?.border || "border-white/10"} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}>
+                 <stat.icon className={STAT_COLORS[stat.color]?.text || "text-gray-400"} size={20} />
                </div>
                <div>
                  <div className="text-2xl font-black">{stat.value}</div>
@@ -91,7 +98,7 @@ export default function CommunityClient() {
                   className="p-6 rounded-[2rem] glass border border-white/8 flex items-center gap-6 hover:border-blue-500/30 transition-all group"
                 >
                   <div className="text-xl font-black text-gray-600 w-8">{user.rank}</div>
-                  <div className={`w-14 h-14 rounded-2xl bg-${user.color}-500/10 border border-${user.color}-500/20 flex items-center justify-center text-xl font-black text-${user.color}-400 flex-shrink-0`}>
+                  <div className={`w-14 h-14 rounded-2xl ${STAT_COLORS[user.color]?.bg || "bg-white/5"} ${STAT_COLORS[user.color]?.border || "border-white/10"} flex items-center justify-center text-xl font-black ${STAT_COLORS[user.color]?.text || "text-gray-400"} flex-shrink-0`}>
                     {user.avatar}
                   </div>
                   <div className="flex-1">

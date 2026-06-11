@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 import { Brain, Database, Cpu, Globe, ArrowDown, Share2 } from "lucide-react";
 
+const ARCH_COLORS: Record<string, { bg: string; border: string; text: string; glow: string }> = {
+  emerald: { bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400", glow: "bg-emerald-500/5" },
+  cyan: { bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400", glow: "bg-cyan-500/5" },
+  purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400", glow: "bg-purple-500/5" },
+  orange: { bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400", glow: "bg-orange-500/5" },
+  blue: { bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400", glow: "bg-blue-500/5" },
+};
+
 const nodes = [
   { id: "input", label: "User Intent", icon: <Globe size={24} />, color: "emerald" },
   { id: "reasoning", label: "Reasoning Engine", icon: <Brain size={24} />, color: "cyan" },
@@ -32,7 +40,7 @@ export default function Architecture() {
                 transition={{ delay: i * 0.1 }}
                 className="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-emerald-500/50 hover:bg-white/[0.06] transition-all duration-500 flex items-center gap-6 shadow-2xl w-full md:w-[400px]"
               >
-                <div className={`p-4 rounded-2xl bg-${node.color}-500/10 text-${node.color}-400 border border-${node.color}-500/20 group-hover:scale-110 transition-transform`}>
+                <div className={`p-4 rounded-2xl ${ARCH_COLORS[node.color]?.bg || "bg-white/5"} ${ARCH_COLORS[node.color]?.text || "text-gray-400"} ${ARCH_COLORS[node.color]?.border || "border-white/10"} group-hover:scale-110 transition-transform`}>
                   {node.icon}
                 </div>
                 <div className="space-y-1">
@@ -41,7 +49,7 @@ export default function Architecture() {
                 </div>
 
                 {/* Ambient Glow */}
-                <div className={`absolute -inset-1 bg-${node.color}-500/5 blur-2xl rounded-[2rem] -z-10 group-hover:opacity-100 opacity-0 transition-opacity`} />
+                <div className={`absolute -inset-1 ${ARCH_COLORS[node.color]?.glow || "bg-white/5"} blur-2xl rounded-[2rem] -z-10 group-hover:opacity-100 opacity-0 transition-opacity`} />
               </motion.div>
               
               {i < nodes.length - 1 && (

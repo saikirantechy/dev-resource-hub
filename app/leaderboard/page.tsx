@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import leaderboardData from "@/data/leaderboard.json";
-import { Trophy, Star, Target, Zap, Medal, GitMerge, FileText } from "lucide-react";
+import { Trophy, Target, Zap, Medal, GitMerge, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 export interface LeaderboardUser {
@@ -40,7 +40,7 @@ export default function LeaderboardPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 py-20 space-y-16 relative z-10">
         
         {/* Header */}
         <header className="text-center space-y-6">

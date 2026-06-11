@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/promptoptimizer/Footer";
 import DashboardHero from "@/components/dashboard/DashboardHero";
@@ -49,7 +48,7 @@ export default function DashboardPage() {
       <div className="gradient-mesh" />
       <Navbar />
 
-      <main className="relative">
+      <main id="main-content" className="relative">
         <DashboardHero userName={displayName} />
 
         {/* Top working area: actions + assistant */}
