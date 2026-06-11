@@ -41,7 +41,7 @@ export default function NewsletterSignup() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/5 to-transparent" />
 
       {/* Decorative dots grid */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[url('/dev-resource-hub/noise.svg')] opacity-20 mix-blend-overlay"></div>
 
       <div className="relative z-10 flex flex-col items-center space-y-6">
         <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center border border-blue-500/20 rotate-3">

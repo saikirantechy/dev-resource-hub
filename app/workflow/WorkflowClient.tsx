@@ -164,7 +164,7 @@ export default function WorkflowClient() {
         </aside>
 
         {/* Main Canvas */}
-        <main className="flex-1 relative bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat opacity-95">
+        <main className="flex-1 relative bg-[url('/dev-resource-hub/noise.svg')] bg-repeat opacity-95">
           {/* Canvas Toolbar */}
           <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-30 pointer-events-none">
             <div className="flex items-center gap-3 p-1.5 glass rounded-2xl border border-white/10 pointer-events-auto">

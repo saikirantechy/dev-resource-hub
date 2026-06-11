@@ -9,27 +9,80 @@ function getOrCreateClient(): SupabaseClient {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
 
   if (!supabaseUrl || !supabaseAnonKey) {
-    // Return a recursive proxy that gracefully handles all operations
-    // including chained access like supabase.auth.getSession()
-    const noopFn = (..._args: unknown[]) =>
-      Promise.resolve({ data: null, error: null })
-    const noopProxy = new Proxy(noopFn, {
-      get(target, prop: string | symbol) {
-        if (prop === 'then') return undefined // Not a Promise
-        return noopProxy
-      },
-    })
-    supabaseInstance = new Proxy({} as SupabaseClient, {
-      get(_, prop: string | symbol) {
-        if (prop === 'then') return undefined
-        return noopProxy
-      },
-    })
+    supabaseInstance = createMockClient()
     return supabaseInstance
   }
 
   supabaseInstance = createClient(supabaseUrl, supabaseAnonKey)
   return supabaseInstance
+}
+
+function createMockClient(): SupabaseClient {
+  const noopAsync = (..._args: unknown[]) =>
+    Promise.resolve({ data: null, error: null })
+  const noopSubscription = { unsubscribe: () => {} }
+
+  // Mock query builder that supports method chaining
+  const createQuery = () => {
+    const query: Record<string, Function> = {
+      select: () => query,
+      insert: () => query,
+      update: () => query,
+      delete: () => query,
+      eq: () => query,
+      neq: () => query,
+      gt: () => query,
+      lt: () => query,
+      gte: () => query,
+      lte: () => query,
+      like: () => query,
+      ilike: () => query,
+      is: () => query,
+      in: () => query,
+      contains: () => query,
+      order: () => query,
+      limit: () => query,
+      range: () => query,
+      single: () => Promise.resolve({ data: null, error: null }),
+      maybeSingle: () => Promise.resolve({ data: null, error: null }),
+      then: (resolve: Function) =>
+        resolve({ data: null, error: null }),
+    }
+    return query
+  }
+
+  return {
+    auth: {
+      getSession: noopAsync,
+      onAuthStateChange: (
+        _callback: (
+          event: string,
+          session: unknown,
+        ) => void,
+      ) => ({
+        data: { subscription: noopSubscription },
+      }),
+      signInWithOtp: noopAsync,
+      signInWithOAuth: noopAsync,
+      signOut: noopAsync,
+      getUser: noopAsync,
+    },
+    from: () => createQuery(),
+    channel: () => ({
+      on: () => ({ subscribe: () => 'mock-subscription' }),
+      subscribe: () => 'mock-subscription',
+    }),
+    removeChannel: () => {},
+    rpc: noopAsync,
+    storage: {
+      from: () => ({
+        upload: noopAsync,
+        download: noopAsync,
+        list: noopAsync,
+        remove: noopAsync,
+      }),
+    },
+  } as unknown as SupabaseClient
 }
 
 export const supabase = getOrCreateClient()
