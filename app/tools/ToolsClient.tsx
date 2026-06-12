@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import toolsData from "@/data/tools.json";
+import aiCodingToolsData from "@/data/ai-coding-tools.json";
 import { Search, Star, Eye, GitFork, BookOpen, Copy, CheckCircle2, Package, Monitor, Globe, Code2, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
@@ -14,6 +15,7 @@ const TOOL_CATEGORIES = [
   { label: "Agent Frameworks", icon: "🔗" },
   { label: "AI Research", icon: "🔬" },
   { label: "Open Source AI", icon: "🛠" },
+  { label: "AI Coding Agents", icon: "🤖" },
 ];
 
 const CAT_COLORS: Record<string, string> = {
@@ -38,7 +40,7 @@ export default function ToolsPage() {
         t.name.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q) ||
         t.tags.some(tag => tag.toLowerCase().includes(q));
-      const matchesCat = activeCategory === "All" || t.category === activeCategory;
+      const matchesCat = activeCategory === "All" || (activeCategory === "AI Coding Agents" ? ["God Tier Tools","Chinese AI Platforms","Big Tech & Cloud Tools","VS Code Extensions","CLI & Terminal Tools","Web Builders","Data Science & Notebook Tools","Next Generation IDEs","Specialized Tools"].includes(t.category) : t.category === activeCategory);
       const matchesOSS = !showOSS || t.isOpenSource;
       return matchesSearch && matchesCat && matchesOSS;
     }), [search, activeCategory, showOSS]);

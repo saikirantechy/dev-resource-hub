@@ -59,7 +59,7 @@ const platformSections = [
     color: "emerald",
     gradient: "from-emerald-500/20 to-blue-500/10",
     border: "border-emerald-500/20 hover:border-emerald-500/40",
-    badge: "10 Tools",
+    badge: "102 Tools",
   },
   {
     href: "/trending",
@@ -72,6 +72,18 @@ const platformSections = [
     gradient: "from-orange-500/20 to-red-500/10",
     border: "border-orange-500/20 hover:border-orange-500/40",
     badge: "Live Pulse",
+  },
+  {
+    href: "/tools?category=AI+Coding",
+    icon: Bot,
+    emoji: "🤖",
+    title: "AI Coding Agents",
+    description:
+      "Explore 100+ free AI coding agents and platforms. From God Tier tools to VS Code extensions.",
+    color: "orange",
+    gradient: "from-orange-500/20 to-red-500/10",
+    border: "border-orange-500/20 hover:border-orange-500/40",
+    badge: "102 Tools",
   },
   {
     href: "/compare",
@@ -107,7 +119,7 @@ const platformSections = [
     color: "yellow",
     gradient: "from-yellow-500/20 to-orange-500/10",
     border: "border-yellow-500/20 hover:border-yellow-500/40",
-    badge: "6 Articles",
+    badge: "7 Articles",
   },
   {
     href: "/community",
@@ -139,18 +151,18 @@ const featuredTools = [
     tag: "UI",
   },
   {
-    name: "CrewAI",
-    emoji: "🤖",
-    desc: "Multi-agent framework",
-    href: "https://crewai.com",
-    tag: "Agent",
+    name: "Antigravity",
+    emoji: "🚀",
+    desc: "Google AI coding",
+    href: "https://antigravity.google",
+    tag: "God Tier",
   },
   {
-    name: "Ollama",
-    emoji: "🦙",
-    desc: "Run LLMs locally",
-    href: "https://ollama.com",
-    tag: "OSS",
+    name: "DeepSeek",
+    emoji: "🔍",
+    desc: "Open-source coding LLM",
+    href: "https://coder.deepseek.com",
+    tag: "AI",
   },
   {
     name: "Bolt.new",
@@ -160,11 +172,11 @@ const featuredTools = [
     tag: "Builder",
   },
   {
-    name: "Claude AI",
-    emoji: "🧠",
-    desc: "200K context LLM",
-    href: "https://claude.ai",
-    tag: "LLM",
+    name: "Windsurf",
+    emoji: "🌪️",
+    desc: "AI IDE with Cascade",
+    href: "https://codeium.com/windsurf",
+    tag: "God Tier",
   },
 ];
 
@@ -334,7 +346,7 @@ export default function Home() {
             {[
               {
                 label: "Resources",
-                value: "100+",
+                value: "200+",
                 icon: Package,
                 color: "text-blue-400",
               },

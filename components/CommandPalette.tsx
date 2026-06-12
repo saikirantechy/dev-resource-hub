@@ -25,6 +25,7 @@ import {
 import agentsData from "@/data/agents.json";
 import toolsData from "@/data/tools.json";
 import promptsData from "@/data/prompts.json";
+import aiCodingToolsData from "@/data/ai-coding-tools.json";
 import { BlogPost } from "@/lib/blogs";
 
 type SearchItem = {
@@ -181,6 +182,16 @@ export default function CommandPalette({
       icon: <Terminal size={18} className="text-purple-400" />,
     }));
 
+    const aiCoding = aiCodingToolsData.map((item: any) => ({
+      id: item.id,
+      name: item.name,
+      description: item.description,
+      category: item.category,
+      href: `/tools?id=${item.id}`,
+      type: "tool" as const,
+      icon: <Terminal size={18} className="text-orange-400" />,
+    }));
+
     const blogs = initialBlogs.map((item) => ({
       id: item.slug,
       name: item.title,
@@ -196,6 +207,7 @@ export default function CommandPalette({
       ...agents,
       ...tools,
       ...prompts,
+      ...aiCoding,
       ...blogs,
     ] as SearchItem[];
   }, [actions, initialBlogs]);

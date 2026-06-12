@@ -1,0 +1,2960 @@
+[
+  {
+    "id": "google-antigravity",
+    "name": "Google Antigravity",
+    "category": "God Tier Tools",
+    "provider": "Google",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://antigravity.google",
+    "description": "Google's most advanced AI coding platform. Next-gen autonomous development environment with deep codebase understanding.",
+    "tags": [
+      "Google",
+      "Autonomous",
+      "AI Coding",
+      "Next-Gen"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Google's most advanced AI coding platform. Next-gen autonomous development envir...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "amazon-kiro",
+    "name": "Amazon Kiro",
+    "category": "God Tier Tools",
+    "provider": "Amazon",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://aws.amazon.com/kiro",
+    "description": "Amazon's AI development platform for building, deploying, and scaling applications with natural language.",
+    "tags": [
+      "Amazon",
+      "AWS",
+      "Cloud",
+      "AI Coding"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Amazon's AI development platform for building, deploying, and scaling applicatio...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "category": "God Tier Tools",
+    "provider": "StackBlitz",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://bolt.new",
+    "description": "AI web development agent from StackBlitz. Build, run, edit, and deploy full-stack apps in the browser with Claude.",
+    "tags": [
+      "StackBlitz",
+      "Browser",
+      "Fullstack",
+      "Claude"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI web development agent from StackBlitz. Build, run, edit, and deploy full-stac...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "firebase-studio",
+    "name": "Firebase Studio",
+    "category": "God Tier Tools",
+    "provider": "Google",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://firebase.google.com/products/studio",
+    "description": "Google's integrated AI development environment for Firebase. Build full-stack apps with AI-powered assistance and one-click deployment.",
+    "tags": [
+      "Google",
+      "Firebase",
+      "Fullstack",
+      "Cloud"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Google's integrated AI development environment for Firebase. Build full-stack ap...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "category": "God Tier Tools",
+    "provider": "Codeium",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codeium.com/windsurf",
+    "description": "Next-gen AI IDE from Codeium. Features Cascade, a deeply context-aware AI that can take multi-step actions in your project.",
+    "tags": [
+      "IDE",
+      "Cascade",
+      "Context",
+      "AI"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Next-gen AI IDE from Codeium. Features Cascade, a deeply context-aware AI that c...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "tongyi-lingma",
+    "name": "Tongyi Lingma",
+    "category": "Chinese AI Platforms",
+    "provider": "Alibaba Cloud",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://tongyi.aliyun.com/lingma",
+    "description": "Alibaba Cloud's AI coding assistant. Deeply integrated with the Chinese developer ecosystem and Alibaba Cloud services.",
+    "tags": [
+      "Alibaba",
+      "AI Coding",
+      "Cloud",
+      "Chinese"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Alibaba Cloud's AI coding assistant. Deeply integrated with the Chinese develope...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "comate",
+    "name": "Comate",
+    "category": "Chinese AI Platforms",
+    "provider": "Baidu",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://comate.baidu.com",
+    "description": "Baidu's AI code assistant powered by ERNIE model. Offers intelligent code completion, generation, and debugging.",
+    "tags": [
+      "Baidu",
+      "AI Coding",
+      "Completion",
+      "Chinese"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Baidu's AI code assistant powered by ERNIE model. Offers intelligent code comple...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "marcode",
+    "name": "MarsCode",
+    "category": "Chinese AI Platforms",
+    "provider": "ByteDance",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.marscode.com",
+    "description": "ByteDance's AI-powered cloud development environment. Browser-based IDE with intelligent coding assistance.",
+    "tags": [
+      "ByteDance",
+      "Cloud IDE",
+      "Browser",
+      "AI Coding"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "ByteDance's AI-powered cloud development environment. Browser-based IDE with int...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "trae",
+    "name": "Trae",
+    "category": "Chinese AI Platforms",
+    "provider": "ByteDance",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://trae.ai",
+    "description": "AI-native IDE from ByteDance. Intelligent code generation, refactoring, and debugging with deep context awareness.",
+    "tags": [
+      "ByteDance",
+      "IDE",
+      "AI Native",
+      "Coding"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-native IDE from ByteDance. Intelligent code generation, refactoring, and debu...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "deepseek-coder",
+    "name": "DeepSeek Coder",
+    "category": "Chinese AI Platforms",
+    "provider": "DeepSeek",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://coder.deepseek.com",
+    "description": "Open-source code generation model specialized in coding and mathematics. Exceptional efficiency and performance.",
+    "tags": [
+      "Open Source",
+      "Coding",
+      "Math",
+      "LLM"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source code generation model specialized in coding and mathematics. Excepti...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "cloud-studio",
+    "name": "Cloud Studio",
+    "category": "Chinese AI Platforms",
+    "provider": "Tencent",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://cloudstudio.net",
+    "description": "Tencent's cloud-based development environment with AI-assisted coding, one-click deployment, and team collaboration.",
+    "tags": [
+      "Tencent",
+      "Cloud IDE",
+      "Collaboration",
+      "Deploy"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Tencent's cloud-based development environment with AI-assisted coding, one-click...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "spark-desk",
+    "name": "Spark Desk",
+    "category": "Chinese AI Platforms",
+    "provider": "iFlytek",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://xinghuo.xfyun.cn",
+    "description": "iFlytek's large language model platform for coding, content generation, and intelligent Q&A.",
+    "tags": [
+      "iFlytek",
+      "LLM",
+      "Coding",
+      "Chinese"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "iFlytek's large language model platform for coding, content generation, and inte...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "glm4-flash",
+    "name": "GLM-4 Flash",
+    "category": "Chinese AI Platforms",
+    "provider": "Zhipu AI",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://open.bigmodel.cn",
+    "description": "Zhipu AI's fast and efficient LLM for code generation, analysis, and general-purpose tasks.",
+    "tags": [
+      "Zhipu AI",
+      "LLM",
+      "Efficient",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Zhipu AI's fast and efficient LLM for code generation, analysis, and general-pur...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "category": "Chinese AI Platforms",
+    "provider": "Moonshot AI",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://kimi.moonshot.cn",
+    "description": "Moonshot AI's intelligent assistant with long-context capabilities for coding, research, and document analysis.",
+    "tags": [
+      "Moonshot AI",
+      "Long Context",
+      "Research",
+      "Coding"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Moonshot AI's intelligent assistant with long-context capabilities for coding, r...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "google-ai-studio",
+    "name": "Google AI Studio",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Google",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://aistudio.google.com",
+    "description": "Google's browser-based IDE for prototyping with Gemini models. Test prompts, tune models, and generate API code.",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Prototyping",
+      "IDE"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Google's browser-based IDE for prototyping with Gemini models. Test prompts, tun...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "GitHub / Microsoft",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://github.com/features/copilot",
+    "description": "AI pair programmer powered by OpenAI Codex. Integrates with VS Code, JetBrains, Neovim, and more.",
+    "tags": [
+      "GitHub",
+      "Microsoft",
+      "Autocomplete",
+      "AI Coding"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI pair programmer powered by OpenAI Codex. Integrates with VS Code, JetBrains, ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "amazon-q-developer",
+    "name": "Amazon Q Developer",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Amazon Web Services",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://aws.amazon.com/q/developer",
+    "description": "AWS's AI-powered developer assistant. Code generation, debugging, and AWS service integration.",
+    "tags": [
+      "AWS",
+      "Cloud",
+      "Coding",
+      "DevOps"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AWS's AI-powered developer assistant. Code generation, debugging, and AWS servic...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "google-cloud-shell",
+    "name": "Google Cloud Shell",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Google Cloud",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://cloud.google.com/shell",
+    "description": "Browser-based terminal and code editor with Google Cloud CLI pre-installed and AI-assisted commands.",
+    "tags": [
+      "Google Cloud",
+      "Terminal",
+      "Browser",
+      "CLI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Browser-based terminal and code editor with Google Cloud CLI pre-installed and A...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "google-colab",
+    "name": "Google Colab",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Google Research",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://colab.research.google.com",
+    "description": "Free Jupyter notebook environment with GPU/TPU support. Write and execute Python in your browser.",
+    "tags": [
+      "Google",
+      "Notebook",
+      "Python",
+      "GPU"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Free Jupyter notebook environment with GPU/TPU support. Write and execute Python...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "kaggle",
+    "name": "Kaggle",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Google",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.kaggle.com",
+    "description": "Google's data science platform with free notebooks, datasets, competitions, and GPU-powered AI development.",
+    "tags": [
+      "Data Science",
+      "Notebook",
+      "Competitions",
+      "GPU"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Google's data science platform with free notebooks, datasets, competitions, and ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "lightning-ai",
+    "name": "Lightning AI",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Lightning AI",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://lightning.ai",
+    "description": "Platform for building, training, and deploying AI models. Features PyTorch Lightning and cloud Studios.",
+    "tags": [
+      "ML",
+      "Training",
+      "PyTorch",
+      "Cloud"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Platform for building, training, and deploying AI models. Features PyTorch Light...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "code-llama",
+    "name": "Code Llama",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "Meta",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/meta/codellama",
+    "description": "Meta's open-source LLM specialized for code generation, completion, and understanding. Available in 7B, 13B, and 34B sizes.",
+    "tags": [
+      "Meta",
+      "Open Source",
+      "LLM",
+      "Coding"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Meta's open-source LLM specialized for code generation, completion, and understa...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "category": "Big Tech & Cloud Tools",
+    "provider": "xAI",
+    "freeTier": false,
+    "openSource": false,
+    "website": "https://grok.com",
+    "description": "xAI's conversational AI assistant with real-time knowledge and coding capabilities for developers.",
+    "tags": [
+      "xAI",
+      "LLM",
+      "Real-time",
+      "Coding"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Paid",
+    "strength": "xAI's conversational AI assistant with real-time knowledge and coding capabiliti...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "cline-ext",
+    "name": "Cline",
+    "category": "VS Code Extensions",
+    "provider": "Cline",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/cline/cline",
+    "description": "Autonomous coding agent for VS Code. Can plan, write code, run terminal commands, and create PRs autonomously.",
+    "tags": [
+      "VS Code",
+      "Autonomous",
+      "Agent",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Autonomous coding agent for VS Code. Can plan, write code, run terminal commands...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "roo-code",
+    "name": "Roo Code",
+    "category": "VS Code Extensions",
+    "provider": "Roo",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/roocode/roocode",
+    "description": "AI coding agent for VS Code. Context-aware code generation with multi-file editing capabilities.",
+    "tags": [
+      "VS Code",
+      "Agent",
+      "Coding",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI coding agent for VS Code. Context-aware code generation with multi-file editi...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "kilocode",
+    "name": "Kilocode",
+    "category": "VS Code Extensions",
+    "provider": "Kilocode",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://kilocode.ai",
+    "description": "AI-powered code review and generation tool for VS Code. Catch bugs and improve code quality automatically.",
+    "tags": [
+      "VS Code",
+      "Review",
+      "Quality",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code review and generation tool for VS Code. Catch bugs and improve c...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codegpt-ext",
+    "name": "CodeGPT",
+    "category": "VS Code Extensions",
+    "provider": "CodeGPT",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codegpt.co",
+    "description": "Multi-model AI coding assistant for VS Code. Supports GPT-4, Claude, Gemini, and local models.",
+    "tags": [
+      "VS Code",
+      "Multi-Model",
+      "Assistant",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Multi-model AI coding assistant for VS Code. Supports GPT-4, Claude, Gemini, and...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "continue-ext",
+    "name": "Continue",
+    "category": "VS Code Extensions",
+    "provider": "Continue",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://continue.dev",
+    "description": "Open-source AI code assistant for VS Code and JetBrains. Customizable with any LLM backend.",
+    "tags": [
+      "VS Code",
+      "JetBrains",
+      "Open Source",
+      "Customizable"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI code assistant for VS Code and JetBrains. Customizable with any L...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "blackbox-ai",
+    "name": "Blackbox AI",
+    "category": "VS Code Extensions",
+    "provider": "Blackbox",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.blackbox.ai",
+    "description": "AI coding assistant with code autocomplete, chat, and code search from 100M+ open-source repositories.",
+    "tags": [
+      "VS Code",
+      "Autocomplete",
+      "Search",
+      "Chat"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI coding assistant with code autocomplete, chat, and code search from 100M+ ope...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "bito-ext",
+    "name": "Bito",
+    "category": "VS Code Extensions",
+    "provider": "Bito",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://bito.ai",
+    "description": "AI coding assistant for VS Code, JetBrains, and Chrome. Code generation, explanation, and unit testing.",
+    "tags": [
+      "VS Code",
+      "JetBrains",
+      "Chrome",
+      "Testing"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI coding assistant for VS Code, JetBrains, and Chrome. Code generation, explana...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codegeex-ext",
+    "name": "CodeGeeX",
+    "category": "VS Code Extensions",
+    "provider": "Zhipu AI",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://codegeex.cn",
+    "description": "Open-source multilingual AI code assistant. Code generation, completion, translation, and explanation.",
+    "tags": [
+      "VS Code",
+      "Open Source",
+      "Multi-language",
+      "Translation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source multilingual AI code assistant. Code generation, completion, transla...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "askcodi",
+    "name": "AskCodi",
+    "category": "VS Code Extensions",
+    "provider": "AskCodi",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.askcodi.com",
+    "description": "AI coding assistant for VS Code with code generation, documentation, unit tests, and database queries.",
+    "tags": [
+      "VS Code",
+      "Assistant",
+      "Docs",
+      "Testing"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI coding assistant for VS Code with code generation, documentation, unit tests,...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "refact-ai-ext",
+    "name": "Refact.ai",
+    "category": "VS Code Extensions",
+    "provider": "Refact",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://refact.ai",
+    "description": "Open-source AI coding assistant with code completion, refactoring, and bug detection capabilities.",
+    "tags": [
+      "VS Code",
+      "Refactoring",
+      "Open Source",
+      "Completion"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI coding assistant with code completion, refactoring, and bug detec...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codemate-ext",
+    "name": "CodeMate",
+    "category": "VS Code Extensions",
+    "provider": "CodeMate",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codemate.ai",
+    "description": "AI code review and debugging tool for VS Code. Real-time bug detection, code optimization suggestions.",
+    "tags": [
+      "VS Code",
+      "Review",
+      "Debugging",
+      "Optimization"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI code review and debugging tool for VS Code. Real-time bug detection, code opt...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "machinet",
+    "name": "Machinet",
+    "category": "VS Code Extensions",
+    "provider": "Machinet",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://machinet.net",
+    "description": "AI-powered Java coding assistant for VS Code and JetBrains. Context-aware code generation and refactoring.",
+    "tags": [
+      "Java",
+      "VS Code",
+      "JetBrains",
+      "Refactoring"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered Java coding assistant for VS Code and JetBrains. Context-aware code g...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "adrenaline",
+    "name": "Adrenaline",
+    "category": "VS Code Extensions",
+    "provider": "Adrenaline",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://useadrenaline.com",
+    "description": "AI debugger for VS Code that automatically identifies and fixes errors in your codebase.",
+    "tags": [
+      "VS Code",
+      "Debugging",
+      "Auto-fix",
+      "Errors"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI debugger for VS Code that automatically identifies and fixes errors in your c...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "grit-io",
+    "name": "Grit.io",
+    "category": "VS Code Extensions",
+    "provider": "Grit",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://grit.io",
+    "description": "Open-source AI code migration and refactoring tool. Automatically upgrade dependencies and fix breaking changes.",
+    "tags": [
+      "Migration",
+      "Refactoring",
+      "Dependencies",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI code migration and refactoring tool. Automatically upgrade depend...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "ellipsis-ext",
+    "name": "Ellipsis",
+    "category": "VS Code Extensions",
+    "provider": "Ellipsis",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://ellipsis.dev",
+    "description": "AI code review assistant that automatically reviews pull requests and catches bugs before merge.",
+    "tags": [
+      "Review",
+      "PR",
+      "GitHub",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI code review assistant that automatically reviews pull requests and catches bu...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "mentat",
+    "name": "Mentat",
+    "category": "VS Code Extensions",
+    "provider": "Mentat",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://mentat.ai",
+    "description": "Open-source AI coding assistant that works from the command line. Plans, writes, and reviews code.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Coding",
+      "Planning"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI coding assistant that works from the command line. Plans, writes,...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "coderabbit",
+    "name": "CodeRabbit",
+    "category": "VS Code Extensions",
+    "provider": "CodeRabbit",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://coderabbit.ai",
+    "description": "AI-powered code review bot that provides intelligent feedback on pull requests in real-time.",
+    "tags": [
+      "Review",
+      "PR",
+      "GitHub",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code review bot that provides intelligent feedback on pull requests i...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "sweep-ai",
+    "name": "Sweep AI",
+    "category": "VS Code Extensions",
+    "provider": "Sweep",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://sweep.dev",
+    "description": "AI junior developer that turns issues into pull requests. Writes code, tests, and documentation automatically.",
+    "tags": [
+      "PR",
+      "GitHub",
+      "Automation",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI junior developer that turns issues into pull requests. Writes code, tests, an...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codiumai",
+    "name": "CodiumAI",
+    "category": "VS Code Extensions",
+    "provider": "CodiumAI",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codium.ai",
+    "description": "AI-powered code testing tool that generates meaningful tests for your code automatically.",
+    "tags": [
+      "Testing",
+      "VS Code",
+      "Automation",
+      "Quality"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code testing tool that generates meaningful tests for your code autom...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "mintlify-ext",
+    "name": "Mintlify",
+    "category": "VS Code Extensions",
+    "provider": "Mintlify",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://mintlify.com",
+    "description": "AI-powered documentation tool for VS Code that writes beautiful docs as you code.",
+    "tags": [
+      "Docs",
+      "VS Code",
+      "Writing",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered documentation tool for VS Code that writes beautiful docs as you code...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "pieces-ext",
+    "name": "Pieces",
+    "category": "VS Code Extensions",
+    "provider": "Pieces",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://pieces.app",
+    "description": "AI-powered code snippet management and workflow copilot. Save, enrich, and reuse code snippets.",
+    "tags": [
+      "Snippets",
+      "Copilot",
+      "Productivity",
+      "Enrichment"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code snippet management and workflow copilot. Save, enrich, and reuse...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "tabby-ext",
+    "name": "Tabby",
+    "category": "VS Code Extensions",
+    "provider": "Tabby",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://tabby.tabbyml.com",
+    "description": "Self-hosted AI code assistant. No third-party dependency, private code stays on your infrastructure.",
+    "tags": [
+      "Self-hosted",
+      "Privacy",
+      "Open Source",
+      "VS Code"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Self-hosted AI code assistant. No third-party dependency, private code stays on ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "twinny-ext",
+    "name": "Twinny",
+    "category": "VS Code Extensions",
+    "provider": "Twinny",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://twinny.dev",
+    "description": "Open-source local AI code completion for VS Code. Run models on your machine with complete privacy.",
+    "tags": [
+      "Local",
+      "Privacy",
+      "Open Source",
+      "VS Code"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source local AI code completion for VS Code. Run models on your machine wit...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "sourcery",
+    "name": "Sourcery",
+    "category": "VS Code Extensions",
+    "provider": "Sourcery",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://sourcery.ai",
+    "description": "AI-powered code reviewer and refactoring tool for Python. Instantly improves Python code quality and readability.",
+    "tags": [
+      "Python",
+      "Refactoring",
+      "Review",
+      "Quality"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code reviewer and refactoring tool for Python. Instantly improves Pyt...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "warp-terminal",
+    "name": "Warp",
+    "category": "CLI & Terminal Tools",
+    "provider": "Warp",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.warp.dev",
+    "description": "Modern, Rust-based terminal with AI-powered command suggestions, workflow automation, and inline IDE features.",
+    "tags": [
+      "Terminal",
+      "Rust",
+      "Modern",
+      "AI"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Modern, Rust-based terminal with AI-powered command suggestions, workflow automa...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "wave-terminal",
+    "name": "Wave Terminal",
+    "category": "CLI & Terminal Tools",
+    "provider": "Wave",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://www.waveterm.dev",
+    "description": "Open-source terminal with built-in AI, rich rendering, and modern workflow features for developers.",
+    "tags": [
+      "Terminal",
+      "Open Source",
+      "Rich UI",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source terminal with built-in AI, rich rendering, and modern workflow featu...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "gemini-cli",
+    "name": "Gemini CLI",
+    "category": "CLI & Terminal Tools",
+    "provider": "Google",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://cloud.google.com/gemini-cli",
+    "description": "Google's AI-powered CLI assistant. Ask questions, generate scripts, and automate workflows from the terminal.",
+    "tags": [
+      "Google",
+      "CLI",
+      "Assistant",
+      "Automation"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Google's AI-powered CLI assistant. Ask questions, generate scripts, and automate...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "copilot-cli",
+    "name": "Copilot CLI",
+    "category": "CLI & Terminal Tools",
+    "provider": "GitHub",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://github.com/github/gh-copilot",
+    "description": "GitHub's AI-powered CLI assistant for GitHub CLI. Get command suggestions and explanations in the terminal.",
+    "tags": [
+      "GitHub",
+      "CLI",
+      "Assistant",
+      "Terminal"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "GitHub's AI-powered CLI assistant for GitHub CLI. Get command suggestions and ex...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "gpt-engineer",
+    "name": "GPT Engineer",
+    "category": "CLI & Terminal Tools",
+    "provider": "GPT Engineer",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/gpt-engineer-org/gpt-engineer",
+    "description": "Open-source CLI tool that generates entire codebases from natural language specifications.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Code Gen",
+      "Specifications"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source CLI tool that generates entire codebases from natural language speci...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "category": "CLI & Terminal Tools",
+    "provider": "Aider",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://aider.chat",
+    "description": "Open-source AI pair programming in the terminal. AI helps edit code in your local git repository.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Pair Programming",
+      "Git"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI pair programming in the terminal. AI helps edit code in your loca...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "opencode",
+    "name": "OpenCode",
+    "category": "CLI & Terminal Tools",
+    "provider": "OpenCode",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/sst/opencode",
+    "description": "Open-source AI coding agent that works from the terminal. Deep integration with your codebase.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Agent",
+      "Coding"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI coding agent that works from the terminal. Deep integration with ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "shell-gpt",
+    "name": "Shell GPT",
+    "category": "CLI & Terminal Tools",
+    "provider": "ShellGPT",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/TheR1D/shell_gpt",
+    "description": "Open-source CLI tool that generates shell commands, code snippets, and documentation from natural language.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Shell",
+      "Commands"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source CLI tool that generates shell commands, code snippets, and documenta...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "gorilla-cli",
+    "name": "Gorilla CLI",
+    "category": "CLI & Terminal Tools",
+    "provider": "Gorilla",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/gorilla-llm/gorilla-cli",
+    "description": "Open-source CLI tool with LLM-powered command generation, API discovery, and code execution.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "LLM",
+      "API"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source CLI tool with LLM-powered command generation, API discovery, and cod...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "butterfish",
+    "name": "Butterfish",
+    "category": "CLI & Terminal Tools",
+    "provider": "Butterfish",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://github.com/butterfish/butterfish",
+    "description": "Open-source CLI tool that adds AI capabilities to your terminal. Shell commands, code review, and more.",
+    "tags": [
+      "CLI",
+      "Open Source",
+      "Terminal",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source CLI tool that adds AI capabilities to your terminal. Shell commands,...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "Web Builders",
+    "provider": "Lovable",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://lovable.dev",
+    "description": "Build full-stack web apps with natural language. Generates React frontends with Supabase backends automatically.",
+    "tags": [
+      "Fullstack",
+      "React",
+      "Supabase",
+      "No-Code"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Build full-stack web apps with natural language. Generates React frontends with ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "v0-vercel",
+    "name": "v0 by Vercel",
+    "category": "Web Builders",
+    "provider": "Vercel",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://v0.dev",
+    "description": "Generative UI tool from Vercel. Describe a component and get production-ready shadcn/ui + Tailwind code instantly.",
+    "tags": [
+      "Vercel",
+      "UI",
+      "React",
+      "shadcn/ui"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Generative UI tool from Vercel. Describe a component and get production-ready sh...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "cosmic",
+    "name": "Cosmic",
+    "category": "Web Builders",
+    "provider": "Cosmic",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://cosmicjs.com",
+    "description": "Headless CMS and website builder with AI-powered content creation and management tools.",
+    "tags": [
+      "CMS",
+      "Content",
+      "AI",
+      "Builder"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Headless CMS and website builder with AI-powered content creation and management...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "glitch",
+    "name": "Glitch",
+    "category": "Web Builders",
+    "provider": "Glitch",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://glitch.com",
+    "description": "Browser-based code editor for building and remixing full-stack web apps collaboratively.",
+    "tags": [
+      "Browser",
+      "Remix",
+      "Collaboration",
+      "Fullstack"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Browser-based code editor for building and remixing full-stack web apps collabor...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "stackblitz",
+    "name": "StackBlitz",
+    "category": "Web Builders",
+    "provider": "StackBlitz",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://stackblitz.com",
+    "description": "Instant browser-based development environment powered by WebContainers. Run Node.js in the browser.",
+    "tags": [
+      "Browser",
+      "WebContainers",
+      "Node.js",
+      "IDE"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Instant browser-based development environment powered by WebContainers. Run Node...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codesandbox",
+    "name": "CodeSandbox",
+    "category": "Web Builders",
+    "provider": "CodeSandbox",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codesandbox.io",
+    "description": "Online code editor and prototyping tool. Build, test, and deploy web apps in the browser.",
+    "tags": [
+      "Browser",
+      "Prototyping",
+      "Deploy",
+      "Editor"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Online code editor and prototyping tool. Build, test, and deploy web apps in the...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "category": "Web Builders",
+    "provider": "Replit",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://replit.com",
+    "description": "Browser-based IDE with AI coding assistant. Write, run, and deploy code in 50+ languages from your browser.",
+    "tags": [
+      "Browser",
+      "Multi-language",
+      "Deploy",
+      "IDE"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Browser-based IDE with AI coding assistant. Write, run, and deploy code in 50+ l...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "playcode",
+    "name": "Playcode",
+    "category": "Web Builders",
+    "provider": "Playcode",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://playcode.io",
+    "description": "Simple, fast browser-based JavaScript and HTML/CSS playground for prototyping and testing.",
+    "tags": [
+      "Browser",
+      "JavaScript",
+      "Playground",
+      "Prototyping"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Simple, fast browser-based JavaScript and HTML/CSS playground for prototyping an...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "jsfiddle",
+    "name": "JSFiddle",
+    "category": "Web Builders",
+    "provider": "JSFiddle",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://jsfiddle.net",
+    "description": "Online code editor for testing HTML, CSS, and JavaScript code snippets with real-time preview.",
+    "tags": [
+      "Browser",
+      "JavaScript",
+      "Snippets",
+      "Preview"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Online code editor for testing HTML, CSS, and JavaScript code snippets with real...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codepen",
+    "name": "CodePen",
+    "category": "Web Builders",
+    "provider": "CodePen",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codepen.io",
+    "description": "Social development environment for front-end designers and developers. Build and showcase web projects.",
+    "tags": [
+      "Browser",
+      "Frontend",
+      "Social",
+      "Showcase"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Social development environment for front-end designers and developers. Build and...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "deepnote",
+    "name": "Deepnote",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Deepnote",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://deepnote.com",
+    "description": "AI-powered cloud notebook for data science and machine learning. Collaborative with built-in AI assistance.",
+    "tags": [
+      "Notebook",
+      "Data Science",
+      "Collaboration",
+      "Cloud"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered cloud notebook for data science and machine learning. Collaborative w...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "hex",
+    "name": "Hex",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Hex",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://hex.tech",
+    "description": "Collaborative data science platform with AI-powered notebooks, SQL cells, and interactive visualizations.",
+    "tags": [
+      "Notebook",
+      "Data Science",
+      "SQL",
+      "Visualization"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Collaborative data science platform with AI-powered notebooks, SQL cells, and in...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "jupyter-ai",
+    "name": "Jupyter AI",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Project Jupyter",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://jupyter.org",
+    "description": "Official Jupyter extension bringing generative AI to notebooks. Chat with models alongside your code.",
+    "tags": [
+      "Notebook",
+      "Open Source",
+      "Jupyter",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Official Jupyter extension bringing generative AI to notebooks. Chat with models...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "deno-jupyter",
+    "name": "Deno Jupyter",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Deno",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://deno.com",
+    "description": "JavaScript/TypeScript notebook runtime for Deno. Run Jupyter notebooks with TypeScript and JavaScript kernels.",
+    "tags": [
+      "Notebook",
+      "Deno",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "JavaScript/TypeScript notebook runtime for Deno. Run Jupyter notebooks with Type...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "anaconda-assistant",
+    "name": "Anaconda Assistant",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Anaconda",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://anaconda.cloud/assistant",
+    "description": "AI-powered coding assistant for data science. Write, debug, and optimize Python code with contextual help.",
+    "tags": [
+      "Python",
+      "Data Science",
+      "Assistant",
+      "Debugging"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered coding assistant for data science. Write, debug, and optimize Python ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "datacamp-workspace",
+    "name": "DataCamp Workspace",
+    "category": "Data Science & Notebook Tools",
+    "provider": "DataCamp",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://workspace.datacamp.com",
+    "description": "Cloud-based data science notebook with AI assistance, pre-installed packages, and learning integrations.",
+    "tags": [
+      "Notebook",
+      "Data Science",
+      "Learning",
+      "Cloud"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Cloud-based data science notebook with AI assistance, pre-installed packages, an...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Julius",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://julius.ai",
+    "description": "AI-powered data analyst. Upload data, ask questions in plain English, get visualizations and insights.",
+    "tags": [
+      "Data Analysis",
+      "Visualization",
+      "Natural Language",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered data analyst. Upload data, ask questions in plain English, get visual...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "einblick",
+    "name": "Einblick",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Einblick",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://einblick.ai",
+    "description": "Collaborative data science platform with AI-powered notebooks and drag-and-drop visual canvas.",
+    "tags": [
+      "Notebook",
+      "Collaboration",
+      "Visual Canvas",
+      "Data Science"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Collaborative data science platform with AI-powered notebooks and drag-and-drop ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "akkio",
+    "name": "Akkio",
+    "category": "Data Science & Notebook Tools",
+    "provider": "Akkio",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://akkio.com",
+    "description": "AI data platform for building and deploying machine learning models without code.",
+    "tags": [
+      "ML",
+      "No-Code",
+      "Data",
+      "Deploy"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI data platform for building and deploying machine learning models without code...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "Next Generation IDEs",
+    "provider": "Anysphere",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://cursor.sh",
+    "description": "AI-first code editor built on VS Code. Features Composer for multi-file editing, inline chat, and deep codebase understanding.",
+    "tags": [
+      "IDE",
+      "AI",
+      "VS Code Fork",
+      "Composer"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-first code editor built on VS Code. Features Composer for multi-file editing,...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "zed",
+    "name": "Zed",
+    "category": "Next Generation IDEs",
+    "provider": "Zed Industries",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://zed.dev",
+    "description": "High-performance, multiplayer code editor built in Rust. Features AI-powered code assistance and real-time collaboration.",
+    "tags": [
+      "IDE",
+      "Rust",
+      "Multiplayer",
+      "High Performance"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "High-performance, multiplayer code editor built in Rust. Features AI-powered cod...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "augment-code",
+    "name": "Augment Code",
+    "category": "Next Generation IDEs",
+    "provider": "Augment",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://augmentcode.com",
+    "description": "AI-powered software development platform with deep codebase understanding and autonomous coding capabilities.",
+    "tags": [
+      "IDE",
+      "AI",
+      "Autonomous",
+      "Codebase"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered software development platform with deep codebase understanding and au...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "pearai",
+    "name": "PearAI",
+    "category": "Next Generation IDEs",
+    "provider": "PearAI",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://pearai.io",
+    "description": "Open-source AI-powered code editor integrated with local LLMs and cloud models for intelligent assistance.",
+    "tags": [
+      "IDE",
+      "Open Source",
+      "Local LLM",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Open-source AI-powered code editor integrated with local LLMs and cloud models f...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "trae-ide",
+    "name": "Trae",
+    "category": "Next Generation IDEs",
+    "provider": "ByteDance",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://trae.ai",
+    "description": "ByteDance's AI-native IDE with intelligent code generation, refactoring, and deep context awareness.",
+    "tags": [
+      "IDE",
+      "AI Native",
+      "ByteDance",
+      "Coding"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "ByteDance's AI-native IDE with intelligent code generation, refactoring, and dee...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "void-editor",
+    "name": "Void",
+    "category": "Next Generation IDEs",
+    "provider": "Void",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://void.dev",
+    "description": "Modern AI-powered code editor with built-in terminal, Git integration, and intelligent code assistance.",
+    "tags": [
+      "IDE",
+      "Terminal",
+      "Git",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Modern AI-powered code editor with built-in terminal, Git integration, and intel...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "melty",
+    "name": "Melty",
+    "category": "Next Generation IDEs",
+    "provider": "Melty",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://melty.sh",
+    "description": "AI-native code editor that understands your entire codebase and suggests contextually-aware changes.",
+    "tags": [
+      "IDE",
+      "Context",
+      "AI",
+      "Suggestions"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-native code editor that understands your entire codebase and suggests context...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "lapce",
+    "name": "Lapce",
+    "category": "Next Generation IDEs",
+    "provider": "Lapce",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://lapce.dev",
+    "description": "Lightning-fast, open-source code editor built in Rust. GPU-accelerated rendering with Vim-style modal editing.",
+    "tags": [
+      "IDE",
+      "Rust",
+      "Open Source",
+      "Vim"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Lightning-fast, open-source code editor built in Rust. GPU-accelerated rendering...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "lite-xl",
+    "name": "Lite XL",
+    "category": "Next Generation IDEs",
+    "provider": "Lite XL",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://lite-xl.com",
+    "description": "Lightweight, open-source text editor written in Lua. Extensible plugin system and minimal resource usage.",
+    "tags": [
+      "Editor",
+      "Lua",
+      "Lightweight",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Lightweight, open-source text editor written in Lua. Extensible plugin system an...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "pulsar",
+    "name": "Pulsar",
+    "category": "Next Generation IDEs",
+    "provider": "Pulsar",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://pulsar-edit.dev",
+    "description": "Community-driven, open-source text editor with built-in AI features and package ecosystem.",
+    "tags": [
+      "Editor",
+      "Open Source",
+      "Community",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Community-driven, open-source text editor with built-in AI features and package ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "category": "Specialized Tools",
+    "provider": "Phind",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.phind.com",
+    "description": "AI search engine optimized for developers. Get precise answers with code examples and real-time web results.",
+    "tags": [
+      "Search",
+      "Developer",
+      "Answers",
+      "Code"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI search engine optimized for developers. Get precise answers with code example...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "category": "Specialized Tools",
+    "provider": "Perplexity AI",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.perplexity.ai",
+    "description": "AI-powered search engine that provides cited, real-time answers. Excellent for developer research and debugging.",
+    "tags": [
+      "Search",
+      "Research",
+      "Citations",
+      "AI"
+    ],
+    "featured": true,
+    "isFeatured": true,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered search engine that provides cited, real-time answers. Excellent for d...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "fine-dev",
+    "name": "Fine.dev",
+    "category": "Specialized Tools",
+    "provider": "Fine",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://fine.dev",
+    "description": "AI-powered code review and continuous improvement platform. Automated PR reviews and quality gates.",
+    "tags": [
+      "Review",
+      "PR",
+      "Quality",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code review and continuous improvement platform. Automated PR reviews...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "second-dev",
+    "name": "Second.dev",
+    "category": "Specialized Tools",
+    "provider": "Second",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://second.dev",
+    "description": "AI-powered code migration and modernization platform. Automatically update and refactor legacy code.",
+    "tags": [
+      "Migration",
+      "Modernization",
+      "Refactoring",
+      "Legacy"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code migration and modernization platform. Automatically update and r...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "factory",
+    "name": "Factory",
+    "category": "Specialized Tools",
+    "provider": "Factory",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://factory.ai",
+    "description": "AI-powered development platform that automates build, test, and deployment workflows.",
+    "tags": [
+      "DevOps",
+      "Automation",
+      "CI/CD",
+      "Deploy"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered development platform that automates build, test, and deployment workf...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "emdash",
+    "name": "Emdash",
+    "category": "Specialized Tools",
+    "provider": "Emdash",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://emdash.io",
+    "description": "AI-powered code documentation and knowledge base generator for your codebase.",
+    "tags": [
+      "Docs",
+      "Knowledge",
+      "AI",
+      "Codebase"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code documentation and knowledge base generator for your codebase....",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "amp",
+    "name": "Amp",
+    "category": "Specialized Tools",
+    "provider": "Amp",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://amp.ai",
+    "description": "AI-powered code performance optimization and analysis tool for faster, more efficient code.",
+    "tags": [
+      "Performance",
+      "Optimization",
+      "Analysis",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code performance optimization and analysis tool for faster, more effi...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "crush",
+    "name": "Crush",
+    "category": "Specialized Tools",
+    "provider": "Crush",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://crush.ai",
+    "description": "AI-powered code comprehension and navigation tool. Understand complex codebases with natural language.",
+    "tags": [
+      "Comprehension",
+      "Navigation",
+      "Codebase",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code comprehension and navigation tool. Understand complex codebases ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "boltai",
+    "name": "BoltAI",
+    "category": "Specialized Tools",
+    "provider": "BoltAI",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://boltai.com",
+    "description": "Native macOS AI coding app that integrates with any LLM. Chat with AI alongside your code editor.",
+    "tags": [
+      "macOS",
+      "Native",
+      "LLM",
+      "Chat"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Native macOS AI coding app that integrates with any LLM. Chat with AI alongside ...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "rovo-dev",
+    "name": "Rovo Dev",
+    "category": "Specialized Tools",
+    "provider": "Rovo",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://rovo.dev",
+    "description": "AI-powered development environment with collaborative features and intelligent code assistance.",
+    "tags": [
+      "IDE",
+      "Collaboration",
+      "AI",
+      "Development"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered development environment with collaborative features and intelligent c...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "zencoder",
+    "name": "Zencoder",
+    "category": "Specialized Tools",
+    "provider": "Zencoder",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://zencoder.ai",
+    "description": "AI-powered code generation and testing platform. Generate unit tests, integration tests, and code automatically.",
+    "tags": [
+      "Testing",
+      "Generation",
+      "Quality",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code generation and testing platform. Generate unit tests, integratio...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "category": "Specialized Tools",
+    "provider": "Tabnine",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://www.tabnine.com",
+    "description": "AI-powered code completion assistant. Supports 90+ languages and integrates with all major IDEs.",
+    "tags": [
+      "Completion",
+      "IDE",
+      "Multi-language",
+      "AI"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code completion assistant. Supports 90+ languages and integrates with...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "sourcegraph-cody",
+    "name": "Sourcegraph Cody",
+    "category": "Specialized Tools",
+    "provider": "Sourcegraph",
+    "freeTier": true,
+    "openSource": true,
+    "website": "https://sourcegraph.com/cody",
+    "description": "AI coding assistant with deep codebase understanding. Answers questions, finds code, and writes fixes.",
+    "tags": [
+      "Sourcegraph",
+      "Codebase",
+      "Answers",
+      "Open Source"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": true,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI coding assistant with deep codebase understanding. Answers questions, finds c...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codeium",
+    "name": "Codeium",
+    "category": "Specialized Tools",
+    "provider": "Codeium",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codeium.com",
+    "description": "Free AI code completion and search tool. Supports 70+ languages and integrates with 40+ IDEs.",
+    "tags": [
+      "Completion",
+      "Search",
+      "Multi-language",
+      "Free"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "Free AI code completion and search tool. Supports 70+ languages and integrates w...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "diffblue-cover",
+    "name": "Diffblue Cover",
+    "category": "Specialized Tools",
+    "provider": "Diffblue",
+    "freeTier": false,
+    "openSource": false,
+    "website": "https://www.diffblue.com",
+    "description": "AI-powered unit test generation for Java. Automatically creates comprehensive, human-readable tests.",
+    "tags": [
+      "Testing",
+      "Java",
+      "Unit Tests",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Paid",
+    "strength": "AI-powered unit test generation for Java. Automatically creates comprehensive, h...",
+    "github": "",
+    "docs": ""
+  },
+  {
+    "id": "codiga",
+    "name": "Codiga",
+    "category": "Specialized Tools",
+    "provider": "Codiga",
+    "freeTier": true,
+    "openSource": false,
+    "website": "https://codiga.io",
+    "description": "AI-powered code analysis and recipe platform. Automated code reviews with customizable rules.",
+    "tags": [
+      "Analysis",
+      "Review",
+      "Recipes",
+      "Automation"
+    ],
+    "featured": false,
+    "isFeatured": false,
+    "isTrending": false,
+    "isOpenSource": false,
+    "platform": [
+      "Web"
+    ],
+    "stars": 0,
+    "views": 1000,
+    "pricing": "Free",
+    "strength": "AI-powered code analysis and recipe platform. Automated code reviews with custom...",
+    "github": "",
+    "docs": ""
+  }
+]
