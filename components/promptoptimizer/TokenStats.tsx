@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import { Coins, TrendingDown, Sparkles, DollarSign } from "lucide-react";
 import { countTokens, estimateCostUsd } from "@/lib/promptOptimizer";
 
@@ -13,10 +12,14 @@ export interface TokenStatsProps {
 
 function useAnimatedNumber(target: number, duration = 900) {
   const [value, setValue] = useState(0);
+  const fromRef = useRef(0);
+  useEffect(() => {
+    fromRef.current = value;
+  }, [value]);
   useEffect(() => {
     let raf: number;
     const start = performance.now();
-    const from = value;
+    const from = fromRef.current;
     const tick = (t: number) => {
       const p = Math.min(1, (t - start) / duration);
       const eased = 1 - Math.pow(1 - p, 3);
@@ -25,8 +28,7 @@ function useAnimatedNumber(target: number, duration = 900) {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [target]);
+  }, [target, duration]);
   return value;
 }
 

@@ -222,11 +222,65 @@ npm run lint        # ESLint check
 ### 🔄 AI Workflow Builder (`/workflow`)
 Visual drag-and-drop canvas for designing AI agent workflows. Add nodes (agents, tools, triggers), connect them visually, and simulate execution with animated connection lines and real-time log output.
 
+**Vision**: The Workflow Builder is evolving into a complete LangGraph-style canvas where developers can design, test, and deploy multi-agent orchestration pipelines — planner, coder, reviewer, and DevOps agents collaborating in real time.
+
+### 🤖 AI Agents (`/ai-agents`)
+Explore 8+ autonomous and coding agents with technical stack labels, GitHub stats, documentation links, and pricing tiers. Each agent card includes quick-copy prompts to get started instantly.
+
+**Vision**: Expanding into a full Agent Marketplace where developers can discover, compare, and fork agent configurations — from single-purpose coding assistants to full multi-agent swarms.
+
 ### 📊 Dashboard (`/dashboard`)
 Personalized hub with 4-stat hero, quick actions panel, AI Assistant chat sidebar, trending tools row, analytics SVG charts (14-day usage + category breakdown), agents panel with status indicators, and community showcase.
 
+**Vision**: The Dashboard will become a fully personalized command center with real-time usage analytics, AI-powered recommendations, and cross-platform activity aggregation.
+
 ### ⚔️ Compare (`/compare`)
 Pick up to 4 tools; full capability matrix across 12 dimensions with animated performance bars, pricing tiers, and pros/cons split panel.
+
+## 🌐 Marketplace Vision
+
+The **Marketplace** (`/marketplace`) is the unified discovery portal for the entire ecosystem — bringing together prompts, tools, and agents in a single curated surface.
+
+### Current Capabilities
+- Unified browsing of prompts, tools, and agents
+- Featured listings with spotlight cards
+- Category-based filtering
+- Open-source toggle for discovery
+
+### Vision
+We envision the Marketplace evolving into a decentralized, community-driven platform where:
+
+- **Prompt Authors** can publish and monetize their best prompts
+- **Tool Creators** can showcase and distribute their AI developer tools
+- **Agent Builders** can share agent configurations and workflows
+- **Users** can rate, review, and remix resources
+- **Curators** can build themed collections and learning paths
+
+Long-term, the Marketplace will support:
+- Creator payouts and revenue sharing
+- Verified publisher badges
+- Collection-based bundling (e.g., "Agent Starter Kit")
+- API access for enterprise teams
+- Community moderation and quality scoring
+
+## 🚀 Showcase Vision
+
+The **Showcase** (`/showcase`) is our Hall of Fame — featuring community-built AI projects, workflows, and automation systems.
+
+### Current Capabilities
+- Project cards with tech stack details
+- Description and links to live demos
+- Community project gallery
+
+### Vision
+The Showcase will grow into a vibrant community portfolio platform:
+
+- **Project Spotlight**: Monthly featured projects with extended write-ups
+- **Stack Tagger**: Auto-detect and display tech stack badges
+- **Community Voting**: Upvote and comment on featured projects
+- **Integration Hub**: Showcase workflows that integrate with Dev Resource Hub
+- **Builder Profiles**: Dedicated profile pages for community creators
+- **Live Demos**: Embedded live previews where possible
 
 ---
 

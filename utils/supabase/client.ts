@@ -18,13 +18,14 @@ function getOrCreateClient(): SupabaseClient {
 }
 
 function createMockClient(): SupabaseClient {
-  const noopAsync = (..._args: unknown[]) =>
+  const noopAsync = () =>
     Promise.resolve({ data: null, error: null })
   const noopSubscription = { unsubscribe: () => {} }
 
   // Mock query builder that supports method chaining
+  type QueryFn = () => Record<string, unknown>
   const createQuery = () => {
-    const query: Record<string, Function> = {
+    const query: Record<string, QueryFn | unknown> = {
       select: () => query,
       insert: () => query,
       update: () => query,
@@ -45,7 +46,7 @@ function createMockClient(): SupabaseClient {
       range: () => query,
       single: () => Promise.resolve({ data: null, error: null }),
       maybeSingle: () => Promise.resolve({ data: null, error: null }),
-      then: (resolve: Function) =>
+      then: (resolve: (val: { data: null; error: null }) => void) =>
         resolve({ data: null, error: null }),
     }
     return query
@@ -55,10 +56,7 @@ function createMockClient(): SupabaseClient {
     auth: {
       getSession: noopAsync,
       onAuthStateChange: (
-        _callback: (
-          event: string,
-          session: unknown,
-        ) => void,
+        _callback: (event: string, session: unknown) => void,
       ) => ({
         data: { subscription: noopSubscription },
       }),
