@@ -278,15 +278,21 @@ export default function CommandPalette({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] px-4">
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] px-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Command palette"
+    >
       <div
         className="fixed inset-0 bg-black/80 backdrop-blur-md animate-fade-in"
         onClick={() => setIsOpen(false)}
+        aria-hidden="true"
       />
 
       <div className="relative w-full max-w-2xl bg-[#0a0a0c] border border-white/10 rounded-2xl shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] overflow-hidden animate-in zoom-in-95 duration-200">
         <div className="flex items-center px-4 border-b border-white/5 bg-white/[0.02]">
-          <SearchIcon size={20} className="text-gray-500 mr-3" />
+          <SearchIcon size={20} className="text-gray-500 mr-3" aria-hidden="true" />
           <input
             autoFocus
             type="text"
@@ -297,6 +303,12 @@ export default function CommandPalette({
             }}
             placeholder="Search agents, prompts, tools, or commands... (Cmd + K)"
             className="flex-1 bg-transparent py-5 text-white outline-none placeholder:text-gray-600 text-base font-medium"
+            aria-label="Search agents, prompts, tools, or commands"
+            aria-activedescendant={results.length > 0 ? `result-${selectedIndex}` : undefined}
+            role="combobox"
+            aria-expanded={true}
+            aria-controls="command-palette-listbox"
+            aria-autocomplete="list"
           />
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-gray-500 font-bold px-2 py-1 rounded border border-white/10 bg-black/50">
@@ -311,17 +323,26 @@ export default function CommandPalette({
           </div>
         </div>
 
-        <div className="max-h-[450px] overflow-y-auto p-2">
+        <div className="max-h-[450px] overflow-y-auto p-2" id="command-palette-listbox" role="listbox" aria-label="Search results">
           {results.length > 0 ? (
             <div className="space-y-1">
               {results.map((item, index) => (
-                <button
+                <div
                   key={item.id + index}
+                  id={`result-${index}`}
                   onMouseEnter={() => setSelectedIndex(index)}
                   onClick={() =>
                     navigate(item.href, item.href.startsWith("http"))
                   }
-                  className={`w-full flex items-center justify-between p-3.5 rounded-xl transition-all group ${
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      navigate(item.href, item.href.startsWith("http"));
+                    }
+                  }}
+                  role="option"
+                  aria-selected={selectedIndex === index}
+                  tabIndex={-1}
+                  className={`w-full flex items-center justify-between p-3.5 rounded-xl transition-all group cursor-pointer ${
                     selectedIndex === index ? "bg-white/10" : "hover:bg-white/5"
                   }`}
                 >
@@ -373,7 +394,7 @@ export default function CommandPalette({
                       )
                     )}
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           ) : (

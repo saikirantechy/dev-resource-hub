@@ -19,8 +19,9 @@ export default function TrendingTools() {
           <Link
             href="/trending"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black uppercase tracking-widest bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/25 transition-all"
+            aria-label="View all trending tools"
           >
-            View All <ArrowRight size={11} />
+            View All <ArrowRight size={11} aria-hidden="true" />
           </Link>
         </div>
 

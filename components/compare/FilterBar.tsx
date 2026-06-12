@@ -43,6 +43,7 @@ export default function FilterBar({
             onChange={(e) => onQuery(e.target.value)}
             placeholder="Search tools, capabilities, or use cases…"
             className="w-full pl-11 pr-10 py-3 rounded-2xl bg-black/40 border border-white/8 text-sm text-gray-100 placeholder:text-gray-600 focus:outline-none focus:border-cyan-400/40 transition-colors"
+            aria-label="Search tools"
           />
           {query && (
             <button
@@ -118,6 +119,7 @@ function Pill({
           ? "bg-gradient-to-r from-cyan-500/25 via-purple-500/20 to-pink-500/20 text-white border-cyan-400/40 shadow-[0_0_18px_rgba(34,211,238,0.2)]"
           : "bg-white/[0.03] text-gray-400 border-white/10 hover:text-white hover:border-white/25"
       }`}
+      aria-pressed={active}
     >
       {children}
     </button>

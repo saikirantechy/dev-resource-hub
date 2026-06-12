@@ -100,6 +100,7 @@ export default function QuickActions() {
             <Link
               href={a.href}
               className={`group flex items-center gap-3 p-3.5 rounded-2xl bg-gradient-to-br ${a.from} ${a.to} border ${a.border} hover:border-white/30 transition-all`}
+              aria-label={`${a.label}: ${a.desc}`}
             >
               <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-black/30 border border-white/10 shrink-0 ${a.text}`}>
                 <a.icon size={16} />

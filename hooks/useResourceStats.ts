@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 
@@ -14,70 +14,114 @@ export function useResourceStats(resourceId: string) {
   useEffect(() => {
     if (!resourceId) return;
 
+    let cancelled = false;
+
     const fetchStats = async () => {
-      // 1. Fetch likes and views from 'resources' table
-      const { data: resourceData } = await supabase
-        .from("resources")
-        .select("likes_count, views_count")
-        .eq("slug", resourceId)
-        .single();
+      try {
+        // 1. Fetch likes and views from 'resources' table
+        const { data: resourceData } = await supabase
+          .from("resources")
+          .select("likes_count, views_count")
+          .eq("slug", resourceId)
+          .maybeSingle();
 
-      if (resourceData) {
-        setLikes(resourceData.likes_count);
-        setViews(resourceData.views_count);
-      }
+        if (!cancelled) {
+          if (resourceData) {
+            setLikes(resourceData.likes_count ?? 0);
+            setViews(resourceData.views_count ?? 0);
+          }
 
-      // 2. Check if current user liked it
-      if (user) {
-        const { data: likeData } = await supabase
-          .from("likes")
-          .select("id")
-          .eq("user_id", user.id)
-          .eq("resource_id", resourceId)
-          .single();
-        
-        setIsLiked(!!likeData);
+          // 2. Check if current user liked it
+          if (user) {
+            const { data: likeData } = await supabase
+              .from("likes")
+              .select("id")
+              .eq("user_id", user.id)
+              .eq("resource_id", resourceId)
+              .maybeSingle();
+
+            if (!cancelled) {
+              setIsLiked(!!likeData);
+            }
+          }
+
+          if (!cancelled) {
+            setLoading(false);
+          }
+        }
+      } catch {
+        // Supabase not configured or network error — use defaults
+        if (!cancelled) setLoading(false);
       }
-      
-      setLoading(false);
     };
 
     fetchStats();
 
-    // Subscribe to changes
-    const channel = supabase
-      .channel(`resource-stats-${resourceId}`)
-      .on("postgres_changes", { event: "UPDATE", schema: "public", table: "resources", filter: `slug=eq.${resourceId}` }, (payload) => {
-        setLikes(payload.new.likes_count);
-        setViews(payload.new.views_count);
-      })
-      .subscribe();
+    // Subscribe to changes (gracefully fails on mock client)
+    let channel: ReturnType<typeof supabase.channel> | null = null;
+    try {
+      channel = supabase
+        .channel(`resource-stats-${resourceId}`)
+        .on(
+          "postgres_changes",
+          {
+            event: "UPDATE",
+            schema: "public",
+            table: "resources",
+            filter: `slug=eq.${resourceId}`,
+          },
+          (payload) => {
+            if (!cancelled) {
+              setLikes((payload.new as Record<string, unknown>).likes_count as number ?? 0);
+              setViews((payload.new as Record<string, unknown>).views_count as number ?? 0);
+            }
+          },
+        )
+        .subscribe();
+    } catch {
+      // Realtime not supported in mock
+    }
 
     return () => {
-      supabase.removeChannel(channel);
+      cancelled = true;
+      if (channel) {
+        try {
+          supabase.removeChannel(channel);
+        } catch {
+          // ignore
+        }
+      }
     };
   }, [resourceId, user]);
 
-  const toggleLike = async () => {
-    if (!user) return alert("Please login to like resources!");
-
-    if (isLiked) {
-      // Unlike
-      await supabase.from("likes").delete().eq("user_id", user.id).eq("resource_id", resourceId);
-      setIsLiked(false);
-      setLikes(prev => prev - 1);
-    } else {
-      // Like
-      await supabase.from("likes").insert({ user_id: user.id, resource_id: resourceId });
-      setIsLiked(true);
-      setLikes(prev => prev + 1);
+  const toggleLike = useCallback(async () => {
+    if (!user) {
+      alert("Please sign in to like resources!");
+      return;
     }
-  };
 
-  const incrementView = async () => {
-     // RPC call or direct update for simplicity
-     await supabase.rpc("increment_views", { resource_slug: resourceId });
-  };
+    try {
+      if (isLiked) {
+        await supabase.from("likes").delete().eq("user_id", user.id).eq("resource_id", resourceId);
+        setIsLiked(false);
+        setLikes((prev) => Math.max(0, prev - 1));
+      } else {
+        await supabase.from("likes").insert({ user_id: user.id, resource_id: resourceId });
+        setIsLiked(true);
+        setLikes((prev) => prev + 1);
+      }
+    } catch {
+      // Optimistic update already applied — ignore Supabase errors
+    }
+  }, [user, isLiked, resourceId]);
+
+  const incrementView = useCallback(async () => {
+    try {
+      await supabase.rpc("increment_views", { resource_slug: resourceId });
+    } catch {
+      // Gracefully fail if RPC doesn't exist
+    }
+  }, [resourceId]);
 
   return { likes, views, isLiked, loading, toggleLike, incrementView };
 }

@@ -41,7 +41,7 @@ export default function SearchBar({
   }, []);
 
   return (
-    <div className="relative group max-w-2xl mx-auto w-full">
+    <div className="relative group max-w-2xl mx-auto w-full" role="search" aria-label="Search resources">
       <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
         {isSemantic ? (
           <Sparkles className="h-5 w-5 text-purple-400 animate-pulse" />
@@ -58,6 +58,7 @@ export default function SearchBar({
         placeholder={
           isSemantic ? "Describe what you want to build..." : placeholder
         }
+        aria-label={isSemantic ? "Semantic search query" : "Search query"}
         className={cn(
           "w-full bg-white/[0.03] border text-white pl-12 pr-32 py-4 rounded-2xl focus:outline-none transition-all placeholder:text-gray-600 shadow-2xl",
           isSemantic
@@ -75,6 +76,8 @@ export default function SearchBar({
               ? "bg-purple-500/10 border-purple-500/30 text-purple-400"
               : "bg-white/5 border-white/10 text-gray-500 hover:text-white",
           )}
+          aria-label={isSemantic ? "Switch to classic search" : "Switch to semantic search"}
+          aria-pressed={isSemantic}
         >
           {isSemantic ? <Sparkles size={12} /> : <Command size={12} />}
           {isSemantic ? "Semantic" : "Classic"}
@@ -86,6 +89,7 @@ export default function SearchBar({
           <button
             onClick={() => setQuery("")}
             className="p-1 rounded-md hover:bg-white/10 text-gray-500 hover:text-white transition-all"
+            aria-label="Clear search query"
           >
             <X className="h-4 w-4" />
           </button>

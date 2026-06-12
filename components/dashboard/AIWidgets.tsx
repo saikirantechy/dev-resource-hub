@@ -102,6 +102,7 @@ export default function AIWidgets() {
               <Link
                 href={w.href}
                 className={`group relative block h-full p-5 rounded-2xl bg-gradient-to-br ${w.accent.from} ${w.accent.to} border ${w.accent.border} hover:${w.accent.glow} hover:border-white/30 transition-all overflow-hidden`}
+                aria-label={`${w.title}: ${w.body}`}
               >
                 <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/5 blur-3xl opacity-50 group-hover:opacity-100 transition-opacity" />
                 <div className="relative space-y-3">

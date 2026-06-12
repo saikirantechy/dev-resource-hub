@@ -22,7 +22,7 @@ const KIND_META: Record<
 
 export default function ActivityFeed() {
   return (
-    <div className="rounded-3xl glass-strong border border-white/10 p-5 md:p-6 h-full flex flex-col">
+    <div className="rounded-3xl glass-strong border border-white/10 p-5 md:p-6 h-full flex flex-col" aria-label="Live activity feed">
       <div className="flex items-center justify-between pb-4 border-b border-white/8">
         <div className="flex items-center gap-2">
           <CircleDot size={12} className="text-emerald-300 animate-pulse" />

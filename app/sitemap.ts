@@ -8,6 +8,7 @@ const STATIC_PATHS = [
   "",
   "/dashboard",
   "/ai-agents",
+  "/agents",
   "/ai-finder",
   "/beginner-guide",
   "/blogs",
@@ -19,6 +20,7 @@ const STATIC_PATHS = [
   "/login",
   "/marketplace",
   "/prompt-optimizer",
+  "/prompt-to-prd",
   "/prompts",
   "/saved",
   "/showcase",
@@ -28,6 +30,20 @@ const STATIC_PATHS = [
   "/trending",
   "/webagentcore",
   "/workflow",
+  // New Platform Modules
+  "/benchmarks",
+  "/map",
+  "/architecture",
+  "/tasks",
+  "/agent-hooks",
+  "/automation",
+  "/errors",
+  "/git-assistant",
+  "/context",
+  "/vibe-to-production",
+  "/roadmap",
+  "/careers",
+  "/perks",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -19,8 +19,9 @@ export default function CommunityShowcase() {
           <Link
             href="/showcase"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-black uppercase tracking-widest bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/25 transition-all"
+            aria-label="View all showcase projects"
           >
-            All Projects <ArrowRight size={11} />
+            All Projects <ArrowRight size={11} aria-hidden="true" />
           </Link>
         </div>
 

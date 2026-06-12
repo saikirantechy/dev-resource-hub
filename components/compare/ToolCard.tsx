@@ -146,8 +146,9 @@ export default function ToolCard({
             href={tool.url}
             target="_blank"
             className="inline-flex items-center justify-center gap-1 px-3 py-2 rounded-xl text-[11px] font-bold bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/25 transition-all"
+            aria-label={`Visit ${tool.name} website (opens in new tab)`}
           >
-            <ExternalLink size={11} />
+            <ExternalLink size={11} aria-hidden="true" />
           </Link>
         </div>
       </div>

@@ -20,12 +20,12 @@ export default function AgentsPanel() {
           <span className="text-[10px] uppercase tracking-[0.25em] font-black text-gray-400">
             Agent Crew
           </span>
-        </div>
-        <Link
-          href="/ai-agents"
-          className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors"
-        >
-          All Agents <ArrowRight size={11} />
+        </div>          <Link
+            href="/ai-agents"
+            className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors"
+            aria-label="View all agents"
+          >
+            All Agents <ArrowRight size={11} aria-hidden="true" />
         </Link>
       </div>
 

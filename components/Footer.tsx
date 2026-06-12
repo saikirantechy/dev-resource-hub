@@ -36,7 +36,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#050508] pt-16 pb-8 px-4 sm:px-6">
+    <footer className="border-t border-white/5 bg-[#050508] pt-16 pb-8 px-4 sm:px-6" aria-label="Footer" role="contentinfo">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-white/5">
           {/* Brand */}
@@ -65,15 +65,16 @@ export default function Footer() {
 
           {/* Links */}
           {footerLinks.map(section => (
-            <div key={section.title} className="space-y-4">
-              <h4 className="font-black text-sm text-white uppercase tracking-widest">{section.title}</h4>
-              <ul className="space-y-2.5">
+            <div key={section.title} className="space-y-4" aria-labelledby={`footer-heading-${section.title.toLowerCase()}`}>
+              <h4 id={`footer-heading-${section.title.toLowerCase()}`} className="font-black text-sm text-white uppercase tracking-widest">{section.title}</h4>
+              <ul className="space-y-2.5" role="list">
                 {section.links.map(link => (
-                  <li key={link.label}>
+                  <li key={link.label} role="listitem">
                     <Link
                       href={link.href}
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       className="text-sm text-gray-500 hover:text-white transition-colors"
+                      aria-label={link.href.startsWith("http") ? `${link.label} (opens in new tab)` : link.label}
                     >
                       {link.label}
                     </Link>

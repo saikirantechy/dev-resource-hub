@@ -142,5 +142,43 @@
     "views": 24000,
     "strength": "Memory-augmented AI assistants",
     "useCases": ["Research assistants", "Data analysis", "Custom chatbots"]
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "description": "Open-source autonomous AI agent platform (formerly OpenDevin). Can write code, use the terminal, browse the web, and interact with APIs.",
+    "url": "https://all-hands.dev",
+    "github": "https://github.com/All-Hands-AI/OpenHands",
+    "docs": "https://docs.all-hands.dev",
+    "tags": ["Autonomous", "Open Source", "Agent", "Multi-Tool"],
+    "category": "Autonomous Agents",
+    "stack": ["Python", "Docker", "LLM"],
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": true,
+    "pricing": "Free / Self-Hosted",
+    "stars": 48000,
+    "views": 72000,
+    "strength": "Open-source autonomous software engineering",
+    "useCases": ["Code generation", "Bug fixing", "Web research", "API integration"]
+  },
+  {
+    "id": "autogen",
+    "name": "AutoGen",
+    "description": "Microsoft's multi-agent conversation framework for building LLM applications. Features agent chat, code execution, and human-in-the-loop.",
+    "url": "https://microsoft.github.io/autogen",
+    "github": "https://github.com/microsoft/autogen",
+    "docs": "https://microsoft.github.io/autogen/stable/",
+    "tags": ["Multi-Agent", "Microsoft", "Framework", "Conversation"],
+    "category": "Agent Frameworks",
+    "stack": ["Python", "GPT-4o", "Docker"],
+    "isFeatured": true,
+    "isTrending": true,
+    "isOpenSource": true,
+    "pricing": "Open Source",
+    "stars": 38000,
+    "views": 56000,
+    "strength": "Multi-agent conversation orchestration",
+    "useCases": ["Task automation", "Research", "Code review", "Data analysis"]
   }
 ]

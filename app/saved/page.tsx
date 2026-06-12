@@ -2,7 +2,8 @@
 
 import Navbar from "@/components/Navbar";
 import { useBookmarks } from "@/context/BookmarkContext";
-import { Bookmark, Trash2, ExternalLink, ArrowRight, Zap, Bot, Terminal, Package } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
+import { Bookmark, Trash2, ExternalLink, ArrowRight, Zap, Bot, Terminal, Package, Cloud, Globe } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,7 +20,8 @@ const COLOR_MAP = {
 };
 
 export default function SavedPage() {
-  const { bookmarks, removeBookmark } = useBookmarks();
+  const { bookmarks, removeBookmark, synced } = useBookmarks();
+  const { user } = useAuth();
 
   return (
     <div className="min-h-screen bg-[#050508] text-white">
@@ -35,7 +37,7 @@ export default function SavedPage() {
             Saved <span className="gradient-text-blue">Resources</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-xl mx-auto leading-relaxed">
-            Your personalized library of AI tools, agents, and prompts. Synced to your local browser.
+            Your personalized library of AI tools, agents, and prompts. {user ? "Synced to the cloud — access from anywhere." : "Saved to your browser."}
           </p>
         </header>
 
@@ -106,11 +108,21 @@ export default function SavedPage() {
           </div>
         )}
 
-        {/* Sync Notice */}
-        <div className="max-w-xl mx-auto p-6 rounded-2xl glass border border-orange-500/20 flex gap-4 items-center">
-           <Zap className="text-orange-400 flex-shrink-0" size={24} />
+        {/* Sync Status */}
+        <div className={`max-w-xl mx-auto p-6 rounded-2xl glass border flex gap-4 items-center ${
+          synced ? "border-emerald-500/20" : "border-orange-500/20"
+        }`}>
+           {synced ? (
+             <Cloud className="text-emerald-400 flex-shrink-0" size={24} />
+           ) : (
+             <Globe className="text-orange-400 flex-shrink-0" size={24} />
+           )}
            <div className="text-xs text-gray-400 leading-relaxed">
-             <span className="text-white font-bold">Local Storage Sync:</span> These items are saved only on this device. Sign up in Phase 3 to sync across all your devices.
+             {synced ? (
+               <><span className="text-white font-bold">Cloud Synced:</span> Your bookmarks are saved to your account and available on all your devices.</>
+             ) : (
+               <><span className="text-white font-bold">Saved Locally:</span> These items are saved only on this device. <Link href="/login" className="text-blue-400 hover:text-blue-300 underline">Sign in</Link> to sync across all your devices.</>
+             )}
            </div>
         </div>
       </main>

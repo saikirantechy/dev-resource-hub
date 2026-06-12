@@ -82,6 +82,8 @@ export default function ResourceCard({
               ? "bg-pink-500/10 border-pink-500/30 text-pink-400" 
               : "bg-white/5 border-white/10 text-gray-500 hover:text-white"
           )}
+          aria-label={isLiked ? `Unlike ${name}` : `Like ${name}`}
+          aria-pressed={isLiked}
         >
           <Heart size={14} fill={isLiked ? "currentColor" : "none"} /> {likes || 0}
         </button>
@@ -106,14 +108,16 @@ export default function ResourceCard({
       </div>
 
       {/* Footer / Action */}
-      <Link 
+      <a 
         href={url} 
         target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-white/[0.05] hover:bg-white text-white hover:text-black font-bold rounded-xl border border-white/10 hover:border-white transition-all duration-300 group/btn"
+        aria-label={`Visit ${name} (opens in new tab)`}
       >
         <span>Visit Resource</span>
-        <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-      </Link>
+        <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" aria-hidden="true" />
+      </a>
     </motion.div>
   );
 }
