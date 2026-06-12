@@ -8,8 +8,8 @@ import {
   LogIn, LogOut, Layers, Layout,
   Gauge, ArrowLeftRight, ShoppingCart, Flame,
   Map, BarChart3, Building2, GitBranch, Wrench,
-  Shield, Cpu, Globe, GraduationCap, Heart,
-  Siren, MessageSquare, Workflow, Compass,
+  Shield, Cpu, Globe, GraduationCap, Heart, Calendar,
+  Siren, MessageSquare, Workflow, Compass, ShieldAlert,
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useBookmarks } from "@/context/BookmarkContext";
@@ -54,7 +54,15 @@ const navGroups = [
       { href: "/marketplace", label: "Marketplace", icon: ShoppingCart, color: "text-pink-400" },
       { href: "/showcase", label: "Showcase", icon: Star, color: "text-yellow-400" },
       { href: "/map", label: "Dev Map", icon: Map, color: "text-emerald-400" },
+      { href: "/events", label: "Events", icon: Calendar, color: "text-pink-400" },
       { href: "/blogs", label: "Blog", icon: BookOpen, color: "text-yellow-400" },
+    ],
+  },
+  {
+    label: "Trust",
+    links: [
+      { href: "/security-center", label: "Security Center", icon: Shield, color: "text-red-400" },
+      { href: "/security-dashboard", label: "Security Dashboard", icon: ShieldAlert, color: "text-orange-400" },
     ],
   },
   {

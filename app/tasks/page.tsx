@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Wrench, Layers, GitBranch, CheckCircle, ArrowRight, Plus, ListChecks } from "lucide-react";
+import { Wrench, Layers, CheckCircle, ArrowRight, Plus, ListChecks } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const sampleEpics = [

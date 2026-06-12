@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Workflow, FileText, Beaker, GitCommit, RefreshCw, FileCode, BookOpen, GitPullRequest, GitBranch } from "lucide-react";
+import { Workflow, FileText, Beaker, GitCommit, RefreshCw, FileCode, GitPullRequest } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const hooks = [

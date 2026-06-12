@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";import { BarChart3, Cpu, Brain, Code, Gauge, Clock, Award, CheckCircle, Search, Trophy } from "lucide-react";
+import { motion } from "framer-motion";import { BarChart3, Cpu, Brain, Code, Clock, Award, Search, Trophy } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
 
 const benchmarkCategories = [
   {

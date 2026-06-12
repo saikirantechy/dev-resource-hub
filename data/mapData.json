@@ -1,0 +1,1059 @@
+{
+  "cities": [
+    {
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "type": "Hub",
+      "count": 245,
+      "color": "emerald"
+    },
+    {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.385,
+      "lng": 78.4867,
+      "type": "Hub",
+      "count": 189,
+      "color": "blue"
+    },
+    {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "lat": 19.076,
+      "lng": 72.8777,
+      "type": "Hub",
+      "count": 210,
+      "color": "purple"
+    },
+    {
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "country": "India",
+      "lat": 28.7041,
+      "lng": 77.1025,
+      "type": "Hub",
+      "count": 175,
+      "color": "orange"
+    },
+    {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "lat": 13.0827,
+      "lng": 80.2707,
+      "type": "Hub",
+      "count": 145,
+      "color": "cyan"
+    },
+    {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "country": "India",
+      "lat": 18.5204,
+      "lng": 73.8567,
+      "type": "Community",
+      "count": 98,
+      "color": "emerald"
+    },
+    {
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "country": "India",
+      "lat": 22.5726,
+      "lng": 88.3639,
+      "type": "Community",
+      "count": 72,
+      "color": "blue"
+    },
+    {
+      "city": "Kochi",
+      "state": "Kerala",
+      "country": "India",
+      "lat": 9.9312,
+      "lng": 76.2673,
+      "type": "Community",
+      "count": 48,
+      "color": "orange"
+    },
+    {
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "lat": 26.8467,
+      "lng": 80.9462,
+      "type": "Community",
+      "count": 28,
+      "color": "purple"
+    },
+    {
+      "city": "Chandigarh",
+      "state": "Punjab",
+      "country": "India",
+      "lat": 30.7333,
+      "lng": 76.7794,
+      "type": "Community",
+      "count": 38,
+      "color": "emerald"
+    },
+    {
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "country": "India",
+      "lat": 20.2961,
+      "lng": 85.8245,
+      "type": "Community",
+      "count": 25,
+      "color": "orange"
+    },
+    {
+      "city": "Guwahati",
+      "state": "Assam",
+      "country": "India",
+      "lat": 26.1445,
+      "lng": 91.7362,
+      "type": "Community",
+      "count": 18,
+      "color": "cyan"
+    },
+    {
+      "city": "Vijayawada",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "lat": 16.5062,
+      "lng": 80.648,
+      "type": "Community",
+      "count": 22,
+      "color": "blue"
+    },
+    {
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "country": "India",
+      "lat": 21.1458,
+      "lng": 79.0882,
+      "type": "Community",
+      "count": 20,
+      "color": "purple"
+    },
+    {
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "lat": 17.6868,
+      "lng": 83.2185,
+      "type": "Community",
+      "count": 24,
+      "color": "cyan"
+    },
+    {
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "lat": 23.2599,
+      "lng": 77.4126,
+      "type": "Community",
+      "count": 22,
+      "color": "blue"
+    },
+    {
+      "city": "Patna",
+      "state": "Bihar",
+      "country": "India",
+      "lat": 25.5941,
+      "lng": 85.1376,
+      "type": "Community",
+      "count": 16,
+      "color": "purple"
+    },
+    {
+      "city": "Thiruvananthapuram",
+      "state": "Kerala",
+      "country": "India",
+      "lat": 8.5241,
+      "lng": 76.9366,
+      "type": "Community",
+      "count": 35,
+      "color": "orange"
+    },
+    {
+      "city": "Mysuru",
+      "state": "Karnataka",
+      "country": "India",
+      "lat": 12.2958,
+      "lng": 76.6394,
+      "type": "Community",
+      "count": 22,
+      "color": "cyan"
+    },
+    {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "country": "India",
+      "lat": 23.0225,
+      "lng": 72.5714,
+      "type": "Startup",
+      "count": 65,
+      "color": "purple"
+    },
+    {
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "country": "India",
+      "lat": 26.9124,
+      "lng": 75.7873,
+      "type": "Startup",
+      "count": 42,
+      "color": "cyan"
+    },
+    {
+      "city": "Indore",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "lat": 22.7196,
+      "lng": 75.8577,
+      "type": "Startup",
+      "count": 35,
+      "color": "blue"
+    },
+    {
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "lat": 11.0168,
+      "lng": 76.9558,
+      "type": "Startup",
+      "count": 32,
+      "color": "emerald"
+    },
+    {
+      "city": "Goa",
+      "state": "Goa",
+      "country": "India",
+      "lat": 15.4909,
+      "lng": 73.8278,
+      "type": "Startup",
+      "count": 30,
+      "color": "orange"
+    },
+    {
+      "city": "Surat",
+      "state": "Gujarat",
+      "country": "India",
+      "lat": 21.1702,
+      "lng": 72.8311,
+      "type": "Startup",
+      "count": 28,
+      "color": "emerald"
+    },
+    {
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "type": "Event",
+      "count": 32,
+      "color": "pink"
+    },
+    {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "lat": 19.076,
+      "lng": 72.8777,
+      "type": "Event",
+      "count": 24,
+      "color": "pink"
+    },
+    {
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "country": "India",
+      "lat": 28.7041,
+      "lng": 77.1025,
+      "type": "Event",
+      "count": 18,
+      "color": "pink"
+    },
+    {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.385,
+      "lng": 78.4867,
+      "type": "Event",
+      "count": 15,
+      "color": "pink"
+    },
+    {
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "type": "Contributor",
+      "count": 85,
+      "color": "amber"
+    },
+    {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "lat": 19.076,
+      "lng": 72.8777,
+      "type": "Contributor",
+      "count": 62,
+      "color": "amber"
+    },
+    {
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "country": "India",
+      "lat": 28.7041,
+      "lng": 77.1025,
+      "type": "Contributor",
+      "count": 48,
+      "color": "amber"
+    },
+    {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "lat": 13.0827,
+      "lng": 80.2707,
+      "type": "Contributor",
+      "count": 38,
+      "color": "amber"
+    },
+    {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.385,
+      "lng": 78.4867,
+      "type": "Contributor",
+      "count": 55,
+      "color": "amber"
+    },
+    {
+      "city": "San Francisco",
+      "country": "United States",
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "type": "Hub",
+      "count": 320,
+      "color": "purple"
+    },
+    {
+      "city": "New York",
+      "country": "United States",
+      "lat": 40.7128,
+      "lng": -74.006,
+      "type": "Hub",
+      "count": 280,
+      "color": "orange"
+    },
+    {
+      "city": "Seattle",
+      "country": "United States",
+      "lat": 47.6062,
+      "lng": -122.3321,
+      "type": "Hub",
+      "count": 175,
+      "color": "cyan"
+    },
+    {
+      "city": "Austin",
+      "country": "United States",
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "type": "Startup",
+      "count": 145,
+      "color": "emerald"
+    },
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Hub",
+      "count": 260,
+      "color": "blue"
+    },
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lng": 13.405,
+      "type": "Hub",
+      "count": 195,
+      "color": "purple"
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "type": "Hub",
+      "count": 185,
+      "color": "orange"
+    },
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Hub",
+      "count": 220,
+      "color": "cyan"
+    },
+    {
+      "city": "Toronto",
+      "country": "Canada",
+      "lat": 43.6532,
+      "lng": -79.3832,
+      "type": "Hub",
+      "count": 165,
+      "color": "emerald"
+    },
+    {
+      "city": "Dubai",
+      "country": "UAE",
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "type": "Hub",
+      "count": 140,
+      "color": "blue"
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "type": "Hub",
+      "count": 155,
+      "color": "purple"
+    },
+    {
+      "city": "Stockholm",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "type": "Hub",
+      "count": 110,
+      "color": "orange"
+    },
+    {
+      "city": "Tel Aviv",
+      "country": "Israel",
+      "lat": 32.0853,
+      "lng": 34.7818,
+      "type": "Hub",
+      "count": 130,
+      "color": "cyan"
+    },
+    {
+      "city": "Sydney",
+      "country": "Australia",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "type": "Hub",
+      "count": 120,
+      "color": "emerald"
+    },
+    {
+      "city": "Seoul",
+      "country": "South Korea",
+      "lat": 37.5665,
+      "lng": 126.978,
+      "type": "Hub",
+      "count": 160,
+      "color": "blue"
+    },
+    {
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "type": "Hub",
+      "count": 135,
+      "color": "purple"
+    },
+    {
+      "city": "Zurich",
+      "country": "Switzerland",
+      "lat": 47.3769,
+      "lng": 8.5417,
+      "type": "Startup",
+      "count": 90,
+      "color": "orange"
+    },
+    {
+      "city": "Sao Paulo",
+      "country": "Brazil",
+      "lat": -23.5505,
+      "lng": -46.6333,
+      "type": "Hub",
+      "count": 105,
+      "color": "cyan"
+    },
+    {
+      "city": "San Francisco",
+      "country": "United States",
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "type": "Event",
+      "count": 45,
+      "color": "pink"
+    },
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Event",
+      "count": 38,
+      "color": "pink"
+    },
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Event",
+      "count": 28,
+      "color": "pink"
+    },
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lng": 13.405,
+      "type": "Event",
+      "count": 22,
+      "color": "pink"
+    },
+    {
+      "city": "Dubai",
+      "country": "UAE",
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "type": "Event",
+      "count": 35,
+      "color": "pink"
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "type": "Event",
+      "count": 30,
+      "color": "pink"
+    },
+    {
+      "city": "San Francisco",
+      "country": "United States",
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "type": "Contributor",
+      "count": 120,
+      "color": "amber"
+    },
+    {
+      "city": "New York",
+      "country": "United States",
+      "lat": 40.7128,
+      "lng": -74.006,
+      "type": "Contributor",
+      "count": 95,
+      "color": "amber"
+    },
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "type": "Contributor",
+      "count": 88,
+      "color": "amber"
+    },
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "lat": 52.52,
+      "lng": 13.405,
+      "type": "Contributor",
+      "count": 72,
+      "color": "amber"
+    },
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "type": "Contributor",
+      "count": 65,
+      "color": "amber"
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "type": "Contributor",
+      "count": 58,
+      "color": "amber"
+    },
+    {
+      "city": "Seoul",
+      "country": "South Korea",
+      "lat": 37.5665,
+      "lng": 126.978,
+      "type": "Contributor",
+      "count": 52,
+      "color": "amber"
+    },
+    {
+      "city": "Toronto",
+      "country": "Canada",
+      "lat": 43.6532,
+      "lng": -79.3832,
+      "type": "Contributor",
+      "count": 48,
+      "color": "amber"
+    }
+  ],
+  "connections": [
+    [
+      "Bengaluru",
+      "Hyderabad"
+    ],
+    [
+      "Bengaluru",
+      "Mumbai"
+    ],
+    [
+      "Bengaluru",
+      "Chennai"
+    ],
+    [
+      "Mumbai",
+      "Pune"
+    ],
+    [
+      "Delhi NCR",
+      "Bengaluru"
+    ],
+    [
+      "Hyderabad",
+      "Chennai"
+    ],
+    [
+      "San Francisco",
+      "New York"
+    ],
+    [
+      "San Francisco",
+      "Seattle"
+    ],
+    [
+      "New York",
+      "London"
+    ],
+    [
+      "London",
+      "Berlin"
+    ],
+    [
+      "London",
+      "Paris"
+    ],
+    [
+      "Singapore",
+      "Tokyo"
+    ],
+    [
+      "Tokyo",
+      "Seoul"
+    ],
+    [
+      "Dubai",
+      "Singapore"
+    ],
+    [
+      "Bengaluru",
+      "San Francisco"
+    ],
+    [
+      "London",
+      "Stockholm"
+    ],
+    [
+      "San Francisco",
+      "Austin"
+    ],
+    [
+      "New York",
+      "Toronto"
+    ],
+    [
+      "Berlin",
+      "Amsterdam"
+    ],
+    [
+      "Tel Aviv",
+      "London"
+    ],
+    [
+      "Sydney",
+      "Singapore"
+    ],
+    [
+      "Bengaluru",
+      "London"
+    ],
+    [
+      "Mumbai",
+      "Dubai"
+    ],
+    [
+      "Paris",
+      "Berlin"
+    ],
+    [
+      "Stockholm",
+      "Zurich"
+    ],
+    [
+      "Sao Paulo",
+      "New York"
+    ],
+    [
+      "Tokyo",
+      "Sydney"
+    ],
+    [
+      "Seoul",
+      "Singapore"
+    ],
+    [
+      "Delhi NCR",
+      "Mumbai"
+    ]
+  ],
+  "activities": [
+    {
+      "user": "Ravi Kumar",
+      "action": "created a new",
+      "target": "AI Workflow",
+      "location": "Bengaluru",
+      "icon": "workflow"
+    },
+    {
+      "user": "Priya Sharma",
+      "action": "joined as",
+      "target": "Contributor",
+      "location": "Hyderabad",
+      "icon": "user"
+    },
+    {
+      "user": "Arun Patel",
+      "action": "published a",
+      "target": "Blog Post",
+      "location": "Delhi NCR",
+      "icon": "blog"
+    },
+    {
+      "user": "Neha Singh",
+      "action": "uploaded a new",
+      "target": "Prompt",
+      "location": "Mumbai",
+      "icon": "prompt"
+    },
+    {
+      "user": "Vikram Reddy",
+      "action": "forked a",
+      "target": "Workflow",
+      "location": "Chennai",
+      "icon": "fork"
+    },
+    {
+      "user": "Ananya Gupta",
+      "action": "starred a",
+      "target": "AI Tool",
+      "location": "Pune",
+      "icon": "star"
+    },
+    {
+      "user": "Karthik Nair",
+      "action": "submitted an",
+      "target": "Agent Plugin",
+      "location": "Kochi",
+      "icon": "plugin"
+    },
+    {
+      "user": "Divya Joshi",
+      "action": "completed the",
+      "target": "Architecture Path",
+      "location": "Ahmedabad",
+      "icon": "check"
+    },
+    {
+      "user": "Rahul Verma",
+      "action": "opened a",
+      "target": "PR on GitHub",
+      "location": "Bengaluru",
+      "icon": "pr"
+    },
+    {
+      "user": "Sneha Patel",
+      "action": "published an",
+      "target": "AI Event",
+      "location": "Jaipur",
+      "icon": "event"
+    },
+    {
+      "user": "Aditya Kumar",
+      "action": "deployed a",
+      "target": "Automation Bot",
+      "location": "Chandigarh",
+      "icon": "bot"
+    },
+    {
+      "user": "Meera Iyer",
+      "action": "shared a",
+      "target": "Resource Guide",
+      "location": "Chennai",
+      "icon": "share"
+    },
+    {
+      "user": "Siddharth Rao",
+      "action": "created a",
+      "target": "Community Hub",
+      "location": "Hyderabad",
+      "icon": "community"
+    },
+    {
+      "user": "Tanya Bose",
+      "action": "benchmarked an",
+      "target": "AI Model",
+      "location": "Kolkata",
+      "icon": "benchmark"
+    },
+    {
+      "user": "Arjun Menon",
+      "action": "submitted a",
+      "target": "Tool Review",
+      "location": "Bengaluru",
+      "icon": "review"
+    },
+    {
+      "user": "Ishita Kapoor",
+      "action": "won the",
+      "target": "AI Hackathon",
+      "location": "Delhi NCR",
+      "icon": "trophy"
+    },
+    {
+      "user": "Nitin Agarwal",
+      "action": "optimized a",
+      "target": "Prompt Library",
+      "location": "Pune",
+      "icon": "optimize"
+    },
+    {
+      "user": "Pooja Desai",
+      "action": "added a",
+      "target": "Startup Listing",
+      "location": "Mumbai",
+      "icon": "startup"
+    },
+    {
+      "user": "Deepak Chauhan",
+      "action": "created an",
+      "target": "Agent Hook",
+      "location": "Indore",
+      "icon": "hook"
+    },
+    {
+      "user": "Lakshmi Narayan",
+      "action": "translated a",
+      "target": "Documentation",
+      "location": "Coimbatore",
+      "icon": "translate"
+    },
+    {
+      "user": "Harsh Vardhan",
+      "action": "built a",
+      "target": "Dev Tool Plugin",
+      "location": "Lucknow",
+      "icon": "build"
+    },
+    {
+      "user": "Anika Patel",
+      "action": "registered for",
+      "target": "AI Summit Bengaluru",
+      "location": "Bengaluru",
+      "icon": "event"
+    },
+    {
+      "user": "Vivek Joshi",
+      "action": "submitted a talk to",
+      "target": "DevConf India",
+      "location": "Mumbai",
+      "icon": "event"
+    },
+    {
+      "user": "Rohit Sharma",
+      "action": "organized",
+      "target": "Hackathon 2026",
+      "location": "Delhi NCR",
+      "icon": "trophy"
+    },
+    {
+      "user": "Sanya Kapoor",
+      "action": "hosted",
+      "target": "Tech Meetup",
+      "location": "Hyderabad",
+      "icon": "community"
+    },
+    {
+      "user": "Sarah Chen",
+      "action": "submitted a new",
+      "target": "Agent Framework",
+      "location": "San Francisco",
+      "icon": "plugin"
+    },
+    {
+      "user": "Alex Rivera",
+      "action": "bookmarked a",
+      "target": "ML Pipeline",
+      "location": "New York",
+      "icon": "star"
+    },
+    {
+      "user": "James Wilson",
+      "action": "starred the",
+      "target": "Ecosystem Map",
+      "location": "London",
+      "icon": "star"
+    },
+    {
+      "user": "Yuki Tanaka",
+      "action": "deployed a",
+      "target": "AI Service",
+      "location": "Tokyo",
+      "icon": "bot"
+    },
+    {
+      "user": "Mohammed Al-Farsi",
+      "action": "opened a",
+      "target": "Tech Hub",
+      "location": "Dubai",
+      "icon": "community"
+    },
+    {
+      "user": "Hans Mueller",
+      "action": "created a",
+      "target": "Agent Blueprint",
+      "location": "Berlin",
+      "icon": "workflow"
+    },
+    {
+      "user": "Emma Thompson",
+      "action": "published a",
+      "target": "Research Paper",
+      "location": "Toronto",
+      "icon": "blog"
+    },
+    {
+      "user": "Wei Zhang",
+      "action": "forked a",
+      "target": "AI Dataset",
+      "location": "Singapore",
+      "icon": "fork"
+    },
+    {
+      "user": "Maria Garcia",
+      "action": "spoke at",
+      "target": "AI Expo",
+      "location": "San Francisco",
+      "icon": "event"
+    },
+    {
+      "user": "Tom Chen",
+      "action": "contributed to",
+      "target": "Open Source AI",
+      "location": "London",
+      "icon": "benchmark"
+    },
+    {
+      "user": "Lena Schmidt",
+      "action": "mentored at",
+      "target": "Startup Weekend",
+      "location": "Berlin",
+      "icon": "community"
+    },
+    {
+      "user": "Kenji Nakamura",
+      "action": "launched",
+      "target": "AI Conference Tokyo",
+      "location": "Tokyo",
+      "icon": "event"
+    },
+    {
+      "user": "Fatima Al-Rashid",
+      "action": "joined as",
+      "target": "Top Contributor",
+      "location": "Dubai",
+      "icon": "user"
+    },
+    {
+      "user": "Oliver Brown",
+      "action": "won",
+      "target": "Hackathon Prize",
+      "location": "Singapore",
+      "icon": "trophy"
+    }
+  ],
+  "statistics": {
+    "activeBuilders": {
+      "value": 18420,
+      "delta": "+12%"
+    },
+    "contributors": {
+      "value": 12580,
+      "delta": "+8%"
+    },
+    "communities": {
+      "value": 945,
+      "delta": "+15%"
+    },
+    "workflows": {
+      "value": 6720,
+      "delta": "+22%"
+    },
+    "aiTools": {
+      "value": 3420,
+      "delta": "+18%"
+    },
+    "blogPosts": {
+      "value": 890,
+      "delta": "+5%"
+    },
+    "prompts": {
+      "value": 2150,
+      "delta": "+25%"
+    },
+    "startups": {
+      "value": 480,
+      "delta": "+10%"
+    }
+  }
+}

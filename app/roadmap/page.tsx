@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Compass, ThumbsUp, MessageSquare, Clock } from "lucide-react";
+import { Compass, ThumbsUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const roadmapItems = [

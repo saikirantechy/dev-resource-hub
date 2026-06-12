@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { useBookmarks } from "@/context/BookmarkContext";
 import { useAuth } from "@/context/AuthContext";
-import { Bookmark, Trash2, ExternalLink, ArrowRight, Zap, Bot, Terminal, Package, Cloud, Globe } from "lucide-react";
+import { Bookmark, Trash2, ExternalLink, ArrowRight, Bot, Terminal, Package, Cloud, Globe } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Users, Building2, Heart, Star, Briefcase, Globe, ArrowRight } from "lucide-react";
+import { GraduationCap, Users, Building2, Heart, Star, Briefcase, Globe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const positions = [

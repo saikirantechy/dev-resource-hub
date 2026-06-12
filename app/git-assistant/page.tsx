@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { GitBranch, MessageSquare, GitPullRequest, Download, FileText, Copy, Check, Sparkles } from "lucide-react";
+import { GitBranch, MessageSquare, FileText, Copy, Check, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const commitPrefixes = [
