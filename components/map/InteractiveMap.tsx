@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface MapCity {
   city: string;
@@ -386,7 +386,32 @@ export default function InteractiveMap({
               const color = nodeStyle.label;
 
               return (
-                <g key={city.city}>
+                <g
+                  key={city.city}
+                  style={{ cursor: "pointer" }}
+                  onMouseEnter={(e) => handleNodeHover(city, e.clientX, e.clientY)}
+                  onMouseLeave={() => setHoveredCity(null)}
+                  onTouchStart={(e) => {
+                    const touch = e.touches[0];
+                    if (touch) handleNodeHover(city, touch.clientX, touch.clientY);
+                  }}
+                  onTouchEnd={() => setHoveredCity(null)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${city.city} - ${city.type} hub with ${city.count} developers`}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      const svgEl = svgRef.current;
+                      if (svgEl) {
+                        const rect = svgEl.getBoundingClientRect();
+                        handleNodeHover(city, rect.left + rect.width / 2, rect.top + rect.height / 2);
+                      }
+                    }
+                    if (e.key === 'Escape') {
+                      setHoveredCity(null);
+                    }
+                  }}
+                >
                   {/* Pulse ring */}
                   <motion.circle
                     cx={x}
@@ -435,29 +460,6 @@ export default function InteractiveMap({
                       ease: "easeInOut",
                       delay: Math.random() * 1.5,
                     }}
-                    style={{ cursor: "pointer" }}
-                    onMouseEnter={(e) => handleNodeHover(city, e.clientX, e.clientY)}
-                    onMouseLeave={() => setHoveredCity(null)}
-                    onTouchStart={(e) => {
-                      const touch = e.touches[0];
-                      if (touch) handleNodeHover(city, touch.clientX, touch.clientY);
-                    }}
-                    onTouchEnd={() => setHoveredCity(null)}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`${city.city} - ${city.type} hub with ${city.count} developers`}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        const svgEl = svgRef.current;
-                        if (svgEl) {
-                          const rect = svgEl.getBoundingClientRect();
-                          handleNodeHover(city, rect.left + rect.width / 2, rect.top + rect.height / 2);
-                        }
-                      }
-                      if (e.key === 'Escape') {
-                        setHoveredCity(null);
-                      }
-                    }}
                   />
 
                   {/* City label (subtle) */}
@@ -481,47 +483,42 @@ export default function InteractiveMap({
       </svg>
 
       {/* Tooltip */}
-      <AnimatePresence>
-        {hoveredCity && (
-          <motion.div
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 5 }}
-            className="absolute z-30 pointer-events-none"
-            style={{ left: tooltipPos.x, top: tooltipPos.y, transform: "translate(-50%, -100%)" }}
-          >
-            <div className="glass-strong border border-white/10 rounded-xl p-3 shadow-2xl min-w-[160px]">
-              <div className="flex items-center gap-2 mb-1">
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{
-                    background:
-                      NODE_SIZE_MAP[hoveredCity.color]?.label || "#60a5fa",
-                    boxShadow: `0 0 6px ${
-                      NODE_SIZE_MAP[hoveredCity.color]?.glow || "rgba(96,165,250,0.6)"
-                    }`,
-                  }}
-                />
-                <span className="text-sm font-bold text-white">
-                  {hoveredCity.city}
-                </span>
+      {hoveredCity && (
+        <div
+          className="absolute z-30 pointer-events-none"
+          style={{ left: tooltipPos.x, top: tooltipPos.y, transform: "translate(-50%, -100%)" }}
+        >
+          <div className="glass-strong border border-white/10 rounded-xl p-3 shadow-2xl min-w-[160px]">
+            <div className="flex items-center gap-2 mb-1">
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{
+                  background:
+                    NODE_SIZE_MAP[hoveredCity.color]?.label || "#60a5fa",
+                  boxShadow: `0 0 6px ${
+                    NODE_SIZE_MAP[hoveredCity.color]?.glow || "rgba(96,165,250,0.6)"
+                  }`,
+                }}
+              />
+              <span className="text-sm font-bold text-white">
+                {hoveredCity.city}
+              </span>
+            </div>
+            <div className="text-[10px] text-gray-400 space-y-0.5">
+              <div>
+                {hoveredCity.country}
+                {hoveredCity.state ? ` • ${hoveredCity.state}` : ""}
               </div>
-              <div className="text-[10px] text-gray-400 space-y-0.5">
-                <div>
-                  {hoveredCity.country}
-                  {hoveredCity.state ? ` • ${hoveredCity.state}` : ""}
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="px-1.5 py-0.5 rounded-full bg-white/5 text-[8px] font-bold uppercase tracking-wider">
-                    {hoveredCity.type}
-                  </span>
-                  <span className="text-gray-500">{hoveredCity.count} developers</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <span className="px-1.5 py-0.5 rounded-full bg-white/5 text-[8px] font-bold uppercase tracking-wider">
+                  {hoveredCity.type}
+                </span>
+                <span className="text-gray-500">{hoveredCity.count} developers</span>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
 
       {/* Legend */}
       <div className="absolute bottom-4 right-4 z-20 flex flex-wrap gap-3">

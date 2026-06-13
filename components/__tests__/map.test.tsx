@@ -1,6 +1,6 @@
 import React from "react";
 import { describe, it, expect, beforeAll, vi } from "vitest";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 
 // Mock ResizeObserver for components that use it
 beforeAll(() => {
@@ -656,17 +656,13 @@ describe("InteractiveMap integration - zoom, pan, hover", () => {
   it("shows tooltip when hovering over a city node", () => {
     const { container } = renderMap();
 
-    // Find city circles (core dots) - they are motion.circle elements rendered as circle
-    const circles = container.querySelectorAll("circle");
-    // Filter to core dots (they have filter attribute with glow-)
-    const coreCircles = Array.from(circles).filter(
-      (c) => c.getAttribute("filter") && c.getAttribute("filter")!.includes("glow-")
-    );
-    expect(coreCircles.length).toBeGreaterThanOrEqual(3);
+    // Find city node groups (g elements with role="button")
+    const cityGroups = container.querySelectorAll('g[role="button"]');
+    expect(cityGroups.length).toBeGreaterThanOrEqual(3);
 
     // Hover over the first city node
-    const bengaluruCircle = coreCircles[0];
-    fireEvent.mouseEnter(bengaluruCircle, { clientX: 200, clientY: 150 });
+    const bengaluruGroup = cityGroups[0];
+    fireEvent.mouseEnter(bengaluruGroup, { clientX: 200, clientY: 150 });
 
     // Tooltip should appear with city info
     expect(container.textContent).toContain("Bengaluru");
@@ -676,26 +672,26 @@ describe("InteractiveMap integration - zoom, pan, hover", () => {
     expect(container.textContent).toContain("developers");
   });
 
-  it("hides tooltip when mouse leaves a city node", () => {
+  it("hides tooltip when mouse leaves a city node", async () => {
     const { container } = renderMap();
 
-    const circles = container.querySelectorAll("circle");
-    const coreCircles = Array.from(circles).filter(
-      (c) => c.getAttribute("filter") && c.getAttribute("filter")!.includes("glow-")
-    );
-    expect(coreCircles.length).toBeGreaterThan(0);
+    // Find city node groups (g elements with role="button")
+    const cityGroups = container.querySelectorAll('g[role="button"]');
+    expect(cityGroups.length).toBeGreaterThan(0);
 
     // Hover over a city — check for tooltip-specific text not in SVG labels
-    const circle = coreCircles[0];
-    fireEvent.mouseEnter(circle, { clientX: 200, clientY: 150 });
+    const group = cityGroups[0];
+    fireEvent.mouseEnter(group, { clientX: 200, clientY: 150 });
     expect(container.textContent).toContain("developers");
     expect(container.textContent).toContain("Karnataka");
 
-    // Leave the city
-    fireEvent.mouseLeave(circle);
+    // Leave the city group
+    fireEvent.mouseLeave(group);
 
-    // Tooltip tooltip-specific text should be gone
-    expect(container.textContent).not.toContain("developers");
+    // Wait for React state to flush and tooltip to unmount
+    await waitFor(() => {
+      expect(container.textContent).not.toContain("developers");
+    });
     expect(container.textContent).not.toContain("Karnataka");
   });
 

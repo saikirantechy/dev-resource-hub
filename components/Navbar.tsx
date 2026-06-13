@@ -10,6 +10,7 @@ import {
   Map, BarChart3, Building2, GitBranch, Wrench,
   Shield, Cpu, Globe, GraduationCap, Heart, Calendar,
   Siren, MessageSquare, Workflow, Compass, ShieldAlert,
+  Newspaper,
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useBookmarks } from "@/context/BookmarkContext";
@@ -50,6 +51,7 @@ const navGroups = [
   {
     label: "Discover",
     links: [
+      { href: "/teach-in-dev-copilot", label: "Teach AI", icon: GraduationCap, color: "text-teal-400" },
       { href: "/trending", label: "Trending", icon: Flame, color: "text-red-400" },
       { href: "/marketplace", label: "Marketplace", icon: ShoppingCart, color: "text-pink-400" },
       { href: "/showcase", label: "Showcase", icon: Star, color: "text-yellow-400" },
@@ -63,6 +65,7 @@ const navGroups = [
     links: [
       { href: "/security-center", label: "Security Center", icon: Shield, color: "text-red-400" },
       { href: "/security-dashboard", label: "Security Dashboard", icon: ShieldAlert, color: "text-orange-400" },
+      { href: "/security-news", label: "Security News", icon: Newspaper, color: "text-amber-400" },
     ],
   },
   {

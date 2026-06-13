@@ -44,6 +44,9 @@ const STATIC_PATHS = [
   "/roadmap",
   "/careers",
   "/perks",
+  // Security & Trust Routes
+  "/security-center",
+  "/security-dashboard",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -3,11 +3,20 @@
 import { motion } from "framer-motion";
 import {
   Shield, TrendingUp, AlertTriangle,
-  Star, Clock, Users, Github,
-  Newspaper, Siren,
-  BarChart3,
+  Star, Clock, Users, GitFork,
+  Newspaper, Siren, MessageSquare,
+  BarChart3, ExternalLink, CheckCircle2, XCircle, AlertCircle,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import {
+  getCommunityReviews, getScamReports, getTopRated,
+} from "@/lib/security";
+import type { Review, ScamReport } from "@/lib/security";
+
+// ── Data from Security Center ──
+const scamReports = getScamReports();
+const communityReviews = getCommunityReviews();
+const topRepos = getTopRated();
 
 const RECENT_DOMAINS = [
   { domain: "github.com", score: 95, level: "Safe", time: "2 min ago" },
@@ -16,22 +25,6 @@ const RECENT_DOMAINS = [
   { domain: "example-ai-tool.xyz", score: 23, level: "High Risk", time: "2 hrs ago" },
   { domain: "suspicious-store.top", score: 12, level: "Dangerous", time: "3 hrs ago" },
   { domain: "npmjs.com", score: 90, level: "Safe", time: "5 hrs ago" },
-];
-
-const TRENDING_SCAMS = [
-  { title: "Fake AI Coding Assistant Promises Unlimited Credits", category: "AI Tool Scam", reports: 47, severity: "high" },
-  { title: "Phishing Campaign Targeting GitHub OAuth Tokens", category: "Security Alert", reports: 32, severity: "critical" },
-  { title: "Fake Startup Accelerator Asking for ETH Deposit", category: "Startup Scam", reports: 28, severity: "high" },
-  { title: "PyPI Package Typosquatting Popular Libraries", category: "Vulnerability", reports: 19, severity: "medium" },
-  { title: "Fake Job Posting on Dev Communities", category: "Job Scam", reports: 15, severity: "medium" },
-];
-
-const TOP_REPOS = [
-  { name: "facebook/react", stars: 235000, trust: 98, risk: "Safe" },
-  { name: "vercel/next.js", stars: 131000, trust: 96, risk: "Safe" },
-  { name: "langchain-ai/langchain", stars: 102000, trust: 92, risk: "Safe" },
-  { name: "openai/openai-cookbook", stars: 62000, trust: 95, risk: "Safe" },
-  { name: "microsoft/vscode", stars: 168000, trust: 97, risk: "Safe" },
 ];
 
 const SECURITY_NEWS = [
@@ -93,9 +86,9 @@ export default function SecurityDashboardPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
                 { icon: Shield, label: "Domains Checked", value: "12,847", color: "text-blue-400" },
-                { icon: AlertTriangle, label: "Scams Reported", value: "342", color: "text-red-400" },
-                { icon: Github, label: "Repos Analyzed", value: "58,291", color: "text-gray-300" },
-                { icon: Users, label: "Community Reports", value: "1,239", color: "text-emerald-400" },
+                { icon: AlertTriangle, label: "Scams Flagged", value: scamReports.length.toString(), color: "text-red-400" },
+                { icon: MessageSquare, label: "Community Reviews", value: communityReviews.length.toString(), color: "text-emerald-400" },
+                { icon: Users, label: "Reports Published", value: (scamReports.length + communityReviews.length).toString(), color: "text-purple-400" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -151,29 +144,38 @@ export default function SecurityDashboardPage() {
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm font-bold text-gray-300 flex items-center gap-2">
                     <TrendingUp size={14} className="text-red-400" /> Trending Scams
+                    <span className="text-[10px] text-gray-600 font-normal ml-auto">{scamReports.length} reports</span>
                   </h2>
                 </div>
                 <div className="space-y-2">
-                  {TRENDING_SCAMS.map((scam, i) => (
+                  {scamReports.sort((a, b) => b.upvotes - a.upvotes).slice(0, 6).map((scam, i) => (
                     <motion.div
-                      key={scam.title}
+                      key={scam.id}
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 }}
-                      className="glass rounded-xl p-4 border border-white/5"
+                      className={"glass rounded-xl p-4 border hover:border-red-500/30 transition-all card-hover " + (
+                        scam.status === "confirmed" ? "border-red-500/10"
+                        : scam.status === "suspected" ? "border-yellow-500/10"
+                        : "border-blue-500/10"
+                      )}
                     >
                       <div className="flex items-start gap-2 mb-2">
                         <Siren size={12} className="text-red-400 mt-0.5 shrink-0" />
-                        <div>
+                        <div className="min-w-0">
                           <div className="text-xs font-bold text-white leading-tight">{scam.title}</div>
-                          <div className="text-[10px] text-gray-500 mt-0.5">{scam.category}</div>
+                          <div className="text-[10px] text-gray-500 mt-0.5 capitalize">{scam.category}</div>
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className={"text-[9px] font-bold px-1.5 py-0.5 rounded-full border " + getSeverityColor(scam.severity)}>
-                          {scam.severity.toUpperCase()}
+                        <span className={"text-[9px] font-bold px-1.5 py-0.5 rounded-full border capitalize " + (
+                          scam.status === "confirmed" ? "bg-red-500/20 text-red-400 border-red-500/30"
+                          : scam.status === "suspected" ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
+                          : "bg-blue-500/20 text-blue-400 border-blue-500/30"
+                        )}>
+                          {scam.status}
                         </span>
-                        <span className="text-[10px] text-gray-500">{scam.reports} reports</span>
+                        <span className="text-[10px] text-gray-500">{scam.upvotes} upvotes</span>
                       </div>
                     </motion.div>
                   ))}
@@ -181,33 +183,45 @@ export default function SecurityDashboardPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-              <div className="space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+              <div className="lg:col-span-2 space-y-4">
                 <div className="flex items-center justify-between">
                   <h2 className="text-sm font-bold text-gray-300 flex items-center gap-2">
-                    <Github size={14} className="text-gray-400" /> Top Trusted Repositories
+                    <MessageSquare size={14} className="text-emerald-400" /> Latest Community Reviews
+                    <span className="text-[10px] text-gray-600 font-normal ml-auto">{communityReviews.length} reviews</span>
                   </h2>
                 </div>
-                <div className="space-y-2">
-                  {TOP_REPOS.map((repo, i) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {communityReviews.slice(0, 6).map((review, i) => (
                     <motion.div
-                      key={repo.name}
+                      key={review.id}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
-                      className="glass rounded-xl p-4 border border-white/5 flex items-center justify-between"
+                      transition={{ delay: i * 0.04 }}
+                      className="glass rounded-xl p-4 border border-white/5 card-hover"
                     >
-                      <div className="flex items-center gap-3 min-w-0">
-                        <Star size={14} className="text-yellow-400 shrink-0" />
+                      <div className="flex items-start justify-between mb-2">
                         <div className="min-w-0">
-                          <div className="text-sm font-bold text-white truncate">{repo.name}</div>
-                          <div className="flex items-center gap-2 text-[10px] text-gray-500">
-                            <span>{repo.stars.toLocaleString()} stars</span>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-bold text-white truncate">{review.entityName}</span>
+                            <span className={"text-[9px] font-bold px-1.5 py-0.5 rounded-full border " + (
+                              review.entityType === "website" ? "bg-blue-500/10 border-blue-500/20 text-blue-400"
+                              : review.entityType === "ai-tool" ? "bg-purple-500/10 border-purple-500/20 text-purple-400"
+                              : "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+                            )}>{review.entityType}</span>
+                          </div>
+                          <div className="flex gap-0.5">
+                            {Array.from({ length: 5 }).map((_, j) => (
+                              <Star key={j} size={10} className={j < review.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-600"} />
+                            ))}
                           </div>
                         </div>
+                        {review.verified && <CheckCircle2 size={12} className="text-emerald-400 shrink-0" />}
                       </div>
-                      <div className={"px-2 py-0.5 rounded-full text-[10px] font-bold border " + getScoreBg(repo.trust) + " " + getScoreColor(repo.trust)}>
-                        {repo.trust}
+                      <p className="text-xs text-gray-400 mb-2 line-clamp-2">{review.comment}</p>
+                      <div className="flex items-center justify-between text-[10px] text-gray-600">
+                        <span>{review.author}</span>
+                        <span>{review.date}</span>
                       </div>
                     </motion.div>
                   ))}
@@ -255,11 +269,19 @@ export default function SecurityDashboardPage() {
                 Use the Security Center to check any website, repo, or AI tool before you commit to it.
               </p>
               <div className="flex justify-center gap-3 text-xs text-gray-500">
-                <span>10 Analysis Tools</span>
+                <span>14 Analysis Tools</span>
                 <span>Live Dashboard</span>
-                <span>Community Reports</span>
-                <span>Security Alerts</span>
+                <span>25 Community Reviews</span>
+                <span>17 Scam Reports</span>
               </div>
+              <a
+                href="/security-center"
+                className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all"
+              >
+                <Shield size={14} />
+                Open Security Center
+                <ExternalLink size={12} />
+              </a>
             </div>
           </div>
         </section>
