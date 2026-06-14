@@ -6,7 +6,9 @@
   <a href="https://saikirantechy.github.io/dev-resource-hub/">
     <img src="https://img.shields.io/badge/%F0%9F%8C%90_Live_Platform-Visit_Now-0A66C2?style=for-the-badge" alt="Live Platform" />
   </a>
-  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build Status" />
+  <a href="https://github.com/saikirantechy/dev-resource-hub/actions/workflows/deploy.yml">
+    <img src="https://github.com/saikirantechy/dev-resource-hub/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" />
+  </a>
   <a href="https://github.com/saikirantechy/dev-resource-hub/stargazers">
     <img src="https://img.shields.io/github/stars/saikirantechy/dev-resource-hub?style=for-the-badge&color=yellow" alt="GitHub stars" />
   </a>
