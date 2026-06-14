@@ -28,6 +28,7 @@ import {
   Compass,
   MessageSquare,
   Rocket,
+  Code2,
   Layers,
   Gauge,
 } from "lucide-react";
@@ -464,6 +465,24 @@ export default function Home() {
               <GraduationCap size={10} /> Student Path
             </Link>
             <Link
+              href="/students"
+              className="badge badge-sky hover:scale-105 transition-transform cursor-pointer"
+            >
+              <BookOpen size={10} /> Students
+            </Link>
+            <Link
+              href="/founders"
+              className="badge badge-orange hover:scale-105 transition-transform cursor-pointer"
+            >
+              <Rocket size={10} /> Founders
+            </Link>
+            <Link
+              href="/agencies"
+              className="badge badge-emerald hover:scale-105 transition-transform cursor-pointer"
+            >
+              <Workflow size={10} /> Agencies
+            </Link>
+            <Link
               href="/benchmarks"
               className="badge badge-purple hover:scale-105 transition-transform cursor-pointer"
             >
@@ -491,11 +510,11 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.85]"
             >
-              <span className="gradient-text-hero">The Open AI</span>
+              <span className="gradient-text-hero">AI Operating System</span>
               <br />
-              <span className="text-white opacity-90">Developer</span>
+              <span className="text-white opacity-90">for Students, Developers</span>
               <br />
-              <span className="gradient-text-blue">Universe</span>
+              <span className="gradient-text-blue">Founders &amp; AI Agencies</span>
             </motion.h1>
 
             <motion.p
@@ -504,14 +523,14 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-500 max-w-4xl mx-auto leading-relaxed font-medium"
             >
-              Build, discover, and scale in the global AI ecosystem. Explore{" "}
+              From learning to building to scaling — explore{" "}
               <span className="text-white">agents</span>,{" "}
               <span className="text-white">prompts</span>,{" "}
               <span className="text-white">benchmarks</span>,{" "}
               <span className="text-white">architecture</span>,{" "}
               <span className="text-white">automation</span>, and{" "}
               <span className="text-white">communities</span>{" "}
-              in one unified platform with 22+ specialized modules.
+              in one unified OS for the AI era. 22+ specialized modules for students, developers, founders, and agencies.
             </motion.p>
           </div>
 
@@ -546,11 +565,85 @@ export default function Home() {
             </Link>
           </motion.div>
 
+          {/* ─── CHOOSE YOUR PATH ─── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="space-y-6"
+          >
+            <div className="flex items-center justify-center gap-3">
+              <div className="h-px w-8 bg-white/10" />
+              <span className="text-[10px] font-black uppercase tracking-[0.25em] text-gray-500">
+                Choose Your Path
+              </span>
+              <div className="h-px w-8 bg-white/10" />
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+              {/* Students */}
+              <Link
+                href="/students"
+                className="group relative p-5 rounded-2xl glass border border-white/8 hover:border-sky-500/40 card-hover text-center flex flex-col items-center gap-3 transition-all duration-500"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <BookOpen size={20} className="text-sky-400" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white group-hover:text-sky-300 transition-colors">Students</div>
+                  <div className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Learn the Stack</div>
+                </div>
+              </Link>
+
+              {/* Developers */}
+              <Link
+                href="/developers"
+                className="group relative p-5 rounded-2xl glass border border-white/8 hover:border-emerald-500/40 card-hover text-center flex flex-col items-center gap-3 transition-all duration-500"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <Code2 size={20} className="text-emerald-400" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">Developers</div>
+                  <div className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Build with AI</div>
+                </div>
+              </Link>
+
+              {/* Founders */}
+              <Link
+                href="/founders"
+                className="group relative p-5 rounded-2xl glass border border-white/8 hover:border-orange-500/40 card-hover text-center flex flex-col items-center gap-3 transition-all duration-500"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 to-amber-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <Rocket size={20} className="text-orange-400" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white group-hover:text-orange-300 transition-colors">Founders</div>
+                  <div className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Ship Faster</div>
+                </div>
+              </Link>
+
+              {/* Agencies */}
+              <Link
+                href="/agencies"
+                className="group relative p-5 rounded-2xl glass border border-white/8 hover:border-teal-500/40 card-hover text-center flex flex-col items-center gap-3 transition-all duration-500"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500/20 to-emerald-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <Globe size={20} className="text-teal-400" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white group-hover:text-teal-300 transition-colors">Agencies</div>
+                  <div className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Scale &amp; Automate</div>
+                </div>
+              </Link>
+            </div>
+          </motion.div>
+
           {/* Terminal Code Snippet */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
             className="max-w-xl mx-auto"
           >
             <div className="terminal text-left text-sm group hover:border-blue-500/30 transition-colors shadow-2xl">
@@ -807,11 +900,12 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h2 className="text-5xl md:text-7xl font-black tracking-tighter">
-                  The AI Developer OS
+                  The AI Operating System
                 </h2>
                 <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed font-medium">
                   22+ modules, 100+ tools, and a growing community of
-                  builders. Everything you need to ship faster with AI.
+                  students, developers, founders, and agencies. Everything
+                  you need to build, ship, and scale with AI.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-3">

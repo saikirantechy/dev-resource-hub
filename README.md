@@ -1,6 +1,6 @@
-# 🚀 Dev Resource Hub — The Open AI Developer Universe
+# 🚀 Dev Resource Hub — AI Operating System for Students, Developers, Founders & AI Agencies
 
-> 🌍 **Dev Resource Hub** is a high-performance, community-driven AI Developer Ecosystem. Explore agents, prompts, tools, workflows, and comparisons in a unified glassmorphism interface.
+> 🌍 **Dev Resource Hub** is the AI Operating System — a high-performance, community-driven platform for students learning AI, developers building with it, founders shipping products, and agencies scaling their workflows. Explore agents, prompts, tools, workflows, and comparisons in a unified glassmorphism interface.
 
 <p align="center">
   <a href="https://saikirantechy.github.io/dev-resource-hub/">
@@ -41,7 +41,7 @@
 
 ## ✨ About the Platform
 
-The **AI Developer Ecosystem Platform** is a production-grade resource hub designed for the modern AI era. It's more than just a list of links — it's a curated marketplace, interactive workbench, and discovery engine for:
+The **AI Operating System** is a production-grade platform designed for everyone building with AI — students, developers, founders, and AI agencies. It's more than just a list of links — it's a curated marketplace, interactive workbench, and discovery engine for:
 
 - 🤖 **AI Agents** — Devin, Manus, CrewAI, LangGraph, and more autonomous & coding agents
 - ⌨️ **AI Tooling** — Cursor, Windsurf, v0, Copilot, and the complete AI developer toolbox
@@ -62,7 +62,7 @@ The AI ecosystem is growing rapidly, but discovering high-quality tools, prompts
 - Community contributions & open-source collaboration
 - Startup innovation through an open ecosystem
 
-Our goal is to become the **operating system for AI developers** — reducing decision fatigue and token waste by aggregating authoritative information and pairing it with hands-on utilities.
+Our goal is to become the **AI Operating System for Students, Developers, Founders, and AI Agencies** — reducing decision fatigue and token waste by aggregating authoritative information and pairing it with hands-on utilities.
 
 ---
 
@@ -354,10 +354,10 @@ Together we're building the future of AI development.
 
 Our long-term goal is to evolve **Dev Resource Hub** into:
 * The "GitHub" for AI resources
-* A discovery engine for AI developers
+* A discovery engine for students, developers, founders, and agencies
 * An open ecosystem for AI builders
 * A community-powered innovation platform
-* The definitive operating system for AI developers
+* The definitive AI Operating System for the entire AI ecosystem
 
 ---
 

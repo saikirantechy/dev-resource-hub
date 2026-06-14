@@ -23,6 +23,19 @@ const footerLinks = [
     ]
   },
   {
+    title: "Open Source",
+    links: [
+      { label: "OS Hub", href: "/open-source" },
+      { label: "Issues Explorer", href: "/issues" },
+      { label: "Repositories", href: "/repositories" },
+      { label: "GSoC Hub", href: "/gsoc" },
+      { label: "Hacktoberfest", href: "/hacktoberfest" },
+      { label: "Bounties", href: "/bounties" },
+      { label: "AI Coach", href: "/ai-contribution-coach" },
+      { label: "Leaderboard", href: "/leaderboard" },
+    ]
+  },
+  {
     title: "Community",
     links: [
       { label: "Community Hub", href: "/community" },

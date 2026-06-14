@@ -20,9 +20,9 @@ fast, free to host, and trivially forkable.
 
 ### 1.2 Platform Vision
 
-> The operating system for AI developers.
+> The AI Operating System for Students, Developers, Founders, and AI Agencies.
 
-A single hub where any engineer building with LLMs can:
+A single hub where anyone building with AI — from students learning the ropes to agencies scaling production workflows — can:
 - discover the right tool, model, or agent for a job,
 - compare options side-by-side with real capability and pricing data,
 - experiment with prompts and measure their token + dollar cost,

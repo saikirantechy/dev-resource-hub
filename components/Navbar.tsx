@@ -10,13 +10,22 @@ import {
   Map, BarChart3, Building2, GitBranch, Wrench,
   Shield, Cpu, Globe, GraduationCap, Heart, Calendar,
   Siren, MessageSquare, Workflow, Compass, ShieldAlert,
-  Newspaper,
+  Newspaper, Bug, Rocket, Code2, DollarSign, GitPullRequest,
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useBookmarks } from "@/context/BookmarkContext";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navGroups = [
+  {
+    label: "Personas",
+    links: [
+      { href: "/students", label: "Students", icon: BookOpen, color: "text-sky-400" },
+      { href: "/developers", label: "Developers", icon: Code2, color: "text-emerald-400" },
+      { href: "/founders", label: "Founders", icon: Rocket, color: "text-orange-400" },
+      { href: "/agencies", label: "Agencies", icon: Globe, color: "text-teal-400" },
+    ],
+  },
   {
     label: "Core",
     links: [
@@ -69,10 +78,26 @@ const navGroups = [
     ],
   },
   {
+    label: "Open Source",
+    links: [
+      { href: "/open-source", label: "OS Hub", icon: Globe, color: "text-emerald-400" },
+      { href: "/issues", label: "Issues", icon: Bug, color: "text-blue-400" },
+      { href: "/repositories", label: "Repos", icon: Code2, color: "text-emerald-400" },
+      { href: "/opportunities", label: "Opportunities", icon: Sparkles, color: "text-emerald-400" },
+      { href: "/gsoc", label: "GSoC", icon: GraduationCap, color: "text-orange-400" },
+      { href: "/hacktoberfest", label: "Hacktoberfest", icon: Zap, color: "text-amber-400" },
+      { href: "/bounties", label: "Bounties", icon: DollarSign, color: "text-emerald-400" },
+      { href: "/leaderboard", label: "Leaderboard", icon: Trophy, color: "text-amber-400" },
+      { href: "/contributors", label: "Contributors", icon: Users, color: "text-purple-400" },
+      { href: "/my-contributions", label: "My Profile", icon: Heart, color: "text-pink-400" },
+      { href: "/ai-contribution-coach", label: "AI Coach", icon: Bot, color: "text-purple-400" },
+      { href: "/pr-assistant", label: "PR Assistant", icon: GitPullRequest, color: "text-purple-400" },
+    ],
+  },
+  {
     label: "Community",
     links: [
       { href: "/community", label: "Community", icon: Users, color: "text-indigo-400" },
-      { href: "/leaderboard", label: "Leaderboard", icon: Trophy, color: "text-amber-400" },
       { href: "/roadmap", label: "Roadmap", icon: Compass, color: "text-blue-400" },
       { href: "/careers", label: "Careers", icon: GraduationCap, color: "text-cyan-400" },
     ],

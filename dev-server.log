@@ -1,0 +1,18 @@
+
+> frontend@0.1.0 dev
+> next dev --port 3001
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.1.7:3001
+- Environments: .env.local
+✓ Ready in 424ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          28928
+- Dir:          C:\Users\saiki\OneDrive\Documents\Dev Resource Hub\dev-resource-hub
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 28928 /F to stop it.
+[?25h
