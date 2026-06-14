@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# Windows reserved device name (can't be indexed by git)
+nul
+
 # debug
 npm-debug.log*
 yarn-debug.log*

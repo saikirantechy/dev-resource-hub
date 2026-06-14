@@ -76,12 +76,15 @@ function DevMapContent() {
   }, [country, state, selectedLayer, router]);
 
   const countriesList = useMemo(
-    () => getCountriesList(mapData.cities),
+    () => ["All", ...new Set(mapData.cities.map((c) => c.country))],
     []
   );
 
   const citiesFiltered = useMemo(
-    () => citiesFilteredByCountry(mapData.cities, country, state),
+    () => mapData.cities.filter(c => 
+      (country === "All" || c.country === country) &&
+      (state === "All States" || c.state === state)
+    ),
     [country, state]
   );
 

@@ -36,9 +36,12 @@ async function getAllResources(): Promise<Resource[]> {
         fs.readFileSync(path.join(dataDir, file), "utf8"),
       );
       const cat = file.replace(".json", "").replace(/-/g, " ").toUpperCase();
+      const items = Array.isArray(content)
+        ? content
+        : Object.values(content).find(Array.isArray) || [];
       allResources = [
         ...allResources,
-        ...content.map((r: Resource) => ({ ...r, _category: cat })),
+        ...items.map((r: Resource) => ({ ...r, _category: cat })),
       ];
     }
   });
