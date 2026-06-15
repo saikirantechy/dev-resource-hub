@@ -10,10 +10,11 @@ import {
   Loader2, RefreshCw, Copy, BookOpen, Clock,
   MessageSquare, Zap, Target,
   Lightbulb, AlertCircle, GitBranch,
-  BookmarkPlus, BookmarkCheck, History, Trash2, Key, Database,
+  BookmarkPlus, BookmarkCheck, History, Trash2, Key, Database, Check,
 } from "lucide-react";
 import Link from "next/link";
 import { type AnalysisType, type AnalysisResult, parseGitHubPR, generateAnalysis } from "@/lib/pr-assistant";
+import NeonGlowCard from "@/components/NeonGlowCard";
 import { saveReview, loadReviews, deleteReview, type SavedReview } from "@/lib/pr-assistant-storage";
 import { fetchRealPRData, generateAnalysisFromRealData, type RealPRData } from "@/lib/github-pr";
 
@@ -48,6 +49,16 @@ function SeverityBadge({ severity }: { severity: string }) {
   );
 }
 
+// ─── LOADING STEPS ────────────────────────────────────────────────────
+
+const loadingSteps = [
+  { liveLabel: "Parsing PR URL", mockLabel: "Parsing PR URL..." },
+  { liveLabel: "Fetching PR details from GitHub", mockLabel: "Analyzing code structure..." },
+  { liveLabel: "Loading changed files", mockLabel: "Running security scan..." },
+  { liveLabel: "Processing commit history", mockLabel: "Checking documentation..." },
+  { liveLabel: "Generating analysis report", mockLabel: "Generating analysis report..." },
+];
+
 // ─── ANALYSIS TAB ─────────────────────────────────────────────────────
 
 const analysisTabs: { id: AnalysisType; label: string; icon: React.ElementType; color: string }[] = [
@@ -76,6 +87,7 @@ export default function PRAssistantPage() {
   const [showTokenInput, setShowTokenInput] = useState(false);
   const [dataSource, setDataSource] = useState<"mock" | "live" | "error">("mock");
   const [apiRouteAvailable, setApiRouteAvailable] = useState(false);
+  const [loadingStage, setLoadingStage] = useState(0);
 
   useEffect(() => {
     setSavedReviews(loadReviews());
@@ -111,6 +123,7 @@ export default function PRAssistantPage() {
 
   const handleAnalyze = async () => {
     setError("");
+    setLoadingStage(0);
     const parsed = parseGitHubPR(prUrl);
     if (!parsed.isValid) {
       setError("Please enter a valid GitHub PR URL (e.g., https://github.com/owner/repo/pull/123)");
@@ -126,9 +139,11 @@ export default function PRAssistantPage() {
     let realData: RealPRData | null = null;
     let realError: string | null = null;
     let viaApiRoute = false;
+    const briefDelay = (ms: number) => new Promise(r => setTimeout(r, ms));
 
     // Try server-side API route first (keeps token off client)
     if (apiRouteAvailable) {
+      setLoadingStage(1);
       try {
         const res = await fetch(API_ROUTE, {
           method: "POST",
@@ -138,6 +153,8 @@ export default function PRAssistantPage() {
         if (res.ok) {
           const data = await res.json();
           viaApiRoute = true;
+          setLoadingStage(4);
+          await briefDelay(200);
           setResult(data.result);
           setDataSource(data.dataSource);
           if (data.error) realError = data.error;
@@ -149,22 +166,44 @@ export default function PRAssistantPage() {
 
     // Fall back to direct client-side GitHub API fetch
     if (!viaApiRoute) {
-      try {
-        realData = await fetchRealPRData(prUrl, githubToken || undefined);
-      } catch (e) {
-        realError = e instanceof Error ? e.message : "Unknown error";
+      if (githubToken) {
+        // Live path — advance stages at real milestones
+        setLoadingStage(1);
+        try {
+          realData = await fetchRealPRData(prUrl, githubToken || undefined);
+        } catch (e) {
+          realError = e instanceof Error ? e.message : "Unknown error";
+        }
+        if (realData) {
+          setLoadingStage(2);
+          await briefDelay(150);
+          setLoadingStage(3);
+          await briefDelay(150);
+        }
+      } else {
+        // Mock path — brief pause so users see the skeleton
+        await briefDelay(600);
       }
+
+      setLoadingStage(4);
+      await briefDelay(200);
 
       if (realData) {
         const analysis = generateAnalysisFromRealData(realData, parsed.repoName);
         setResult(analysis);
         setDataSource("live");
       } else {
-        const analysis = generateAnalysis(prUrl, parsed.repoName, parsed.prNumber);
-        setResult(analysis);
-        setDataSource("mock");
-        if (realError) {
-          setError(realError);
+        if (!githubToken) {
+          // No token — use simulated data straight away
+          const analysis = generateAnalysis(prUrl, parsed.repoName, parsed.prNumber);
+          setResult(analysis);
+          setDataSource("mock");
+        } else {
+          // Had a token but real data failed — fall back with error
+          const analysis = generateAnalysis(prUrl, parsed.repoName, parsed.prNumber);
+          setResult(analysis);
+          setDataSource("mock");
+          if (realError) setError(realError);
         }
       }
     }
@@ -180,6 +219,7 @@ export default function PRAssistantPage() {
     setError("");
     setRepoName("");
     setPrNumber("");
+    setLoadingStage(0);
     setActiveTab("summary");
   };
 
@@ -238,12 +278,12 @@ export default function PRAssistantPage() {
                             onChange={(e) => setPrUrl(e.target.value)}
                             onKeyDown={(e) => e.key === "Enter" && handleAnalyze()}
                             placeholder="https://github.com/owner/repo/pull/123"
-                            className="w-full pl-11 pr-4 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-gray-600 focus:outline-none focus:border-purple-500/50 transition-all text-sm font-mono"
+                            className={`w-full pl-11 pr-4 py-4 rounded-2xl bg-white/5 text-white placeholder:text-gray-600 focus:outline-none focus:border-purple-500/50 transition-all text-sm font-mono ${analyzing ? 'border-purple-500/40 animate-neon-glow' : 'border border-white/10'}`}
                             disabled={analyzing}
                           />
                         </div>
                         <button onClick={handleAnalyze} disabled={!prUrl || analyzing}
-                          className={`btn-primary px-8 py-4 rounded-2xl text-sm whitespace-nowrap ${(!prUrl || analyzing) ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                          className={`btn-primary px-8 py-4 rounded-2xl text-sm whitespace-nowrap ${!prUrl ? 'opacity-50 cursor-not-allowed' : ''} ${analyzing ? 'animate-neon-glow' : ''}`}>
                           {analyzing ? (
                             <><Loader2 size={18} className="animate-spin" /> Analyzing</>
                           ) : (
@@ -393,48 +433,124 @@ export default function PRAssistantPage() {
 
           {/* ─── LOADING STATE ─── */}
           {analyzing && (
-            <section className="max-w-3xl mx-auto">
-              <div className="p-8 rounded-[2rem] glass border border-purple-500/20 overflow-hidden">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <Loader2 size={24} className="animate-spin text-purple-400" />
-                    <div>
-                      <h3 className="font-bold text-white">Analyzing Pull Request</h3>
-                      <p className="text-xs text-gray-500">
-                        {githubToken ? "Fetching real data from GitHub API" : "Generating simulated analysis"}
-                      </p>
+            <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-5xl mx-auto space-y-6">
+              {/* Progress Header with Stage Steps */}
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                className="p-6 sm:p-8 rounded-[2rem] glass border border-purple-500/20 overflow-hidden relative animate-neon-glow">
+                <div className="absolute top-0 right-0 w-36 h-36 bg-purple-500/5 blur-[80px] rounded-full" />
+
+                <div className="flex items-center gap-4 mb-6 relative z-10">
+                  <div className="relative">
+                    <Loader2 size={26} className="animate-spin text-purple-400" />
+                    <div className="absolute inset-0 animate-ping opacity-20">
+                      <Loader2 size={26} className="text-purple-400" />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    {[
-                      githubToken ? "Connecting to GitHub API..." : "Parsing PR URL...",
-                      githubToken ? "Fetching PR details..." : "Analyzing code structure...",
-                      githubToken ? "Getting changed files..." : "Running security scan...",
-                      githubToken ? "Loading commit history..." : "Checking documentation...",
-                      "Generating analysis report...",
-                    ].map((step, i) => (
-                      <motion.div key={step} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.3 }}
-                        className="flex items-center gap-2 text-xs text-gray-400">
-                        <div className={`w-1.5 h-1.5 rounded-full ${i <= 2 ? 'bg-purple-400 animate-pulse' : 'bg-gray-600'}`} />
-                        {step}
-                      </motion.div>
-                    ))}
-                  </div>
-                  <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                    <motion.div initial={{ width: "0%" }} animate={{ width: "100%" }} transition={{ duration: 2, ease: "easeInOut" }}
-                      className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
-                  </div>
-                  {!githubToken && (
-                    <p className="text-[9px] text-gray-600 text-center">
-                      Add a GitHub token for live data.{' '}
-                      <button onClick={() => setShowTokenInput(true)} className="text-blue-400 hover:text-blue-300 underline">
-                        Configure
-                      </button>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Analyzing Pull Request</h3>
+                    <p className="text-[11px] text-gray-500">
+                      {githubToken
+                        ? "Fetching live data from GitHub API"
+                        : "Generating simulated analysis"}
                     </p>
-                  )}
+                  </div>
                 </div>
+
+                {/* Stage Progress Steps */}
+                <div className="space-y-3 mb-6 relative z-10">
+                  {loadingSteps.map((step, i) => {
+                    const isCompleted = i < loadingStage;
+                    const isActive = i === loadingStage;
+                    return (
+                      <motion.div key={step.liveLabel}
+                        initial={{ opacity: 0, x: -12 }}
+                        animate={{ opacity: isCompleted || isActive ? 1 : 0.3, x: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex items-center gap-3">
+                        <div className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 transition-all duration-500 ${
+                          isCompleted
+                            ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                            : isActive
+                              ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30 animate-pulse'
+                              : 'bg-white/5 text-gray-600 border border-white/10'
+                        }`}>
+                          {isCompleted ? <Check size={12} /> : i + 1}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className={`text-xs font-medium transition-colors duration-500 ${
+                            isCompleted ? 'text-emerald-400' :
+                            isActive ? 'text-white' : 'text-gray-600'
+                          }`}>
+                            {githubToken ? step.liveLabel : step.mockLabel}
+                          </span>
+                          {isActive && (
+                            <span className="inline-flex ml-1">
+                              <span className="w-[3px] h-3.5 bg-purple-400/60 rounded-full animate-pulse" />
+                            </span>
+                          )}
+                        </div>
+                        {isCompleted && (
+                          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
+                            className="text-emerald-400/50 shrink-0">
+                            <Check size={10} />
+                          </motion.div>
+                        )}
+                      </motion.div>
+                    );
+                  })}
+                </div>
+
+                {/* Indeterminate Shimmer Bar */}
+                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden relative z-10">
+                  <div className="h-full w-full bg-gradient-to-r from-transparent via-purple-500/40 to-transparent rounded-full animate-shimmer" />
+                </div>
+
+                {!githubToken && (
+                  <p className="text-[10px] text-gray-600 text-center mt-4 relative z-10">
+                    Add a GitHub token for live data.{' '}
+                    <button onClick={() => { setShowTokenInput(true); }} className="text-blue-400 hover:text-blue-300 underline">
+                      Configure
+                    </button>
+                  </p>
+                )}
+              </motion.div>
+
+              {/* Skeleton Stat Cards */}
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {[...Array(5)].map((_, i) => (
+                  <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
+                    <NeonGlowCard className="p-4 rounded-xl glass border border-white/8 text-center">
+                      <div className="w-4 h-4 rounded bg-white/5 mx-auto mb-2 animate-pulse" />
+                      <div className="w-14 h-7 rounded bg-white/5 mx-auto mb-1 animate-pulse" />
+                      <div className="w-16 h-3 rounded bg-white/5 mx-auto animate-pulse" />
+                    </NeonGlowCard>
+                  </motion.div>
+                ))}
               </div>
-            </section>
+
+              {/* Skeleton Changed Files */}
+              <NeonGlowCard className="p-6 rounded-2xl glass border border-white/8">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
+                <div className="w-32 h-4 rounded bg-white/5 mb-4 animate-pulse" />
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5 mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-white/5 animate-pulse" />
+                      <div className="w-36 sm:w-48 h-3 rounded bg-white/5 animate-pulse" />
+                    </div>
+                    <div className="w-16 h-3 rounded bg-white/5 animate-pulse" />
+                  </div>
+                ))}
+              </motion.div>
+              </NeonGlowCard>
+
+              {/* Skeleton Tabs */}
+              <div className="flex flex-wrap gap-2">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-24 h-10 rounded-xl bg-white/5 animate-pulse" />
+                ))}
+              </div>
+            </motion.section>
           )}
 
           {/* ─── RESULTS ─── */}
