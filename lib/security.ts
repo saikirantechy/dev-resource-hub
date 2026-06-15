@@ -888,7 +888,7 @@ export async function analyzePackageTrust(
           } catch { /* ignore */ }
         }
       }
-      let hasSecurityPolicy = false;
+      const hasSecurityPolicy = false;
       const author = typeof data.maintainers?.[0] === "object" ? data.maintainers[0].name || data.maintainers[0].email || "Unknown" : "Unknown";
       const finalScore = Math.min(100, Math.max(0, score));
       return {

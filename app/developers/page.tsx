@@ -158,7 +158,7 @@ export default function DevelopersPage() {
             <div className="text-center space-y-4">
               <div className="badge badge-orange inline-flex"><Zap size={11} /> Developer Stack 2026</div>
               <h2 className="text-4xl md:text-5xl font-black tracking-tight">The Modern AI Dev Stack</h2>
-              <p className="text-gray-500 text-lg max-w-2xl mx-auto">The tools powering today's most productive AI engineers.</p>
+              <p className="text-gray-500 text-lg max-w-2xl mx-auto">The tools powering today&apos;s most productive AI engineers.</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

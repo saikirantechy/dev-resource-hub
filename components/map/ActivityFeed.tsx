@@ -87,27 +87,22 @@ interface ActivityFeedProps {
 }
 
 export default function ActivityFeed({ activities }: ActivityFeedProps) {
-  const [visibleActivities, setVisibleActivities] = useState<Activity[]>([]);
-  const [index, setIndex] = useState(0);
+  const [visibleActivities, setVisibleActivities] = useState<Activity[]>(() => activities.slice(0, 5));
   const feedRef = useRef<HTMLDivElement>(null);
+  const indexRef = useRef(5);
 
   // Simulate live feed: add new activity every 2-3 seconds
   useEffect(() => {
-    // Seed initial activities
-    setVisibleActivities(activities.slice(0, 5));
-    setIndex(5);
-
     const interval = setInterval(() => {
       setVisibleActivities((prev) => {
-        const next = activities[index % activities.length];
-        const updated = [next, ...prev].slice(0, 12);
-        return updated;
+        const next = activities[indexRef.current % activities.length];
+        indexRef.current += 1;
+        return [next, ...prev].slice(0, 12);
       });
-      setIndex((i) => i + 1);
     }, 2200);
 
     return () => clearInterval(interval);
-  }, [activities, index]);
+  }, [activities]);
 
   return (
     <div className="rounded-2xl glass border border-white/8 overflow-hidden">

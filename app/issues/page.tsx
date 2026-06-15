@@ -97,25 +97,7 @@ export default function IssuesPage() {
     }
   }, [language]);
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const qParam = params.get("q") || "";
-    const langParam = params.get("language") || "";
-    const diffParam = params.get("difficulty") || "";
-    const sortParam = params.get("sort") as "updated" | "created" | "comments" | "reactions" | null;
-
-    if (qParam || langParam || diffParam || sortParam) {
-      if (qParam) setQuery(qParam);
-      if (langParam) setLanguage(langParam);
-      if (diffParam) setDifficulty(diffParam);
-      if (sortParam) setSort(sortParam);
-      doSearchWithParams(qParam, langParam, diffParam, sortParam || "updated");
-    } else {
-      loadGoodFirstIssues();
-    }
-  }, []);
-
-  const doSearchWithParams = async (
+  const doSearchWithParams = useCallback(async (
     q: string, lang: string, diff: string, s: string
   ) => {
     setLoading(true);
@@ -136,7 +118,26 @@ export default function IssuesPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const qParam = params.get("q") || "";
+    const langParam = params.get("language") || "";
+    const diffParam = params.get("difficulty") || "";
+    const sortParam = params.get("sort") as "updated" | "created" | "comments" | "reactions" | null;
+
+    if (qParam || langParam || diffParam || sortParam) {
+      if (qParam !== query) setQuery(qParam);
+      if (langParam !== language) setLanguage(langParam);
+      if (diffParam !== difficulty) setDifficulty(diffParam);
+      if (sortParam && sortParam !== sort) setSort(sortParam);
+      doSearchWithParams(qParam, langParam, diffParam, sortParam || "updated");
+    } else {
+      loadGoodFirstIssues();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const analyzeIssue = async () => {
     const m = explainerUrl.match(/github\.com\/([^\/]+)\/([^\/]+)\/issues\/(\d+)/);

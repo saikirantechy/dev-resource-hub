@@ -30,19 +30,19 @@ export default function LlmSettingsPanel({ open, onClose, onConfigChange }: Prop
 
   // Load existing config when opening
   useEffect(() => {
-    if (open) {
-      const existing = loadLLMConfig();
-      if (existing) {
-        setApiKey(existing.apiKey);
-        setModel(existing.model);
-        setBaseUrl(existing.baseUrl);
-      } else {
-        setApiKey("");
-        setModel(DEFAULT_MODEL);
-        setBaseUrl(DEFAULT_BASE_URL);
-      }
-      setValidationResult(null);
+    if (!open) return;
+    const existing = loadLLMConfig();
+    if (existing) {
+      if (existing.apiKey !== apiKey) setApiKey(existing.apiKey);
+      if (existing.model !== model) setModel(existing.model);
+      if (existing.baseUrl !== baseUrl) setBaseUrl(existing.baseUrl);
+    } else {
+      if ("" !== apiKey) setApiKey("");
+      if (DEFAULT_MODEL !== model) setModel(DEFAULT_MODEL);
+      if (DEFAULT_BASE_URL !== baseUrl) setBaseUrl(DEFAULT_BASE_URL);
     }
+    setValidationResult(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const handleSave = async () => {

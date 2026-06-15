@@ -33,9 +33,9 @@ const iconMap: Record<string, React.ElementType> = {
 
 const fallbackIcon = Bot;
 
-function getAgentIcon(iconName: string): React.ElementType {
-  const iconKey = iconName as keyof typeof iconMap;
-  return iconMap[iconKey] || fallbackIcon;
+function AgentIcon({ iconName, className }: { iconName: string; className?: string }) {
+  const Icon = iconMap[iconName as keyof typeof iconMap] || fallbackIcon;
+  return <Icon size={20} className={className || "text-white"} />;
 }
 
 const colorVariants: Record<string, { text: string }> = {
@@ -67,7 +67,6 @@ export default function RecommendedAgentCard({ agent, index }: Props) {
   const [showAllCapabilities, setShowAllCapabilities] = useState(false);
   const [showWorkflow, setShowWorkflow] = useState(false);
 
-  const AgentIcon = getAgentIcon(agent.icon);
   const colorVariant = getColorVariant(agent.color);
 
   return (
@@ -85,7 +84,7 @@ export default function RecommendedAgentCard({ agent, index }: Props) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className={"w-12 h-12 rounded-2xl bg-gradient-to-br " + agent.color + "/20 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"}>
-              <AgentIcon size={20} className="text-white" />
+              <AgentIcon iconName={agent.icon} />
             </div>
             <div>
               <h3 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">

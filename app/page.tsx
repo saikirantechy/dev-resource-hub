@@ -29,8 +29,7 @@ import {
   MessageSquare,
   Rocket,
   Code2,
-  Layers,
-  Gauge,
+  Layers,  Gauge, Swords, BrainCircuit,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -153,6 +152,32 @@ const platformSections: {
     gradient: "from-cyan-500/20 to-blue-500/10",
     border: "border-cyan-500/20 hover:border-cyan-500/40",
     badge: "3 Categories",
+    group: "Build",
+  },
+  {
+    href: "/devrank",
+    icon: BrainCircuit,
+    emoji: "🏆",
+    title: "DevRank AI",
+    description:
+      "Developer reputation & open source intelligence platform. Track rankings, earn badges, and get AI career insights.",
+    color: "sky",
+    gradient: "from-sky-500/20 to-blue-500/10",
+    border: "border-sky-500/20 hover:border-sky-500/40",
+    badge: "New",
+    group: "Build",
+  },
+  {
+    href: "/dsa",
+    icon: Swords,
+    emoji: "⚔️",
+    title: "DSA Arena",
+    description:
+      "Master DSA through AI coaching, live coding challenges, rankings, and interview simulations with the AI Examiner.",
+    color: "violet",
+    gradient: "from-violet-500/20 to-purple-500/10",
+    border: "border-violet-500/20 hover:border-violet-500/40",
+    badge: "New",
     group: "Build",
   },
 

@@ -65,6 +65,27 @@ const STATIC_PATHS = [
   // Security & Trust Routes
   "/security-center",
   "/security-dashboard",
+  // DevRank AI Routes
+  "/devrank",
+  "/devrank/global",
+  "/devrank/developers",
+  "/devrank/colleges",
+  "/devrank/communities",
+  "/devrank/organizations",
+  "/devrank/hackathons",
+  "/devrank/badges",
+  "/devrank/analytics",
+  "/devrank/insights",
+  // DSA Arena Routes
+  "/dsa",
+  "/dsa/tutor",
+  "/dsa/assessment",
+  "/dsa/arena",
+  "/dsa/leaderboard",
+  "/dsa/roadmaps",
+  "/dsa/topics",
+  "/dsa/challenges",
+  "/dsa/rankings",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

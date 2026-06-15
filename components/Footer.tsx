@@ -15,6 +15,8 @@ const footerLinks = [
   {
     title: "Explore",
     links: [
+      { label: "DevRank AI", href: "/devrank" },
+      { label: "DSA Arena", href: "/dsa" },
       { label: "Compare Tools", href: "/compare" },
       { label: "Showcase", href: "/showcase" },
       { label: "Blog", href: "/blogs" },

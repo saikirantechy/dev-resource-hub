@@ -76,7 +76,7 @@ export default function AIContributionCoachPage() {
           <section className="max-w-4xl mx-auto space-y-6">
             <div className="text-center space-y-2">
               <div className="badge badge-blue inline-flex"><Target size={11} /> Step 1</div>
-              <h2 className="text-3xl font-black">What's Your Experience Level?</h2>
+              <h2 className="text-3xl font-black">What&apos;s Your Experience Level?</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -103,7 +103,7 @@ export default function AIContributionCoachPage() {
           <section className="max-w-4xl mx-auto space-y-6">
             <div className="text-center space-y-2">
               <div className="badge badge-emerald inline-flex"><Rocket size={11} /> Step 2</div>
-              <h2 className="text-3xl font-black">What's Your Goal?</h2>
+              <h2 className="text-3xl font-black">What&apos;s Your Goal?</h2>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">

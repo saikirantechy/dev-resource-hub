@@ -11,6 +11,7 @@ import {
   Shield, Cpu, Globe, GraduationCap, Heart, Calendar,
   Siren, MessageSquare, Workflow, Compass, ShieldAlert,
   Newspaper, Bug, Rocket, Code2, DollarSign, GitPullRequest,
+  Swords, BrainCircuit, Award,
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useBookmarks } from "@/context/BookmarkContext";
@@ -45,6 +46,8 @@ const navGroups = [
       { href: "/compare", label: "Compare", icon: ArrowLeftRight, color: "text-green-400" },
       { href: "/prompt-optimizer", label: "Optimizer", icon: Gauge, color: "text-orange-400" },
       { href: "/prompt-to-prd", label: "Prompt → PRD", icon: GitBranch, color: "text-rose-400" },
+      { href: "/dsa", label: "DSA Arena", icon: Swords, color: "text-violet-400" },
+      { href: "/devrank", label: "DevRank AI", icon: BrainCircuit, color: "text-sky-400" },
     ],
   },
   {

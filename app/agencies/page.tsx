@@ -133,7 +133,7 @@ export default function AgenciesPage() {
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-500 max-w-4xl mx-auto leading-relaxed font-medium">
                   From multi-agent workflows to client delivery pipelines — automate, scale, and{" "}
-                  deliver faster with Dev Resource Hub's agency-grade toolset.
+                  deliver faster with Dev Resource Hub&apos;s agency-grade toolset.
               </motion.p>
             </div>
 
@@ -181,7 +181,7 @@ export default function AgenciesPage() {
             <div className="text-center space-y-4">
               <div className="badge badge-blue inline-flex"><Layers size={11} /> Agency Modules</div>
               <h2 className="text-4xl md:text-6xl font-black tracking-tight">Enterprise-Grade Infrastructure</h2>
-              <p className="text-gray-500 text-lg max-w-2xl mx-auto">8 specialized modules to power your AI agency's delivery and operations.</p>
+              <p className="text-gray-500 text-lg max-w-2xl mx-auto">8 specialized modules to power your AI agency&apos;s delivery and operations.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

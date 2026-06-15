@@ -329,6 +329,8 @@ export default function InteractiveMap({
               const fromPos = cityPosMap[from];
               const toPos = cityPosMap[to];
               if (!fromPos || !toPos) return null;
+              const connDuration = 3 + ((i * 7) % 4);
+              const connDelay = ((i * 13) % 20) / 10;
               return (
                 <motion.line
                   key={`conn-${i}`}
@@ -342,10 +344,10 @@ export default function InteractiveMap({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: [0.1, 0.4, 0.1] }}
                   transition={{
-                    duration: 3 + Math.random() * 2,
+                    duration: connDuration,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: Math.random() * 2,
+                    delay: connDelay,
                   }}
                 />
               );
@@ -378,7 +380,7 @@ export default function InteractiveMap({
 
           {/* City Nodes */}
           <g>
-            {cityPositions.map(({ city, x, y }) => {
+            {cityPositions.map(({ city, x, y }, nodeIdx) => {
               const nodeStyle = NODE_SIZE_MAP[city.color] || NODE_SIZE_MAP.emerald;
               const baseRadius = nodeStyle.base;
               const size = baseRadius * (1 + city.count / 400);
@@ -429,7 +431,7 @@ export default function InteractiveMap({
                       duration: 3,
                       repeat: Infinity,
                       ease: "easeOut",
-                      delay: Math.random() * 2,
+                      delay: ((nodeIdx * 7) % 20) / 10,
                     }}
                   />
 
@@ -455,10 +457,10 @@ export default function InteractiveMap({
                       r: [radius, radius * 1.15, radius],
                     }}
                     transition={{
-                      duration: 2 + Math.random(),
+                      duration: 2 + ((nodeIdx * 13) % 3),
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: Math.random() * 1.5,
+                      delay: ((nodeIdx * 11) % 15) / 10,
                     }}
                   />
 
