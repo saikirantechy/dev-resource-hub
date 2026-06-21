@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { GraduationCap, ArrowLeft, Search, MapPin, Trophy, TrendingUp, TrendingDown, Users, BarChart3, Star } from "lucide-react";
+import { GraduationCap, ArrowLeft, Search, MapPin, TrendingUp, TrendingDown, BarChart3 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { COLLEGES, ALL_COUNTRIES } from "@/lib/devrank/data";
 import DevRankChart from "@/components/devrank/DevRankChart";

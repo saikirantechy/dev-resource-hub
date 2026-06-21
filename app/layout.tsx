@@ -46,6 +46,7 @@ import PageTransition from "@/components/PageTransition";
 import CursorGlow from "@/components/CursorGlow";
 import { BookmarkProvider } from "@/context/BookmarkContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { I18nProvider } from "@/lib/i18n/context";
 import { getAllBlogs } from "@/lib/blogs";
 
 export default function RootLayout({
@@ -58,6 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      dir="ltr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
@@ -117,15 +119,17 @@ export default function RootLayout({
           Skip to main content
         </a>
         <AuthProvider>
-          <BookmarkProvider>
-            <div className="gradient-mesh" />
-            <CursorGlow />
-            <CommandPalette initialBlogs={blogs} />
-            <PageTransition>
-              {children}
-            </PageTransition>
-            <Footer />
-          </BookmarkProvider>
+          <I18nProvider>
+            <BookmarkProvider>
+              <div className="gradient-mesh" />
+              <CursorGlow />
+              <CommandPalette initialBlogs={blogs} />
+              <PageTransition>
+                {children}
+              </PageTransition>
+              <Footer />
+            </BookmarkProvider>
+          </I18nProvider>
         </AuthProvider>
       </body>
     </html>

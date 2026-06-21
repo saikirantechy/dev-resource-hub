@@ -4,9 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Sparkles, ArrowRight, Bot, Target, BookOpen, Code2,
-  BarChart3, Lightbulb, Star, TrendingUp, Rocket,
-  ExternalLink, Zap, Users, Award, MessageSquare,
+  Sparkles, Bot, Target,
+  Star, TrendingUp, Rocket,
+  Zap, Users, Award,
   FileText, CheckCircle, GraduationCap, Globe, Brain, Bug,
 } from "lucide-react";
 import Link from "next/link";

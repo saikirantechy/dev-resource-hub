@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   Sparkles, BookOpen, Target, Swords, Trophy, Map, LayoutGrid,
   GraduationCap, ArrowRight, Star, Zap, TrendingUp, Users, Code2,
-  BrainCircuit, Award, BarChart3, ChevronRight, Flame
+  BrainCircuit, Award, BarChart3, Flame
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { DEFAULT_STATS, AI_AGENTS } from "@/lib/dsa/data";

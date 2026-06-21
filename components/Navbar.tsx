@@ -11,11 +11,12 @@ import {
   Shield, Cpu, Globe, GraduationCap, Heart, Calendar,
   Siren, MessageSquare, Workflow, Compass, ShieldAlert,
   Newspaper, Bug, Rocket, Code2, DollarSign, GitPullRequest,
-  Swords, BrainCircuit, Award,
+  Swords, BrainCircuit,
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useBookmarks } from "@/context/BookmarkContext";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const navGroups = [
   {
@@ -146,6 +147,7 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <LanguageSwitcher />
             <ThemeToggle />
 
             <Link
@@ -237,8 +239,9 @@ export default function Navbar() {
                 </div>
               ))}
 
-              <div className="pt-4 border-t border-white/5 space-y-2">
-                <div className="px-4 py-2">
+              <div className="pt-4 border-t border-white/5 space-y-4">
+                <div className="px-4 py-2 flex items-center gap-3">
+                  <LanguageSwitcher />
                   <ThemeToggle />
                 </div>
                 <Link href="/saved" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-4 py-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold hover:bg-blue-500/20 transition-all text-sm">

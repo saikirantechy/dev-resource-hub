@@ -158,7 +158,7 @@ export async function fetchRealPRData(
   };
 }
 
-export function generateAnalysisFromRealData(data: RealPRData, repoName: string): AnalysisResult {
+export function generateAnalysisFromRealData(data: RealPRData, _repoName: string): AnalysisResult {
   const { pr, files, commits, languages, topics } = data;
 
   const totalAdded = files.reduce((s, f) => s + f.additions, 0);

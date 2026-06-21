@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Play, RotateCcw, ChevronDown, CheckCircle2, XCircle, Loader2 } from "lucide-react";
 import type { Language, TestCase } from "@/lib/dsa/types";
 import { ALL_LANGUAGES } from "@/lib/dsa/data";
@@ -40,7 +39,6 @@ export default function DSACodeEditor({ initialCode = "", language: initialLang 
     setTestCases(prev => prev.map(tc => ({ ...tc, passed: undefined, output: undefined })));
   };
 
-  const currentLang = ALL_LANGUAGES.find(l => l.name === language) || ALL_LANGUAGES[3];
 
   return (
     <div className="rounded-2xl glass border border-white/10 overflow-hidden">

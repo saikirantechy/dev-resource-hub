@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, ClipboardList, Trash2, Filter, Shield, User, Edit3, Trash, Settings, LogIn, LogOut } from "lucide-react";
+import { Search, ClipboardList, Trash2, Shield, Edit3, Trash, Settings, LogIn, LogOut } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
-import { clearActivityLog, getActivityLog } from "@/lib/admin/storage";
+import { clearActivityLog } from "@/lib/admin/storage";
 
 const ACTION_ICONS: Record<string, typeof Shield> = {
   login: LogIn,

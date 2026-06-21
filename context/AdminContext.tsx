@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
+import React, { createContext, useContext, useState, useCallback } from "react";
 import { AdminUser, SystemSettings, ActivityLogEntry, ResourceType, Permission } from "@/lib/admin/types";
 import {
   clearAdminSession,
@@ -31,12 +31,12 @@ interface AdminContextType {
 const AdminContext = createContext<AdminContextType | undefined>(undefined);
 
 export function AdminProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<AdminUser | null>(null);
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [setupDone, setSetupDone] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [settings, setSettings] = useState<SystemSettings>({} as SystemSettings);
-  const [activityLog, setActivityLog] = useState<ActivityLogEntry[]>([]);
+  const [user, setUser] = useState<AdminUser | null>(() => getAdminUser());
+  const [loggedIn, setLoggedIn] = useState(() => isAdminLoggedIn());
+  const [setupDone, setSetupDone] = useState(() => isSetupComplete());
+  const [loading, setLoading] = useState(false);
+  const [settings, setSettings] = useState<SystemSettings>(() => getSystemSettings());
+  const [activityLog, setActivityLog] = useState<ActivityLogEntry[]>(() => getActivityLog());
 
   const refresh = useCallback(() => {
     setUser(getAdminUser());
@@ -45,11 +45,6 @@ export function AdminProvider({ children }: { children: React.ReactNode }) {
     setSettings(getSystemSettings());
     setActivityLog(getActivityLog());
   }, []);
-
-  useEffect(() => {
-    refresh();
-    setLoading(false);
-  }, [refresh]);
 
   const logout = useCallback(() => {
     const currentUser = getAdminUser();

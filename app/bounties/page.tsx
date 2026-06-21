@@ -4,9 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Sparkles, ArrowRight, DollarSign, Award, ExternalLink,
-  Star, TrendingUp, Filter, Search, RotateCcw, Bug,
-  Code2, Globe, Users, Shield, Zap,
+  DollarSign, ExternalLink,
+  Search, RotateCcw,
+  Code2, Globe,
 } from "lucide-react";
 import Link from "next/link";
 

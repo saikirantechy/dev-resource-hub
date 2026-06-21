@@ -10,7 +10,7 @@ export default function AdminBlogsPage() {
   const { can } = useAdmin();
   const [items, setItems] = useState<PromptItem[]>([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
 
   useEffect(() => {
     loadPromptsData().then((data) => { setItems(data); setLoading(false); });

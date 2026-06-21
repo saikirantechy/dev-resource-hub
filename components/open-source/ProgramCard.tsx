@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Calendar, Users, TrendingUp, Award } from "lucide-react";
+import { ExternalLink, TrendingUp, Award } from "lucide-react";
 
 interface Program {
   id: string;

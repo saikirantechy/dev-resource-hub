@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shield, User, Mail, Lock, Check, ArrowRight, ArrowLeft, Sparkles, Crown } from "lucide-react";
+import { User, Mail, Lock, Check, ArrowRight, ArrowLeft, Sparkles, Crown } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 import { createSuperAdmin } from "@/lib/admin/storage";
 import { ADMIN_ROUTES } from "@/lib/admin/constants";
@@ -135,7 +135,7 @@ export default function AdminSetupPage() {
                 <h2 className="text-2xl font-black">Welcome to Your Admin Panel</h2>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   This setup wizard will create your <span className="text-amber-400 font-bold">Super Admin</span> account — 
-                  the highest level of access. You'll be able to manage users, content, settings, 
+                  the highest level of access. You&apos;ll be able to manage users, content, settings, 
                   and every module of the Dev Resource Hub.
                 </p>
               </div>

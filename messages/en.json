@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "tools": "Tools",
+    "agents": "Agents",
+    "aiAgents": "AI Agents",
+    "prompts": "Prompts",
+    "benchmarks": "Benchmarks",
+    "architecture": "Architecture",
+    "automation": "Automation",
+    "community": "Community",
+    "trending": "Trending",
+    "compare": "Compare",
+    "roadmap": "Roadmap",
+    "login": "Login",
+    "showcase": "Showcase",
+    "map": "Dev Map",
+    "blog": "Blog",
+    "docs": "Docs",
+    "marketplace": "Marketplace",
+    "openSource": "Open Source",
+    "language": "Language"
+  },
+  "hero": {
+    "title1": "AI Operating System",
+    "title2": "for Students, Developers",
+    "title3": "Founders & AI Agencies",
+    "subtitle": "From learning to building to scaling — explore agents, prompts, benchmarks, architecture, automation, and communities in one unified OS for the AI era. 22+ specialized modules for students, developers, founders, and agencies.",
+    "ctaGetStarted": "Get Started",
+    "ctaOpenDashboard": "Open Dashboard",
+    "ctaStartBuilding": "Start Building",
+    "chooseYourPath": "Choose Your Path",
+    "students": "Learn the Stack",
+    "developers": "Build with AI",
+    "founders": "Ship Faster",
+    "agencies": "Scale & Automate"
+  },
+  "sections": {
+    "core": "Core Platform",
+    "build": "Build & Design",
+    "automate": "Automate & Debug",
+    "discover": "Discover & Explore",
+    "community": "Community & Growth",
+    "persona": "Persona Routes",
+    "agents": "Agent Hub",
+    "openSource": "Open Source Hub",
+    "admin": "Admin Panel",
+    "everything": "Everything in One Ecosystem",
+    "description": "22 specialized modules across 5 pillars — from building and automating to discovering and growing with AI."
+  },
+  "stats": {
+    "modules": "Modules",
+    "modulesValue": "22+",
+    "resources": "Resources",
+    "resourcesValue": "200+",
+    "stars": "GitHub Stars",
+    "starsValue": "5k+",
+    "openSource": "Open Source",
+    "openSourceValue": "100%"
+  },
+  "ui": {
+    "search": "Search",
+    "searchPlaceholder": "Search tools, agents, prompts...",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "save": "Save",
+    "share": "Share",
+    "filter": "Filter",
+    "sort": "Sort",
+    "more": "More",
+    "learnMore": "Learn More",
+    "explore": "Explore",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "viewTrending": "View Trending",
+    "modulesCount": "22+ modules",
+    "toolsCount": "100+ tools",
+    "exploreModule": "Explore {name}"
+  },
+  "badges": {
+    "students": "Student Path",
+    "developers": "Developers",
+    "founders": "Founders",
+    "agencies": "Agencies",
+    "new": "New",
+    "popular": "Popular",
+    "trending": "Trending",
+    "hot": "Hot Right Now",
+    "live": "Live",
+    "community": "Community"
+  },
+  "footer": {
+    "description": "The AI Operating System — discover AI tools, agents, prompts, and connect with a global community of students, developers, founders, and AI agencies.",
+    "platform": "Platform",
+    "community": "Community",
+    "resources": "Resources",
+    "legal": "Legal",
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© {year} Dev Resource Hub. Open source and free for everyone.",
+    "joinNewsletter": "Join the Ecosystem",
+    "newsletterDesc": "Weekly drops: best AI tools, trending resources, and open-source opportunities.",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email",
+    "subscribers": "Join 2,000+ developers already subscribed"
+  },
+  "pages": {
+    "agents": {
+      "title": "Agent Hub",
+      "description": "9 specialized AI agents — Planner, Architect, Developer, QA, Security, DevOps, Documentation, SEO, Marketing."
+    },
+    "aiAgents": {
+      "title": "AI Agents Catalog",
+      "description": "Explore autonomous agents — from Devin to CrewAI, OpenHands, and AutoGen."
+    },
+    "tools": {
+      "title": "Tools Hub",
+      "description": "Curated AI-powered tools across IDEs, UI builders, frameworks, and open-source categories."
+    },
+    "prompts": {
+      "title": "Prompt Library",
+      "description": "Searchable marketplace with copy button, syntax highlighting, categories, and difficulty ratings."
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "description": "Your personal command center for the Dev Resource Hub ecosystem."
+    },
+    "benchmarks": {
+      "title": "Benchmark Center",
+      "description": "AI model, coding, agent, and IDE benchmarks. Compare speed, cost, and quality across 30+ providers."
+    },
+    "architecture": {
+      "title": "Architecture Studio",
+      "description": "Generate system designs, microservices, SaaS, and AI agent architectures."
+    },
+    "community": {
+      "title": "Community",
+      "description": "Discord, discussions, contributor leaderboard, open issues, and Hall of Fame."
+    }
+  },
+  "devrank": {
+    "title": "DevRank AI",
+    "description": "Developer reputation & open source intelligence platform. Track rankings, earn badges, and get AI career insights.",
+    "global": "Global",
+    "developers": "Developers",
+    "colleges": "Colleges",
+    "analytics": "Analytics"
+  },
+  "dsa": {
+    "title": "DSA Arena",
+    "description": "Master DSA through AI coaching, live coding challenges, rankings, and interview simulations.",
+    "arena": "Arena",
+    "tutor": "AI Tutor",
+    "challenges": "Challenges",
+    "leaderboard": "Leaderboard"
+  }
+}

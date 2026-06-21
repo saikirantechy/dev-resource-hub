@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, BookOpen, Plus, Eye, Edit3, Trash2, Star, FileText } from "lucide-react";
+import { Search, BookOpen, Plus, Eye, Edit3, Trash2, FileText } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 
 const MOCK_DOCS = [

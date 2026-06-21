@@ -10,7 +10,7 @@ import {
   STATS,
 } from "@/lib/dashboardData";
 
-const VALID_KINDS = ["launch", "prompt", "repo", "news"];
+const VALID_KINDS = ["launch", "prompt", "repo", "news"] as const;
 const VALID_STATUSES = ["idle", "running", "ready"];
 
 describe("dashboardData", () => {

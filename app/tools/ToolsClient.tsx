@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react";
 import toolsData from "@/data/tools.json";
-import aiCodingToolsData from "@/data/ai-coding-tools.json";
 import { Search, Star, Eye, GitFork, BookOpen, Copy, CheckCircle2, Package, Monitor, Globe, Code2, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";

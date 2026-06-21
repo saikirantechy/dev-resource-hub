@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, MapPin, Building2, GraduationCap, Users, Globe, Award, Calendar } from "lucide-react";
+import { ArrowLeft, ExternalLink, Users, Globe, Award, Calendar } from "lucide-react";
 import { DEVELOPERS, TIER_THRESHOLDS, DEFAULT_GITHUB_STATS, INSIGHTS } from "@/lib/devrank/data";
 import DevRankProfileComponent from "@/components/devrank/DevRankProfile";
 import DevRankChart from "@/components/devrank/DevRankChart";

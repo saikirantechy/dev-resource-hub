@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Swords, ArrowLeft, Search, Calendar, MapPin, Users, Code2, Trophy, Globe, Monitor } from "lucide-react";
+import { Swords, ArrowLeft, Search, Calendar, MapPin, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { HACKATHONS } from "@/lib/devrank/data";
 

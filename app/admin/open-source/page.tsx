@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Globe, Plus, Eye, Edit3, Trash2, Star } from "lucide-react";
+import { Search, Globe, Plus, Eye, Trash2, Star } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 import { loadOpenSourceData, OpenSourceItem } from "@/lib/admin/loaders";
 

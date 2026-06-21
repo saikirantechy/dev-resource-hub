@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TrendingUp } from "lucide-react";
-
 interface StatCardProps {
   label: string;
   value: string;

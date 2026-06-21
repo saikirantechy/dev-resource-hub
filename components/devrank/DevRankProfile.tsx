@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Building2, GraduationCap, Users, GitPullRequest, Star, GitFork, Eye, Flame, Code2, Award, TrendingUp, BarChart3 } from "lucide-react";
+import { MapPin, Building2, GraduationCap, Users, GitPullRequest, Star, GitFork, Flame, Code2, Award, TrendingUp, BarChart3 } from "lucide-react";
 import type { Developer, GitHubStats } from "@/lib/devrank/types";
 import { TIER_THRESHOLDS, DEFAULT_GITHUB_STATS } from "@/lib/devrank/data";
 

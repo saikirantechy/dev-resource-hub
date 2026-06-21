@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Trophy, Globe, Building2, Users, GraduationCap, Swords, BarChart3, BrainCircuit, ArrowRight, Zap, Star, TrendingUp, Code2, Medal, Award } from "lucide-react";
+import { Sparkles, Trophy, Globe, Building2, Users, GraduationCap, Swords, BarChart3, BrainCircuit, Zap, Code2, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import { DEVELOPERS, COLLEGES, COMMUNITIES } from "@/lib/devrank/data";
+import { DEVELOPERS, COLLEGES } from "@/lib/devrank/data";
 import DevRankCard from "@/components/devrank/DevRankCard";
 import DevRankChart from "@/components/devrank/DevRankChart";
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  Pencil, BookOpen, GraduationCap, Sparkles,
+  BookOpen, GraduationCap, Sparkles,
   FileText, ClipboardList, Puzzle, AlignLeft,
   BookMarked, Blocks, Layers, Lightbulb,
   School, StickyNote, CheckSquare, Brain,
@@ -230,7 +230,7 @@ export default function TeachInDevCopilotPage() {
         </div>
 
         {/* ─── FOUR SECTIONS ─── */}
-        {sections.map((section, sectionIdx) => (
+        {sections.map((section) => (
           <section key={section.title} className="px-4 sm:px-6 py-12 md:py-16">
             <div className="max-w-7xl mx-auto">
               <motion.div

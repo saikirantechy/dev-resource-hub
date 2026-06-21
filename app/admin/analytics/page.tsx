@@ -27,7 +27,7 @@ const TOP_PAGES = [
 ];
 
 export default function AdminAnalyticsPage() {
-  const { can } = useAdmin();
+  useAdmin();
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6">

@@ -7,12 +7,9 @@ import Navbar from "@/components/Navbar";
 import {
   Search,
   Bug,
-  ArrowRight,
   Sparkles,
   MessageSquare,
   Clock,
-  User,
-  BookOpen,
   Filter,
   ChevronDown,
   ExternalLink,
@@ -26,7 +23,7 @@ import {
 import { searchIssues, getGoodFirstIssues, GitHubIssue } from "@/lib/github";
 
 const LANGUAGES = ["", "javascript", "typescript", "python", "rust", "go", "java", "ruby", "cpp", "swift"];
-const DIFFICULTIES = ["", "good-first-issue", "help-wanted"];
+
 const SORT_OPTIONS = ["updated", "created", "comments", "reactions"];
 
 function timeAgo(dateStr: string): string {
@@ -38,10 +35,6 @@ function timeAgo(dateStr: string): string {
   const days = Math.floor(hrs / 24);
   if (days < 30) return `${days}d ago`;
   return `${Math.floor(days / 30)}mo ago`;
-}
-
-function truncate(str: string, len: number): string {
-  return str.length > len ? str.slice(0, len) + "..." : str;
 }
 
 function getRepoFromUrl(url: string): string {
@@ -72,7 +65,7 @@ export default function IssuesPage() {
       const result = await searchIssues({ q, language, difficulty, sort, page });
       setIssues(result.items);
       setTotalCount(result.total_count);
-    } catch (e) {
+    } catch {
       setError("GitHub API rate limit exceeded or network error. Try again in a minute.");
       setIssues([]);
     } finally {
@@ -90,7 +83,7 @@ export default function IssuesPage() {
       const items = await getGoodFirstIssues(language);
       setIssues(items);
       setTotalCount(items.length);
-    } catch (e) {
+    } catch {
       setError("Could not load issues. Try again.");
     } finally {
       setLoading(false);
@@ -128,13 +121,17 @@ export default function IssuesPage() {
     const sortParam = params.get("sort") as "updated" | "created" | "comments" | "reactions" | null;
 
     if (qParam || langParam || diffParam || sortParam) {
-      if (qParam !== query) setQuery(qParam);
-      if (langParam !== language) setLanguage(langParam);
-      if (diffParam !== difficulty) setDifficulty(diffParam);
-      if (sortParam && sortParam !== sort) setSort(sortParam);
-      doSearchWithParams(qParam, langParam, diffParam, sortParam || "updated");
+      Promise.resolve().then(() => {
+        setQuery(qParam);
+        setLanguage(langParam);
+        setDifficulty(diffParam);
+        if (sortParam) setSort(sortParam as "updated" | "created" | "comments" | "reactions");
+        doSearchWithParams(qParam, langParam, diffParam, sortParam || "updated");
+      });
     } else {
-      loadGoodFirstIssues();
+      Promise.resolve().then(() => {
+        loadGoodFirstIssues();
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

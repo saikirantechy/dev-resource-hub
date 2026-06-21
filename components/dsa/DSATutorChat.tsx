@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bot, Send, Lightbulb, ChevronDown, BookOpen, Code2, Beaker, Sparkles } from "lucide-react";
+import { Bot, Send, Lightbulb, BookOpen, Code2, Beaker, Sparkles } from "lucide-react";
 
 interface Message {
   id: string;
@@ -22,7 +22,7 @@ interface Props {
   topic?: string;
 }
 
-export default function DSATutorChat({ topic }: Props) {
+export default function DSATutorChat(_props: Props) {
   const [messages, setMessages] = useState<Message[]>([WELCOME]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);

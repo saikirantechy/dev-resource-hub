@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Sparkles, ArrowRight, Users, Award, BarChart3, TrendingUp,
-  GitFork, Star, Globe, ExternalLink, Plus,
+  Users, BarChart3, TrendingUp,
+  GitFork, Star, Globe, Plus,
   Bell, Settings, Activity, Eye, MessageSquare, Bug,
 } from "lucide-react";
 import Link from "next/link";

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "首页",
+    "dashboard": "仪表盘",
+    "tools": "工具",
+    "agents": "代理",
+    "aiAgents": "AI代理",
+    "prompts": "提示词",
+    "benchmarks": "基准测试",
+    "architecture": "架构",
+    "automation": "自动化",
+    "community": "社区",
+    "trending": "热门趋势",
+    "compare": "对比",
+    "roadmap": "路线图",
+    "login": "登录",
+    "showcase": "展示",
+    "map": "开发者地图",
+    "blog": "博客",
+    "docs": "文档",
+    "marketplace": "应用市场",
+    "openSource": "开源",
+    "language": "语言"
+  },
+  "hero": {
+    "title1": "AI操作系统",
+    "title2": "面向学生、开发者",
+    "title3": "创始人与AI机构",
+    "subtitle": "从学习到构建再到规模化 — 在统一的AI时代操作系统中探索代理、提示词、基准测试、架构、自动化和社区。为学生、开发者、创始人和机构提供22+个专业模块。",
+    "ctaGetStarted": "开始使用",
+    "ctaOpenDashboard": "打开仪表盘",
+    "ctaStartBuilding": "开始构建",
+    "chooseYourPath": "选择你的路径",
+    "students": "学习技术栈",
+    "developers": "用AI构建",
+    "founders": "更快发布",
+    "agencies": "扩展与自动化"
+  },
+  "sections": {
+    "core": "核心平台",
+    "build": "构建与设计",
+    "automate": "自动化与调试",
+    "discover": "发现与探索",
+    "community": "社区与成长",
+    "persona": "角色路径",
+    "agents": "代理中心",
+    "openSource": "开源中心",
+    "admin": "管理面板",
+    "everything": "一个生态系统，包罗万象",
+    "description": "5大支柱下的22个专业模块 — 从构建、自动化到发现、与AI共同成长。"
+  },
+  "stats": {
+    "modules": "模块",
+    "modulesValue": "22+",
+    "resources": "资源",
+    "resourcesValue": "200+",
+    "stars": "GitHub星标",
+    "starsValue": "5k+",
+    "openSource": "开源",
+    "openSourceValue": "100%"
+  },
+  "ui": {
+    "search": "搜索",
+    "searchPlaceholder": "搜索工具、代理、提示词...",
+    "viewAll": "查看全部",
+    "loading": "加载中...",
+    "error": "出错了",
+    "save": "保存",
+    "share": "分享",
+    "filter": "筛选",
+    "sort": "排序",
+    "more": "更多",
+    "learnMore": "了解更多",
+    "explore": "探索",
+    "submit": "提交",
+    "cancel": "取消",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "viewTrending": "查看热门",
+    "modulesCount": "22+ 模块",
+    "toolsCount": "100+ 工具",
+    "exploreModule": "探索 {name}"
+  },
+  "badges": {
+    "students": "学生路径",
+    "developers": "开发者",
+    "founders": "创始人",
+    "agencies": "机构",
+    "new": "新",
+    "popular": "热门",
+    "trending": "趋势",
+    "hot": "热门推荐",
+    "live": "实时",
+    "community": "社区"
+  },
+  "footer": {
+    "description": "AI操作系统 — 发现AI工具、代理、提示词，并与全球学生、开发者、创始人和AI机构社区建立联系。",
+    "platform": "平台",
+    "community": "社区",
+    "resources": "资源",
+    "legal": "法律",
+    "about": "关于",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© {year} Dev Resource Hub。开源且免费。",
+    "joinNewsletter": "加入生态系统",
+    "newsletterDesc": "每周推送：最佳AI工具、热门资源和开源机会。",
+    "subscribe": "订阅",
+    "emailPlaceholder": "输入你的邮箱",
+    "subscribers": "已有2,000+开发者订阅"
+  },
+  "pages": {
+    "agents": {
+      "title": "代理中心",
+      "description": "9个专业AI代理 — 规划师、架构师、开发者、QA、安全、DevOps、文档、SEO、营销。"
+    },
+    "aiAgents": {
+      "title": "AI代理目录",
+      "description": "探索自主代理 — 从Devin到CrewAI、OpenHands和AutoGen。"
+    },
+    "tools": {
+      "title": "工具中心",
+      "description": "精选的AI驱动工具，涵盖IDE、UI构建器、框架和开源类别。"
+    },
+    "prompts": {
+      "title": "提示词库",
+      "description": "可搜索的市场，支持复制、语法高亮、分类和难度评级。"
+    },
+    "dashboard": {
+      "title": "仪表盘",
+      "description": "你的Dev Resource Hub生态系统个人指挥中心。"
+    },
+    "benchmarks": {
+      "title": "基准测试中心",
+      "description": "AI模型、编程、代理和IDE基准测试。比较30+提供商的 speed、成本和 quality。"
+    },
+    "architecture": {
+      "title": "架构工作室",
+      "description": "生成系统设计、微服务、SaaS和AI代理架构。"
+    },
+    "community": {
+      "title": "社区",
+      "description": "Discord、讨论区、贡献者排行榜、开放问题 and 名人堂。"
+    }
+  },
+  "devrank": {
+    "title": "DevRank AI",
+    "description": "开发者声誉和开源智能平台。追踪排名、赢得徽章并获得AI职业洞察。",
+    "global": "全球",
+    "developers": "开发者",
+    "colleges": "大学",
+    "analytics": "分析"
+  },
+  "dsa": {
+    "title": "DSA竞技场",
+    "description": "通过AI辅导、实时编程挑战、排名和面试模拟掌握DSA。",
+    "arena": "竞技场",
+    "tutor": "AI导师",
+    "challenges": "挑战",
+    "leaderboard": "排行榜"
+  }
+}

@@ -3,10 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Award, ArrowLeft, Trophy, Rocket, Bot, Code2, Star, Medal, GraduationCap, Flame, Zap, Crown, Lock, CheckCircle2, Share2 } from "lucide-react";
+import { Award, ArrowLeft, Trophy, Code2, Star, Medal, Lock, CheckCircle2, Share2, Flame } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { BADGES } from "@/lib/devrank/data";
-import type { DevRankBadge } from "@/lib/devrank/types";
 import DevRankBadgeCard from "@/components/devrank/DevRankBadge";
 
 const CATEGORIES = ["all", "contribution", "achievement", "community", "skill", "hackathon"];

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Code2, Search, RotateCcw, Building2, Sparkles, ThumbsUp, CheckCircle2, Clock } from "lucide-react";
+import { ArrowLeft, Code2, Search, RotateCcw, Building2, ThumbsUp, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import DSAChallengeCard from "@/components/dsa/DSAChallengeCard";

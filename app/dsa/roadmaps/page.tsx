@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Map, GraduationCap, CheckCircle2, Clock, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowLeft, Map, GraduationCap, Clock, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { ROADMAPS } from "@/lib/dsa/data";

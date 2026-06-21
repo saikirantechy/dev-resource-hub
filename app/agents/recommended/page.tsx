@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Sparkles, TrendingUp, Star, Zap, Shield, Activity,
+  Sparkles, TrendingUp, Star, Zap, Activity,
   Rocket, Bot, Search, Filter, ArrowRight, Crown,
   Heart, Layers, Code2, Wrench, X, GitFork
 } from "lucide-react";

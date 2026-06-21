@@ -7,7 +7,6 @@ import {
   Rocket,
   Lightbulb,
   ArrowRight,
-  Sparkles,
   Building2,
   GitBranch,
   Wrench,

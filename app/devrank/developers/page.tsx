@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Search, ArrowLeft, Code2, Globe, Filter, ChevronDown, Users } from "lucide-react";
+import { Search, ArrowLeft, Code2, Filter, ChevronDown, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { DEVELOPERS, ALL_LANGUAGES, ALL_COUNTRIES } from "@/lib/devrank/data";
 import DevRankCard from "@/components/devrank/DevRankCard";

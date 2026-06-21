@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Wrench, Layers, CheckCircle, ArrowRight, Plus, ListChecks } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sampleEpics = [
   {
     name: "User Authentication System",

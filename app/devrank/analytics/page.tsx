@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BarChart3, ArrowLeft, TrendingUp, Star, GitPullRequest, Code2, Users, Flame, GitFork, Eye, Activity, Clock } from "lucide-react";
+import { BarChart3, ArrowLeft, TrendingUp, Star, Code2, Users, GitFork, Activity } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import DevRankChart from "@/components/devrank/DevRankChart";
 import { DEFAULT_GITHUB_STATS, DEVELOPERS } from "@/lib/devrank/data";
@@ -10,7 +10,6 @@ import { DEFAULT_GITHUB_STATS, DEVELOPERS } from "@/lib/devrank/data";
 const stats = DEFAULT_GITHUB_STATS;
 
 const trendData = stats.repoGrowth.map(r => ({ label: r.date.split("-")[1] + "/" + r.date.split("-")[0].slice(2), value: r.count }));
-const langData = stats.languageDistribution.map(l => ({ label: l.language, value: l.percentage, color: l.color }));
 const heatmapData = stats.activityHeatmap.slice(0, 52).map((v, i) => ({ label: `W${i + 1}`, value: v }));
 
 const METRICS = [

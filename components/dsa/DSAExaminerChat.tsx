@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Bot, Send, Clock, Target, AlertTriangle, CheckCircle2, BarChart3, Loader2 } from "lucide-react";
 import type { Difficulty } from "@/lib/dsa/types";
 
@@ -35,7 +35,6 @@ export default function DSAExaminerChat() {
   const [questions, setQuestions] = useState<Question[]>(INITIAL_QUESTIONS);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [input, setInput] = useState("");
   const [phase, setPhase] = useState<"intro" | "active" | "completed">("intro");
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutes
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -233,7 +232,7 @@ export default function DSAExaminerChat() {
               </div>
 
               <div className="space-y-3 max-w-md mx-auto text-left">
-                {questions.map((q, i) => (
+                {questions.map((q) => (
                   <div key={q.id} className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5">
                     <div>
                       <div className="text-xs font-bold text-white">{q.title}</div>

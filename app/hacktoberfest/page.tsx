@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Sparkles, ArrowRight, Calendar, Users, Award, BookOpen,
-  Zap, Star, CheckCircle, Clock, ExternalLink, Trophy,
+  Calendar, Users, Award, BookOpen,
+  Zap, CheckCircle, ExternalLink, Trophy,
   GitPullRequest, TrendingUp, Target, Gift, Bug, Code2,
 } from "lucide-react";
 import Link from "next/link";

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, ShoppingBag, Plus, Eye, Edit3, Trash2, CheckCircle, XCircle } from "lucide-react";
+import { Search, ShoppingBag, Plus, Edit3, Trash2, CheckCircle } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 import { loadMarketplaceData, MarketplaceItem } from "@/lib/admin/loaders";
 
@@ -10,7 +10,7 @@ export default function AdminMarketplacePage() {
   const { can } = useAdmin();
   const [items, setItems] = useState<MarketplaceItem[]>([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
 
   useEffect(() => { loadMarketplaceData().then((d) => { setItems(d); setLoading(false); }); }, []);
 

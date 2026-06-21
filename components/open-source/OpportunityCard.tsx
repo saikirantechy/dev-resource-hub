@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ExternalLink, Sparkles, TrendingUp, Globe, Lock, Clock, Star } from "lucide-react";
+import { ExternalLink, Sparkles, Globe } from "lucide-react";
 
 interface Opportunity {
   id: string;

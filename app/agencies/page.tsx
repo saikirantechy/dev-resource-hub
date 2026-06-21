@@ -7,7 +7,6 @@ import {
   Workflow,
   Cpu,
   ArrowRight,
-  Sparkles,
   Siren,
   GitBranch,
   Layers,

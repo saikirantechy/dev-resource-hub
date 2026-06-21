@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { AdminProvider, useAdmin } from "@/context/AdminContext";
 import { ADMIN_NAV_ITEMS, GROUP_LABELS, ADMIN_ROUTES } from "@/lib/admin/constants";
 import { getRoleBadgeColor, getRoleLabel } from "@/lib/admin/permissions";
-import { Shield, LogOut, Menu, X, ChevronRight } from "lucide-react";
+import { Shield, LogOut, Menu, ChevronRight } from "lucide-react";
 
 function AdminShell({ children }: { children: React.ReactNode }) {
   const { isLoggedIn, isSetupDone, loading, user, logout, can } = useAdmin();

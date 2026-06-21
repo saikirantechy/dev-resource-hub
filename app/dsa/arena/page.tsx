@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Swords, Plus, Search, Users, QrCode, Globe, Lock, Zap, Sparkles } from "lucide-react";
+import { ArrowLeft, Swords, Plus, Search, Users, QrCode, Globe, Lock, Zap } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import DSARoomCard from "@/components/dsa/DSARoomCard";

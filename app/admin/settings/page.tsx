@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Settings, Save, RotateCcw, Globe, Palette, Search, Shield, Bell } from "lucide-react";
+import { Settings, Save, RotateCcw, Globe, Search, Bell } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 import { saveSystemSettings, getSystemSettings } from "@/lib/admin/storage";
 
 export default function AdminSettingsPage() {
-  const { can, settings, logAction } = useAdmin();
+  const { settings, logAction } = useAdmin();
   const [activeTab, setActiveTab] = useState<"general" | "seo" | "features" | "analytics">("general");
   const [saved, setSaved] = useState(false);
   const [form, setForm] = useState({ ...settings });

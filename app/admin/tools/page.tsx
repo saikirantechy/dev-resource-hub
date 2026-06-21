@@ -10,7 +10,7 @@ export default function AdminToolsPage() {
   const { can } = useAdmin();
   const [items, setItems] = useState<ToolItem[]>([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
 
   useEffect(() => { loadToolsData().then((d) => { setItems(d); setLoading(false); }); }, []);
 

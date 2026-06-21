@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Building2, ArrowLeft, Search, Star, GitFork, Users, Code2, TrendingUp } from "lucide-react";
+import { Building2, ArrowLeft, Search, Code2, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { ORGANIZATIONS } from "@/lib/devrank/data";
 

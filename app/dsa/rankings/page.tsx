@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, BarChart3, Users, Search, Globe, GraduationCap, Sparkles, ChevronDown } from "lucide-react";
+import { ArrowLeft, BarChart3, Users, Globe, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import DSARankingCard from "@/components/dsa/DSARankingCard";
@@ -15,7 +15,6 @@ const TIERS: RankingTier[] = ["Bronze", "Silver", "Gold", "Platinum", "Diamond",
 
 export default function DSARankingsPage() {
   const [filter, setFilter] = useState<Filter>("Global");
-  const [search, setSearch] = useState("");
 
   const tierCounts = useMemo(() => {
     const counts: Record<string, number> = {};

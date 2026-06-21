@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "tools": "Herramientas",
+    "agents": "Agentes",
+    "aiAgents": "Agentes IA",
+    "prompts": "Prompts",
+    "benchmarks": "Comparativas",
+    "architecture": "Arquitectura",
+    "automation": "Automatización",
+    "community": "Comunidad",
+    "trending": "Tendencias",
+    "compare": "Comparar",
+    "roadmap": "Hoja de Ruta",
+    "login": "Iniciar Sesión",
+    "showcase": "Vitrina",
+    "map": "Mapa Dev",
+    "blog": "Blog",
+    "docs": "Documentación",
+    "marketplace": "Marketplace",
+    "openSource": "Código Abierto",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title1": "Sistema Operativo IA",
+    "title2": "para Estudiantes, Desarrolladores",
+    "title3": "Fundadores y Agencias IA",
+    "subtitle": "Desde aprender hasta construir y escalar — explora agentes, prompts, comparativas, arquitectura, automatización y comunidades en un SO unificado para la era IA. 22+ módulos especializados para estudiantes, desarrolladores, fundadores y agencias.",
+    "ctaGetStarted": "Comenzar",
+    "ctaOpenDashboard": "Abrir Panel",
+    "ctaStartBuilding": "Empezar a Construir",
+    "chooseYourPath": "Elige tu Camino",
+    "students": "Aprende el Stack",
+    "developers": "Construye con IA",
+    "founders": "Lanza Más Rápido",
+    "agencies": "Escala y Automatiza"
+  },
+  "sections": {
+    "core": "Plataforma Principal",
+    "build": "Construir y Diseñar",
+    "automate": "Automatizar y Depurar",
+    "discover": "Descubrir y Explorar",
+    "community": "Comunidad y Crecimiento",
+    "persona": "Rutas de Persona",
+    "agents": "Centro de Agentes",
+    "openSource": "Centro de Código Abierto",
+    "admin": "Panel de Administración",
+    "everything": "Todo en un Solo Ecosistema",
+    "description": "22 módulos especializados en 5 pilares — desde construir y automatizar hasta descubrir y crecer con IA."
+  },
+  "stats": {
+    "modules": "Módulos",
+    "modulesValue": "22+",
+    "resources": "Recursos",
+    "resourcesValue": "200+",
+    "stars": "Estrellas GitHub",
+    "starsValue": "5k+",
+    "openSource": "Código Abierto",
+    "openSourceValue": "100%"
+  },
+  "ui": {
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar herramientas, agentes, prompts...",
+    "viewAll": "Ver Todo",
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "save": "Guardar",
+    "share": "Compartir",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "more": "Más",
+    "learnMore": "Saber Más",
+    "explore": "Explorar",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "viewTrending": "Ver Tendencias",
+    "modulesCount": "22+ módulos",
+    "toolsCount": "100+ herramientas",
+    "exploreModule": "Explorar {name}"
+  },
+  "badges": {
+    "students": "Ruta Estudiante",
+    "developers": "Desarrolladores",
+    "founders": "Fundadores",
+    "agencies": "Agencias",
+    "new": "Nuevo",
+    "popular": "Popular",
+    "trending": "Tendencia",
+    "hot": "Popular Ahora",
+    "live": "En Vivo",
+    "community": "Comunidad"
+  },
+  "footer": {
+    "description": "El Sistema Operativo IA — descubre herramientas IA, agentes, prompts y conéctate con una comunidad global de estudiantes, desarrolladores, fundadores y agencias IA.",
+    "platform": "Plataforma",
+    "community": "Comunidad",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "about": "Acerca de",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos del Servicio",
+    "copyright": "© {year} Dev Resource Hub. Código abierto y gratuito para todos.",
+    "joinNewsletter": "Únete al Ecosistema",
+    "newsletterDesc": "Drops semanales: mejores herramientas IA, recursos trending y oportunidades de código abierto.",
+    "subscribe": "Suscribirse",
+    "emailPlaceholder": "Ingresa tu correo",
+    "subscribers": "Únete a 2,000+ desarrolladores ya suscritos"
+  },
+  "pages": {
+    "agents": {
+      "title": "Centro de Agentes",
+      "description": "9 agentes IA especializados — Planificador, Arquitecto, Desarrollador, QA, Seguridad, DevOps, Documentación, SEO, Marketing."
+    },
+    "aiAgents": {
+      "title": "Catálogo de Agentes IA",
+      "description": "Explora agentes autónomos — desde Devin hasta CrewAI, OpenHands y AutoGen."
+    },
+    "tools": {
+      "title": "Centro de Herramientas",
+      "description": "Herramientas impulsadas por IA seleccionadas en IDEs, constructores UI, frameworks y categorías de código abierto."
+    },
+    "prompts": {
+      "title": "Biblioteca de Prompts",
+      "description": "Marketplace buscable con botón de copia, resaltado de sintaxis, categorías y valoraciones de dificultad."
+    },
+    "dashboard": {
+      "title": "Panel",
+      "description": "Tu centro de comando personal para el ecosistema Dev Resource Hub."
+    },
+    "benchmarks": {
+      "title": "Centro de Comparativas",
+      "description": "Comparativas de modelos IA, coding, agentes e IDEs. Compara velocidad, costo y calidad en 30+ proveedores."
+    },
+    "architecture": {
+      "title": "Estudio de Arquitectura",
+      "description": "Genera diseños de sistemas, microservicios, SaaS y arquitecturas de agentes IA."
+    },
+    "community": {
+      "title": "Comunidad",
+      "description": "Discord, discusiones, tabla de líderes de contribuidores, issues abiertos y Salón de la Fama."
+    }
+  },
+  "devrank": {
+    "title": "DevRank IA",
+    "description": "Plataforma de reputación de desarrolladores e inteligencia de código abierto. Rastrea rankings, gana insignias y obtén insights de carrera con IA.",
+    "global": "Global",
+    "developers": "Desarrolladores",
+    "colleges": "Universidades",
+    "analytics": "Analíticas"
+  },
+  "dsa": {
+    "title": "Arena DSA",
+    "description": "Domina DSA mediante coaching IA, desafíos de codificación en vivo, rankings y simulaciones de entrevistas.",
+    "arena": "Arena",
+    "tutor": "Tutor IA",
+    "challenges": "Desafíos",
+    "leaderboard": "Tabla de Líderes"
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Crown, Users, TrendingUp } from "lucide-react";
+import { Users, TrendingUp } from "lucide-react";
 import { TIER_COLORS } from "@/lib/dsa/data";
 import type { RankingTier } from "@/lib/dsa/types";
 

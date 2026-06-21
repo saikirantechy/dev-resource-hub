@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, GitPullRequest, GitFork, Users, Trophy, Medal } from "lucide-react";
+import { Medal } from "lucide-react";
 import type { Developer } from "@/lib/devrank/types";
 import { TIER_THRESHOLDS } from "@/lib/devrank/data";
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Workflow, Plus, Eye, Edit3, Trash2, Play } from "lucide-react";
+import { Search, Workflow, Plus, Edit3, Trash2, Play } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 
 const MOCK_WORKFLOWS = [

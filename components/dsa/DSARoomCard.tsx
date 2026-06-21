@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Users, Zap, Clock, Globe, Lock, Unlock } from "lucide-react";
+import { Trophy, Users, Zap, Clock, Lock, Unlock } from "lucide-react";
 import type { Room } from "@/lib/dsa/types";
 
 interface Props {
@@ -17,11 +17,6 @@ export default function DSARoomCard({ room, index }: Props) {
     Expert: "text-purple-400 bg-purple-500/10 border-purple-500/20",
   }[room.difficulty];
 
-  const statusColor = {
-    Active: "text-emerald-400 border-emerald-500/20",
-    Upcoming: "text-amber-400 border-amber-500/20",
-    Ended: "text-gray-500 border-gray-500/20",
-  }[room.status];
 
   return (
     <motion.div

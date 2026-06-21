@@ -4,14 +4,13 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Users, FileText, Bot, Workflow, ShoppingBag, Globe,
-  Trophy, Swords, MessageSquare, Calendar, BarChart3, Settings,
-  TrendingUp, ArrowUp, Activity, Shield, BookOpen, Package, Layers
+  Users, FileText, Bot, Workflow, ShoppingBag,
+  Calendar, BarChart3, Settings,
+  TrendingUp, ArrowUp, Activity, Shield, BookOpen, Package,
 } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 import { ADMIN_ROUTES } from "@/lib/admin/constants";
 import { loadJsonData } from "@/lib/admin/storage";
-import { DashboardStats } from "@/lib/admin/types";
 
 interface DataCounts {
   agents: number;
@@ -34,11 +33,11 @@ const STAT_CARDS = [
 ];
 
 export default function AdminDashboardPage() {
-  const { user, can, activityLog } = useAdmin();
+  const { user, activityLog } = useAdmin();
   const [counts, setCounts] = useState<DataCounts>({
     agents: 0, tools: 0, prompts: 0, marketplace: 0, events: 0, openSource: 0,
   });
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, ArrowLeft, Search, Globe, TrendingUp, Building2, Calendar, Code2 } from "lucide-react";
+import { Users, ArrowLeft, Search, Globe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { COMMUNITIES } from "@/lib/devrank/data";
 import type { CommunityType } from "@/lib/devrank/types";

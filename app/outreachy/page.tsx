@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Sparkles, ArrowRight, Calendar, Users, Award, BookOpen,
-  Globe, Star, CheckCircle, Clock, ExternalLink, Heart,
-  Lightbulb, Target, Shield, GraduationCap, Bug, FileText,
+  Sparkles, Calendar, BookOpen,
+  Globe, CheckCircle, Clock, ExternalLink,
+  Lightbulb, Target, Bug, FileText,
 } from "lucide-react";
 import Link from "next/link";
 import programs from "@/data/programs.json";

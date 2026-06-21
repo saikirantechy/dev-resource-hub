@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { motion } from "framer-motion";
-import { ArrowLeft, LayoutGrid, Search, RotateCcw, Sparkles } from "lucide-react";
+import { ArrowLeft, LayoutGrid, Search, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import DSATopicCard from "@/components/dsa/DSATopicCard";

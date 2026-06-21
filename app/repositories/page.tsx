@@ -84,7 +84,25 @@ export default function RepositoriesPage() {
   }, [language]);
 
   useEffect(() => {
-    loadTrending();
+    let cancelled = false;
+    getTrendingRepos(language)
+      .then((items) => {
+        if (cancelled) return;
+        setRepos(items);
+        setTotalCount(items.length);
+        setView("trending");
+        setSearched(true);
+      })
+      .catch(() => {
+        if (!cancelled) setError("Could not load trending repos. Try again.");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

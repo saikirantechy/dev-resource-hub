@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Trophy, Medal, Search, Users, Zap, Globe, GraduationCap, Star, ChevronDown } from "lucide-react";
+import { ArrowLeft, Trophy, Medal, Search, Users, Globe, GraduationCap, Star } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { RANKING_USERS, TIER_COLORS } from "@/lib/dsa/data";

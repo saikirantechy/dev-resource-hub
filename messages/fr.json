@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "dashboard": "Tableau de Bord",
+    "tools": "Outils",
+    "agents": "Agents",
+    "aiAgents": "Agents IA",
+    "prompts": "Invites",
+    "benchmarks": "Références",
+    "architecture": "Architecture",
+    "automation": "Automatisation",
+    "community": "Communauté",
+    "trending": "Tendances",
+    "compare": "Comparer",
+    "roadmap": "Feuille de Route",
+    "login": "Connexion",
+    "showcase": "Vitrine",
+    "map": "Carte Dev",
+    "blog": "Blog",
+    "docs": "Documentation",
+    "marketplace": "Marketplace",
+    "openSource": "Open Source",
+    "language": "Langue"
+  },
+  "hero": {
+    "title1": "Système d'Exploitation IA",
+    "title2": "pour Étudiants, Développeurs",
+    "title3": "Fondateurs et Agences IA",
+    "subtitle": "De l'apprentissage à la création et au passage à l'échelle — explorez agents, invites, références, architecture, automatisation et communautés dans un SE unifié pour l'ère de l'IA. 22+ modules spécialisés pour étudiants, développeurs, fondateurs et agences.",
+    "ctaGetStarted": "Commencer",
+    "ctaOpenDashboard": "Ouvrir le Tableau de Bord",
+    "ctaStartBuilding": "Commencer à Construire",
+    "chooseYourPath": "Choisissez Votre Voie",
+    "students": "Apprendre la Stack",
+    "developers": "Construire avec l'IA",
+    "founders": "Lancer Plus Vite",
+    "agencies": "Passer à l'Échelle"
+  },
+  "sections": {
+    "core": "Plateforme Principale",
+    "build": "Construire et Concevoir",
+    "automate": "Automatiser et Déboguer",
+    "discover": "Découvrir et Explorer",
+    "community": "Communauté et Croissance",
+    "persona": "Parcours Persona",
+    "agents": "Hub d'Agents",
+    "openSource": "Hub Open Source",
+    "admin": "Panneau d'Administration",
+    "everything": "Tout dans un Seul Écosystème",
+    "description": "22 modules spécialisés répartis en 5 piliers — de la construction et l'automatisation à la découverte et la croissance avec l'IA."
+  },
+  "stats": {
+    "modules": "Modules",
+    "modulesValue": "22+",
+    "resources": "Ressources",
+    "resourcesValue": "200+",
+    "stars": "Étoiles GitHub",
+    "starsValue": "5k+",
+    "openSource": "Open Source",
+    "openSourceValue": "100%"
+  },
+  "ui": {
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher outils, agents, invites...",
+    "viewAll": "Voir Tout",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "save": "Enregistrer",
+    "share": "Partager",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "more": "Plus",
+    "learnMore": "En Savoir Plus",
+    "explore": "Explorer",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "viewTrending": "Voir les Tendances",
+    "modulesCount": "22+ modules",
+    "toolsCount": "100+ outils",
+    "exploreModule": "Explorer {name}"
+  },
+  "badges": {
+    "students": "Parcours Étudiant",
+    "developers": "Développeurs",
+    "founders": "Fondateurs",
+    "agencies": "Agences",
+    "new": "Nouveau",
+    "popular": "Populaire",
+    "trending": "Tendance",
+    "hot": "Tendance du Moment",
+    "live": "En Direct",
+    "community": "Communauté"
+  },
+  "footer": {
+    "description": "Le Système d'Exploitation IA — découvrez des outils IA, agents, invites et connectez-vous avec une communauté mondiale d'étudiants, développeurs, fondateurs et agences IA.",
+    "platform": "Plateforme",
+    "community": "Communauté",
+    "resources": "Ressources",
+    "legal": "Juridique",
+    "about": "À Propos",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "copyright": "© {year} Dev Resource Hub. Open source et gratuit pour tous.",
+    "joinNewsletter": "Rejoindre l'Écosystème",
+    "newsletterDesc": "Envois hebdomadaires : meilleurs outils IA, ressources tendances et opportunités open source.",
+    "subscribe": "S'abonner",
+    "emailPlaceholder": "Entrez votre email",
+    "subscribers": "Rejoignez 2 000+ développeurs déjà abonnés"
+  },
+  "pages": {
+    "agents": {
+      "title": "Hub d'Agents",
+      "description": "9 agents IA spécialisés — Planificateur, Architecte, Développeur, QA, Sécurité, DevOps, Documentation, SEO, Marketing."
+    },
+    "aiAgents": {
+      "title": "Catalogue d'Agents IA",
+      "description": "Explorez les agents autonomes — de Devin à CrewAI, OpenHands et AutoGen."
+    },
+    "tools": {
+      "title": "Hub d'Outils",
+      "description": "Outils propulsés par l'IA sélectionnés dans les IDE, constructeurs UI, frameworks et catégories open source."
+    },
+    "prompts": {
+      "title": "Bibliothèque d'Invites",
+      "description": "Marketplace consultable avec bouton de copie, coloration syntaxique, catégories et évaluations de difficulté."
+    },
+    "dashboard": {
+      "title": "Tableau de Bord",
+      "description": "Votre centre de commandement personnel pour l'écosystème Dev Resource Hub."
+    },
+    "benchmarks": {
+      "title": "Centre de Références",
+      "description": "Références de modèles IA, codage, agents et IDE. Comparez vitesse, coût et qualité sur 30+ fournisseurs."
+    },
+    "architecture": {
+      "title": "Studio d'Architecture",
+      "description": "Générez des conceptions système, microservices, SaaS et architectures d'agents IA."
+    },
+    "community": {
+      "title": "Communauté",
+      "description": "Discord, discussions, classement des contributeurs, issues ouvertes et Temple de la Renommée."
+    }
+  },
+  "devrank": {
+    "title": "DevRank IA",
+    "description": "Plateforme de réputation des développeurs et d'intelligence open source. Suivez les classements, gagnez des badges et obtenez des insights de carrière IA.",
+    "global": "Mondial",
+    "developers": "Développeurs",
+    "colleges": "Universités",
+    "analytics": "Analytiques"
+  },
+  "dsa": {
+    "title": "Arène DSA",
+    "description": "Maîtrisez DSA grâce au coaching IA, aux défis de codage en direct, aux classements et aux simulations d'entretien.",
+    "arena": "Arène",
+    "tutor": "Tuteur IA",
+    "challenges": "Défis",
+    "leaderboard": "Classement"
+  }
+}

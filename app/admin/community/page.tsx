@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, MessageSquare, Plus, Edit3, Trash2, Users, CheckCircle, XCircle } from "lucide-react";
+import { Search, MessageSquare, Plus, Edit3, Trash2, Users, CheckCircle } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 
 const MOCK_COMMUNITIES = [

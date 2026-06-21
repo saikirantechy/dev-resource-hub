@@ -4,9 +4,9 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import {
-  Search, Sparkles, ArrowRight, Globe,
-  TrendingUp, Award, ExternalLink, BookOpen, Code2, Bot,
-  DollarSign, GraduationCap, Users, Zap, Star, RotateCcw, Bug,
+  Search, Sparkles, Globe,
+  Award, Code2, Bot,
+  DollarSign, GraduationCap, Users, Zap, RotateCcw, Bug,
 } from "lucide-react";
 import Link from "next/link";
 import opportunities from "@/data/open-source-opportunities.json";

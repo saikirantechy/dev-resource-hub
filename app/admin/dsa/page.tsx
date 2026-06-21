@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Swords, Plus, Edit3, Trash2, Trophy, Users } from "lucide-react";
+import { Search, Swords, Plus, Edit3, Trash2, Users } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
 
 const MOCK_CHALLENGES = [

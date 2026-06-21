@@ -124,7 +124,7 @@ describe("llm", () => {
 
     it("returns valid=false with 401 error", async () => {
       const err = new Error("Incorrect API key provided");
-      (err as Record<string, unknown>).status = 401;
+      (err as any).status = 401;
       mockCreate.mockRejectedValue(err);
 
       const cfg: LLMConfig = {

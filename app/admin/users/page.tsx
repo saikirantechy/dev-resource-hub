@@ -2,12 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Filter, Users, UserPlus, Shield, Ban, CheckCircle, MoreHorizontal } from "lucide-react";
+import { Search, Users, UserPlus, Shield, Ban } from "lucide-react";
 import { useAdmin } from "@/context/AdminContext";
-import { loadJsonData } from "@/lib/admin/storage";
 import { loadLeaderboardData } from "@/lib/admin/loaders";
-import { ADMIN_ROUTES } from "@/lib/admin/constants";
-import { getRoleLabel, getRoleBadgeColor } from "@/lib/admin/permissions";
 
 interface LeaderboardUser {
   username: string;
@@ -21,10 +18,10 @@ interface LeaderboardUser {
 }
 
 export default function AdminUsersPage() {
-  const { user, can } = useAdmin();
+  const { can } = useAdmin();
   const [users, setUsers] = useState<LeaderboardUser[]>([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [_loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {

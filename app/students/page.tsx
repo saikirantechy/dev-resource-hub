@@ -9,7 +9,6 @@ import {
   ArrowRight,
   Sparkles,
   Map,
-  CheckCircle2,
   Users,
   Code2,
   Terminal,

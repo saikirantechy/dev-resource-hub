@@ -26,7 +26,7 @@ import type {
   FakeStoreResult, PhishingResult, SslInfo,
   SecurityHeaders, TechDetectResult, SeoResult, UrlAnalysis,
   DomainIntelligence, PackageTrustResult,
-  SecurityReport, Review, ScamReport,
+  SecurityReport,
 } from "@/lib/security";
 
 type ToolTab = "trust" | "github" | "ai" | "phishing" | "ssl" | "headers" | "tech" | "seo" | "url" | "fakestore" | "domain-intel" | "packages" | "report" | "community";

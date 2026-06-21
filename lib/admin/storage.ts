@@ -215,8 +215,8 @@ export function saveSystemSettings(settings: SystemSettings): void {
 
 export async function loadJsonData<T>(path: string): Promise<T[]> {
   try {
-    const module = await import(`@/data/${path}`);
-    const data = module.default || module;
+    const mod = await import(`@/data/${path}`);
+    const data = mod.default || mod;
     return Array.isArray(data) ? data : data.events || [];
   } catch {
     return [];

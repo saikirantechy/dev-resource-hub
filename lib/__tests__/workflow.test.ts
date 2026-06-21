@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { simulateExecution } from "@/lib/workflow/engine";
 import { templates } from "@/lib/workflow/templates";
 import { useWorkflowStore } from "@/lib/workflow/store";

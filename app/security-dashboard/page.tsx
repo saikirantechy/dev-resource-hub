@@ -3,20 +3,19 @@
 import { motion } from "framer-motion";
 import {
   Shield, TrendingUp, AlertTriangle,
-  Star, Clock, Users, GitFork,
+  Clock, Users, Star,
   Newspaper, Siren, MessageSquare,
-  BarChart3, ExternalLink, CheckCircle2, XCircle, AlertCircle,
+  BarChart3, ExternalLink, CheckCircle2,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import {
-  getCommunityReviews, getScamReports, getTopRated,
+  getCommunityReviews, getScamReports,
 } from "@/lib/security";
-import type { Review, ScamReport } from "@/lib/security";
+import type { ScamReport } from "@/lib/security";
 
 // ── Data from Security Center ──
 const scamReports = getScamReports();
 const communityReviews = getCommunityReviews();
-const topRepos = getTopRated();
 
 const RECENT_DOMAINS = [
   { domain: "github.com", score: 95, level: "Safe", time: "2 min ago" },

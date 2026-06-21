@@ -145,7 +145,7 @@ describe("blogs", () => {
         }\n---\nContent`;
       });
 
-      vi.mocked(matter).mockImplementation((_content: string, ..._args: any[]) => {
+      vi.mocked(matter).mockImplementation((_content: any, ..._args: any[]) => {
         const title = String(_content).includes("old")
           ? "Old Post"
           : String(_content).includes("new")

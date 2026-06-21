@@ -90,7 +90,9 @@ export default function PRAssistantPage() {
   const [loadingStage, setLoadingStage] = useState(0);
 
   useEffect(() => {
-    setSavedReviews(loadReviews());
+    Promise.resolve().then(() => {
+      setSavedReviews(loadReviews());
+    });
     // Check if server-side API route is available (skipped on static export)
     fetch(API_ROUTE, { method: "OPTIONS" })
       .then(() => setApiRouteAvailable(true))
@@ -101,7 +103,7 @@ export default function PRAssistantPage() {
     if (!result || !prUrl) return;
     const parsed = parseGitHubPR(prUrl);
     if (!parsed.isValid) return;
-    const review = saveReview(prUrl, parsed, result);
+    saveReview(prUrl, parsed, result);
     setSaved(true);
     setSavedReviews(loadReviews());
     setTimeout(() => setSaved(false), 2000);

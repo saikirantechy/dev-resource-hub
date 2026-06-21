@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import {
-  Search, Bug, ArrowRight, Sparkles, Star, Code2, Globe,
-  GraduationCap, Zap, Trophy, Users, BookOpen, Rocket, TrendingUp,
-  Filter, Layers, ExternalLink, Award, Calendar, DollarSign, GitFork,
+  Search, Bug, ArrowRight, Sparkles, Code2, Globe,
+  GraduationCap, Zap, Trophy, Users, Rocket,
+  Layers, Award, DollarSign, Star, TrendingUp,
 } from "lucide-react";
 import opportunities from "@/data/open-source-opportunities.json";
 import programs from "@/data/programs.json";

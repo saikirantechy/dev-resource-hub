@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Shield, Newspaper, AlertTriangle, Siren,
   Bot, Bug, Search, ExternalLink,
-  Clock, Calendar, TrendingUp, Zap,
+  Calendar, TrendingUp,
   CheckCircle2, AlertCircle, XCircle,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { getSecurityNews } from "@/lib/security";
-import type { SecurityNews as SecurityNewsType } from "@/lib/security";
+
 
 type NewsCategory = "all" | "scam" | "alert" | "ai-security" | "vulnerability";
 
