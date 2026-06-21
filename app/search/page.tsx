@@ -25,6 +25,7 @@ import {
   type SearchResult,
   type ResultType,
 } from "@/lib/searchEngine";
+import { logSearch, logSearchClick } from "@/lib/searchAnalytics";
 
 export default function SearchPage() {
   const [query, setQuery] = useState("");
@@ -72,6 +73,8 @@ export default function SearchPage() {
       setUsedAI(aiResult.usedAI);
       setAiIntent(aiResult.intent);
       setIsSearching(false);
+
+      logSearch(q, aiResult.results.length);
     }, 200);
 
     return () => {
@@ -227,6 +230,7 @@ export default function SearchPage() {
                         role="option"
                         aria-selected={selectedIndex === globalIdx}
                         onMouseEnter={() => setSelectedIndex(globalIdx)}
+                        onClick={() => logSearchClick(query, item.href, item.name)}
                         className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all group cursor-pointer ${
                           selectedIndex === globalIdx ? "bg-white/10" : "hover:bg-white/5"
                         }`}
@@ -322,6 +326,7 @@ export default function SearchPage() {
                 <Link
                   key={item.id}
                   href={item.href}
+                  onClick={() => logSearchClick("", item.href, item.name)}
                   className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-all group"
                 >
                   <span className="text-xl">{item.icon || getTypeIcon(item.type)}</span>
