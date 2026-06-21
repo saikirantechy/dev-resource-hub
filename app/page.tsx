@@ -29,7 +29,7 @@ import {
   MessageSquare,
   Rocket,
   Code2,
-  Layers,  Gauge, Swords, BrainCircuit,
+  Layers, Gauge, Swords, BrainCircuit, Search as SearchIcon,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -587,6 +587,26 @@ export default function Home() {
               className="hidden sm:inline-flex items-center gap-2 px-6 py-5 rounded-2xl border border-white/10 text-sm font-bold text-gray-400 hover:text-white hover:border-blue-500/30 transition-all"
             >
               <Building2 size={18} /> Start Building
+            </Link>
+          </motion.div>
+
+          {/* ─── SEARCH BAR ─── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="max-w-2xl mx-auto w-full"
+          >
+            <Link
+              href="/search"
+              className="group relative flex items-center w-full px-6 py-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-blue-500/40 hover:bg-white/[0.06] transition-all duration-300 cursor-text"
+            >
+              <SearchIcon size={20} className="text-gray-500 group-hover:text-blue-400 transition-colors mr-3 shrink-0" />
+              <span className="text-gray-500 text-base font-medium">Search tools, agents, prompts, events, or pages...</span>
+              <div className="ml-auto flex items-center gap-1.5 text-[10px] font-bold text-gray-600 select-none px-2 py-1 rounded-lg bg-white/5 border border-white/10 shrink-0">
+                <span className="text-[11px]">⌘</span>K
+              </div>
+              <ArrowRight size={16} className="text-gray-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all ml-2 shrink-0" />
             </Link>
           </motion.div>
 
