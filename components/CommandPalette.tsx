@@ -19,13 +19,24 @@ import {
   Cpu,
   Globe,
   Search as SearchIcon,
+  Sparkles,
+  Calendar,
+  Star,
+  BarChart3,
+  ShoppingCart,
+  GraduationCap,
 } from "lucide-react";
 
-// Import data
 import agentsData from "@/data/agents.json";
 import toolsData from "@/data/tools.json";
 import promptsData from "@/data/prompts.json";
 import aiCodingToolsData from "@/data/ai-coding-tools.json";
+import eventsData from "@/data/events.json";
+import showcaseData from "@/data/showcase.json";
+import benchmarksData from "@/data/benchmarks.json";
+import marketplaceData from "@/data/marketplace.json";
+import openSourceOpportunitiesData from "@/data/open-source-opportunities.json";
+import programsData from "@/data/programs.json";
 import { BlogPost } from "@/lib/blogs";
 
 type SearchItem = {
@@ -34,7 +45,7 @@ type SearchItem = {
   description: string;
   category: string;
   href: string;
-  type: "action" | "agent" | "tool" | "prompt" | "blog";
+  type: "action" | "agent" | "tool" | "prompt" | "ai-coding" | "event" | "showcase" | "benchmark" | "marketplace" | "opportunity" | "program" | "blog" | "search";
   icon?: React.ReactNode;
   shortcut?: string;
 };
@@ -50,175 +61,101 @@ export default function CommandPalette({
   const router = useRouter();
 
   const actions = useMemo((): SearchItem[] => [
-    {
-      id: "a1",
-      name: "Latest Blog Posts",
-      description: "Read the latest AI insights",
-      icon: <BookOpen size={18} />,
-      href: "/blogs",
-      shortcut: "B",
-      category: "Content",
-      type: "action",
-    },
-    {
-      id: "a2",
-      name: "AI Resource Finder",
-      description: "Discover tools based on your stack",
-      icon: <BrainCircuit size={18} />,
-      href: "/ai-finder",
-      shortcut: "AI",
-      category: "Featured",
-      type: "action",
-    },
-    {
-      id: "a3",
-      name: "Prompt Library",
-      description: "Master prompt engineering",
-      icon: <Terminal size={18} />,
-      href: "/prompts",
-      shortcut: "PR",
-      category: "Content",
-      type: "action",
-    },
-    {
-      id: "a4",
-      name: "AI Agent Explorer",
-      description: "Explore autonomous builders",
-      icon: <Bot size={18} />,
-      href: "/ai-agents",
-      shortcut: "AG",
-      category: "Featured",
-      type: "action",
-    },
-    {
-      id: "a5",
-      name: "Compare AI Tools",
-      description: "Side-by-side technical breakdowns",
-      icon: <Scale size={18} />,
-      href: "/compare",
-      shortcut: "VS",
-      category: "Featured",
-      type: "action",
-    },
-    {
-      id: "a6",
-      name: "Project Showcase",
-      description: "Community built projects",
-      icon: <MonitorPlay size={18} />,
-      href: "/showcase",
-      shortcut: "SH",
-      category: "Community",
-      type: "action",
-    },
-    {
-      id: "a7",
-      name: "Community Hub",
-      description: "Connect with builders",
-      icon: <Users size={18} />,
-      href: "/community",
-      shortcut: "CM",
-      category: "Community",
-      type: "action",
-    },
-    {
-      id: "a8",
-      name: "Trending Now",
-      description: "Hottest resources this week",
-      icon: <TrendingUp size={18} />,
-      href: "/trending",
-      shortcut: "T",
-      type: "action",
-      category: "Discovery",
-    },
-    {
-      id: "a9",
-      name: "Submit Resource",
-      description: "Add to the ecosystem",
-      icon: <PlusCircle size={18} />,
-      href: "/submit",
-      shortcut: "P",
-      type: "action",
-      category: "Community",
-    },
-    {
-      id: "a10",
-      name: "View on GitHub",
-      description: "Open source platform",
-      icon: <Globe size={18} />,
-      href: "https://github.com/saikirantechy/dev-resource-hub",
-      type: "action",
-      category: "Platform",
-    },
+    { id: "a1", name: "Latest Blog Posts", description: "Read the latest AI insights", icon: <BookOpen size={18} />, href: "/blogs", shortcut: "B", category: "Content", type: "action" },
+    { id: "a2", name: "AI Resource Finder", description: "Discover tools based on your stack", icon: <BrainCircuit size={18} />, href: "/ai-finder", shortcut: "AI", category: "Featured", type: "action" },
+    { id: "a3", name: "Prompt Library", description: "Master prompt engineering", icon: <Terminal size={18} />, href: "/prompts", shortcut: "PR", category: "Content", type: "action" },
+    { id: "a4", name: "AI Agent Explorer", description: "Explore autonomous builders", icon: <Bot size={18} />, href: "/ai-agents", shortcut: "AG", category: "Featured", type: "action" },
+    { id: "a5", name: "Compare AI Tools", description: "Side-by-side technical breakdowns", icon: <Scale size={18} />, href: "/compare", shortcut: "VS", category: "Featured", type: "action" },
+    { id: "a6", name: "Project Showcase", description: "Community built projects", icon: <MonitorPlay size={18} />, href: "/showcase", shortcut: "SH", category: "Community", type: "action" },
+    { id: "a7", name: "Community Hub", description: "Connect with builders", icon: <Users size={18} />, href: "/community", shortcut: "CM", category: "Community", type: "action" },
+    { id: "a8", name: "Trending Now", description: "Hottest resources this week", icon: <TrendingUp size={18} />, href: "/trending", shortcut: "T", type: "action", category: "Discovery" },
+    { id: "a9", name: "Submit Resource", description: "Add to the ecosystem", icon: <PlusCircle size={18} />, href: "/submit", shortcut: "P", type: "action", category: "Community" },
+    { id: "a10", name: "View on GitHub", description: "Open source platform", icon: <Globe size={18} />, href: "https://github.com/saikirantechy/dev-resource-hub", type: "action", category: "Platform" },
+    { id: "a11", name: "Open Search Page", description: "Full search with AI intent understanding", icon: <SearchIcon size={18} />, href: "/search", shortcut: "S", type: "search", category: "Search" },
   ], []);
 
   const searchIndex = useMemo(() => {
-    const agents = agentsData.map((item: (typeof agentsData)[0]) => ({
-      id: item.id,
-      name: item.name,
-      description: item.description,
-      category: item.category,
-      href: `/ai-agents?id=${item.id}`,
-      type: "agent" as const,
-      icon: <Bot size={18} className="text-emerald-400" />,
+    const agents = (agentsData as any[]).map((item) => ({
+      id: item.id, name: item.name, description: item.description,
+      category: item.category, href: "/ai-agents?id=" + item.id,
+      type: "agent" as const, icon: <Bot size={18} className="text-emerald-400" />,
     }));
 
-    const tools = toolsData.map((item: (typeof toolsData)[0]) => ({
-      id: item.id,
-      name: item.name,
-      description: item.description,
-      category: item.category,
-      href: `/tools?id=${item.id}`,
-      type: "tool" as const,
-      icon: <Cpu size={18} className="text-blue-400" />,
+    const tools = (toolsData as any[]).map((item) => ({
+      id: item.id, name: item.name, description: item.description,
+      category: item.category, href: "/tools?id=" + item.id,
+      type: "tool" as const, icon: <Cpu size={18} className="text-blue-400" />,
     }));
 
-    const prompts = promptsData.map((item: (typeof promptsData)[0]) => ({
-      id: item.id,
-      name: item.title,
-      description: item.description,
-      category: item.category,
-      href: `/prompts?id=${item.id}`,
-      type: "prompt" as const,
-      icon: <Terminal size={18} className="text-purple-400" />,
+    const prompts = (promptsData as any[]).map((item) => ({
+      id: item.id, name: item.title, description: item.description,
+      category: item.category, href: "/prompts?id=" + item.id,
+      type: "prompt" as const, icon: <Terminal size={18} className="text-purple-400" />,
     }));
 
-    const aiCoding = aiCodingToolsData.map((item: any) => ({
-      id: item.id,
-      name: item.name,
-      description: item.description,
-      category: item.category,
-      href: `/tools?id=${item.id}`,
-      type: "tool" as const,
-      icon: <Terminal size={18} className="text-orange-400" />,
+    const aiCoding = (aiCodingToolsData as any[]).map((item) => ({
+      id: item.id, name: item.name, description: item.description,
+      category: item.category, href: "/tools?id=" + item.id,
+      type: "ai-coding" as const, icon: <Sparkles size={18} className="text-yellow-400" />,
+    }));
+
+    const events = ((eventsData as any)?.events || []).map((item: any) => ({
+      id: item.id, name: item.name,
+      description: item.description + " — " + (item.city || ""),
+      category: item.category, href: "/events?id=" + item.id,
+      type: "event" as const, icon: <Calendar size={18} className="text-pink-400" />,
+    }));
+
+    const showcase = (showcaseData as any[]).map((item) => ({
+      id: item.id, name: item.title, description: item.description,
+      category: item.category, href: "/showcase?id=" + item.id,
+      type: "showcase" as const, icon: <Star size={18} className="text-amber-400" />,
+    }));
+
+    const benchmarks = (benchmarksData as any[]).map((item) => ({
+      id: item.id, name: item.name + " Benchmark",
+      description: "Score: " + (item.overallScore || "") + " — " + item.bestFor,
+      category: item.category, href: "/benchmarks?id=" + item.id,
+      type: "benchmark" as const, icon: <BarChart3 size={18} className="text-orange-400" />,
+    }));
+
+    const marketplace = (marketplaceData as any[]).map((item) => ({
+      id: item.id, name: item.title, description: item.description,
+      category: item.category, href: "/marketplace?id=" + item.id,
+      type: "marketplace" as const, icon: <ShoppingCart size={18} className="text-rose-400" />,
+    }));
+
+    const opportunities = (openSourceOpportunitiesData as any[]).map((item) => ({
+      id: item.id, name: item.name, description: item.description,
+      category: item.category, href: "/opportunities?id=" + item.id,
+      type: "opportunity" as const, icon: <GraduationCap size={18} className="text-lime-400" />,
+    }));
+
+    const programs = (programsData as any[]).map((item) => ({
+      id: item.id, name: item.name, description: item.description,
+      category: "Programs", href: "/opportunities?id=" + item.id,
+      type: "program" as const, icon: <GraduationCap size={18} className="text-indigo-400" />,
     }));
 
     const blogs = initialBlogs.map((item) => ({
-      id: item.slug,
-      name: item.title,
-      description: item.excerpt,
-      category: item.category,
-      href: `/blog/${item.slug}`,
-      type: "blog" as const,
-      icon: <BookOpen size={18} className="text-orange-400" />,
+      id: item.slug, name: item.title, description: item.excerpt,
+      category: item.category, href: "/blog/" + item.slug,
+      type: "blog" as const, icon: <BookOpen size={18} className="text-orange-400" />,
     }));
 
     return [
-      ...actions,
-      ...agents,
-      ...tools,
-      ...prompts,
-      ...aiCoding,
-      ...blogs,
+      ...actions, ...agents, ...tools, ...prompts, ...aiCoding,
+      ...events, ...showcase, ...benchmarks, ...marketplace,
+      ...opportunities, ...programs, ...blogs,
     ] as SearchItem[];
   }, [actions, initialBlogs]);
 
   const fuse = useMemo(
-    () =>
-      new Fuse(searchIndex, {
-        keys: ["name", "description", "category"],
-        threshold: 0.3,
-        distance: 100,
-      }),
+    () => new Fuse(searchIndex, {
+      keys: ["name", "description", "category"],
+      threshold: 0.3,
+      distance: 100,
+    }),
     [searchIndex],
   );
 
@@ -256,8 +193,7 @@ export default function CommandPalette({
         if (e.key === "ArrowUp") {
           e.preventDefault();
           setSelectedIndex(
-            (prev) =>
-              (prev - 1 + (results.length || 1)) % (results.length || 1),
+            (prev) => (prev - 1 + (results.length || 1)) % (results.length || 1),
           );
         }
         if (e.key === "Enter") {
@@ -301,10 +237,10 @@ export default function CommandPalette({
               setQuery(e.target.value);
               setSelectedIndex(0);
             }}
-            placeholder="Search agents, prompts, tools, or commands... (Cmd + K)"
+            placeholder="Search agents, tools, prompts, events, or commands..."
             className="flex-1 bg-transparent py-5 text-white outline-none placeholder:text-gray-600 text-base font-medium"
-            aria-label="Search agents, prompts, tools, or commands"
-            aria-activedescendant={results.length > 0 ? `result-${selectedIndex}` : undefined}
+            aria-label="Search all resources"
+            aria-activedescendant={results.length > 0 ? "result-" + selectedIndex : undefined}
             role="combobox"
             aria-expanded={true}
             aria-controls="command-palette-listbox"
@@ -315,10 +251,7 @@ export default function CommandPalette({
               ESC
             </span>
             <button onClick={() => setIsOpen(false)}>
-              <X
-                size={20}
-                className="text-gray-500 hover:text-white transition-colors"
-              />
+              <X size={20} className="text-gray-500 hover:text-white transition-colors" />
             </button>
           </div>
         </div>
@@ -329,11 +262,9 @@ export default function CommandPalette({
               {results.map((item, index) => (
                 <div
                   key={item.id + index}
-                  id={`result-${index}`}
+                  id={"result-" + index}
                   onMouseEnter={() => setSelectedIndex(index)}
-                  onClick={() =>
-                    navigate(item.href, item.href.startsWith("http"))
-                  }
+                  onClick={() => navigate(item.href, item.href.startsWith("http"))}
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
                       navigate(item.href, item.href.startsWith("http"));
@@ -342,29 +273,15 @@ export default function CommandPalette({
                   role="option"
                   aria-selected={selectedIndex === index}
                   tabIndex={-1}
-                  className={`w-full flex items-center justify-between p-3.5 rounded-xl transition-all group cursor-pointer ${
-                    selectedIndex === index ? "bg-white/10" : "hover:bg-white/5"
-                  }`}
+                  className={"w-full flex items-center justify-between p-3.5 rounded-xl transition-all group cursor-pointer " + (selectedIndex === index ? "bg-white/10" : "hover:bg-white/5")}
                 >
                   <div className="flex items-center gap-4">
-                    <div
-                      className={`p-2 rounded-lg transition-colors ${
-                        selectedIndex === index
-                          ? "bg-blue-500/20 text-blue-400"
-                          : "bg-white/5 text-gray-500"
-                      }`}
-                    >
+                    <div className={"p-2 rounded-lg transition-colors " + (selectedIndex === index ? "bg-blue-500/20 text-blue-400" : "bg-white/5 text-gray-500")}>
                       {item.icon}
                     </div>
                     <div className="text-left">
                       <div className="flex items-center gap-2">
-                        <span
-                          className={`text-sm font-semibold transition-colors ${
-                            selectedIndex === index
-                              ? "text-white"
-                              : "text-gray-300"
-                          }`}
-                        >
+                        <span className={"text-sm font-semibold transition-colors " + (selectedIndex === index ? "text-white" : "text-gray-300")}>
                           {item.name}
                         </span>
                         {item.type !== "action" && (
@@ -389,9 +306,7 @@ export default function CommandPalette({
                         {item.shortcut}
                       </div>
                     ) : (
-                      selectedIndex === index && (
-                        <ArrowRight size={14} className="text-blue-500" />
-                      )
+                      selectedIndex === index && <ArrowRight size={14} className="text-blue-500" />
                     )}
                   </div>
                 </div>
@@ -407,8 +322,7 @@ export default function CommandPalette({
                   No results found for &quot;{query}&quot;
                 </p>
                 <p className="text-xs text-gray-600">
-                  Try searching for &quot;Cursor&quot;, &quot;Agents&quot;, or
-                  &quot;Prompts&quot;
+                  Try searching for &quot;Cursor&quot;, &quot;Agents&quot;, or &quot;Events&quot;
                 </p>
               </div>
             </div>
@@ -424,22 +338,13 @@ export default function CommandPalette({
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
-              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">
-                ↑↓
-              </span>{" "}
-              Navigate
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">↑↓</span> Navigate
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
-              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">
-                ↵
-              </span>{" "}
-              Select
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">↵</span> Select
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-medium">
-              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">
-                ESC
-              </span>{" "}
-              Close
+              <span className="p-1 px-1.5 rounded bg-white/5 border border-white/10 text-gray-400">ESC</span> Close
             </div>
           </div>
         </div>
