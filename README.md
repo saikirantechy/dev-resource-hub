@@ -376,7 +376,7 @@ Thanks to the amazing developers building the future of the AI ecosystem!
 ## 🔥 Maintained By
 
 ### Sai Kiran BK (SKT)
-🚀 Founder @ **SKT Nexus**  
+🚀 Founder @ **SKT Nexus & Vexlo**  
 💡 Building developer communities & open-source AI platforms.
 
 [GitHub](https://github.com/saikirantechy) | [LinkedIn](https://linkedin.com/in/saikirantechy) | [Twitter](https://twitter.com/saikirantechy)
