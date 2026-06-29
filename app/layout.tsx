@@ -114,7 +114,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#050508] relative transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-background relative">
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>

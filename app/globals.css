@@ -47,18 +47,48 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :root[data-theme="light"] body {
   background: var(--background) !important;
 }
 
+/* ─── GLOBAL THEME TRANSITIONS ─── */
+/* Key structural elements that should smoothly transition on theme switch */
+nav, footer, main, section, header, aside, article,
+.glass, .glass-strong, .glass-dark,
+button, a, input, select, textarea,
+.gradient-mesh, .card-hover,
+.glow-blue, .glow-purple {
+  transition:
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0a0f; }
-::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 4px; }
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+  transition: background 0.35s ease;
+}
+:root[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #eef2f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a3a;
+  border-radius: 4px;
+  transition: background 0.35s ease;
+}
+:root[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #c0c8d4;
+}
 ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+:root[data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
 
 /* ─── GRADIENT MESH BACKGROUND ─── */
 .gradient-mesh {
@@ -70,6 +100,7 @@ body {
     radial-gradient(ellipse 60% 50% at 80% 110%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 60% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 60%);
   pointer-events: none;
+  transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :root[data-theme="light"] .gradient-mesh {
@@ -229,17 +260,25 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-glass);
+  transition:
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .glass-strong {
   background: var(--surface-glass-strong);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 1px solid var(--border-glass-strong);
+  transition:
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .glass-dark {
   background: var(--surface-glass-dark);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
+  transition:
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :root[data-theme="light"] .theme-toggle-surface {
@@ -252,22 +291,39 @@ body {
 :root[data-theme="light"] .text-white,
 :root[data-theme="light"] .text-gray-300,
 :root[data-theme="light"] .text-gray-400 {
-  color: #0f172a;
+  color: #0f172a !important;
 }
 
 :root[data-theme="light"] .text-gray-500 {
-  color: #475569;
+  color: #475569 !important;
+}
+
+:root[data-theme="light"] .text-gray-600 {
+  color: #64748b !important;
 }
 
 :root[data-theme="light"] .border-white\/5,
-:root[data-theme="light"] .border-white\/10 {
+:root[data-theme="light"] .border-white\/10,
+:root[data-theme="light"] .border-white\/8 {
   border-color: rgba(15, 23, 42, 0.08);
 }
 
 :root[data-theme="light"] .bg-white\/5,
 :root[data-theme="light"] .bg-white\/8,
-:root[data-theme="light"] .bg-white\/10 {
+:root[data-theme="light"] .bg-white\/10,
+:root[data-theme="light"] .bg-white\/12,
+:root[data-theme="light"] .bg-white\/15 {
   background-color: rgba(255, 255, 255, 0.72);
+}
+
+:root[data-theme="light"] .hover\:bg-white\/5:hover,
+:root[data-theme="light"] .hover\:bg-white\/10:hover,
+:root[data-theme="light"] .hover\:bg-white\/12:hover {
+  background-color: rgba(15, 23, 42, 0.05);
+}
+
+:root[data-theme="light"] .hover\:text-white:hover {
+  color: #0f172a !important;
 }
 
 /* ─── GLOW EFFECTS ─── */
