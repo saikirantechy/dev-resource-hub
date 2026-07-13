@@ -320,6 +320,24 @@
     "platform": ["Mac", "Linux", "Windows"]
   },
   {
+    "id": "codex-profiles",
+    "name": "codex-profiles",
+    "description": "Open-source CLI that selects named CODEX_HOME directories for Codex CLI and separate local state for named ChatGPT Desktop windows on macOS. It never reads or copies tokens.",
+    "url": "https://ducksss.github.io/codex-profiles/",
+    "github": "https://github.com/Ducksss/codex-profiles",
+    "docs": "https://github.com/Ducksss/codex-profiles#readme",
+    "tags": ["CLI", "Codex", "CODEX_HOME", "Open Source", "Profiles"],
+    "category": "CLI Coding Tools",
+    "pricing": "Free",
+    "isOpenSource": true,
+    "isFeatured": false,
+    "isTrending": false,
+    "stars": 52,
+    "views": 0,
+    "strength": "Named Codex local-state profiles without token copying",
+    "platform": ["Mac", "Linux"]
+  },
+  {
     "id": "opencode",
     "name": "OpenCode",
     "description": "The most popular open-source CLI coding agent. Supports 75+ LLM providers via BYOK. Works entirely offline with local models. Unlimited usage with zero token caps.",
