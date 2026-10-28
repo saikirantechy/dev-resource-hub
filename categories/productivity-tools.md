@@ -10,6 +10,9 @@ Tools to help you stay organized and work more efficiently.
 - **Trello** – Visual tool for managing projects and workflows  
   🔗 [https://trello.com](https://trello.com)
 
+- **LayoutKeeper** – Free open-source macOS multi-monitor window layout and display manager  
+  🔗 [https://github.com/tumingke0/LayoutKeeper](https://github.com/tumingke0/LayoutKeeper)
+
 ---
 
 [⬅️ Back to Main README](../README.md)

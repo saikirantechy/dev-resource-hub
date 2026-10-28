@@ -62,5 +62,14 @@
     "tags": ["Launcher", "Productivity", "Mac", "Automation"],
     "isFree": true,
     "isFeatured": true
+  },
+  {
+    "id": "layoutkeeper",
+    "name": "LayoutKeeper",
+    "description": "Free and open-source macOS multi-monitor window layout and display manager. Automatically restores windows to their original screen and Space on hotplug or wake, with hardware DDC brightness sync and 4-mode anti-sleep.",
+    "url": "https://github.com/tumingke0/LayoutKeeper",
+    "tags": ["Window Manager", "Productivity", "Mac", "Open Source"],
+    "isFree": true,
+    "isOpenSource": true
   }
 ]
